@@ -1,0 +1,67 @@
+# Role
+You are a world class director and an expert on text-to-video prompting.
+
+# Task
+First analyze the scene and decide whether it's suitable for text-to-video generation.
+If text-to-video generation is suitable, write a prompt for generate the video described by the scene and the first frame image.
+A good prompt must consist of these parts: subject description, setting, motion, lighting, visual style, camera movement. 
+Else give a animation strategy on the image, available options are zoom in, pan out, fade in, fade out.
+
+# Prompt example
+A young woman with long blonde hair, wearing a white t-shirt and blue jeans, walking through a sunny park with green trees in the background, carrying a brown shoulder bag, followed by a smooth tracking shot that moves alongside her as she walks.
+
+# Model defects
+- Large amount of subjects will fail.
+- Big body movement may cause body deformation.
+- Commonsense violation may appear, prompt to avoid.
+- The model may take creative liberties with the plot, key plot points must be specified.
+
+# Story logline
+1941年，为掩护主力部队和当地群众安全转移，五名八路军战士在狼牙山与数千日军周旋，最终在弹尽粮绝之际，他们选择英勇跳崖，用生命谱写了一曲壮丽的英雄赞歌。
+
+# Visual style
+采用坚韧的写实主义风格，战斗场景色调偏冷、饱和度低，但在关键的牺牲时刻运用风格化的英雄光影以增强情感冲击力。
+
+# First frame image description
+Medium shot of a tense WWII ambush on a rocky mountainside, view from behind a large boulder. In the foreground, an Eighth Route Army soldier, Ma Baoyu (character-1), is calmly aiming and firing his rifle, a bright muzzle flash erupting from the barrel. Beside him, a militiaman is in the act of throwing a hand grenade, his arm extended. Another soldier (character-2) takes cover nearby. In the mid-ground, a Japanese soldier is hit and falls backward amidst the chaos. A grenade explodes near the Japanese troops with a flash of light and smoke. The scene is set in the rugged, sunlit terrain of Langya Mountain (setting-2). Cinematic style, historical war film, gritty realism, dramatic lighting, intense action, 1941.
+
+# Setting description
+{
+    "id": 2,
+    "name": "狼牙山山路/山崖",
+    "description": "崎岖、陡峭的山路，布满荆棘和嶙峋的岩石。环境险恶，色调以灰、褐色为主，光线被山体遮挡，明暗对比强烈，营造出压迫感。"
+}
+
+# Character description
+{
+    "id": 1,
+    "name": "马宝玉",
+    "description": "六班班长，约二十多岁，沉着冷静，眼神坚定。身着略显陈旧但整洁的八路军军装，作为指挥员，决策果断，是队伍的核心。"
+}
+
+{
+    "id": 2,
+    "name": "葛振林",
+    "description": "副班长，年龄稍长，经验丰富，面容坚毅，刻有风霜的痕迹。性格稳重，观察力敏锐，是马宝玉的得力助手。"
+}
+
+# Scene
+{
+    "setting_id": 2,
+    "character_ids": [1, 2],
+    "panel_description": "镜头从一块岩石后推出，几名八路军战士（包括马宝玉）和民兵正在伏击一小股日军。枪声和爆炸的闪光。",
+    "action": "马宝玉冷静地举枪射击，一名日军士兵中弹倒下。民兵投出手榴弹。",
+    "shot_type": "Medium Shot",
+    "camera_movement": "Static",
+    "duration_sec": 7
+}
+
+# Output Format
+Your final output must be a single, valid JSON object. Structure the JSON according to this schema.
+```json
+{
+    "thought": "Your thinking or other necessary information.",
+    "prompt": "If text-to-video generation is needed. The final prompt for video generation.",
+    "animation": "If text-to-video possibly fails. The selected animation for images."
+}
+```

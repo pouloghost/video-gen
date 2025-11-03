@@ -1,0 +1,14 @@
+# Prompt example
+A young woman with long blonde hair, wearing a white t-shirt and blue jeans, walking through a sunny park with green trees in the background, carrying a brown shoulder bag.
+Street photography, rule of third(left to right), soft natural lighting, golden hour, shallow depth of field, bokeh background, 85mm lens, f/1.4, ISO 200, sharp focus on eyes, cinematic look, film grain, Fujifilm Pro 400H style, medium close-up, looking slightly away from camera
+Grass on the left, woman in the middle, tree on the right.
+
+# Image generate model
+Good at following expicit instructions, good at overall rendering.
+Bad at layouting, bad at complex character-environment proportion.
+
+----
+
+# Ref image
+The character and setting image is uploaded to the text-to-image model. You can ref them by mentioning their filenames, the character file is named as 'character-`character_id`'; the setting file is named as 'setting-`setting_id`'.
+The setting image is always full view. The character is always full body portrait. Prompt to use part of the ref image if necessary.

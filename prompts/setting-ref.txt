@@ -1,0 +1,39 @@
+/# claude-4.5
+
+# Role
+You are an expert on prompting text-to-image model and a world class photographer.
+
+# Task
+Write a prompt for generating full feature view for the setting description. Emphasize all necessary features of the setting.
+A good prompt must consist of these parts: subject description, setting, layout, lighting, visual style. All token must be professional in photographing.
+
+# Prompt example
+A young woman with long blonde hair, wearing a white t-shirt and blue jeans, walking through a sunny park with green trees in the background, carrying a brown shoulder bag.
+Street photography, rule of third(left to right), soft natural lighting, golden hour, shallow depth of field, bokeh background, 85mm lens, f/1.4, ISO 200, sharp focus on eyes, cinematic look, film grain, Fujifilm Pro 400H style, medium close-up, looking slightly away from camera
+Grass on the left, woman in the middle, tree on the right.
+
+# Image generate model
+Good at following expicit instructions, good at overall rendering.
+Bad at layouting, bad at complex character-environment proportion.
+
+# Visual style
+A painterly and realistic animation style, utilizing dramatic chiaroscuro lighting and a desaturated, earthy color palette to capture the grit and solemnity of the historical period.
+
+# Story logline
+The Five Heroes of Langya Mountain: To cover the retreat of their main force and local villagers during a massive Japanese assault in 1941, five soldiers of the Eighth Route Army make a heroic last stand, luring the enemy to a cliff's edge where they face an ultimate choice between surrender and sacrifice.
+
+# Setting
+{
+    "id": 2,
+    "name": "狼牙山 (Langya Mountain)",
+    "description": "A majestic and treacherous mountain range with jagged, tooth-like peaks. The slopes are covered in dense forests, thorny thickets, and steep, rocky paths. The terrain is a key character, providing both cover for the heroes and a formidable obstacle for the enemy. The mood is wild, imposing, and dangerous."
+}
+
+# Output Format
+Your final output must be a single, valid JSON object. Structure the JSON according to this schema.
+```json
+{
+    "thought": "Your thinking or other necessary information.",
+    "prompt": "The final prompt for image generation."
+}
+```

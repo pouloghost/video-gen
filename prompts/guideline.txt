@@ -1,0 +1,91 @@
+Here's a guideline for generating detailed and professional image prompts like Prompt 5 (Revised), incorporating various photographic elements:
+
+---
+
+**Guideline for Generating Detailed Professional Photographic Prompts**
+
+The goal is to provide a comprehensive description that not only outlines the subject matter but also guides the AI on the desired photographic qualities, mood, and technical aspects. Think like a photographer planning a shot.
+
+**I. Core Subject and Scene Description:**
+*   **What is the main subject?** Be precise (e.g., "three young Chinese women," "a lone astronaut").
+*   **What are they doing?** (e.g., "standing side-by-side," "riding a horse").
+*   **What are their key characteristics?** (e.g., "exquisite traditional Hanfu," "intricate traditional hairstyles," "serene expressions").
+*   **Are there any specific props?** (e.g., "ornamental circular fans," "vintage binoculars").
+*   **What is the setting/environment?** (e.g., "ancient Chinese palace architecture," "Martian desert landscape").
+*   **Any specific background elements?** (e.g., "red walls, golden roofs, stone balustrade," "rocky outcrops, red dust").
+
+**II. Photographic Technicals (The "How"):**
+
+1.  **Exposure Triangle:**
+    *   **ISO:** Specify a low ISO for clean images (e.g., "ISO 100", "ISO 200").
+    *   **Aperture (f-stop):** Crucial for Depth of Field.
+        *   *Shallow DoF (blurry background):* "f/1.2", "f/1.8", "f/2.8"
+        *   *Deep DoF (everything in focus):* "f/8", "f/11", "f/16"
+    *   **Shutter Speed:** Influences motion blur and light.
+        *   *Freeze motion:* "1/1000s", "1/500s"
+        *   *Some motion blur (for effect):* "1/60s", "1/30s"
+        *   *Long exposure:* "2s", "10s" (specify if for light trails, smooth water, etc.)
+
+2.  **Lighting:**
+    *   **Type:** "natural daylight," "studio lighting," "artificial light," "moonlight."
+    *   **Quality/Direction:** "golden hour lighting," "soft diffused lighting," "hard direct sunlight," "rim light," "backlight," "front light," "dramatic chiaroscuro."
+    *   **Color Temperature:** "warm tones," "cool tones," "neutral."
+
+3.  **Composition:**
+    *   **Rule of Thirds:** "subjects centered and slightly to the right/left," "horizon on lower third."
+    *   **Leading Lines:** "leading lines from the balustrade/road/river."
+    *   **Symmetry:** "symmetrical composition."
+    *   **Framing:** "natural framing by doorway/trees."
+    *   **Negative Space:** "emphasizing negative space around subject."
+    *   **Rule of Odds:** "odd number of subjects."
+    *   **Perspective:** "low-angle," "high-angle," "worm's-eye view," "bird's-eye view."
+
+4.  **Depth of Field (DoF):**
+    *   **Shallow:** "shallow depth of field, isolating subjects."
+    *   **Deep/Large:** "deep depth of field, everything in focus."
+
+5.  **Bokeh:**
+    *   **Presence:** "creamy bokeh," "smooth bokeh," "busy bokeh," "noticeable bokeh circles."
+    *   **Quality:** "soft background blur," "dreamy background blur."
+
+6.  **Lens & Focal Length:**
+    *   **Type:** "prime lens," "zoom lens," "telephoto lens," "wide-angle lens," "macro lens," "fisheye lens."
+    *   **Specific Focal Length:** "85mm," "50mm," "24mm," "200mm." (This implies perspective compression/expansion).
+
+7.  **Genre/Style/Mood:**
+    *   **Genre:** "cultural portraiture," "environmental portraiture," "street photography," "landscape photography," "fine art," "documentary," "fashion."
+    *   **Style:** "warm, vibrant, high-key," "moody, cinematic, low-key," "vintage, sepia tone," "monochrome, black and white," "dreamy," "realistic," "hyperrealistic."
+    *   **Mood:** "serene," "dramatic," "joyful," "mysterious."
+
+8.  **Camera Angle & Shot Type:**
+    *   **Angle:** "eye level," "low angle," "high angle," "Dutch angle."
+    *   **Shot Type:** "full shot," "medium shot," "close-up," "wide shot," "establishing shot."
+
+**III. Structuring the Prompt:**
+
+*   **Start with the broad strokes:** Shot type, main subjects, core action.
+*   **Integrate technical details:** Weave in exposure, composition, lighting, DoF, lens. You can group them or spread them logically.
+*   **Add stylistic elements:** Genre, mood, color palette.
+*   **Be specific:** Instead of "good lighting," use "golden hour lighting, soft diffused." Instead of "blurry background," use "shallow depth of field, creamy bokeh."
+*   **Use strong descriptive adjectives.**
+*   **Think about the desired *feeling* of the image** and translate that into photographic terms.
+
+**Example Application:**
+
+*   *Initial Idea:* A knight in armor.
+*   *Adding Detail:*
+    *   **Subject:** A lone knight in full plate armor.
+    *   **Setting:** Standing in a misty, ancient forest, sunlight filtering through trees.
+    *   **Exposure:** ISO 200, f/4, 1/125s.
+    *   **Lighting:** Backlit, dramatic light shafts through the mist.
+    *   **Composition:** Knight on the left third, leading lines from forest path.
+    *   **DoF/Bokeh:** Moderate depth of field, slight background blur to emphasize mist.
+    *   **Lens:** 50mm prime lens.
+    *   **Genre/Style:** Fantasy portraiture, cinematic, moody, high contrast.
+    *   **Camera Angle:** Eye level, medium shot.
+
+*Prompt:* "Medium shot, a lone knight in full plate armor. **Exposure:** ISO 200, f/4, 1/125s. **Lighting:** Dramatic backlit light shafts piercing through dense mist in an ancient forest, creating a mystical atmosphere. **Composition:** Knight positioned on the left third, forest path forming subtle leading lines. **Depth of Field:** Moderate, with a slight, ethereal background blur. **Lens:** 50mm prime lens. **Genre:** Fantasy portraiture, cinematic. **Style:** Moody, high contrast, dark fantasy aesthetics. Shot at eye level."
+
+---
+
+By following this guideline, you can craft highly specific and professional prompts that leave little to ambiguity, allowing the AI to generate images that closely match your vision.
