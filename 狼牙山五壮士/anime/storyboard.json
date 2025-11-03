@@ -1,0 +1,1536 @@
+{
+    "thought": "I will structure the storyboard by breaking down each voiceover line into a distinct scene, adhering to the 7-second maximum duration. The core of the visual storytelling will rely on the key elements defined in the concept: the stark contrast between the five soldiers and the massive Japanese army, the symbolic moment with the turnip, the pivotal discovery of the civilians, the defiant use of the last grenade, and the final, majestic leap from the cliff. Character limits per scene will be managed by splitting group shots into sequential panels. The visual style will be consistently described as realistic and painterly, with a desaturated, earthy palette and strong chiaroscuro to evoke the solemnity of the historical event. Each scene will be meticulously planned to flow cinematically, building tension and emotional weight towards the climax.",
+    "scenes": [
+      {
+        "panel_id": 1,
+        "voiceover_ref": "1.1",
+        "setting_id": "Setting 2, 狼牙山远景",
+        "character_ids": [],
+        "panel_description": "1941年秋，晋察冀根据地。广阔的、枯黄色的山脉连绵起伏。远处的村庄冒着几缕黑烟，暗示着战争的到来。整体色调偏向饱和度低的土黄色，气氛凝重。",
+        "action": "镜头缓缓地在山脉上空平移，展现战争前夕压抑的广阔景象。",
+        "shot_type": "Wide Shot",
+        "camera_movement": "Slow Pan Right",
+        "duration_sec": 7,
+        "is_continue": false
+      },
+      {
+        "panel_id": 2,
+        "voiceover_ref": "2.1",
+        "setting_id": "Setting 2, 狼牙山山麓",
+        "character_ids": [],
+        "panel_description": "狼牙山山脚下，岩石嶙峋。几个八路军战士的剪影在崎岖的山路上快速移动，他们的动作敏捷而隐蔽，利用地形作为掩护。",
+        "action": "战士们的剪影在岩石和树木的阴影中穿梭，体现游击战的特点。",
+        "shot_type": "Medium Wide Shot",
+        "camera_movement": "Static",
+        "duration_sec": 6,
+        "is_continue": false
+      },
+      {
+        "panel_id": 3,
+        "voiceover_ref": "3.1",
+        "setting_id": "Setting 1, 村庄/七连驻地",
+        "character_ids": [
+          1,
+          2
+        ],
+        "panel_description": "傍晚，在简朴的村庄里。副班长葛振林（ID 2）正用扁担给一个大水缸挑水，他身形结实。班长马宝玉（ID 1）从背景中快步跑来，表情严肃。",
+        "action": "葛振林将水倒入缸中。马宝玉跑近并拍了拍他的肩膀。",
+        "shot_type": "Medium Shot",
+        "camera_movement": "Static",
+        "duration_sec": 5,
+        "is_continue": false
+      },
+      {
+        "panel_id": 4,
+        "voiceover_ref": "4.1",
+        "setting_id": "Setting 1, 村外小山崖下",
+        "character_ids": [
+          1,
+          2
+        ],
+        "panel_description": "村外山崖下，光线昏暗。马宝玉和葛振林并排坐在一块大石头上，他们的背影对着镜头，正抬头专注地聆听着画面外指导员的讲话。",
+        "action": "两人保持静坐聆听的姿势，只有微风吹动他们的衣角。",
+        "shot_type": "Medium Shot (from behind)",
+        "camera_movement": "Static",
+        "duration_sec": 7,
+        "is_continue": false
+      },
+      {
+        "panel_id": 5,
+        "voiceover_ref": "5.1",
+        "setting_id": "Setting 1, 村外小山崖下",
+        "character_ids": [
+          1,
+          2
+        ],
+        "panel_description": "特写镜头，聚焦于马宝玉坚毅的侧脸。他眉头微蹙，眼神中透露出对严峻形势的深刻理解。背景是模糊的山岩。",
+        "action": "马宝玉的目光随着指导员的讲话而变得更加坚定。",
+        "shot_type": "Close-Up",
+        "camera_movement": "Static",
+        "duration_sec": 6,
+        "is_continue": true
+      },
+      {
+        "panel_id": 6,
+        "voiceover_ref": "5.2",
+        "setting_id": "Setting 1, 村外小山崖下",
+        "character_ids": [
+          2
+        ],
+        "panel_description": "切换到葛振林的特写。他的脸上同样写满了严肃，紧抿的嘴唇显示出他内心的决心。光线从一侧打来，在他脸上形成强烈的明暗对比。",
+        "action": "葛振林缓缓点头，表示对命令的领会和决心。",
+        "shot_type": "Close-Up",
+        "camera_movement": "Static",
+        "duration_sec": 6,
+        "is_continue": true
+      },
+      {
+        "panel_id": 7,
+        "voiceover_ref": "6.1",
+        "setting_id": "Setting 1, 村庄小路",
+        "character_ids": [
+          1,
+          2
+        ],
+        "panel_description": "散会后，两人走在返回驻地的土路上。葛振林边走边侧头问马宝玉问题，脸上带着一丝期待和紧张。",
+        "action": "葛振林开口询问，马宝玉只是低沉地“嗯”了一声，继续向前走。",
+        "shot_type": "Medium Shot",
+        "camera_movement": "Tracking (following the characters)",
+        "duration_sec": 4,
+        "is_continue": false
+      },
+      {
+        "panel_id": 8,
+        "voiceover_ref": "6.2",
+        "setting_id": "Setting 1, 村庄小路",
+        "character_ids": [
+          1,
+          2
+        ],
+        "panel_description": "镜头从葛振林身后过肩拍摄，焦点落在马宝玉的脸上。他的表情凝重，眼神望向远方，仿佛已经看到了即将到来的血战。",
+        "action": "马宝玉没有说话，只是紧锁眉头，加快了脚步。",
+        "shot_type": "Over-the-Shoulder Shot",
+        "camera_movement": "Static",
+        "duration_sec": 5,
+        "is_continue": true
+      },
+      {
+        "panel_id": 9,
+        "voiceover_ref": "7.1",
+        "setting_id": "Setting 4, 狼牙山全景",
+        "character_ids": [],
+        "panel_description": "一幅壮丽的狼牙山全景。山峰如犬齿交错，险峻陡峭，云雾缭绕在山腰，显得神秘而威严。镜头缓缓向上移动，强调其高度和险要。",
+        "action": "云雾在山间流动，阳光穿透云层，在山体上留下斑驳的光影。",
+        "shot_type": "Extreme Wide Shot",
+        "camera_movement": "Tilt Up",
+        "duration_sec": 5,
+        "is_continue": false
+      },
+      {
+        "panel_id": 10,
+        "voiceover_ref": "7.2",
+        "setting_id": "Setting 4, 狼牙山全景",
+        "character_ids": [],
+        "panel_description": "在狼牙山的全景上，叠加一个半透明的、风格化的军事地图，红色的箭头指向狼牙山，象征着日军的战略意图。",
+        "action": "地图上的红色箭头闪烁，最后锁定在狼牙山的主峰位置。",
+        "shot_type": "Extreme Wide Shot with Graphic Overlay",
+        "camera_movement": "Static",
+        "duration_sec": 5,
+        "is_continue": true
+      },
+      {
+        "panel_id": 11,
+        "voiceover_ref": "8.1",
+        "setting_id": "Setting 2, 狼牙山山脚",
+        "character_ids": [],
+        "panel_description": "低角度拍摄，日军士兵的军靴和绑腿在崎岖的山路上行进，扬起阵阵尘土。远处，大炮正在开火，炮口闪光。",
+        "action": "大批日军士兵如潮水般涌入画面，气氛紧张。",
+        "shot_type": "Low Angle Shot",
+        "camera_movement": "Static",
+        "duration_sec": 7,
+        "is_continue": false
+      },
+      {
+        "panel_id": 12,
+        "voiceover_ref": "9.1",
+        "setting_id": "日军前线指挥帐篷",
+        "character_ids": [
+          6
+        ],
+        "panel_description": "在昏暗的指挥帐篷内，日军指挥官高见（ID 6）身着笔挺军服，手持指挥刀，正对着一张军事地图，脸上带着傲慢自大的笑容。",
+        "action": "高见用戴着白手套的手在地图上的狼牙山位置重重一点。",
+        "shot_type": "Medium Close-Up",
+        "camera_movement": "Static",
+        "duration_sec": 7,
+        "is_continue": false
+      },
+      {
+        "panel_id": 13,
+        "voiceover_ref": "10.1",
+        "setting_id": "Setting 2, 狼牙山阻击阵地",
+        "character_ids": [],
+        "panel_description": "八路军战士在简易的岩石工事后向山下射击。硝烟弥漫，枪口不断喷出火舌。一名战士向敌群投掷手榴弹。",
+        "action": "手榴弹在山下的日军中爆炸，掀起烟尘。",
+        "shot_type": "Medium Shot",
+        "camera_movement": "Slight Shake (to simulate impact)",
+        "duration_sec": 4,
+        "is_continue": false
+      },
+      {
+        "panel_id": 14,
+        "voiceover_ref": "10.2",
+        "setting_id": "柿子林",
+        "character_ids": [
+          1,
+          2,
+          3
+        ],
+        "panel_description": "天黑后，在一片柿子林里。马宝玉、葛振林和宋学义（ID 3）靠着树干休息，他们脸上虽有疲惫，但仍在兴高采烈地讨论白天的战斗。",
+        "action": "马宝玉笑着拍了拍葛振林的肩膀，葛振林则在擦拭他的步枪。",
+        "shot_type": "Medium Shot",
+        "camera_movement": "Static",
+        "duration_sec": 6,
+        "is_continue": false
+      },
+      {
+        "panel_id": 15,
+        "voiceover_ref": "11.1",
+        "setting_id": "八路军团指挥所 (临时)",
+        "character_ids": [],
+        "panel_description": "一个简陋的指挥所内（可能是一个山洞或老乡的房子），团首长（未露全脸，只看到背影和侧影）俯身在一张铺在箱子上的地图前，神情凝重。",
+        "action": "团首长用手指在地图上划出一条线，模拟主力部队的转移路线。",
+        "shot_type": "Medium Close-Up",
+        "camera_movement": "Static",
+        "duration_sec": 6,
+        "is_continue": false
+      },
+      {
+        "panel_id": 16,
+        "voiceover_ref": "11.2",
+        "setting_id": "八路军团指挥所 (临时)",
+        "character_ids": [],
+        "panel_description": "特写镜头，团首长的目光从地图上移开，望向黑暗的远方，眼神中充满了决心和对战士们的担忧。",
+        "action": "他深吸一口气，下定了决心。",
+        "shot_type": "Close-Up",
+        "camera_movement": "Static",
+        "duration_sec": 6,
+        "is_continue": true
+      },
+      {
+        "panel_id": 17,
+        "voiceover_ref": "12.1",
+        "setting_id": "八路军团指挥所 (临时)",
+        "character_ids": [],
+        "panel_description": "特写，团长粗糙的手在一张发黄的纸上迅速写下命令。写完后，他将信折好，递给一个年轻的通信员。",
+        "action": "通信员接过信，敬了一个军礼，迅速转身跑出画面。",
+        "shot_type": "Close-Up",
+        "camera_movement": "Static",
+        "duration_sec": 5,
+        "is_continue": true
+      },
+      {
+        "panel_id": 18,
+        "voiceover_ref": "13.1",
+        "setting_id": "七连驻地",
+        "character_ids": [],
+        "panel_description": "七连长在昏暗的油灯下展开信纸，快速阅读。他的表情随着阅读变得越来越严肃。",
+        "action": "连长读完信，抬头看向帐外，目光坚定。",
+        "shot_type": "Medium Close-Up",
+        "camera_movement": "Static",
+        "duration_sec": 6,
+        "is_continue": false
+      },
+      {
+        "panel_id": 19,
+        "voiceover_ref": "14.1",
+        "setting_id": "七连驻地",
+        "character_ids": [
+          1
+        ],
+        "panel_description": "连长站在队伍前大喊。马宝玉（ID 1）从队列中应声出列，他身姿挺拔，表情坚毅。",
+        "action": "马宝玉响亮地回答“到！”，并向前迈出一步。",
+        "shot_type": "Medium Shot",
+        "camera_movement": "Static",
+        "duration_sec": 3,
+        "is_continue": true
+      },
+      {
+        "panel_id": 20,
+        "voiceover_ref": "14.2",
+        "setting_id": "七连驻地",
+        "character_ids": [
+          1
+        ],
+        "panel_description": "连长对马宝玉下达命令，用手指着团部的方向。马宝玉敬礼，然后转身准备出发。",
+        "action": "马宝玉领命后，立刻转身，动作干脆利落。",
+        "shot_type": "Medium Shot",
+        "camera_movement": "Static",
+        "duration_sec": 5,
+        "is_continue": true
+      },
+      {
+        "panel_id": 21,
+        "voiceover_ref": "15.1",
+        "setting_id": "狼牙山山路",
+        "character_ids": [
+          1,
+          2,
+          3
+        ],
+        "panel_description": "中景，马宝玉、葛振林、宋学义三人作为队伍的前导，在崎岖的山路上快速行进。他们的军装已经褪色，但步伐矫健。",
+        "action": "三人敏捷地在岩石间跳跃穿行。",
+        "shot_type": "Medium Shot",
+        "camera_movement": "Pan Left",
+        "duration_sec": 4,
+        "is_continue": false
+      },
+      {
+        "panel_id": 22,
+        "voiceover_ref": "15.2",
+        "setting_id": "狼牙山山路",
+        "character_ids": [
+          4,
+          5
+        ],
+        "panel_description": "紧接着的镜头，胡德林（ID 4）和胡福才（ID 5）跟在后面，他们脸上带着兴奋的笑容，胡德林甚至还回头对胡福才说了句什么，显得非常乐观。",
+        "action": "两人几乎是在奔跑，跨过一条小溪，动作充满活力。",
+        "shot_type": "Medium Shot",
+        "camera_movement": "Pan Left",
+        "duration_sec": 7,
+        "is_continue": true
+      },
+      {
+        "panel_id": 23,
+        "voiceover_ref": "16.1",
+        "setting_id": "八路军团指挥所 (临时)",
+        "character_ids": [
+          1
+        ],
+        "panel_description": "在指挥所，团长面对着马宝玉，表情严肃而坚定，一手按在地图上。",
+        "action": "团长用充满信任和力量的眼神看着马宝玉，下达命令。",
+        "shot_type": "Medium Shot",
+        "camera_movement": "Static",
+        "duration_sec": 5,
+        "is_continue": false
+      },
+      {
+        "panel_id": 24,
+        "voiceover_ref": "16.2",
+        "setting_id": "八路军团指挥所 (临时)",
+        "character_ids": [
+          1,
+          2
+        ],
+        "panel_description": "特写，团长的手指重重地落在地图上的“棋盘陀”位置，向马宝玉和葛振林强调任务的关键点。",
+        "action": "手指在地图上停留，强调任务的不可动摇性。",
+        "shot_type": "Close-Up (on map and hands)",
+        "camera_movement": "Static",
+        "duration_sec": 5,
+        "is_continue": true
+      },
+      {
+        "panel_id": 25,
+        "voiceover_ref": "17.1",
+        "setting_id": "Setting 2, 狼牙山阻击阵地 (山口)",
+        "character_ids": [
+          1,
+          2
+        ],
+        "panel_description": "在山口阵地，团长（背对镜头）指着险要的地形，对身边的马宝玉和葛振林进行最后的嘱咐。",
+        "action": "马宝玉和葛振林认真地听着，不时点头，观察着周围的地形。",
+        "shot_type": "Medium Shot",
+        "camera_movement": "Static",
+        "duration_sec": 7,
+        "is_continue": false
+      },
+      {
+        "panel_id": 26,
+        "voiceover_ref": "18.1",
+        "setting_id": "Setting 2, 狼牙山阻击阵地 (山口)",
+        "character_ids": [
+          1,
+          2,
+          3
+        ],
+        "panel_description": "五名战士站在山脊上，远处的山下火光冲天，浓烟滚滚，村庄正在燃烧。战士们的脸被火光映红，表情充满了愤怒。",
+        "action": "马宝玉的拳头紧握，葛振林和宋学义咬紧牙关。",
+        "shot_type": "Medium Wide Shot",
+        "camera_movement": "Static",
+        "duration_sec": 5,
+        "is_continue": false
+      },
+      {
+        "panel_id": 27,
+        "voiceover_ref": "18.2",
+        "setting_id": "Setting 2, 狼牙山阻击阵地 (山口)",
+        "character_ids": [
+          1,
+          4,
+          5
+        ],
+        "panel_description": "镜头切换到另一个角度，马宝玉正与胡德林、胡福才以及几名民兵（次要角色，可模糊处理）围在一起，在一块岩石上摊开简易地图，商讨对策。",
+        "action": "马宝玉用手指在地图上比划，其他人都专注地听着。",
+        "shot_type": "Medium Shot",
+        "camera_movement": "Static",
+        "duration_sec": 6,
+        "is_continue": true
+      },
+      {
+        "panel_id": 28,
+        "voiceover_ref": "19.1",
+        "setting_id": "Setting 2, 狼牙山阻击阵地 (山口)",
+        "character_ids": [
+          2,
+          3,
+          5
+        ],
+        "panel_description": "夜晚，月光下。葛振林、宋学义和胡福才三人正小心翼翼地在山路上埋设地雷。他们的动作专业而迅速。",
+        "action": "胡福才挖坑，葛振林放置地雷，宋学义用泥土和树叶进行伪装。",
+        "shot_type": "Medium Shot",
+        "camera_movement": "Static",
+        "duration_sec": 7,
+        "is_continue": false
+      },
+      {
+        "panel_id": 29,
+        "voiceover_ref": "20.1",
+        "setting_id": "Setting 2, 狼牙山阻击阵地 (山口)",
+        "character_ids": [
+          1
+        ],
+        "panel_description": "准备工作完成，马宝玉对几名民兵挥手，示意他们撤离。民兵们敬礼后迅速消失在黑暗中。",
+        "action": "马宝玉目送民兵离开，然后转身望向山下。",
+        "shot_type": "Medium Shot",
+        "camera_movement": "Static",
+        "duration_sec": 5,
+        "is_continue": false
+      },
+      {
+        "panel_id": 30,
+        "voiceover_ref": "20.2",
+        "setting_id": "Setting 2, 狼牙山阻击阵地 (山口)",
+        "character_ids": [
+          1
+        ],
+        "panel_description": "极度特写，马宝玉的眼睛在黑暗中闪着警惕的光芒。他的耳朵微微动了一下，似乎捕捉到了远处的声响。",
+        "action": "眼睛锐利地扫视着黑暗的山谷。",
+        "shot_type": "Extreme Close-Up (on eyes)",
+        "camera_movement": "Static",
+        "duration_sec": 5,
+        "is_continue": true
+      },
+      {
+        "panel_id": 31,
+        "voiceover_ref": "21.1",
+        "setting_id": "Setting 2, 狼牙山阻击阵地 (山口)",
+        "character_ids": [
+          1,
+          2,
+          3
+        ],
+        "panel_description": "拂晓，天色蒙蒙亮。从战士们的视角（过肩镜头）看下去，山下黑压压的一片日军，像蚁群一样开始向山口移动。视觉反差强烈。",
+        "action": "远处的日军发出模糊的叫喊声，开始加速冲锋。",
+        "shot_type": "Over-the-Shoulder Wide Shot",
+        "camera_movement": "Static",
+        "duration_sec": 7,
+        "is_continue": false
+      },
+      {
+        "panel_id": 32,
+        "voiceover_ref": "22.1",
+        "setting_id": "Setting 2, 狼牙山阻击阵地 (山口)",
+        "character_ids": [
+          1,
+          2,
+          3
+        ],
+        "panel_description": "中近景，马宝玉、葛振林和宋学义在岩石后严阵以待。他们冷静地揭开手榴弹的盖子，拉动枪栓，子弹上膛的声音清脆可闻。",
+        "action": "马宝玉低声下令，三人同时准备好武器。",
+        "shot_type": "Medium Close-Up",
+        "camera_movement": "Static",
+        "duration_sec": 5,
+        "is_continue": false
+      },
+      {
+        "panel_id": 33,
+        "voiceover_ref": "23.1",
+        "setting_id": "Setting 2, 狼牙山山脚",
+        "character_ids": [],
+        "panel_description": "广角镜头，山路上突然爆发出巨大的火光和浓烟，地雷被引爆。冲在前面的日军士兵被炸得人仰马翻。",
+        "action": "连续的爆炸沿着山路蔓延，泥土和碎石四处飞溅。",
+        "shot_type": "Wide Shot",
+        "camera_movement": "Shake",
+        "duration_sec": 5,
+        "is_continue": false
+      },
+      {
+        "panel_id": 34,
+        "voiceover_ref": "24.1",
+        "setting_id": "Setting 2, 狼牙山山脚",
+        "character_ids": [],
+        "panel_description": "硝烟中，幸存的日军士兵惊恐地趴在地上。一名日军军官挥舞着指挥刀，逼迫士兵们继续前进。",
+        "action": "士兵们战战兢兢地从尸体旁爬过，继续向山上进攻。",
+        "shot_type": "Medium Shot",
+        "camera_movement": "Static",
+        "duration_sec": 6,
+        "is_continue": false
+      },
+      {
+        "panel_id": 35,
+        "voiceover_ref": "25.1",
+        "setting_id": "Setting 2, 狼牙山阻击阵地 (山口)",
+        "character_ids": [
+          1
+        ],
+        "panel_description": "特写镜头，马宝玉的眼睛死死盯住越来越近的敌人。他怒吼一声“打！”，然后奋力将手榴弹投出。",
+        "action": "马宝玉怒吼，手臂肌肉紧绷，完成投掷动作。",
+        "shot_type": "Close-Up",
+        "camera_movement": "Whip Pan (following the grenade)",
+        "duration_sec": 5,
+        "is_continue": false
+      },
+      {
+        "panel_id": 36,
+        "voiceover_ref": "26.1",
+        "setting_id": "Setting 2, 狼牙山山脚",
+        "character_ids": [],
+        "panel_description": "俯瞰镜头，手榴弹在敌群中爆炸。日军阵型大乱，活着的士兵惊慌失措地向山下逃窜。",
+        "action": "士兵们连滚带爬，互相冲撞，狼狈地撤退。",
+        "shot_type": "High Angle Wide Shot",
+        "camera_movement": "Static",
+        "duration_sec": 5,
+        "is_continue": false
+      },
+      {
+        "panel_id": 37,
+        "voiceover_ref": "27.1",
+        "setting_id": "Setting 2, 狼牙山阻击阵地 (山口)",
+        "character_ids": [],
+        "panel_description": "日军的炮火猛烈轰击阵地。镜头剧烈晃动，岩石被炸得粉碎，浓烟和尘土瞬间笼罩了一切，看不清人影。",
+        "action": "爆炸的火光不断闪现，碎石从镜头前划过。",
+        "shot_type": "Medium Shot",
+        "camera_movement": "Heavy Shake",
+        "duration_sec": 6,
+        "is_continue": false
+      },
+      {
+        "panel_id": 38,
+        "voiceover_ref": "28.1",
+        "setting_id": "Setting 2, 狼牙山阻击阵地 (山口)",
+        "character_ids": [
+          1,
+          2,
+          3
+        ],
+        "panel_description": "炮火稍停，烟雾中。马宝玉从掩体后探出头观察，宋学义检查了一下身边的葛振林，葛振林则冷静地检查着步枪的机件。",
+        "action": "三人各自确认情况，动作迅速而默契。",
+        "shot_type": "Medium Shot",
+        "camera_movement": "Static",
+        "duration_sec": 7,
+        "is_continue": true
+      },
+      {
+        "panel_id": 39,
+        "voiceover_ref": "29.1",
+        "setting_id": "Setting 2, 狼牙山阻击阵地 (山口)",
+        "character_ids": [
+          1,
+          4,
+          5
+        ],
+        "panel_description": "马宝玉对身边的胡德林和胡福才下达新指令，决定引敌上山。",
+        "action": "马宝玉用手势指向更高的山头，三人准备转移。",
+        "shot_type": "Medium Close-Up",
+        "camera_movement": "Static",
+        "duration_sec": 4,
+        "is_continue": true
+      },
+      {
+        "panel_id": 40,
+        "voiceover_ref": "29.2",
+        "setting_id": "Setting 2, 狼牙山山脊",
+        "character_ids": [
+          1,
+          2,
+          3
+        ],
+        "panel_description": "在弥漫的硝烟中，五名战士的身影在山脊上快速移动，奔向另一个预设的阵地。",
+        "action": "战士们的身影在烟雾中时隐时现，迅速转移。",
+        "shot_type": "Medium Wide Shot",
+        "camera_movement": "Pan Left",
+        "duration_sec": 4,
+        "is_continue": false
+      },
+      {
+        "panel_id": 41,
+        "voiceover_ref": "30.1",
+        "setting_id": "Setting 2, 南石门山峡口",
+        "character_ids": [
+          1,
+          2
+        ],
+        "panel_description": "到达新的峡口阵地。马宝玉抬头看了一眼太阳的位置，然后对葛振林说这里地形很好，可以再坚持一下。",
+        "action": "马宝玉抬头观察太阳，然后自信地对葛振林点头。",
+        "shot_type": "Medium Shot",
+        "camera_movement": "Static",
+        "duration_sec": 6,
+        "is_continue": false
+      },
+      {
+        "panel_id": 42,
+        "voiceover_ref": "31.1",
+        "setting_id": "Setting 2, 狼牙山阻击阵地 (山口)",
+        "character_ids": [],
+        "panel_description": "三架日军飞机俯冲轰炸战士们之前的阵地，炸弹掀起巨大的烟尘。这是从新阵地的视角看到的景象。",
+        "action": "飞机投下炸弹，地面剧烈爆炸。",
+        "shot_type": "Wide Shot",
+        "camera_movement": "Static",
+        "duration_sec": 6,
+        "is_continue": false
+      },
+      {
+        "panel_id": 43,
+        "voiceover_ref": "31.2",
+        "setting_id": "Setting 2, 南石门山峡口",
+        "character_ids": [
+          1,
+          2,
+          3
+        ],
+        "panel_description": "在新阵地上，马宝玉、葛振林和宋学义隐蔽在岩石后，冷静地看着远处的轰炸，毫不动摇。",
+        "action": "三人保持着战斗姿态，对敌人的徒劳攻击无动于衷。",
+        "shot_type": "Medium Shot",
+        "camera_movement": "Static",
+        "duration_sec": 4,
+        "is_continue": true
+      },
+      {
+        "panel_id": 44,
+        "voiceover_ref": "32.1",
+        "setting_id": "Setting 2, 狼牙山山脊",
+        "character_ids": [
+          2
+        ],
+        "panel_description": "葛振林从一块岩石后闪身，用步枪进行了一次精准的冷枪射击，击中一个远处的敌人，然后迅速隐蔽。",
+        "action": "葛振林开枪，然后迅速缩回掩体。",
+        "shot_type": "Medium Close-Up",
+        "camera_movement": "Static",
+        "duration_sec": 4,
+        "is_continue": false
+      },
+      {
+        "panel_id": 45,
+        "voiceover_ref": "32.2",
+        "setting_id": "Setting 2, 狼牙山山脊",
+        "character_ids": [
+          1,
+          2
+        ],
+        "panel_description": "葛振林撤回后，对身旁的马宝玉露出一个得意的笑容。马宝玉也赞许地点了点头。",
+        "action": "两人交换了一个充满默契和信心的眼神。",
+        "shot_type": "Medium Close-Up",
+        "camera_movement": "Static",
+        "duration_sec": 5,
+        "is_continue": true
+      },
+      {
+        "panel_id": 46,
+        "voiceover_ref": "33.1",
+        "setting_id": "Setting 2, 狼牙山山坡",
+        "character_ids": [],
+        "panel_description": "从山下日军的视角，他们只能看到山上不时有枪火闪现，于是只能朝着大概的方向胡乱射击，迫击炮弹在山上随机爆炸。",
+        "action": "日军士兵盲目地向山上开火，显得既愤怒又无措。",
+        "shot_type": "Wide Shot",
+        "camera_movement": "Static",
+        "duration_sec": 7,
+        "is_continue": false
+      },
+      {
+        "panel_id": 47,
+        "voiceover_ref": "34.1",
+        "setting_id": "Setting 2, 狼牙山山脊",
+        "character_ids": [
+          1,
+          4
+        ],
+        "panel_description": "胡德林看着山下大批跟上来的敌人，兴奋地对马宝玉说，敌人真的上当了。",
+        "action": "胡德林脸上带着战斗的兴奋，马宝玉则露出计划得逞的微笑。",
+        "shot_type": "Medium Shot",
+        "camera_movement": "Static",
+        "duration_sec": 4,
+        "is_continue": false
+      },
+      {
+        "panel_id": 48,
+        "voiceover_ref": "34.2",
+        "setting_id": "Setting 2, 狼牙山山脊",
+        "character_ids": [
+          1
+        ],
+        "panel_description": "特写马宝玉的脸，他微笑着，眼神中闪烁着智慧和勇气。他要的就是这个效果。",
+        "action": "马宝玉的笑容充满了自信。",
+        "shot_type": "Close-Up",
+        "camera_movement": "Static",
+        "duration_sec": 4,
+        "is_continue": true
+      },
+      {
+        "panel_id": 49,
+        "voiceover_ref": "35.1",
+        "setting_id": "Setting 2, 狼牙山山坡",
+        "character_ids": [],
+        "panel_description": "正午的太阳下，山上的草丛被炮火点燃，熊熊燃烧。火势凶猛，浓烟滚滚。",
+        "action": "火焰迅速蔓延，将战士们的阵地包围。",
+        "shot_type": "Wide Shot",
+        "camera_movement": "Static",
+        "duration_sec": 4,
+        "is_continue": false
+      },
+      {
+        "panel_id": 50,
+        "voiceover_ref": "35.2",
+        "setting_id": "Setting 2, 狼牙山山坡",
+        "character_ids": [
+          2,
+          3,
+          4
+        ],
+        "panel_description": "战士们在浓烟中咳嗽，眼睛被熏得直流泪。他们的脸上沾满了烟灰，显得非常狼狈，但眼神依旧坚毅。",
+        "action": "一名战士用袖子擦拭眼睛，但浓烟让他无法睁眼。",
+        "shot_type": "Medium Close-Up",
+        "camera_movement": "Slight Shake",
+        "duration_sec": 5,
+        "is_continue": true
+      },
+      {
+        "panel_id": 51,
+        "voiceover_ref": "36.1",
+        "setting_id": "Setting 2, 狼牙山山坡",
+        "character_ids": [
+          2
+        ],
+        "panel_description": "葛振林的背上着了火，他毫不犹豫地在地上翻滚，将火焰扑灭。他的动作迅速而果断。",
+        "action": "葛振林在地上翻滚，压灭背后的火焰后，立刻重新拿起枪。",
+        "shot_type": "Medium Shot",
+        "camera_movement": "Static",
+        "duration_sec": 4,
+        "is_continue": true
+      },
+      {
+        "panel_id": 52,
+        "voiceover_ref": "36.2",
+        "setting_id": "Setting 2, 狼牙山山坡",
+        "character_ids": [
+          1,
+          2,
+          5
+        ],
+        "panel_description": "特写镜头，战士们干裂的嘴唇和被烟熏黑的脸庞。镜头通过热浪效果表现出极度的干渴和炎热。",
+        "action": "一名战士（胡福才）舔了舔干裂的嘴唇，眼神中流露出对水的渴望。",
+        "shot_type": "Close-Up",
+        "camera_movement": "Static",
+        "duration_sec": 6,
+        "is_continue": true
+      },
+      {
+        "panel_id": 53,
+        "voiceover_ref": "37.1",
+        "setting_id": "萝卜地",
+        "character_ids": [
+          3
+        ],
+        "panel_description": "镜头聚焦在一片萝卜地，白嫩的萝卜露在土壤外面，看起来非常诱人。宋学义就趴在这片地旁边。",
+        "action": "镜头从萝卜慢慢摇到宋学义渴望的脸上。",
+        "shot_type": "Close-Up",
+        "camera_movement": "Pan Right",
+        "duration_sec": 4,
+        "is_continue": false
+      },
+      {
+        "panel_id": 54,
+        "voiceover_ref": "37.2",
+        "setting_id": "萝卜地",
+        "character_ids": [
+          3
+        ],
+        "panel_description": "极度特写宋学义的脸。他干裂的嘴唇，喉结上下滚动了一下，但他紧紧咬住牙关，眼神从渴望转为钢铁般的坚定，最终毅然决然地把头扭向一边。",
+        "action": "宋学义的眼神中闪过挣扎，但最终被纪律和意志战胜。他闭上眼睛，然后猛地转过头去。",
+        "shot_type": "Extreme Close-Up",
+        "camera_movement": "Static",
+        "duration_sec": 7,
+        "is_continue": true
+      },
+      {
+        "panel_id": 55,
+        "voiceover_ref": "38.1",
+        "setting_id": "Setting 2, 狼牙山山坡",
+        "character_ids": [],
+        "panel_description": "山下，一名日军士兵拿着一个铁皮喇叭，用生硬的中文向山上喊话劝降。",
+        "action": "这名日军士兵面目可憎地喊着话。",
+        "shot_type": "Medium Shot",
+        "camera_movement": "Static",
+        "duration_sec": 4,
+        "is_continue": false
+      },
+      {
+        "panel_id": 56,
+        "voiceover_ref": "39.1",
+        "setting_id": "Setting 2, 狼牙山另一侧山坡",
+        "character_ids": [],
+        "panel_description": "在日军后方的另一个山坡上，突然响起了枪声和手榴弹的爆炸声。几名民兵的模糊身影在岩石后闪现。",
+        "action": "枪火闪烁，手榴弹爆炸，打乱了日军的后队。",
+        "shot_type": "Wide Shot",
+        "camera_movement": "Static",
+        "duration_sec": 5,
+        "is_continue": false
+      },
+      {
+        "panel_id": 57,
+        "voiceover_ref": "39.2",
+        "setting_id": "Setting 2, 狼牙山山坡",
+        "character_ids": [],
+        "panel_description": "遭到侧后方袭击的日军阵脚大乱，进攻的士兵停下来，惊慌地四处张望。",
+        "action": "日军军官大声呵斥，试图稳住部队，但士兵们已经陷入混乱。",
+        "shot_type": "Medium Wide Shot",
+        "camera_movement": "Static",
+        "duration_sec": 4,
+        "is_continue": true
+      },
+      {
+        "panel_id": 58,
+        "voiceover_ref": "40.1",
+        "setting_id": "Setting 2, 狼牙山山脊",
+        "character_ids": [
+          2,
+          5
+        ],
+        "panel_description": "葛振林和胡福才发现了远处的民兵，脸上露出惊喜的表情，兴奋地喊了起来。",
+        "action": "葛振林用手指着民兵的方向，对身边的战友大喊。",
+        "shot_type": "Medium Shot",
+        "camera_movement": "Static",
+        "duration_sec": 4,
+        "is_continue": false
+      },
+      {
+        "panel_id": 59,
+        "voiceover_ref": "40.2",
+        "setting_id": "Setting 2, 狼牙山山脊",
+        "character_ids": [
+          1,
+          2,
+          3
+        ],
+        "panel_description": "马宝玉、葛振林和宋学义受到鼓舞，士气大振。马宝玉趁机对大家进行动员。",
+        "action": "马宝玉紧握拳头，坚定地对大家说：“我们一定能完成任务！”",
+        "shot_type": "Medium Close-Up",
+        "camera_movement": "Static",
+        "duration_sec": 5,
+        "is_continue": true
+      },
+      {
+        "panel_id": 60,
+        "voiceover_ref": "41.1",
+        "setting_id": "Setting 2, 狼牙山山脊",
+        "character_ids": [
+          1,
+          2,
+          3
+        ],
+        "panel_description": "太阳已经偏西，光线变得柔和而金黄。马宝玉看了一下天色，果断下令：“撤！”五名战士开始向棋盘陀方向转移。",
+        "action": "马宝玉挥手下令，战士们立刻开始行动。",
+        "shot_type": "Medium Wide Shot",
+        "camera_movement": "Static",
+        "duration_sec": 5,
+        "is_continue": false
+      },
+      {
+        "panel_id": 61,
+        "voiceover_ref": "42.1",
+        "setting_id": "Setting 4, 通往棋盘陀的险路",
+        "character_ids": [
+          1,
+          2,
+          3
+        ],
+        "panel_description": "战士们正在攀爬一处几乎垂直的岩壁，这里布满了荆棘和松动的石头。他们的动作惊险但坚定。",
+        "action": "一名战士脚下的一块石头滑落，但他迅速稳住身形，继续向上攀爬。",
+        "shot_type": "Low Angle Shot",
+        "camera_movement": "Tilt Up",
+        "duration_sec": 7,
+        "is_continue": false
+      },
+      {
+        "panel_id": 62,
+        "voiceover_ref": "43.1",
+        "setting_id": "Setting 4, 通往棋盘陀的险路",
+        "character_ids": [],
+        "panel_description": "从高处俯瞰，两名紧随其后的日军士兵在攀爬时失足，惨叫着坠入深谷。",
+        "action": "两人的身影在空中迅速变小，消失在山谷的阴影中。",
+        "shot_type": "High Angle Wide Shot",
+        "camera_movement": "Static",
+        "duration_sec": 5,
+        "is_continue": false
+      },
+      {
+        "panel_id": 63,
+        "voiceover_ref": "44.1",
+        "setting_id": "Setting 4, 通往棋盘陀的险路",
+        "character_ids": [
+          1,
+          5
+        ],
+        "panel_description": "马宝玉回头看到这一幕，开心地大笑起来。镜头转向胡福才，他正扶着膝盖喘气，脸上带着一丝得意的笑——原来是他刚才故意蹬下了一块石头。",
+        "action": "胡福才对马宝玉眨了眨眼，两人会心一笑。",
+        "shot_type": "Medium Shot",
+        "camera_movement": "Static",
+        "duration_sec": 5,
+        "is_continue": true
+      },
+      {
+        "panel_id": 64,
+        "voiceover_ref": "45.1",
+        "setting_id": "Setting 4, 狼牙山棋盘陀峰顶附近",
+        "character_ids": [
+          1,
+          2,
+          3
+        ],
+        "panel_description": "战士们登上一个新的平台，惊喜地发现这里堆放着许多准备好的石块和原木，是预设的“滚木石雷”阵地。",
+        "action": "他们的脸上露出如获至宝的喜悦表情。",
+        "shot_type": "Medium Shot",
+        "camera_movement": "Static",
+        "duration_sec": 4,
+        "is_continue": false
+      },
+      {
+        "panel_id": 65,
+        "voiceover_ref": "45.2",
+        "setting_id": "Setting 4, 狼牙山棋盘陀峰顶附近",
+        "character_ids": [
+          1
+        ],
+        "panel_description": "马宝玉立即下令，让大家节省子弹，用石头攻击。",
+        "action": "马宝玉指着石堆，然后指向山下的敌人，做出砸的动作。",
+        "shot_type": "Close-Up",
+        "camera_movement": "Static",
+        "duration_sec": 4,
+        "is_continue": true
+      },
+      {
+        "panel_id": 66,
+        "voiceover_ref": "46.1",
+        "setting_id": "Setting 4, 狼牙山棋盘陀峰顶附近",
+        "character_ids": [
+          2
+        ],
+        "panel_description": "葛振林第一个响应，他用尽全身力气搬起一块巨大的石头，瞄准下方正在攀爬的敌人，猛地推了下去。",
+        "action": "葛振林大吼一声，将巨石推下悬崖。",
+        "shot_type": "Medium Shot",
+        "camera_movement": "Static",
+        "duration_sec": 4,
+        "is_continue": false
+      },
+      {
+        "panel_id": 67,
+        "voiceover_ref": "46.2",
+        "setting_id": "Setting 4, 通往棋盘陀的险路",
+        "character_ids": [],
+        "panel_description": "俯瞰镜头，无数石块像冰雹一样砸向正在攀爬的日军，不断有敌人被砸中，惨叫着滚下山崖。",
+        "action": "石块不断落下，造成了巨大的杀伤和混乱。",
+        "shot_type": "High Angle Wide Shot",
+        "camera_movement": "Static",
+        "duration_sec": 6,
+        "is_continue": true
+      },
+      {
+        "panel_id": 68,
+        "voiceover_ref": "47.1",
+        "setting_id": "Setting 4, 狼牙山棋盘陀峰顶附近",
+        "character_ids": [
+          1,
+          2,
+          3
+        ],
+        "panel_description": "逆光拍摄，五名战士的剪影站在崖边，不断地将石块推下。他们的身姿在夕阳下显得无比高大，充满了力量感。",
+        "action": "战士们机械但有力地重复着搬石头、推石头的动作。",
+        "shot_type": "Medium Shot (Silhouette)",
+        "camera_movement": "Static",
+        "duration_sec": 6,
+        "is_continue": false
+      },
+      {
+        "panel_id": 69,
+        "voiceover_ref": "48.1",
+        "setting_id": "Setting 4, 狼牙山棋盘陀峰顶",
+        "character_ids": [
+          1,
+          2,
+          3
+        ],
+        "panel_description": "战斗暂停，夕阳的余晖将整个山顶染成血红色。五名战士站在崖边，眺望远方，任务似乎已经完成。这是一个短暂而壮美的平静时刻。",
+        "action": "微风吹拂着他们破旧的军装，他们暂时放松下来，喘着气。",
+        "shot_type": "Wide Shot",
+        "camera_movement": "Slow Zoom Out",
+        "duration_sec": 7,
+        "is_continue": false
+      },
+      {
+        "panel_id": 70,
+        "voiceover_ref": "49.1",
+        "setting_id": "莲花瓣陀下",
+        "character_ids": [
+          1,
+          2,
+          3
+        ],
+        "panel_description": "当他们准备从另一条路下山时，在山路拐角处，突然与另一股摸上来的日军迎面遭遇。双方都愣住了，气氛瞬间紧张到极点。",
+        "action": "双方同时举枪对峙，战斗一触即发。",
+        "shot_type": "Medium Shot",
+        "camera_movement": "Static",
+        "duration_sec": 5,
+        "is_continue": false
+      },
+      {
+        "panel_id": 71,
+        "voiceover_ref": "50.1",
+        "setting_id": "Setting 3, 群众藏身的山谷",
+        "character_ids": [
+          1,
+          2,
+          3
+        ],
+        "panel_description": "五位勇士在山间奔跑，试图甩开敌人。当他们经过一个隐蔽的石谷时，突然停下了脚步。",
+        "action": "马宝玉第一个停下，举手示意大家停步，表情震惊。",
+        "shot_type": "Medium Shot",
+        "camera_movement": "Tracking then Static",
+        "duration_sec": 4,
+        "is_continue": false
+      },
+      {
+        "panel_id": 72,
+        "voiceover_ref": "50.2",
+        "setting_id": "Setting 3, 群众藏身的山谷",
+        "character_ids": [
+          1,
+          2,
+          3
+        ],
+        "panel_description": "战士们的视角（POV），山谷底部阴影里，挤满了躲藏的群众——老人、妇女和儿童。他们惊恐地向上望着。",
+        "action": "一个抱着孩子的母亲，用手捂住孩子的嘴，眼中充满了恐惧和哀求。",
+        "shot_type": "Point of View Shot",
+        "camera_movement": "Static",
+        "duration_sec": 6,
+        "is_continue": true
+      },
+      {
+        "panel_id": 73,
+        "voiceover_ref": "51.1",
+        "setting_id": "Setting 3, 群众藏身的山谷",
+        "character_ids": [],
+        "panel_description": "从山谷中向上看的角度，一个老人的脸部特写，他布满皱纹的脸上写满了惊慌，但看到是八路军后，眼神又转为一丝希望。",
+        "action": "老人和其他群众的目光都聚焦在崖边的五名战士身上。",
+        "shot_type": "Low Angle Close-Up",
+        "camera_movement": "Static",
+        "duration_sec": 6,
+        "is_continue": true
+      },
+      {
+        "panel_id": 74,
+        "voiceover_ref": "52.1",
+        "setting_id": "山谷上方",
+        "character_ids": [
+          1
+        ],
+        "panel_description": "这是故事的道德高潮。特写马宝玉的脸，他的眼神在看到群众的瞬间，从战斗的警惕转变为一种沉重而决绝的责任感。没有任何犹豫。",
+        "action": "马宝玉毅然转身，对战友们做了一个返回的手势。",
+        "shot_type": "Close-Up",
+        "camera_movement": "Static",
+        "duration_sec": 5,
+        "is_continue": false
+      },
+      {
+        "panel_id": 75,
+        "voiceover_ref": "52.2",
+        "setting_id": "山谷上方",
+        "character_ids": [
+          1,
+          2,
+          3
+        ],
+        "panel_description": "战士们没有一句对话，但他们都明白了班长的意图。他们跟随着马宝玉，毫不犹豫地返回原路，走向了那条通往绝路的棋盘陀。",
+        "action": "他们的背影在夕阳下拉得很长，走向了与群众相反的方向。",
+        "shot_type": "Medium Wide Shot",
+        "camera_movement": "Static",
+        "duration_sec": 6,
+        "is_continue": true
+      },
+      {
+        "panel_id": 76,
+        "voiceover_ref": "53.1",
+        "setting_id": "Setting 4, 通往棋盘陀的险路",
+        "character_ids": [
+          1,
+          2,
+          3
+        ],
+        "panel_description": "战士们边打边退，故意开枪吸引敌人的注意力，将他们一步步引向棋盘陀峰顶。",
+        "action": "马宝玉朝天开了一枪，然后迅速转移，把敌人的火力吸引过来。",
+        "shot_type": "Medium Shot",
+        "camera_movement": "Pan Right",
+        "duration_sec": 6,
+        "is_continue": false
+      },
+      {
+        "panel_id": 77,
+        "voiceover_ref": "54.1",
+        "setting_id": "Setting 4, 通往棋盘陀的险路",
+        "character_ids": [
+          1,
+          2
+        ],
+        "panel_description": "在一个岩石掩体后，马宝玉和葛振林交替射击，压制着向上攀爬的敌人。敌人每前进一步，都付出沉重代价。",
+        "action": "一名向上爬的日军被击中，滚落下去。",
+        "shot_type": "Medium Close-Up",
+        "camera_movement": "Static",
+        "duration_sec": 6,
+        "is_continue": false
+      },
+      {
+        "panel_id": 78,
+        "voiceover_ref": "55.1",
+        "setting_id": "Setting 4, 狼牙山棋盘陀峰顶",
+        "character_ids": [
+          1,
+          2,
+          3
+        ],
+        "panel_description": "五名战士登上了棋盘陀峰顶。广角镜头展示了这里的绝境：三面是万丈悬崖，背后是追来的敌人。",
+        "action": "他们背靠悬崖，转身面向唯一的来路，准备做最后的抵抗。",
+        "shot_type": "Wide Shot",
+        "camera_movement": "Static",
+        "duration_sec": 5,
+        "is_continue": false
+      },
+      {
+        "panel_id": 79,
+        "voiceover_ref": "55.2",
+        "setting_id": "Setting 4, 狼牙山棋盘陀峰顶",
+        "character_ids": [
+          1
+        ],
+        "panel_description": "特写马宝玉的脸，他环顾四周，清楚地认识到已无退路。他的眼神没有绝望，只有战斗到底的决心。",
+        "action": "马宝玉检查了一下自己的步枪，目光如炬。",
+        "shot_type": "Close-Up",
+        "camera_movement": "Static",
+        "duration_sec": 6,
+        "is_continue": true
+      },
+      {
+        "panel_id": 80,
+        "voiceover_ref": "56.1",
+        "setting_id": "Setting 4, 狼牙山棋盘陀峰顶",
+        "character_ids": [
+          1
+        ],
+        "panel_description": "马宝玉瞄准一个敌人，扣动扳机，但只听到“咔”的一声空响。他拉开枪栓，空的弹仓弹出。特写空的子弹袋。",
+        "action": "马宝玉扔掉已经没用的步枪。",
+        "shot_type": "Close-Up",
+        "camera_movement": "Static",
+        "duration_sec": 6,
+        "is_continue": false
+      },
+      {
+        "panel_id": 81,
+        "voiceover_ref": "57.1",
+        "setting_id": "Setting 4, 狼牙山棋盘陀峰顶",
+        "character_ids": [
+          1,
+          5
+        ],
+        "panel_description": "胡福才拿出最后一颗手榴弹，正要投出，马宝玉迅速伸手拦住他，把手榴弹拿了过来，插在自己的腰间。",
+        "action": "马宝玉的动作果断，眼神示意胡福才冷静。",
+        "shot_type": "Medium Shot",
+        "camera_movement": "Static",
+        "duration_sec": 5,
+        "is_continue": false
+      },
+      {
+        "panel_id": 82,
+        "voiceover_ref": "58.1",
+        "setting_id": "Setting 4, 狼牙山棋盘陀峰顶",
+        "character_ids": [],
+        "panel_description": "低角度拍摄，日军士兵正在向上攀爬最后几米，他们面目狰狞地喊着劝降的话。",
+        "action": "一个日军士兵已经把手搭上了崖顶的边缘。",
+        "shot_type": "Low Angle Shot",
+        "camera_movement": "Static",
+        "duration_sec": 4,
+        "is_continue": false
+      },
+      {
+        "panel_id": 83,
+        "voiceover_ref": "59.1",
+        "setting_id": "Setting 4, 狼牙山棋盘陀峰顶",
+        "character_ids": [
+          1,
+          2,
+          3
+        ],
+        "panel_description": "崖顶已经没有任何可以投掷的石块。敌人像潮水一样涌上来。",
+        "action": "战士们背靠背，已经无物可守。",
+        "shot_type": "Medium Shot",
+        "camera_movement": "Static",
+        "duration_sec": 4,
+        "is_continue": false
+      },
+      {
+        "panel_id": 84,
+        "voiceover_ref": "59.2",
+        "setting_id": "Setting 4, 狼牙山棋盘陀峰顶",
+        "character_ids": [
+          1,
+          2,
+          3
+        ],
+        "panel_description": "马宝玉拔出腰间那颗唯一的手榴弹。其他四名战士立刻围拢过来，眼神决绝，催促班长拉弦，准备同归于尽。",
+        "action": "葛振林的手按在马宝玉的手上，示意他快拉弦。",
+        "shot_type": "Medium Close-Up",
+        "camera_movement": "Static",
+        "duration_sec": 6,
+        "is_continue": true
+      },
+      {
+        "panel_id": 85,
+        "voiceover_ref": "60.1",
+        "setting_id": "Setting 4, 狼牙山棋盘陀峰顶",
+        "character_ids": [
+          1
+        ],
+        "panel_description": "特写马宝玉的脸。他用牙咬开手榴弹的盖子，眼神中燃烧着怒火。他激昂地说：“我们决不当俘虏！但也不能用自己的武器消灭自己！”",
+        "action": "马宝玉的表情充满了作为战士的骄傲和不屈。",
+        "shot_type": "Close-Up",
+        "camera_movement": "Static",
+        "duration_sec": 7,
+        "is_continue": false
+      },
+      {
+        "panel_id": 86,
+        "voiceover_ref": "60.2",
+        "setting_id": "Setting 4, 狼牙山棋盘陀峰顶",
+        "character_ids": [
+          1
+        ],
+        "panel_description": "马宝玉怒视着已经爬上来的敌人，用尽全身力气，将最后一颗手榴弹奋力投向敌群。这是一个充满力量和反抗精神的动作。",
+        "action": "手榴弹在空中划出一道弧线，飞向敌人最密集的地方。",
+        "shot_type": "Medium Shot",
+        "camera_movement": "Slow Motion",
+        "duration_sec": 5,
+        "is_continue": true
+      },
+      {
+        "panel_id": 87,
+        "voiceover_ref": "61.1",
+        "setting_id": "Setting 4, 狼牙山棋盘陀峰顶",
+        "character_ids": [],
+        "panel_description": "“轰”的一声巨响，手榴弹在崖顶的日军中爆炸，血肉横飞。后面的敌人被吓得惊恐地缩了回去。",
+        "action": "爆炸的冲击波将几个敌人掀下悬崖。",
+        "shot_type": "Wide Shot",
+        "camera_movement": "Shake",
+        "duration_sec": 6,
+        "is_continue": false
+      },
+      {
+        "panel_id": 88,
+        "voiceover_ref": "62.1",
+        "setting_id": "Setting 4, 狼牙山棋盘陀峰顶",
+        "character_ids": [
+          1,
+          2,
+          3
+        ],
+        "panel_description": "在片刻的宁静中，马宝玉缓缓地环视着他的四位战友。镜头依次扫过葛振林、宋学义、胡德林、胡福才布满硝烟但无比坚定的脸。",
+        "action": "马宝玉的眼神中充满了同志间的情谊和最后的告别。",
+        "shot_type": "Slow Pan",
+        "camera_movement": "Pan Left",
+        "duration_sec": 7,
+        "is_continue": false
+      },
+      {
+        "panel_id": 89,
+        "voiceover_ref": "63.1",
+        "setting_id": "Setting 4, 狼牙山棋盘陀峰顶",
+        "character_ids": [
+          1,
+          2
+        ],
+        "panel_description": "马宝玉掏出一个小本子和一支铅笔，对葛振林说，要介绍另外三名同志入党。",
+        "action": "他翻开本子，准备写下这封特殊的入党介绍信。",
+        "shot_type": "Medium Close-Up",
+        "camera_movement": "Static",
+        "duration_sec": 6,
+        "is_continue": false
+      },
+      {
+        "panel_id": 90,
+        "voiceover_ref": "64.1",
+        "setting_id": "Setting 4, 狼牙山棋盘陀峰顶",
+        "character_ids": [
+          1,
+          2
+        ],
+        "panel_description": "葛振林郑重地点头同意。特写镜头，马宝玉在本子上写下介绍信，然后葛振林也签上了自己的名字。",
+        "action": "铅笔在纸上划过，字迹坚定有力。",
+        "shot_type": "Close-Up (on notebook)",
+        "camera_movement": "Static",
+        "duration_sec": 5,
+        "is_continue": true
+      },
+      {
+        "panel_id": 91,
+        "voiceover_ref": "65.1",
+        "setting_id": "Setting 4, 狼牙山棋盘陀峰顶",
+        "character_ids": [
+          3,
+          4,
+          5
+        ],
+        "panel_description": "宋学义、胡德林和胡福才三人站在一起，他们的脸上充满了激动和自豪，面对着党旗的方向（想象中的），庄严宣誓。",
+        "action": "三人异口同声，语气斩钉截铁。",
+        "shot_type": "Medium Shot",
+        "camera_movement": "Static",
+        "duration_sec": 7,
+        "is_continue": false
+      },
+      {
+        "panel_id": 92,
+        "voiceover_ref": "66.1",
+        "setting_id": "Setting 4, 狼牙山棋盘陀峰顶",
+        "character_ids": [
+          1
+        ],
+        "panel_description": "马宝玉情绪激动，他高声对大家讲完话，然后迈着大步，第一个走向悬崖边。",
+        "action": "马宝玉的背影走向悬崖，显得无比高大。",
+        "shot_type": "Medium Shot",
+        "camera_movement": "Static",
+        "duration_sec": 7,
+        "is_continue": false
+      },
+      {
+        "panel_id": 93,
+        "voiceover_ref": "67.1",
+        "setting_id": "Setting 4, 狼牙山棋盘陀峰顶",
+        "character_ids": [
+          1
+        ],
+        "panel_description": "走到崖边的马宝玉突然停住，他猛地回头，想起了自己的武器。",
+        "action": "马宝玉转身，目光落在地上的步枪上。",
+        "shot_type": "Medium Shot",
+        "camera_movement": "Static",
+        "duration_sec": 4,
+        "is_continue": true
+      },
+      {
+        "panel_id": 94,
+        "voiceover_ref": "68.1",
+        "setting_id": "Setting 4, 狼牙山棋盘陀峰顶",
+        "character_ids": [
+          1
+        ],
+        "panel_description": "马宝玉走回去，捡起那把缴获来的步枪，高高举起，用尽全力砸向一块岩石。“咔”的一声，枪身断裂。",
+        "action": "马宝玉砸枪的动作充满了力量和决心。",
+        "shot_type": "Medium Close-Up",
+        "camera_movement": "Static",
+        "duration_sec": 4,
+        "is_continue": false
+      },
+      {
+        "panel_id": 95,
+        "voiceover_ref": "68.2",
+        "setting_id": "Setting 4, 狼牙山棋盘陀峰顶",
+        "character_ids": [
+          2,
+          3,
+          4
+        ],
+        "panel_description": "紧接着，葛振林、宋学义、胡德林也纷纷拿起自己的武器，用力砸毁。",
+        "action": "连续的“咔嚓”声响起，四把步枪相继被砸坏。",
+        "shot_type": "Medium Shot",
+        "camera_movement": "Static",
+        "duration_sec": 5,
+        "is_continue": true
+      },
+      {
+        "panel_id": 96,
+        "voiceover_ref": "69.1",
+        "setting_id": "Setting 4, 狼牙山棋盘陀峰顶",
+        "character_ids": [
+          1
+        ],
+        "panel_description": "日军再次冲上崖顶。马宝玉从容地整理了一下自己的军帽和衣领，挺起胸膛，像指挥冲锋一样，高呼：“同志们，跳吧！”",
+        "action": "马宝玉的表情庄严而平静，毫无畏惧。",
+        "shot_type": "Medium Close-Up",
+        "camera_movement": "Slow Zoom In",
+        "duration_sec": 7,
+        "is_continue": false
+      },
+      {
+        "panel_id": 97,
+        "voiceover_ref": "70.1",
+        "setting_id": "Setting 4, 狼牙山棋盘陀峰顶",
+        "character_ids": [
+          2
+        ],
+        "panel_description": "葛振林面对扑上来的几个敌人，怒目圆睁，向前迈出一步。他强大的气势竟让冲在最前面的敌人吓得慌忙后退。",
+        "action": "葛振林挺胸怒视，敌人不由自主地后退了一步。",
+        "shot_type": "Medium Shot",
+        "camera_movement": "Static",
+        "duration_sec": 6,
+        "is_continue": false
+      },
+      {
+        "panel_id": 98,
+        "voiceover_ref": "71.1",
+        "setting_id": "Setting 4, 狼牙山棋盘陀峰顶",
+        "character_ids": [
+          1,
+          2,
+          3
+        ],
+        "panel_description": "这是故事的最高潮。一个极其壮丽的广角镜头，五位勇士高呼着口号，排成一排，纵身跳下万丈悬崖。他们的剪影在血红色的夕阳下显得无比崇高，他们的吼声在群山间回荡。",
+        "action": "五人同时跳下，动作决绝而庄严。镜头在此定格，他们的身影仿佛化作了永恒。",
+        "shot_type": "Extreme Wide Shot (Silhouette)",
+        "camera_movement": "Static",
+        "duration_sec": 7,
+        "is_continue": false
+      },
+      {
+        "panel_id": 99,
+        "voiceover_ref": "72.1",
+        "setting_id": "Setting 4, 狼牙山棋盘陀峰顶",
+        "character_ids": [
+          6
+        ],
+        "panel_description": "日军指挥官高见（ID 6）终于登上了峰顶，他看着空无一人的悬崖和散落的破枪，表情从错愕、不解到最终的呆滞和震撼。",
+        "action": "高见茫然地走到悬崖边向下望去，完全无法理解眼前发生的一切。",
+        "shot_type": "Medium Close-Up",
+        "camera_movement": "Slow Zoom In (on Takami's face)",
+        "duration_sec": 7,
+        "is_continue": false
+      },
+      {
+        "panel_id": 100,
+        "voiceover_ref": "73.1",
+        "setting_id": "八路军团指挥所 (临时)",
+        "character_ids": [],
+        "panel_description": "在团指挥所，团首长（侧脸）焦急地来回踱步，其他指挥员也满脸担忧。",
+        "action": "团首长停下脚步，望向狼牙山的方向。",
+        "shot_type": "Medium Shot",
+        "camera_movement": "Static",
+        "duration_sec": 4,
+        "is_continue": false
+      },
+      {
+        "panel_id": 101,
+        "voiceover_ref": "73.2",
+        "setting_id": "Setting 2, 狼牙山山麓",
+        "character_ids": [],
+        "panel_description": "第二天，一支由八路军战士和老乡组成的搜救队进入狼牙山，在悬崖下四处寻找五位英雄的踪迹。",
+        "action": "搜救队员们在陡峭的山坡上艰难地搜寻。",
+        "shot_type": "Wide Shot",
+        "camera_movement": "Pan Down",
+        "duration_sec": 4,
+        "is_continue": false
+      },
+      {
+        "panel_id": 102,
+        "voiceover_ref": "74.1",
+        "setting_id": "Setting 4, 狼牙山悬崖下",
+        "character_ids": [
+          1
+        ],
+        "panel_description": "一个庄严肃穆的镜头，马宝玉（或其他牺牲的战士）安详地躺在青松之下，仿佛只是睡着了。光线透过树叶洒在他身上。",
+        "action": "静止画面，只有光影在缓缓移动。",
+        "shot_type": "Medium Close-Up",
+        "camera_movement": "Static",
+        "duration_sec": 6,
+        "is_continue": false
+      },
+      {
+        "panel_id": 103,
+        "voiceover_ref": "74.2",
+        "setting_id": "Setting 4, 狼牙山悬崖下",
+        "character_ids": [
+          2,
+          3
+        ],
+        "panel_description": "搜救队员发现了挂在半山腰树枝上的葛振林和宋学义。他们虽然受伤，但还活着。战友们正在小心翼翼地把他们救下来。",
+        "action": "葛振林被救下后，第一件事就是询问其他战友的情况。",
+        "shot_type": "Medium Shot",
+        "camera_movement": "Static",
+        "duration_sec": 7,
+        "is_continue": true
+      },
+      {
+        "panel_id": 104,
+        "voiceover_ref": "75.1",
+        "setting_id": "Setting 4, 狼牙山纪念塔",
+        "character_ids": [],
+        "panel_description": "镜头缓缓拉起，展现出在狼牙山顶修建的“狼牙山五壮士纪念塔”。纪念塔在蓝天下矗立，庄严而雄伟。",
+        "action": "白鸽从塔顶飞过。",
+        "shot_type": "Low Angle Shot",
+        "camera_movement": "Tilt Up",
+        "duration_sec": 5,
+        "is_continue": false
+      },
+      {
+        "panel_id": 105,
+        "voiceover_ref": "75.2",
+        "setting_id": "八路军军分区驻地",
+        "character_ids": [
+          2,
+          3
+        ],
+        "panel_description": "伤愈后的葛振林和宋学义，身着整洁的军装，从首长手中接过奖状。他们的眼神更加坚毅。",
+        "action": "两人庄重地敬礼。",
+        "shot_type": "Medium Shot",
+        "camera_movement": "Static",
+        "duration_sec": 7,
+        "is_continue": false
+      },
+      {
+        "panel_id": 106,
+        "voiceover_ref": "76.1",
+        "setting_id": "象征性场景",
+        "character_ids": [],
+        "panel_description": "一个象征胜利的镜头：一面鲜艳的红旗在战场（或城市）上空迎风飘扬，背景是庆祝胜利的人民群众的欢呼剪影。",
+        "action": "红旗在风中猎猎作响。",
+        "shot_type": "Medium Close-Up",
+        "camera_movement": "Static",
+        "duration_sec": 7,
+        "is_continue": false
+      },
+      {
+        "panel_id": 107,
+        "voiceover_ref": "77.1",
+        "setting_id": "Setting 4, 狼牙山全景",
+        "character_ids": [],
+        "panel_description": "今日的狼牙山，山峦叠翠，雄伟壮丽。山下的易水河波光粼粼，滚滚东流。一派和平安宁的景象。",
+        "action": "镜头缓缓地从易水河摇到雄伟的狼牙山主峰。",
+        "shot_type": "Extreme Wide Shot",
+        "camera_movement": "Tilt Up",
+        "duration_sec": 6,
+        "is_continue": false
+      },
+      {
+        "panel_id": 108,
+        "voiceover_ref": "77.2",
+        "setting_id": "Setting 4, 狼牙山纪念塔",
+        "character_ids": [],
+        "panel_description": "最后一个镜头，回到纪念塔。夕阳的光辉洒在塔身上，“狼牙山五壮士纪念塔”几个大字熠熠生辉。五位英雄的幻影（半透明）在塔旁浮现，微笑着凝视着远方。 ",
+        "action": "英雄们的幻影渐渐融入阳光，化为永恒。",
+        "shot_type": "Wide Shot",
+        "camera_movement": "Slow Zoom In",
+        "duration_sec": 7,
+        "is_continue": false
+      }
+    ]
+  }

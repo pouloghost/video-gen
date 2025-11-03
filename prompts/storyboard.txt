@@ -4,7 +4,7 @@
 You are a world class director and storyboard artist. You are working on a realistic cartoon.
 
 # Main Task
-Generate the storyboard for a video using the following voiceover script and story concept.
+Generate the storyboard for a realistic cartoon using the following voiceover script and story concept.
 
 # Requirements
 - The provided text is the verbatim voiceover script. Each voiceover must have at least one scene.
@@ -23,7 +23,7 @@ Your final output must be a single, valid JSON object. Structure the JSON accord
     {
       "panel_id": "Sequential integer for the shot order.",
       "voiceover_ref": "The corresponding voiceover id for this specific panel.",
-      "setting_id": "The integer 'id' of the setting from the 'settings' array.",
+      "setting_id": "The integer 'id' of the referenced setting from the 'settings' array. Then a simple description of the scene. E.g. Setting 1, middle shot of the rural village in setting 1.",
       "character_ids": [
         "An array of integer 'id's from the 'important_characters' array, for all characters present in the shot."
       ],
@@ -41,32 +41,88 @@ Your final output must be a single, valid JSON object. Structure the JSON accord
 # Concept
 {
   "analysis": {
-    "logline": "The Five Heroes of Langya Mountain: To cover the retreat of their main force and local villagers during a massive Japanese assault in 1941, five soldiers of the Eighth Route Army make a heroic last stand, luring the enemy to a cliff's edge where they face an ultimate choice between surrender and sacrifice.",
+    "logline": "狼牙山五壮士：1941年，五名八路军战士为掩护主力部队和数千名群众安全转移，将日军精锐引上狼牙山绝顶，在弹尽粮绝后毅然跳崖，谱写了一曲壮丽的英雄赞歌。",
     "theme": {
-      "central_theme": "Unwavering courage and selfless sacrifice in the name of duty can turn a hopeless last stand into an immortal legend that inspires a nation.",
-      "emphasis_points": [
-        "The solemn moment the five soldiers accept their critical, near-suicidal mission, establishing the immense weight of their duty.",
-        "The pivotal decision to consciously lead the enemy away from the hidden villagers, thereby sealing their own fate out of a profound sense of responsibility.",
-        "The final, defiant act on the clifftop: destroying their weapons and leaping into the abyss, a powerful visual metaphor for their unbreakable spirit."
+      "central_theme": "真正的英雄主义是在明知必死的情况下，为保护他人和信仰而选择的无畏牺牲。",
+      "key_elements": [
+        "**视觉反差 (Visual Contrast):** 必须始终强调五名战士的孤立与日军“狼群”般庞大数量的鲜明对比，以凸显任务的不可能性。",
+        "**纪律的象征 (The Turnip):** 宋学义看到萝卜却忍住不吃（第37条）的瞬间必须被特写。这一定格画面是他们钢铁纪律和道德的基石，是他们最终选择牺牲的品格铺垫。",
+        "**抉择的转折 (The Civilian Discovery):** 当他们发现山谷中隐藏的百姓时（第50条），这是故事的核心道德高潮。他们的军事任务已经完成，但保护平民的责任迫使他们做出了赴死的选择。",
+        "**最后的战斗 (The Last Grenade):** 马宝玉拒绝用最后一颗手榴弹自尽，而是选择将其投向敌人（第60条）。这表明他们至死都是战士，而非受害者。",
+        "**崇高的牺牲 (The Final Jump):** 最后的跳崖（第71条）不应被描绘为失败，而应是顶天立地的、庄严的最终胜利，背景是雄伟的狼牙山全景。"
       ]
     },
-    "historical_basis": "The story is based on the well-known account of the 'Five Heroes of Langya Mountain' (狼牙山五壮士). This event took place in autumn 1941 in the Jin-Cha-Ji (Shanxi-Chahar-Hebei) border region during the Second Sino-Japanese War. The five soldiers—Ma Baoyu, Ge Zhenlin, Song Xueyi, Hu Delin, and Hu Fucai—were part of the Eighth Route Army. They were tasked with covering the retreat of their main force and local civilians during a large-scale Japanese 'mopping-up' operation. Their heroic sacrifice has become a cornerstone of modern Chinese patriotic education and folklore."
+    "historical_basis": "故事基于第二次中日战争期间的真实历史事件。1941年9月，日军对晋察冀抗日根据地进行“大扫荡”。为掩护主力部队和群众转移，八路军晋察冀军区第一军分区第1团第7连第6班的五名战士——马宝玉、葛振林、宋学义、胡德林、胡福才，在狼牙山与日军作战，最后弹尽粮绝，选择跳崖。此事件被称为“狼牙山保卫战”，五位士兵被中共誉为“狼牙山五壮士”。"
   },
   "creative_direction": {
-    "narrative_pace": "The story begins with a deliberate, tense pace, establishing the grim reality of the war. The second act accelerates into a series of fast-paced, intense combat sequences, punctuated by a moment of stark choice. The final act slows dramatically on the clifftop, building to a powerful, emotionally charged climax, followed by a reflective and somber resolution."
+    "visual_style": "一种写实、厚涂的2D动画风格，运用强烈的明暗对比和偏向饱和度低的土色调色板，以强调历史事件的严酷、庄重和史诗感。"
   },
   "screenplay": [
     {
-      "act_number": 1,
-      "act_summary": "1941年秋，日寇对我晋察冀根据地发动残酷“扫荡”。在巍巍狼牙山，八路军七连六班的马宝玉、葛振林等五名战士在粉碎敌人多次进攻后，接到一项事关重大的新任务。团首长命令他们，不惜一切代价拖住数千敌军主力，掩护大部队和当地群众安全转移，必须在第二天中午前守住通往棋盘陀的要道。五位战士怀着必胜的决心，领受了这项光荣而艰巨的使命。"
+      "act_number": "1",
+      "act_summary": "1941年秋，日寇对晋察冀根据地进行残酷“扫荡”。为掩护主力部队和当地群众转移，八路军团首长决定派出一个班执行艰巨的阻击任务。七连六班班长马宝玉，带领副班长葛振林及战士宋学义、胡德林、胡福才，这五名战士临危受命。他们的任务是不惜一切代价，将敌人拖在狼牙山，阻止其在次日中午前越过棋盘陀。"
     },
     {
-      "act_number": 2,
-      "act_summary": "主力部队和群众安全转移后，五名战士利用狼牙山的险要地形，与民兵一起布下雷区，严阵以待。天亮后，他们凭借地雷和精准的射击，数次打退敌人潮水般的进攻。为将敌人彻底引离主力转移的方向，班长马宝玉决定将敌人引上绝路。他们边打边撤，将敌人引向了三面绝壁的棋盘陀峰顶。途中，他们发现了一处藏有百姓的山谷，为了保护乡亲，他们毅然返回原路，将追兵引向自己，彻底断绝了后路。"
+      "act_number": "2",
+      "act_summary": "五名战士利用狼牙山的险要地形，与数千日伪军展开殊死搏斗。他们先用夜间埋设的地雷重创敌军，随后在山口阵地用手榴弹和步枪打退敌人多次进攻。为将敌人牢牢牵制住，马宝玉决定将敌人引上山。他们边打边撤，忍受着饥渴、烈火和浓烟，诱敌深入。敌人误以为他们是八路军主力，疯狂追击。战斗中，他们还得到了当地民兵的策应，成功将敌人拖到了太阳偏西。"
     },
     {
-      "act_number": 3,
-      "act_summary": "在棋盘陀峰顶，五位勇士打光了最后一颗子弹，扔出了最后一颗手榴弹。面对逼近的敌人和劝降的嚎叫，他们宁死不屈。在班长马宝玉的带领下，他们砸毁了自己的武器，高呼着“打倒日本帝国主义”和“中国共产党万岁”的口号，纵身跳下了万丈悬崖。他们的壮举完成了掩护任务，也深深震撼了敌人。最终，马宝玉、胡德林、胡福才壮烈牺牲，葛振林和宋学义被树枝挂住幸存。五壮士的英雄事迹，化作一座不朽的丰碑，永远矗立在狼牙山上，激励着后人。"
+      "act_number": "3",
+      "act_summary": "完成任务的五战士在撤退途中，意外发现山谷中藏有大批百姓。为保护群众安全，马宝玉毅然决定返回原路，将敌人引向棋盘陀峰顶的绝路。在弹尽粮绝之际，他们面对蜂拥而至的敌人，扔出最后一颗手榴弹，砸毁了所有武器。在生命的最后时刻，他们在党旗下宣誓，最后高呼“中国共产党万岁”等口号，集体跳下万丈悬崖。三人牺牲，两人幸存，他们的事迹成为不朽的传奇。"
+    }
+  ],
+  "important_characters": [
+    {
+      "id": 1,
+      "name": "马宝玉 (Ma Baoyu)",
+      "description": "六班班长。沉着、果断，具有坚定的政治信念和出色的战术头脑。身穿褪色的灰色八路军军装，腰间系着武装带，面容坚毅，眼神明亮。"
+    },
+    {
+      "id": 2,
+      "name": "葛振林 (Ge Zhenlin)",
+      "description": "六班副班长。勇敢、细心，具有敏锐的观察力。身材结实，同样身穿八路军军装，对班长马宝玉的命令坚决执行。"
+    },
+    {
+      "id": 3,
+      "name": "宋学义 (Song Xueyi)",
+      "description": "六班战士。纪律性极强，坚韧不拔。在极度干渴时也绝不违反群众纪律（萝卜事件）。"
+    },
+    {
+      "id": 4,
+      "name": "胡德林 (Hu Delin)",
+      "description": "六班战士。性格乐观，在炮火中也能苦中作乐。是团队中的勇气和活力的体现。"
+    },
+    {
+      "id": 5,
+      "name": "胡福才 (Hu Fucai)",
+      "description": "六班战士。机智勇敢，在撤退时用石头砸死敌人。在最后关头，他拿出了最后一颗手榴弹。"
+    },
+    {
+      "id": 6,
+      "name": "高见 (Takami)",
+      "description": "日军指挥官。傲慢自大，夸下海口要消灭八路军主力。身穿精良的日军军官制服，配有指挥刀。在故事结尾，当他发现对手只有五个人时，表现出极度的震惊和呆滞。"
+    }
+  ],
+  "settings": [
+    {
+      "id": 1,
+      "name": "村庄 / 七连驻地",
+      "description": "狼牙山脚下的一个简朴村庄，多为石头和土坯房。时近黄昏，光线昏暗，气氛紧张。房东大娘的水缸和开会的小山崖是关键点，烘托出战前的宁静与压抑。"
+    },
+    {
+      "id": 2,
+      "name": "狼牙山阻击阵地 (山口)",
+      "description": "一个狭窄、岩石嶙峋的山地隘口。地势险要，易守难攻。遍布着战士们设置的巨石和埋设的地雷。战斗在此处打响，炮火和硝烟弥漫。"
+    },
+    {
+      "id": 3,
+      "name": "群众藏身的山谷",
+      "description": "一个隐蔽、幽深的山谷，布满灌木和阴影。光线昏暗，气氛极度紧张。挤满了躲藏的老人、妇女和儿童，他们的恐惧与战士们的决心形成鲜明对比。"
+    },
+    {
+      "id": 4,
+      "name": "狼牙山棋盘陀峰顶",
+      "description": "狼牙山的最高点，一个三面绝壁的、风化严重的岩石平台。这里几乎没有植被，只有嶙峋的怪石。这是一个绝境，视野极其开阔，但也意味着无路可退。日落时分，夕阳将悬崖染成血红色，营造出牺牲的壮丽氛围。"
     }
   ]
 }

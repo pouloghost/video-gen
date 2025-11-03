@@ -6,18 +6,81 @@ You are an expert on prompting text-to-image model.
 # Task
 Write a prompt for generating full body portrait for the character description. Use high contrast, single colored background.
 
-# Visual style
-A painterly and realistic animation style, utilizing dramatic chiaroscuro lighting and a desaturated, earthy color palette to capture the grit and solemnity of the historical period.
+# Distinctive features
+Each character must have some unique features from others so they can be recognized immediately. Should be outfits, unique appearances, NOT expression or current posture.
+Emphasize the distinctive feature using a single description. E.g. she has golden curly hair.
 
+# Generative prompt guidelines
+The goal is to provide a comprehensive description that not only outlines the subject matter but also guides the AI on the desired photographic qualities, mood, and technical aspects. Think like a photographer planning a shot.
+
+**I. Core Subject and Scene Description:**
+*   **What is the main subject?** Be precise (e.g., "three young Chinese women,").
+*   **What are they doing?** (e.g., "standing side-by-side,").
+*   **What are their key characteristics?** (e.g., "a blaze scar between his eyes,").
+*   **Are there any specific props?** (e.g., "ornamental circular fans,").
+*   **What is the setting/environment?** (e.g., "ancient Chinese palace architecture,").
+*   **Any specific background elements?** (e.g., "red walls, golden roofs, stone balustrade,").
+*   **What are their outfits?** (e.g., "shiny boots,").
+
+**II. Photographic Technicals (The "How"):**
+1.  **Exposure Triangle:**
+    *   **ISO:** Specify a low ISO for clean images (e.g., "ISO 100", "ISO 200").
+    *   **Aperture (f-stop):** Crucial for Depth of Field.
+    *   **Shutter Speed:** Influences motion blur and light.
+2.  **Lighting:**
+    *   **Type:** "natural daylight,", "studio lighting,", "artificial light,", "moonlight.", etc.
+    *   **Quality/Direction:** "golden hour lighting,", "soft diffused lighting,", "hard direct sunlight,", "rim light,", "backlight,", "front light,", "dramatic chiaroscuro.", etc.
+    *   **Color Temperature:** "warm tones,", "cool tones,", "neutral.", etc.
+3.  **Composition:**
+    *   **Rule of Thirds:** "subjects centered and slightly to the right/left,", "horizon on lower third.", etc.
+    *   **Leading Lines:** "leading lines from the balustrade/road/river.", etc.
+    *   **Symmetry:** "symmetrical composition.", etc.
+    *   **Framing:** "natural framing by doorway/trees.", etc.
+    *   **Negative Space:** "emphasizing negative space around subject.", etc.
+    *   **Rule of Odds:** "odd number of subjects.", etc.
+    *   **Perspective:** "low-angle,", "high-angle,", "worm's-eye view", "bird's-eye view.", etc.
+4.  **Depth of Field (DoF):**
+    *   **Shallow:**
+    *   **Deep/Large:**
+5.  **Bokeh:**
+    *   **Presence:** "creamy bokeh," "smooth bokeh," "busy bokeh," "noticeable bokeh circles."
+    *   **Quality:** "soft background blur," "dreamy background blur."
+6.  **Lens & Focal Length:**
+    *   **Type:** "prime lens," "zoom lens," "telephoto lens," "wide-angle lens," "macro lens," "fisheye lens."
+    *   **Specific Focal Length:** "85mm," "50mm," "24mm," "200mm." (This implies perspective compression/expansion).
+7.  **Genre/Style/Mood:**
+    *   **Genre:** "cultural portraiture," "environmental portraiture," "street photography," "landscape photography," "fine art," "documentary," "fashion."
+    *   **Style:** "warm, vibrant, high-key," "moody, cinematic, low-key," "vintage, sepia tone," "monochrome, black and white," "dreamy," "realistic," "hyperrealistic."
+    *   **Mood:** "serene," "dramatic," "joyful," "mysterious."
+8.  **Camera Angle & Shot Type:**
+    *   **Angle:** "eye level," "low angle," "high angle," "Dutch angle."
+    *   **Shot Type:** "full shot," "medium shot," "close-up," "wide shot," "establishing shot."
+
+**III. Structuring the Prompt:**
+*   **Start with the broad strokes:** Shot type, main subjects, core action.
+*   **Integrate technical details:** Weave in exposure, composition, lighting, DoF, lens. You can group them or spread them logically.
+*   **Add stylistic elements:** Genre, mood, color palette.
+*   **Be specific:** Instead of "good lighting," use "golden hour lighting, soft diffused." Instead of "blurry background," use "shallow depth of field, creamy bokeh."
+*   **Use strong descriptive adjectives.**
+*   **Think about the desired *feeling* of the image** and translate that into photographic terms.
+
+# Generative prompt example
+Medium shot, a lone knight in full plate armor. **Exposure:** ISO 200, f/4, 1/125s. **Lighting:** Dramatic backlit light shafts piercing through dense mist in an ancient forest, creating a mystical atmosphere. **Composition:** Knight positioned on the left third, forest path forming subtle leading lines. **Depth of Field:** Moderate, with a slight, ethereal background blur. **Lens:** 50mm prime lens. **Genre:** Fantasy portraiture, cinematic. **Style:** Moody, high contrast, dark fantasy aesthetics. Shot at eye level.
+
+# Visual style
+一种写实、厚涂的2D动画风格，运用强烈的明暗对比和偏向饱和度低的土色调色板，以强调历史事件的严酷、庄重和史诗感。
 
 # Story logline
-The Five Heroes of Langya Mountain: To cover the retreat of their main force and local villagers during a massive Japanese assault in 1941, five soldiers of the Eighth Route Army make a heroic last stand, luring the enemy to a cliff's edge where they face an ultimate choice between surrender and sacrifice.
+狼牙山五壮士：1941年，五名八路军战士为掩护主力部队和数千名群众安全转移，将日军精锐引上狼牙山绝顶，在弹尽粮绝后毅然跳崖，谱写了一曲壮丽的英雄赞歌。
 
-# Character
+# Existing characters
+Full body portrait, a Chinese male soldier in his early thirties standing in commanding military posture. Exposure: ISO 200, f/8, 1/60s. Subject: Squad leader with strikingly bright, piercing eyes beneath thick, dark, straight eyebrows that dominate his weathered, resolute face with prominent cheekbones and strong jawline. Wearing a faded grayish-green Eighth Route Army uniform jacket with standing collar, prominent brown leather military belt with metal buckle at waist, loose gray-green trousers tucked into worn cloth leg wrappings, weathered shoes. Hands relaxed at sides, shoulders back, upright stance conveying authority. Lighting: Dramatic hard directional lighting from 45-degree angle creating strong chiaroscuro contrast, deep shadows carving facial features, harsh highlight on eyes making them gleam intensely. Composition: Centered full figure, symmetrical stance, feet shoulder-width apart. Background: Solid desaturated ochre-brown, high contrast separation from figure. Depth of Field: Deep focus, f/8, entire figure razor sharp. Lens: 50mm prime lens at eye level with subtle low angle. Genre: Historical military character portrait, wartime documentation. Style: Realistic thick-paint 2D animation aesthetic with visible brushstroke texture, oil painting quality, dramatic value contrast, heavily desaturated earth palette dominated by grays, muted olive-greens, dusty browns, solemn and epic atmosphere, 1940s historical accuracy, painterly rendering.
+
+# Character to generate
     {
       "id": 2,
       "name": "葛振林 (Ge Zhenlin)",
-      "description": "The deputy squad leader. Slightly older than Ma Baoyu, with a sturdy build and a more weathered, observant face. He is dependable, courageous, and acts as Ma Baoyu's trusted second. Wears the standard Eighth Route Army uniform."
+      "description": "六班副班长。勇敢、细心，具有敏锐的观察力。身材结实，同样身穿八路军军装，对班长马宝玉的命令坚决执行。"
     }
 
 # Output Format
@@ -25,7 +88,8 @@ Your final output must be a single, valid JSON object. Structure the JSON accord
 ```json
 {
     "thought": "Your thinking or other necessary information.",
-    "prompt": "The final prompt for image generation. Must have detailed facial, pose, outfits, subjects description, background definition, style definition. Avoidance on generation."
-    {}
+    "distinctive_features": "The distinctive features of the character. Clothing, facial character, etc.",
+    "prompt": "The final prompt for image generation. In English.",
+    "ref_description": "A concise description for identifying the character between other character. Must be distinctive from other characters. E.g. Man in a yellow hat."
 }
 ```
