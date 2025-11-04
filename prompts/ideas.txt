@@ -2,3 +2,8 @@
 - 最开始只做故事拆解和storyboard，不在开始生成角色和场景，生成到具体场景时增量生成人物和场景（资产）
 - animatic的每一个关键帧都输入上一个关键帧作为ref
 - 枚举出模型常见错误
+- 先做sketch再做modify，sketch的情景感和物理准确性明显好。
+
+------
+
+split-text -> story-concept -> storyboard -> extract-refs -> character-ref -> setting-ref -> scene-frames

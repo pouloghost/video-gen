@@ -132,7 +132,8 @@ Your final output must be a single, valid JSON object. Structure the JSON accord
     "keyframe_prompt": [
         {
             "type": "one of the prompt types: Text, Ref, Modify",
-            "prompt": "The full prompt. In English.",
+            "prompt": "The full prompt. In English. In Modify and Ref, is how to modify the existing image. In Text, full prompt to generate a new image.",
+            "sketch_prompt": "For Ref prompting. Ref workflow is generate a simple sketch to show the plot and composition, then remix with the refered images. This prompt is for the sketch. In English.",
             "images": ["Optional. An array of image file names used in the generation. Follow the Refering section."]
         }
     ]

@@ -38,20 +38,6 @@ Your final output must be a single, valid JSON object. Structure the JSON accord
       "act_number": "The number of the act",
       "act_summary": "A concise paragraph of what happens in this act. Must contain all important details. In the language of voiceover."
     }
-  ],
-  "important_characters": [
-    {
-      "id": "A unique integer to identify the character.",
-      "name": "The character's name.",
-      "description": "A detailed visual description, covering appearance, clothing, and key personality traits. No relationship here."
-    }
-  ],
-  "settings": [
-    {
-      "id": "A unique integer to identify the setting.",
-      "name": "The name of the location.",
-      "description": "A detailed visual description of the environment, focusing on mood, lighting, and key subjects."
-    }
   ]
 }
 ```

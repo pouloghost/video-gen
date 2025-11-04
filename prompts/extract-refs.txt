@@ -1,5 +1,35 @@
+# Role
+You are a world class director. You are working on a realistic cartoon.
+
+# Main Task
+Find all recurring character and setting in the storyboard. Then give each character and setting a comprehensive and concise description.
+
+# Output Requirements
+Your final output must be a single, valid JSON object. Structure the JSON according to this schema.
+```json
 {
-    "thought": "I will structure the storyboard by breaking down each voiceover line into a distinct scene, adhering to the 7-second maximum duration. The core of the visual storytelling will rely on the key elements defined in the concept: the stark contrast between the five soldiers and the massive Japanese army, the symbolic moment with the turnip, the pivotal discovery of the civilians, the defiant use of the last grenade, and the final, majestic leap from the cliff. Character limits per scene will be managed by splitting group shots into sequential panels. The visual style will be consistently described as realistic and painterly, with a desaturated, earthy palette and strong chiaroscuro to evoke the solemnity of the historical event. Each scene will be meticulously planned to flow cinematically, building tension and emotional weight towards the climax.",
+  "thought": "Thoughts or other things you need to say before performing tasks.",
+  "characters": [
+    {
+      "id": "A unique integer to identify the character.",
+      "name": "The character's name.",
+      "description": "A detailed visual description, covering appearance, clothing, and key personality traits. Include highly distinctive and iconic visual features with strong recognizability. Focus on static, cross-temporal invariant characteristics. Strictly exclude plot-dependent descriptions and temporally-sensitive dynamic changes.",
+      "scene_ids": ["An array of scene ids. The character appears in these scenes."]
+    }
+  ],
+  "settings": [
+    {
+      "id": "A unique integer to identify the setting.",
+      "name": "The name of the location.",
+      "description": "A detailed visual description of the environment, focusing on mood, lighting, and key subjects. Include highly distinctive and iconic visual features with strong recognizability. Focus on static, cross-temporal invariant characteristics. Strictly exclude plot-dependent descriptions and temporally-sensitive dynamic changes.",
+      "scene_ids": ["An array of scene ids. The setting is the main setting of these scenes."]
+    }
+  ]
+}
+```
+
+# Storyboard
+{
     "scenes": [
       {
         "panel_id": 1,

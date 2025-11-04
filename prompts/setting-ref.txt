@@ -75,9 +75,9 @@ Bad at layouting, bad at complex character-environment proportion.
 
 # Setting
     {
-      "id": 1,
-      "name": "村庄 / 七连驻地",
-      "description": "狼牙山脚下的一个简朴村庄，多为石头和土坯房。时近黄昏，光线昏暗，气氛紧张。房东大娘的水缸和开会的小山崖是关键点，烘托出战前的宁静与压抑。"
+      "id": 2,
+      "name": "狼牙山阻击阵地 (山口)",
+      "description": "一个狭窄、岩石嶙峋的山地隘口。地势险要，易守难攻。遍布着战士们设置的巨石和埋设的地雷。战斗在此处打响，炮火和硝烟弥漫。"
     }
 
 # Output Format
