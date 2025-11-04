@@ -74,11 +74,8 @@ Bad at layouting, bad at complex character-environment proportion.
 狼牙山五壮士：1941年，五名八路军战士为掩护主力部队和数千名群众安全转移，将日军精锐引上狼牙山绝顶，在弹尽粮绝后毅然跳崖，谱写了一曲壮丽的英雄赞歌。
 
 # Setting
-    {
-      "id": 2,
-      "name": "狼牙山阻击阵地 (山口)",
-      "description": "一个狭窄、岩石嶙峋的山地隘口。地势险要，易守难攻。遍布着战士们设置的巨石和埋设的地雷。战斗在此处打响，炮火和硝烟弥漫。"
-    }
+"name": "狼牙山五壮士纪念塔",
+        "description": "战后修建在狼牙山顶的纪念建筑。一座“庄严而雄伟”的石塔，塔身上刻有“狼牙山五壮士纪念塔”大字。它矗立在“蓝天”或“夕阳”下，是和平年代的象征，气氛庄重而安宁。",
 
 # Output Format
 Your final output must be a single, valid JSON object. Structure the JSON according to this schema.
