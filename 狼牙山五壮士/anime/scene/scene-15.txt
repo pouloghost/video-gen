@@ -120,28 +120,35 @@ I will upload the files in the images array. You can refer them as `image [index
 
 # Setting description
 {
-  "id": 201,
-  "name": "狼牙山（战时）",
-  "description": "1941年秋季的狼牙山。一个“险峻陡峭”、“岩石嶙峋”的山地环境。其标志性特征是“山峰如犬齿交错”，三面多为“万丈悬崖”。整体色调是饱和度低的“枯黄色”和“土黄色”，营造出一种凝重、荒凉且极度危险的战争氛围。地形复杂，遍布崎岖山路、岩壁和峡谷。",
-  "setting_image_prompt": "Wide establishing shot, Wolf Fang Mountain wartime landscape, autumn 1941. Exposure: ISO 200, f/8, natural overcast daylight, dramatic chiaroscuro lighting with strong light-dark contrast. Composition: Low-angle perspective looking upward, emphasizing verticality and danger, rule of thirds with jagged peaks occupying upper two-thirds, leading lines from rugged mountain paths drawing eye toward precipitous summit. Depth of Field: Deep, rendering entire mountainscape in sharp focus from foreground rocky terrain to distant peaks. Lens: 24mm wide-angle lens for epic scale and environmental context. Genre: Landscape photography, historical environmental documentary. Style: Realistic thick-painted 2D animation aesthetic, low-saturation earth-tone color palette, somber and heavy atmosphere. Setting Details: Steep, rugged mountain terrain with jagged peaks resembling interlocking dog teeth silhouetted against grey sky, three sides featuring sheer cliff faces and precipitous drops of thousands of feet, complex topography with winding treacherous mountain paths, exposed rock walls, deep canyons and ravines. Color Palette: Desaturated withered yellow and earth yellow tones dominating rocky surfaces, grey-brown stone, muted ochre and sienna in sparse vegetation, cool grey overcast sky. Lighting Quality: Diffused natural light filtered through war-time haze, creating stark shadows in crevices and valleys, rim lighting along cliff edges emphasizing dangerous drops. Atmosphere: Desolate, harsh, grave, emphasizing extreme danger and wartime severity. Texture: Rough, craggy rock surfaces, weathered stone, sparse dried autumn grass. No characters present, pure environmental shot showcasing the treacherous battlefield terrain."
+  "id": 203,
+  "name": "八路军指挥所",
+  "description": "八路军团指挥所。一个“简陋”的室内空间，可能是“山洞或老乡的房子”。环境“昏暗”，通常由油灯照明。最具标志性的核心物件是一张铺在“箱子”上的“军事地图”。气氛严肃、凝重，是制定作战计划的核心场所。",
+  "setting_image_prompt": "Wide establishing shot, interior view of Eighth Route Army command post, 1941. Exposure: ISO 200, f/4, 1/30s. Lighting: low-key dramatic lighting, single oil lamp as primary light source, warm amber glow, strong chiaroscuro with deep shadows, hard directional light creating pronounced contrast, warm color temperature from flame light, minimal ambient fill light. Composition: centered on military map spread across wooden crate, rule of thirds with map positioned in lower third, natural framing by cave walls or rustic room structure, emphasizing depth through foreground and background elements, asymmetrical balance. Depth of Field: moderate, f/4 maintaining sharpness on central map and crate while allowing slight softness in background details. Visual Style: realistic impasto 2D animation aesthetic, painterly quality, heavily desaturated earth-tone color palette dominated by browns, ochres, dark grays, muted greens, strong value contrast between illuminated areas and shadows, textural brushstroke quality, solemn and austere mood. Setting Details: crude interior space suggesting cave or commandeered civilian dwelling, rough stone walls or weathered wooden planks, dirt or packed earth floor, minimal furnishings, wooden ammunition crates, simple stools or benches, military equipment scattered organically, maps and documents, sparse utilitarian objects, signs of wartime austerity. Central Focus: large military topographic map spread on wooden crate serving as makeshift table, oil lamp positioned near map casting dramatic shadows, possibly tin cups, simple writing implements. Atmosphere: serious, grave, solemn, wartime tension, historical authenticity, documentary realism. Genre: historical environmental photography, wartime documentary style. Camera Angle: eye level, straight-on perspective capturing full breadth of command post interior."
 }
 
 # Character description
-
+{
+  "id": 101,
+  "name": "团首长",
+  "description": "八路军高级指挥员（团长）。通常不展示全脸，多以“背影和侧影”出现，以营造其权威感。标志性特征是“粗糙的手”（如17号面板）和“凝重、坚定”的眼神。他的表情严肃，眼神中总是充满了决心、力量，以及对部下战士的深深担忧和信任。",
+  "portrait_prompt": "Full body portrait, a Chinese military regiment commander standing at attention in 1941. **Subject:** Man in his early forties with commanding authoritative presence and deeply weathered experienced features. Most distinctive are the exceptionally rough, heavily calloused hands with prominent weathered texture and visible work-worn skin - the unmistakable hands of a veteran field commander who has endured countless campaigns. Deep-set grave eyes radiating steely determination and resolute authority, graying hair at temples showing years of dedicated service, angular weathered face with prominent cheekbones and serious expression. Wearing a faded grayish-blue Eight Route Army officer uniform with distinctive red collar tabs indicating regiment-level rank, worn fabric texture from extended field service, sturdy leather belt with brass buckle, small leather map case secured to belt side, weathered cotton shoes. **Exposure:** ISO 200, f/5.6, 1/60s. **Lighting:** Dramatic chiaroscuro lighting from the front-left, creating strong contrast between light and shadow across the weathered face and rough calloused hands, emphasizing the hand texture and historical gravity of command authority. **Composition:** Subject centered, standing rigidly straight with commanding military bearing projecting absolute authority, hands naturally at sides with rough weathered texture prominently visible. **Depth of Field:** Deep focus keeping entire figure sharp with emphasis on hand detail. **Background:** High contrast, single solid dark olive-brown background. **Lens:** 85mm prime lens. **Genre:** Historical portraiture, realistic thick-painted 2D animation style. **Style:** Strong light-dark contrast, low-saturation earthy color palette with muted blues and browns, serious and epic mood emphasizing command gravitas, realistic brush stroke textures, painterly quality. Shot at eye level."
+}
 
 # Scene
 {
-  "panel_id": 1,
-  "voiceover_ref": "1.1",
-  "panel_description": "1941年秋，晋察冀根据地。广阔的、枯黄色的山脉连绵起伏。远处的村庄冒着几缕黑烟，暗示着战争的到来。整体色调偏向饱和度低的土黄色，气氛凝重。",
-  "action": "镜头缓缓地在山脉上空平移，展现战争前夕压抑的广阔景象。",
-  "shot_type": "Wide Shot",
-  "camera_movement": "Slow Pan Right",
-  "duration_sec": 7,
+  "panel_id": 15,
+  "voiceover_ref": "11.1",
+  "panel_description": "一个简陋的指挥所内（可能是一个山洞或老乡的房子），团首长（未露全脸，只看到背影和侧影）俯身在一张铺在箱子上的地图前，神情凝重。",
+  "action": "团首长用手指在地图上划出一条线，模拟主力部队的转移路线。",
+  "shot_type": "Medium Close-Up",
+  "camera_movement": "Static",
+  "duration_sec": 6,
   "is_continue": false,
-  "characters": [],
-  "setting": 201,
-  "voiceover": "1941年秋，侵华日寇对我晋察冀抗日根据地进行秋季大“扫荡”，一个多月来，被我八路军和当地民兵打得晕头转向，伤亡惨重。"
+  "characters": [
+    101
+  ],
+  "setting": 203,
+  "voiceover": "指挥所里，团首长估计，不甘心失败的敌人，还会增加兵力对我军继续围攻。"
 }
 
 # Output Format

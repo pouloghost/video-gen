@@ -26,6 +26,6 @@ if [ ! -f "$STORYBOARD_FILE" ]; then
 fi
 
 # Run the node script to merge the JSON files
-node "$(dirname "$0")/mergeStoryBoard.js" "$STORYBOARD_FILE" "$REFS_FILE" "$OUTPUT_FILE"
+node "$(dirname "$0")/merge_story_board.js" "$STORYBOARD_FILE" "$REFS_FILE" "$OUTPUT_FILE"
 
 echo "Merge completed. Output saved to $OUTPUT_FILE"
