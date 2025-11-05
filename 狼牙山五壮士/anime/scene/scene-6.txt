@@ -119,13 +119,31 @@ I will upload the files in the images array. You can refer them as `image [index
 狼牙山五壮士：1941年，五名八路军战士为掩护主力部队和数千名群众安全转移，将日军精锐引上狼牙山绝顶，在弹尽粮绝后毅然跳崖，谱写了一曲壮丽的英雄赞歌。
 
 # Setting description
-<gt_tmpl>setting</gt_tmpl>
+
 
 # Character description
-<gt_tmpl>character</gt_tmpl>
+{
+  "id": 2,
+  "name": "葛振林",
+  "description": "八路军六班副班长，五壮士之一。身形结实，体格强壮，是力量的代表。他的脸部线条硬朗，嘴唇紧抿，显露出一种不屈不挠的决心。他的气质冷静而果敢，是班长最可靠的助手，具有强大的威慑力和行动力。身着褪色的八路军标准军装。",
+  "portrait_prompt": "Full body portrait, a Chinese military deputy squad leader standing at attention in 1941. **Subject:** Man in his late twenties with robust, muscular build featuring broad shoulders and stocky powerful frame. Hard angular facial lines with tightly pressed lips conveying unyielding determination, calm and decisive expression radiating strong presence. Wearing a faded grayish-blue Eight Route Army uniform with worn fabric texture stretched across his solid torso, simple cloth belt, weathered cotton shoes. **Exposure:** ISO 200, f/5.6, 1/60s. **Lighting:** Dramatic chiaroscuro lighting from the front-left, creating strong contrast between light and shadow across the muscular physique and uniform, emphasizing the historical gravity and solemnity. **Composition:** Subject centered, standing straight with powerful military bearing, hands naturally at sides, broad shoulders squared. **Depth of Field:** Deep focus keeping entire figure sharp. **Background:** High contrast, single solid dark olive-brown background. **Lens:** 85mm prime lens. **Genre:** Historical portraiture, realistic thick-painted 2D animation style. **Style:** Strong light-dark contrast, low-saturation earthy color palette with muted blues and browns, serious and epic mood, realistic brush stroke textures, painterly quality. Shot at eye level."
+}
 
 # Scene
-<gt_tmpl>scene</gt_tmpl>
+{
+  "panel_id": 6,
+  "voiceover_ref": "5.2",
+  "panel_description": "切换到葛振林的特写。他的脸上同样写满了严肃，紧抿的嘴唇显示出他内心的决心。光线从一侧打来，在他脸上形成强烈的明暗对比。",
+  "action": "葛振林缓缓点头，表示对命令的领会和决心。",
+  "shot_type": "Close-Up",
+  "camera_movement": "Static",
+  "duration_sec": 6,
+  "is_continue": true,
+  "characters": [
+    2
+  ],
+  "setting": null
+}
 
 # Output Format
 Your final output must be a single, valid JSON object. Structure the JSON according to this schema.
@@ -137,7 +155,7 @@ Your final output must be a single, valid JSON object. Structure the JSON accord
             "type": "one of the prompt types: Text, Ref, Modify",
             "images": ["Optional. An array of image file names used in the generation. Follow the Image filename section."],
             "prompt": "For Text prompting. Full prompt to generate a new image. In English.",
-            "modify_prompt": "For modify prompting. How to modify the existing image.",
+            "modify_prompt": "For modify prompting. How to modify the existing image. Less than 300 words.",
             "remix_prompt": "For Ref prompting. This prompt is for the remix step in workflow, focusing on replace subjects and visual improvements. In English.",
             "sketch_prompt": "For Ref prompting. This prompt is for the sketch step in workflow. In English."
         }
