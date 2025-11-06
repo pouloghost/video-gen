@@ -1,0 +1,226 @@
+{
+  "thought": "Directorial thought: This is the climax and conclusion. The pacing must be handled with extreme care. We transition from the last-second defiance (destroying the guns) to the story's apex: the jump. The jump itself must not be portrayed as a defeat, but as a final, soaring act of will—a 'solemn victory' as the concept demands. I'll use majestic wide shots to contrast their small figures with the vast, beautiful, and indifferent mountain. Their slogans must echo over this vastness. Immediately after, the camera must turn to the enemy—his confusion and shock are our narrative 'payoff.' The epilogue's tone then shifts dramatically to somber respect, a touch of miracle (the survivors), and finally, to enduring, majestic legacy. The final shots will be slow, wide, and peaceful, contrasting the 'war' palette with the rich colors of 'peace' and 'memory,' bringing the story to a powerful, uplifting conclusion.",
+  "scenes": [
+    {
+      "panel_id": 91,
+      "voiceover_ref": "67.1",
+      "3w": "Who: 马宝玉, 敌人 (逼近) / Where: 棋盘陀峰顶 / When: Sunset",
+      "description": "马宝玉（近景）正要跳，突然想起了什么。他猛地回头，看到了自己心爱的枪。“我们用鲜血换来的武器，决不留给敌人！”",
+      "mood": "决绝, 最后一搏",
+      "camera": "近景 (CU)，马宝玉的脸，眼神坚定。",
+      "duration_sec": 4,
+      "notes": "这是最后的象征性抵抗：不留给敌人任何战利品。",
+      "is_continue": true
+    },
+    {
+      "panel_id": 92,
+      "voiceover_ref": "68.1",
+      "3w": "Who: 马宝玉 / Where: 棋盘陀峰顶 / When: Sunset",
+      "description": "“咔！”马宝玉（中景）举起从敌人手里缴来的枪，用尽全力砸在悬崖边的岩石上。特写镜头：枪身断裂。",
+      "mood": "决绝, 毁坏",
+      "camera": "中景 (MS) -> 插入特写 (Insert CU) 枪支断裂",
+      "duration_sec": 3,
+      "notes": "动作必须充满力量。",
+      "is_continue": true
+    },
+    {
+      "panel_id": 93,
+      "voiceover_ref": "68.2",
+      "3w": "Who: 葛振林, 宋学义, 胡德林, 胡福才 / Where: 棋盘陀峰顶 / When: Sunset",
+      "description": "“咔. 咔. 咔. 咔！”一个快速的蒙太奇镜头（中景），其他四名战士也纷纷举起自己的武器，将其砸毁在岩石上。",
+      "mood": "团结, 决绝, 悲壮",
+      "camera": "快速剪辑蒙太奇 (Quick-cut Montage)",
+      "duration_sec": 4,
+      "notes": "这是他们最后一次统一的集体行动。",
+      "is_continue": true
+    },
+    {
+      "panel_id": 94,
+      "voiceover_ref": "69.1",
+      "3w": "Who: 敌人 (日军) / Where: 棋盘陀峰顶 / When: Sunset",
+      "description": "低角度镜头：一群“饿狼似的”敌人终于冲上了崖顶，他们端着刺刀，表情狰狞，却被眼前的一幕（五人砸枪）惊得一愣。",
+      "mood": "狰狞, 紧逼, 混乱",
+      "camera": "低角度广角 (Low-Angle Wide Shot)，仰拍敌人。",
+      "duration_sec": 3,
+      "notes": "",
+      "is_continue": true
+    },
+    {
+      "panel_id": 95,
+      "voiceover_ref": "69.1",
+      "3w": "Who: 马宝玉 / Where: 棋盘陀悬崖边 / When: Sunset",
+      "description": "马宝玉（中景）无视冲上来的敌人，他“正了正帽子，拉了拉衣领，挺着胸，昂着头”。他转身面向万丈深渊，高呼：“同志们，跳吧！”他第一个纵身一跃。",
+      "mood": "崇高, 庄严, 领袖",
+      "camera": "中景 (MS)，背光 (Backlit by sunset)，他跳出画框。",
+      "duration_sec": 5,
+      "notes": "这是全剧的最高潮。他的动作必须是庄严的，不是狼狈的。",
+      "is_continue": true
+    },
+    {
+      "panel_id": 96,
+      "voiceover_ref": "70.1",
+      "3w": "Who: 葛振林, 敌人 / Where: 棋盘陀悬崖边 / When: Sunset",
+      "description": "几个敌人向葛振林（中景）扑来。他“挺胸怒目，跨前几步”，他身上那股赴死的气势，竟“吓得敌人慌忙后退”。他随即也转身跳下。",
+      "mood": "威严, 蔑视, 震慑",
+      "camera": "中景 (MS)，固定机位。展现最后的威严。",
+      "duration_sec": 4,
+      "notes": "即使在最后一刻，他们仍然在气势上压倒敌人。",
+      "is_continue": true
+    },
+    {
+      "panel_id": 97,
+      "voiceover_ref": "71.1",
+      "3w": "Who: 五勇士 / Where: 狼牙山空中 / When: Sunset",
+      "description": "【史诗级镜头】一个广阔的、安静的远景镜头。五名勇士（剪影）一齐从棋盘陀峰顶纵身跳下。他们的身影在雄伟的、布满晚霞的狼牙山山脉中显得很小，但无比坚定。",
+      "mood": "崇高, 壮烈, 永恒",
+      "camera": "史诗级广角 (EWS)，固定机位，慢动作 (Slow-motion)",
+      "duration_sec": 8,
+      "notes": "这是“崇高的牺牲”。不要跟拍坠落，而是展现他们跃入永恒的画面。口号声在山谷中回荡。",
+      "is_continue": false
+    },
+    {
+      "panel_id": 98,
+      "voiceover_ref": "71.1",
+      "3w": "Who: N/A / Where: 狼牙山山谷 / When: Sunset",
+      "description": "一个从山谷底部向上仰拍的镜头，天空被悬崖切割。我们看不到他们，只能听到“中国共产党万岁！”等口号在“群山深谷”中不断回响。",
+      "mood": "回荡, 动人心弦",
+      "camera": "仰拍 (Worm's-eye View)，固定机位。",
+      "duration_sec": 5,
+      "notes": "用声音来完成这个高潮。口号是主角。",
+      "is_continue": false
+    },
+    {
+      "panel_id": 99,
+      "voiceover_ref": "72.1",
+      "3w": "Who: 敌指挥官高见 (Takahashi) / Where: 棋盘陀峰顶 / When: Sunset",
+      "description": "敌指挥官高见（中景）终于登上了峰顶。他冲到悬崖边，向下望去，只看到深不见底的云雾。他身后的士兵们也都面面相觑。",
+      "mood": "困惑, 震惊",
+      "camera": "中景 (MS)，从他身后过肩拍摄 (Over-the-Shoulder) 深渊。",
+      "duration_sec": 5,
+      "notes": "",
+      "is_continue": false
+    },
+    {
+      "panel_id": 100,
+      "voiceover_ref": "72.1",
+      "3w": "Who: 敌指挥官高见 (Takahashi) / Where: 棋盘陀峰顶 / When: Sunset",
+      "description": "极近特写 (ECU) 高见的眼睛。他的瞳孔中充满了“呆若木鸡”的困惑和挫败。他无法理解：付出一百多条生命，难道只为了这几个人？",
+      "mood": "挫败, 荒谬, 失败",
+      "camera": "极近特写 (ECU)，眼球特写。",
+      "duration_sec": 5,
+      "notes": "这是战士们的胜利：敌人的精神被彻底击垮。",
+      "is_continue": true
+    },
+    {
+      "panel_id": 101,
+      "voiceover_ref": "73.1",
+      "3w": "Who: 团首长, 战友们 / Where: 团指挥所 / When: Night",
+      "description": "（切换场景）团指挥所。团首长（中景）和指挥员们围在地图前，神情“十分惦记”。他们都在等待六班的消息。",
+      "mood": "担忧, 惦记",
+      "camera": "中景 (MS)，油灯下的凝重表情。",
+      "duration_sec": 4,
+      "notes": "【尾声】开始。色调转为冷静和庄重。",
+      "is_continue": false
+    },
+    {
+      "panel_id": 102,
+      "voiceover_ref": "73.2",
+      "3w": "Who: 八路军搜寻队 / Where: 狼牙山山谷 / When: 第二天 (Next Day)",
+      "description": "第二天。八路军搜寻队（中景）正在狼牙山的山谷和悬崖上艰难地“四处寻找”。他们呼喊着五人的名字。",
+      "mood": "焦急, 搜寻, 悲伤",
+      "camera": "中景 (MS)，手持跟拍。",
+      "duration_sec": 4,
+      "notes": "",
+      "is_continue": false
+    },
+    {
+      "panel_id": 103,
+      "voiceover_ref": "74.1",
+      "3w": "Who: 搜寻队, 牺牲的战士 / Where: 狼牙山谷底 / When: Day",
+      "description": "一个悲伤的镜头。搜寻队找到了马宝玉、胡德林和胡福才的遗体。战士们（中景）脱帽致敬，小心翼翼地用军毯盖住他们。",
+      "mood": "壮烈, 牺牲, 沉痛",
+      "camera": "中景 (MS)，低角度固定机位。",
+      "duration_sec": 5,
+      "notes": "“重如泰山”。",
+      "is_continue": true
+    },
+    {
+      "panel_id": 104,
+      "voiceover_ref": "74.2",
+      "3w": "Who: 搜寻队, 葛振林, 宋学义 / Where: 狼牙山半山腰 / When: Day",
+      "description": "突然，一名战士（近景）抬头，发现了什么。镜头（广角）拉开，葛振林和宋学义奇迹般地“被树枝挂在半空”，虽然重伤，但还活着。搜寻队（中景）立刻展开营救。",
+      "mood": "奇迹, 惊喜, 幸存",
+      "camera": "近景 (CU) 战士 -> 广角 (WS) 揭示幸存者 -> 中景 (MS) 营救",
+      "duration_sec": 7,
+      "notes": "从悲痛中透出一丝希望。",
+      "is_continue": true
+    },
+    {
+      "panel_id": 105,
+      "voiceover_ref": "74.2",
+      "3w": "Who: 葛振林, 宋学义 / Where: 战地医院 / When: Later",
+      "description": "伤愈后（中景）。葛振林和宋学义（已穿上干净军装）站在新的队伍中，他们的眼神（近景）比以前更加坚毅，准备“投入了新的战斗”。",
+      "mood": "坚毅, 重生, 传承",
+      "camera": "中景 (MS) -> 近景 (CU) 坚毅的眼神",
+      "duration_sec": 5,
+      "notes": "",
+      "is_continue": false
+    },
+    {
+      "panel_id": 106,
+      "voiceover_ref": "75.1",
+      "3w": "Who: N/A / Where: 狼牙山峰顶 / When: 战后 (Post-war), Day",
+      "description": "一个雄伟的广角镜头。在棋盘陀峰顶，一座庄严的“五壮士纪念塔”修建了起来。天空晴朗，山河壮丽。",
+      "mood": "崇敬, 纪念, 庄严",
+      "camera": "史诗级广角 (EWS)，缓慢向上摇 (Slow Tilt-up)。",
+      "duration_sec": 6,
+      "notes": "从“战场”到“圣地”的转变。",
+      "is_continue": false
+    },
+    {
+      "panel_id": 107,
+      "voiceover_ref": "75.2",
+      "3w": "Who: N/A / Where: N/A / When: N/A",
+      "description": "特写镜头：一张泛黄的“奖状”，上面写着葛振林和宋学义的名字，以及“狼牙山五勇士”的字样。",
+      "mood": "荣誉, 历史",
+      "camera": "特写 (CU)，缓慢推近 (Slow Push-in)。",
+      "duration_sec": 4,
+      "notes": "",
+      "is_continue": false
+    },
+    {
+      "panel_id": 108,
+      "voiceover_ref": "76.1",
+      "3w": "Who: 中国人民 / Where: 全中国 / When: 1945年",
+      "description": "一组快速的历史蒙太奇：中国人民“前仆后继”，英勇抗战。地图上，日军的占领区被不断压缩。最后，是一个“抗日战争伟大胜利”的群众欢庆镜头。",
+      "mood": "胜利, 喜悦, 史诗",
+      "camera": "蒙太奇 (Montage)，历史资料风格。",
+      "duration_sec": 6,
+      "notes": "将五壮士的牺牲连接到最终的宏大胜利。",
+      "is_continue": false
+    },
+    {
+      "panel_id": 109,
+      "voiceover_ref": "77.1",
+      "3w": "Who: N/A / Where: 狼牙山, 易水河 / When: 现代, 白天 (Modern Day)",
+      "description": "（溶）一个宁静而雄伟的史诗级广角镜头：“今天的狼牙山”，山色青翠，“分外雄伟壮丽”。镜头（广角）扫过山脚下“滚滚东流”的易水河。",
+      "mood": "雄伟, 壮丽, 和平",
+      "camera": "史诗级广角 (EWS)，缓慢平移 (Slow Pan)。",
+      "duration_sec": 7,
+      "notes": "与开头的“扫荡”形成鲜明对比。色调饱满和平。",
+      "is_continue": false
+    },
+    {
+      "panel_id": 110,
+      "voiceover_ref": "77.2",
+      "3w": "Who: N/A (五壮士) / Where: 狼牙山纪念塔 / When: Modern Day",
+      "description": "最后一个镜头：中景，五壮士纪念塔。一群戴着红领巾的少先队员正在塔前敬礼。镜头缓慢推向纪念塔，塔身（特写）上，“抗日烈士们”的形象（或名字）渐渐淡入，与塔融为一体。",
+      "mood": "传承, 崇敬, 永恒",
+      "camera": "中景 (MS) -> 缓慢推近 (Slow Push-in) -> 叠化 (Dissolve) 烈士形象",
+      "duration_sec": 8,
+      "notes": "“永远活在人们的心里”。全剧终。",
+      "is_continue": false
+    }
+  ],
+  "has_more": false
+}

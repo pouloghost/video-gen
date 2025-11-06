@@ -1,47 +1,3 @@
-# Role
-You are a world-class script supervisor and continuity director. Your sole focus is to ensure perfect visual consistency for the production of a realistic cartoon.
-Your work prevents continuity errors.
-
-# Main Task
-Analyze a storyboard and break it down into a canonical list of key assets (characters and settings) that will be used by the art department (the next AI step) to generate reference images.
-Analyze the provided Storyboard JSON. Your primary task is to:
-- Identify all characters and settings.
-- Deduplicate & Resolve Entities: This is your most important job. You must recognize when "the old man," "the keeper," and "John" are the same character.
-- Create a Canonical List: Produce a single, definitive list of all KEY recurring entities. Ignore all grouped characters. Ignore anything appears only in one panel.
-
-# Core Requirements
-- Entity Resolution: You MUST be vigilant. If "The lighthouse keeper" (panel 3) and "Old Man John" (panel 10) are clearly the same entity, you must merge them into a single character entry. Use the thought field to explain your reasoning.
-- Key Entities Only: Focus on assets critical for narrative consistency. Ignore minor characters.
-- Invariant Descriptions: Your descriptions (as specified in the schema) are vital. They must only contain static, unchanging features (e.g., "deep-set eyes, scar on left cheek") and strictly avoid plot-specific actions or emotions (e.g., "is angry," "is running").
-
-# Output Requirements
-Your final output must be a single, valid JSON object. Structure the JSON according to this schema.
-```json
-{
-  "thought": "Thoughts or other things you need to say before performing tasks.",
-  "entities": [
-    {
-      "id": "A unique integer to identify the subject.",
-      "name": "The canonical, resolved name for this character or subject.",
-      "description": "A detailed visual description, covering appearance, clothing, textures, and key personality traits, etc. Include highly distinctive and iconic visual features with strong recognizability. Focus on static, cross-temporal invariant characteristics. Strictly exclude plot-dependent descriptions and temporally-sensitive dynamic changes.",
-      "panel_ids": ["An array of panel ids where this character appears."]
-    }
-  ],
-  "settings": [
-    {
-      "id": "A unique integer to identify the setting.",
-      "name": "The canonical, resolved name for this location.",
-      "description": "A detailed visual description of the environment, focusing on mood, lighting, and key subjects. Include highly distinctive and iconic visual features with strong recognizability. Focus on static, cross-temporal invariant characteristics. Strictly exclude plot-dependent descriptions and temporally-sensitive dynamic changes.",
-      "panel_ids": ["An array of panel ids where this setting is the main focus."]
-    }
-  ]
-}
-```
-
-# Logline
-狼牙山五壮士：1941年，五名八路军战士为掩护主力部队和数千名群众安全转移，将日军精锐引上狼牙山绝顶，在弹尽粮绝后毅然跳崖，谱写了一曲壮丽的英雄赞歌。
-
-# Storyboard
 {
   "scenes": [
     {
@@ -53,7 +9,10 @@ Your final output must be a single, valid JSON object. Structure the JSON accord
       "camera": "史诗级广角镜头 (EWS)，缓慢向前推进 (Slow Push-in)",
       "duration_sec": 6,
       "notes": "设定基调。强调环境的广阔和战争的威胁。色调：饱和度低的土黄色和灰色。",
-      "is_continue": false
+      "is_continue": false,
+      "characters": [],
+      "setting": 2,
+      "voiceover": "1941年秋，侵华日寇对我晋察冀抗日根据地进行秋季大“扫荡”，一个多月来，被我八路军和当地民兵打得晕头转向，伤亡惨重。"
     },
     {
       "panel_id": 2,
@@ -64,7 +23,10 @@ Your final output must be a single, valid JSON object. Structure the JSON accord
       "camera": "中景 (MS)，手持跟拍 (Handheld Tracking Shot)，穿过树叶的窥视视角。",
       "duration_sec": 4,
       "notes": "在不明确展示主角的情况下，展示八路军的战斗方式。",
-      "is_continue": false
+      "is_continue": false,
+      "characters": [],
+      "setting": 1,
+      "voiceover": "活动在冀西狼牙山周围的我八路军某部，和当地民兵密切配合，神出鬼没地袭击敌人，粉碎敌人的疯狂“扫荡“。"
     },
     {
       "panel_id": 3,
@@ -75,7 +37,12 @@ Your final output must be a single, valid JSON object. Structure the JSON accord
       "camera": "特写 (CU) 倒水 -> 中景 (MS)，固定机位 (Static)",
       "duration_sec": 5,
       "notes": "“暴风雨前的宁静”。建立葛振林与人民的联系。",
-      "is_continue": false
+      "is_continue": false,
+      "characters": [
+        2
+      ],
+      "setting": 2,
+      "voiceover": "一天傍晚，七连六班副班长葛振林正忙着给房东老大娘担水，班长马宝玉跑来通知他开会。"
     },
     {
       "panel_id": 4,
@@ -86,7 +53,13 @@ Your final output must be a single, valid JSON object. Structure the JSON accord
       "camera": "中景 (MS)，马宝玉入画 (Enter Frame)，然后轻微推向两人的面部表情 (Slow Push-in to Two-Shot)",
       "duration_sec": 3,
       "notes": "用马宝玉的严肃表情制造紧张感。",
-      "is_continue": true
+      "is_continue": true,
+      "characters": [
+        1,
+        2
+      ],
+      "setting": 2,
+      "voiceover": "一天傍晚，七连六班副班长葛振林正忙着给房东老大娘担水，班长马宝玉跑来通知他开会。"
     },
     {
       "panel_id": 5,
@@ -97,7 +70,13 @@ Your final output must be a single, valid JSON object. Structure the JSON accord
       "camera": "中景跟拍 (MS Tracking Shot)，从他们身后拍摄。",
       "duration_sec": 4,
       "notes": "从“生活”到“战斗”的快速转变。",
-      "is_continue": false
+      "is_continue": false,
+      "characters": [
+        1,
+        2
+      ],
+      "setting": 3,
+      "voiceover": "葛振林立即背上枪，跟着马宝玉来到村外的小山崖下，参加党支部扩大会。两人坐在一块石头上，静听指导员分析当前形势。"
     },
     {
       "panel_id": 6,
@@ -108,7 +87,14 @@ Your final output must be a single, valid JSON object. Structure the JSON accord
       "camera": "中景 (MS)，固定机位，低角度拍摄以示庄重。",
       "duration_sec": 5,
       "notes": "构图要简洁，突出会议的严肃性。",
-      "is_continue": false
+      "is_continue": false,
+      "characters": [
+        1,
+        2,
+        7
+      ],
+      "setting": 3,
+      "voiceover": "葛振林立即背上枪，跟着马宝玉来到村外的小山崖下，参加党支部扩大会。两人坐在一块石头上，静听指导员分析当前形势。"
     },
     {
       "panel_id": 7,
@@ -119,7 +105,12 @@ Your final output must be a single, valid JSON object. Structure the JSON accord
       "camera": "近景 (CU)，固定机位。",
       "duration_sec": 4,
       "notes": "通过特写强调话语的重要性。",
-      "is_continue": true
+      "is_continue": true,
+      "characters": [
+        7
+      ],
+      "setting": 3,
+      "voiceover": "指导员告诉大家：“日寇秋季大‘扫荡’越来越残酷，这对我们每个共产党员是一场严峻的考验。"
     },
     {
       "panel_id": 8,
@@ -130,7 +121,13 @@ Your final output must be a single, valid JSON object. Structure the JSON accord
       "camera": "双人特写 (Two-Shot CU)，焦点在他们的眼睛上。",
       "duration_sec": 5,
       "notes": "将指导员的抽象话语与主角的具象决心联系起来。",
-      "is_continue": true
+      "is_continue": true,
+      "characters": [
+        1,
+        2
+      ],
+      "setting": 3,
+      "voiceover": "要发扬不怕牺牲. 不怕疲劳. 勇敢作战的精神，坚持狼牙山根据地的战斗！"
     },
     {
       "panel_id": 9,
@@ -141,7 +138,13 @@ Your final output must be a single, valid JSON object. Structure the JSON accord
       "camera": "中景跟拍 (MS Tracking Shot)",
       "duration_sec": 3,
       "notes": "",
-      "is_continue": false
+      "is_continue": false,
+      "characters": [
+        1,
+        2
+      ],
+      "setting": 2,
+      "voiceover": "散会后，葛振林边走边问马宝玉：“班长，要打大仗了吧？”马宝玉“嗯”了一声没说什么。"
     },
     {
       "panel_id": 10,
@@ -152,7 +155,12 @@ Your final output must be a single, valid JSON object. Structure the JSON accord
       "camera": "近景 (CU)，固定机位。",
       "duration_sec": 4,
       "notes": "这个“嗯”字必须充满分量，暗示他已知道任务的艰巨。",
-      "is_continue": true
+      "is_continue": true,
+      "characters": [
+        1
+      ],
+      "setting": 2,
+      "voiceover": "散会后，葛振林边走边问马宝玉：“班长，要打大仗了吧？”马宝玉“嗯”了一声没说什么。"
     },
     {
       "panel_id": 11,
@@ -163,7 +171,10 @@ Your final output must be a single, valid JSON object. Structure the JSON accord
       "camera": "史诗级广角镜头 (EWS)，缓慢摇摄 (Slow Pan) 或 延时摄影 (Time-lapse) 效果。",
       "duration_sec": 6,
       "notes": "这是对“狼牙山”这个核心意象的第一次隆重介绍。",
-      "is_continue": false
+      "is_continue": false,
+      "characters": [],
+      "setting": 1,
+      "voiceover": "巍巍狼牙山，耸立在河北省易县境内，是晋察冀抗日根据地的险要屏障。"
     },
     {
       "panel_id": 12,
@@ -174,7 +185,10 @@ Your final output must be a single, valid JSON object. Structure the JSON accord
       "camera": "高角度广角 (High-Angle Wide Shot)，缓慢拉远 (Slow Pull-out) 以展示更多敌人。",
       "duration_sec": 6,
       "notes": "首次展示“视觉反差”：敌人的庞大数量。",
-      "is_continue": false
+      "is_continue": false,
+      "characters": [],
+      "setting": 1,
+      "voiceover": "果然，9月24日，盘踞在狼牙山附近界安. 龙门庄. 中独乐. 南管头. 大良岗一带的敌人，在飞机大炮的掩护下，分九路向狼牙山进犯了。"
     },
     {
       "panel_id": 13,
@@ -185,7 +199,12 @@ Your final output must be a single, valid JSON object. Structure the JSON accord
       "camera": "近景 (CU)，焦点从望远镜拉到他充满“杀气”的眼睛。",
       "duration_sec": 4,
       "notes": "给敌人一个“脸”，增加戏剧冲突。",
-      "is_continue": false
+      "is_continue": false,
+      "characters": [
+        10
+      ],
+      "setting": null,
+      "voiceover": "日寇的山地战指挥官高见，曾向他的上司夸下海口：“消现在，他率领“山地精锐灭八路军主力，为天皇建立奇功。”五三千多人和一部分伪军，疯狂扑来。"
     },
     {
       "panel_id": 14,
@@ -196,7 +215,10 @@ Your final output must be a single, valid JSON object. Structure the JSON accord
       "camera": "低角度广角 (Low-Angle Wide Shot)，手持抖动，跟随行军。",
       "duration_sec": 4,
       "notes": "不需要看清脸，只需要展示其非人化的、庞大的军事机器。",
-      "is_continue": true
+      "is_continue": true,
+      "characters": [],
+      "setting": 1,
+      "voiceover": "日寇的山地战指挥官高见，曾向他的上司夸下海口：“消现在，他率领“山地精锐灭八路军主力，为天皇建立奇功。”五三千多人和一部分伪军，疯狂扑来。"
     },
     {
       "panel_id": 15,
@@ -207,7 +229,10 @@ Your final output must be a single, valid JSON object. Structure the JSON accord
       "camera": "中景 (MS)，手持抖动 (Shaky Cam)",
       "duration_sec": 5,
       "notes": "用快速剪辑来表现“十几次进攻”。",
-      "is_continue": false
+      "is_continue": false,
+      "characters": [],
+      "setting": null,
+      "voiceover": "我军在狼牙山东侧和敌人整整激战了一天，打退敌人十几次进攻。"
     },
     {
       "panel_id": 16,
@@ -218,7 +243,13 @@ Your final output must be a single, valid JSON object. Structure the JSON accord
       "camera": "中景 (MS)，固定机位，利用月光和微弱的灯火。",
       "duration_sec": 5,
       "notes": "展现战士们的革命乐观主义精神，与随后的任务形成对比。",
-      "is_continue": false
+      "is_continue": false,
+      "characters": [
+        1,
+        2
+      ],
+      "setting": 6,
+      "voiceover": "天黑时，七连来到一片柿子林里休息待命。六班马宝玉. 葛振林等正在兴高采烈地谈论着敌人的失败和我军的胜利。"
     },
     {
       "panel_id": 17,
@@ -229,7 +260,12 @@ Your final output must be a single, valid JSON object. Structure the JSON accord
       "camera": "中景 (MS)，从地图上方过肩拍摄 (Over-the-Shoulder) 首长。",
       "duration_sec": 4,
       "notes": "",
-      "is_continue": false
+      "is_continue": false,
+      "characters": [
+        8
+      ],
+      "setting": 7,
+      "voiceover": "指挥所里，团首长估计，不甘心失败的敌人，还会增加兵力对我军继续围攻。"
     },
     {
       "panel_id": 18,
@@ -240,7 +276,12 @@ Your final output must be a single, valid JSON object. Structure the JSON accord
       "camera": "特写 (CU)，俯拍 (Top-down Shot) 地图。",
       "duration_sec": 5,
       "notes": "用视觉方式（箭头）来解释“秘密转移”。",
-      "is_continue": true
+      "is_continue": true,
+      "characters": [
+        8
+      ],
+      "setting": 7,
+      "voiceover": "根据毛主席“尽可能地保存自已的力量，消灭敌人的力量”的教导，团首长决定将主力部队秘密转移到外线去作战。"
     },
     {
       "panel_id": 19,
@@ -251,7 +292,12 @@ Your final output must be a single, valid JSON object. Structure the JSON accord
       "camera": "特写 (CU) 写信 -> 中景 (MS) 交信",
       "duration_sec": 4,
       "notes": "",
-      "is_continue": true
+      "is_continue": true,
+      "characters": [
+        8
+      ],
+      "setting": 7,
+      "voiceover": "团长写好一封信，叫通信员立刻急送七连驻地，交给七连长。"
     },
     {
       "panel_id": 20,
@@ -262,7 +308,12 @@ Your final output must be a single, valid JSON object. Structure the JSON accord
       "camera": "中景 (MS)，火光照亮他的脸。",
       "duration_sec": 5,
       "notes": "表现命令的传递和压力的传递。",
-      "is_continue": false
+      "is_continue": false,
+      "characters": [
+        9
+      ],
+      "setting": 6,
+      "voiceover": "团长命令七连马上随主力转移，并抽调一个精干班配备足够弹药，到团指挥所接受任务，"
     },
     {
       "panel_id": 21,
@@ -273,7 +324,13 @@ Your final output must be a single, valid JSON object. Structure the JSON accord
       "camera": "中景 (MS) 连长 -> 近景 (CU) 马宝玉",
       "duration_sec": 4,
       "notes": "VO中的“刘班长”和马宝玉的身份需要统一。这里我假设马宝玉就是六班长，应答了。",
-      "is_continue": true
+      "is_continue": true,
+      "characters": [
+        1,
+        9
+      ],
+      "setting": 6,
+      "voiceover": "出发前，连长叫：“ 刘班长”“到！”马宝玉应声站了出来。"
     },
     {
       "panel_id": 22,
@@ -284,7 +341,13 @@ Your final output must be a single, valid JSON object. Structure the JSON accord
       "camera": "双人中景 (Two-Shot MS)",
       "duration_sec": 3,
       "notes": "",
-      "is_continue": true
+      "is_continue": true,
+      "characters": [
+        1,
+        9
+      ],
+      "setting": 6,
+      "voiceover": "连长命令说：“你们班快去团部，团首长亲自给你们布置任务。出发！"
     },
     {
       "panel_id": 23,
@@ -295,7 +358,16 @@ Your final output must be a single, valid JSON object. Structure the JSON accord
       "camera": "中景 (MS)，五人并排，准备出发。",
       "duration_sec": 5,
       "notes": "第一次正式将五人作为一个战斗集体呈现。",
-      "is_continue": true
+      "is_continue": true,
+      "characters": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "setting": 6,
+      "voiceover": "六班只有五名战士：马宝玉. 葛振林. 宋学义. 胡德林和胡福才。"
     },
     {
       "panel_id": 24,
@@ -306,7 +378,10 @@ Your final output must be a single, valid JSON object. Structure the JSON accord
       "camera": "动态跟拍 (Dynamic Tracking Shots)，低角度，快速剪辑。",
       "duration_sec": 5,
       "notes": "表现他们对任务的渴望和出色的军事素质。",
-      "is_continue": false
+      "is_continue": false,
+      "characters": [],
+      "setting": 1,
+      "voiceover": "他们一听说执行任务，个个乐得心都快蹦出来了，飞快地翻山越岭，跳溪越涧，跨过“仙人桥”，向团指挥所赶去。"
     },
     {
       "panel_id": 25,
@@ -317,7 +392,13 @@ Your final output must be a single, valid JSON object. Structure the JSON accord
       "camera": "中景 (MS) -> 近景 (CU) 五人脸部特写",
       "duration_sec": 4,
       "notes": "传达任务的时刻。",
-      "is_continue": false
+      "is_continue": false,
+      "characters": [
+        1,
+        8
+      ],
+      "setting": 7,
+      "voiceover": "团长明确坚定地对六班五名战士说：“你们的任务是掩护团主力秘密转移。"
     },
     {
       "panel_id": 26,
@@ -328,7 +409,12 @@ Your final output must be a single, valid JSON object. Structure the JSON accord
       "camera": "极近特写 (ECU)，只拍眼睛和嘴。",
       "duration_sec": 5,
       "notes": "这是核心任务。必须用特写来强调。",
-      "is_continue": true
+      "is_continue": true,
+      "characters": [
+        8
+      ],
+      "setting": 7,
+      "voiceover": "要想尽一切办法拖住敌人，明天中午以前，不让敌人越过棋盘陀！"
     },
     {
       "panel_id": 27,
@@ -339,7 +425,13 @@ Your final output must be a single, valid JSON object. Structure the JSON accord
       "camera": "中景 (MS) -> 近景 (CU) 团长和马宝玉",
       "duration_sec": 6,
       "notes": "实地勘察，强调“有利地形”。",
-      "is_continue": false
+      "is_continue": false,
+      "characters": [
+        1,
+        8
+      ],
+      "setting": 8,
+      "voiceover": "团长马上带领五战士到山口察看阵地，嘱咐他们：“要利用狼牙山有利地形，和当地民兵配合，加上你们的勇敢和智慧，就能以一当百，战胜更多的敌人。“"
     },
     {
       "panel_id": 28,
@@ -350,7 +442,10 @@ Your final output must be a single, valid JSON object. Structure the JSON accord
       "camera": "高角度广角 (High-Angle Wide Shot)，深焦 (Deep Focus)。",
       "duration_sec": 6,
       "notes": "强烈的视觉对比：转移的希望与毁灭的现实。",
-      "is_continue": false
+      "is_continue": false,
+      "characters": [],
+      "setting": 8,
+      "voiceover": "主力部队和当地群众安全转移了。敌人放火烧村，山下火光冲天，烟雾腾腾。"
     },
     {
       "panel_id": 29,
@@ -361,7 +456,12 @@ Your final output must be a single, valid JSON object. Structure the JSON accord
       "camera": "组合近景 (Group CU)，特写葛振林的下颌。",
       "duration_sec": 5,
       "notes": "这是他们战斗的直接动力：保护家园，复仇。",
-      "is_continue": true
+      "is_continue": true,
+      "characters": [
+        2
+      ],
+      "setting": 8,
+      "voiceover": "六班战士们怒火满腔，牙咬得咯咯直响。他们和民兵一起，商量怎样完成这次阻击敌人的光荣任务。"
     },
     {
       "panel_id": 30,
@@ -372,7 +472,10 @@ Your final output must be a single, valid JSON object. Structure the JSON accord
       "camera": "中景 (MS) -> 特写 (CU) 埋雷的手",
       "duration_sec": 6,
       "notes": "表现他们的智慧和战前准备。",
-      "is_continue": false
+      "is_continue": false,
+      "characters": [],
+      "setting": 8,
+      "voiceover": "晚上趁着月光，他们把部队留下的二百多个地雷，从山脚一直埋到山口阵地前，凡是能上山的小路，都埋上了地雷。"
     },
     {
       "panel_id": 31,
@@ -383,7 +486,12 @@ Your final output must be a single, valid JSON object. Structure the JSON accord
       "camera": "中景 (MS)，固定机位，月光作为轮廓光。",
       "duration_sec": 4,
       "notes": "最后的准备完成，现在只剩下他们五人。",
-      "is_continue": true
+      "is_continue": true,
+      "characters": [
+        1
+      ],
+      "setting": 8,
+      "voiceover": "夜深了，阵地上战前准备工作做完，马宝玉立即让民兵们撤走，去保护山里的群众。"
     },
     {
       "panel_id": 32,
@@ -394,7 +502,12 @@ Your final output must be a single, valid JSON object. Structure the JSON accord
       "camera": "极近特写 (ECU) 眼睛 -> 慢速扫视 (Slow Pan) 过其他战士的特写",
       "duration_sec": 6,
       "notes": "暴风雨前的宁静。用寂静来制造最大的紧张感。",
-      "is_continue": true
+      "is_continue": true,
+      "characters": [
+        2
+      ],
+      "setting": 8,
+      "voiceover": "六班战士留下严密监视山下的动静，连一点儿细小声音都不放过。"
     },
     {
       "panel_id": 33,
@@ -405,7 +518,10 @@ Your final output must be a single, valid JSON object. Structure the JSON accord
       "camera": "高角度史诗级广角 (High-Angle EWS)，缓慢拉远 (Slow Pull-out) 以展示更多敌人。",
       "duration_sec": 6,
       "notes": "核心主题：“视觉反差”。五人VS“狼群”。这是对“狼群”的第一次视觉震撼。",
-      "is_continue": false
+      "is_continue": false,
+      "characters": [],
+      "setting": null,
+      "voiceover": "天刚蒙蒙亮，就响起了枪声。战士们严阵以待，只见山下到处是密密麻麻的敌人，像狼群一样，号叫着向山口窜来。"
     },
     {
       "panel_id": 34,
@@ -416,7 +532,12 @@ Your final output must be a single, valid JSON object. Structure the JSON accord
       "camera": "近景 (CU) 马宝玉 -> 插入特写 (Insert CU) 手部动作 (手榴弹, 枪栓)",
       "duration_sec": 5,
       "notes": "用声音（拉枪栓）和手部特写来表现他们的战备状态。",
-      "is_continue": true
+      "is_continue": true,
+      "characters": [
+        1
+      ],
+      "setting": 8,
+      "voiceover": "马宝玉对大家说：“准备好！”大家揭开手榴弹盖子，把子弹推上膛。"
     },
     {
       "panel_id": 35,
@@ -427,7 +548,10 @@ Your final output must be a single, valid JSON object. Structure the JSON accord
       "camera": "低角度广角 (Low-Angle Wide Shot)，手持抖动 (Shaky Cam) 模拟爆炸冲击波。",
       "duration_sec": 4,
       "notes": "第一个战斗高潮。必须有冲击力。",
-      "is_continue": false
+      "is_continue": false,
+      "characters": [],
+      "setting": 8,
+      "voiceover": "突然，山崩地裂般的一声巨响，接着又是“轰轰轰”的连续爆炸声。这是夜间埋下的地雷爆炸了。"
     },
     {
       "panel_id": 36,
@@ -438,7 +562,10 @@ Your final output must be a single, valid JSON object. Structure the JSON accord
       "camera": "中景 (MS) 穿过硝烟拍摄 -> 特写 (CU) 指挥刀和惊恐的士兵脸。",
       "duration_sec": 5,
       "notes": "展现敌人的恐惧和高压下的被迫推进。",
-      "is_continue": true
+      "is_continue": true,
+      "characters": [],
+      "setting": 8,
+      "voiceover": "地雷炸得敌人尸横遍野。硝烟过后，敌人在指挥刀的驱使下，战战兢兢地向六班阵地爬来。"
     },
     {
       "panel_id": 37,
@@ -449,7 +576,12 @@ Your final output must be a single, valid JSON object. Structure the JSON accord
       "camera": "近景 (CU) 马宝玉 -> 中景 (MS) 葛振林 -> 广角 (WS) 敌群中爆炸。",
       "duration_sec": 5,
       "notes": "快速剪辑，展现战斗的激烈和战士的英勇。",
-      "is_continue": true
+      "is_continue": true,
+      "characters": [
+        2
+      ],
+      "setting": 8,
+      "voiceover": "二百米，一百米，五十米······敌人越来越近了。“打！“随着马宝玉一声怒吼，手榴弹抛进了敌群。"
     },
     {
       "panel_id": 38,
@@ -460,7 +592,10 @@ Your final output must be a single, valid JSON object. Structure the JSON accord
       "camera": "高角度广角 (High-Angle Wide Shot)，固定机位。",
       "duration_sec": 3,
       "notes": "第一次进攻被击退。",
-      "is_continue": true
+      "is_continue": true,
+      "characters": [],
+      "setting": 8,
+      "voiceover": "敌人死的死，伤的伤，活着的像乱了阵的蚂蚁，连滚带爬地退了下去。"
     },
     {
       "panel_id": 39,
@@ -471,7 +606,10 @@ Your final output must be a single, valid JSON object. Structure the JSON accord
       "camera": "广角 (WS)，手持剧烈抖动 (Violent Shaky Cam)，模拟被炮击。",
       "duration_sec": 5,
       "notes": "展现敌人压倒性的火力优势。",
-      "is_continue": true
+      "is_continue": true,
+      "characters": [],
+      "setting": 8,
+      "voiceover": "过了不久，敌人用猛烈的炮火向六班阵地轰击。顿时，乱石横飞，硝烟弥漫，五个人谁也看不见谁了。"
     },
     {
       "panel_id": 40,
@@ -482,7 +620,15 @@ Your final output must be a single, valid JSON object. Structure the JSON accord
       "camera": "中景 (MS) -> 近景 (CU) 葛振林 -> 双人中景 (Two-Shot MS) 胡德林和胡福才",
       "duration_sec": 6,
       "notes": "在敌人的猛烈炮火下，展现战士们惊人的心理素质和革命乐观精神。",
-      "is_continue": true
+      "is_continue": true,
+      "characters": [
+        1,
+        2,
+        4,
+        5
+      ],
+      "setting": 8,
+      "voiceover": "炮火稍停，马宝玉爬起来观察动静。宋学义抬头看看有谁受伤，葛振林检查着“三八”大盖，胡德林和胡福才在乐呵呵地说笑着。"
     },
     {
       "panel_id": 41,
@@ -493,7 +639,12 @@ Your final output must be a single, valid JSON object. Structure the JSON accord
       "camera": "近景 (CU)，焦点在马宝玉的眼睛上。",
       "duration_sec": 4,
       "notes": "这是战术的转折点。",
-      "is_continue": true
+      "is_continue": true,
+      "characters": [
+        1
+      ],
+      "setting": 8,
+      "voiceover": "紧接着，敌人又打来了一阵炮火。马宝玉说：“我们的任务是阻击敌人，掩护主力转移。"
     },
     {
       "panel_id": 42,
@@ -504,7 +655,10 @@ Your final output must be a single, valid JSON object. Structure the JSON accord
       "camera": "中景 (MS)，跟拍 (Tracking Shot)，穿过硝烟。",
       "duration_sec": 4,
       "notes": "从“防守”转向“诱敌”。",
-      "is_continue": true
+      "is_continue": true,
+      "characters": [],
+      "setting": 1,
+      "voiceover": "现在我们把鬼子往山上引吧！“ 在硝烟弥漫中，他们立刻转向另一个山头。"
     },
     {
       "panel_id": 43,
@@ -515,7 +669,12 @@ Your final output must be a single, valid JSON object. Structure the JSON accord
       "camera": "近景 (CU) 马宝玉 -> 主观视角 (POV) 太阳 -> 中景 (MS) 五人",
       "duration_sec": 5,
       "notes": "展现马宝玉作为指挥员的素养：利用地形，争取时间。",
-      "is_continue": false
+      "is_continue": false,
+      "characters": [
+        1
+      ],
+      "setting": 9,
+      "voiceover": "至鍵到了南石门山峡口，马宝玉拾头看看太阳，估计了一下时间，说：“这里地形很好，我们坚持一会儿，争取时间，对我们主力转移更有利。“"
     },
     {
       "panel_id": 44,
@@ -526,7 +685,10 @@ Your final output must be a single, valid JSON object. Structure the JSON accord
       "camera": "广角 (WS) 敌机 -> 广角 (WS) 爆炸 (旧阵地)",
       "duration_sec": 5,
       "notes": "表现敌人的徒劳和判断失误。",
-      "is_continue": false
+      "is_continue": false,
+      "characters": [],
+      "setting": 8,
+      "voiceover": "说话间，来了三架敌机，嗡嗡地朝六班原来的阵地俯冲，又是扫射，又是投炸弹，闹腾了好一阵子，最后翘着尾巴飞走了。"
     },
     {
       "panel_id": 45,
@@ -537,7 +699,10 @@ Your final output must be a single, valid JSON object. Structure the JSON accord
       "camera": "中景 (MS)，固定机位，前景是战士，背景是远处（旧阵地）的烟柱。",
       "duration_sec": 4,
       "notes": "这个对比镜头极具戏剧性，展现了战士的智慧。",
-      "is_continue": true
+      "is_continue": true,
+      "characters": [],
+      "setting": 9,
+      "voiceover": "六班战士在新的阵地上然不动。"
     },
     {
       "panel_id": 46,
@@ -548,7 +713,12 @@ Your final output must be a single, valid JSON object. Structure the JSON accord
       "camera": "近景 (CU) 葛振林 -> 主观瞄准 (POV Scope) -> 中景 (MS) 葛振林转移",
       "duration_sec": 5,
       "notes": "展现“诱惑敌人”的具体战术。",
-      "is_continue": false
+      "is_continue": false,
+      "characters": [
+        2
+      ],
+      "setting": 1,
+      "voiceover": "他们边打边走，用冷枪准确地杀伤敌人，诱惑敌人。"
     },
     {
       "panel_id": 47,
@@ -559,7 +729,13 @@ Your final output must be a single, valid JSON object. Structure the JSON accord
       "camera": "近景 (CU)，双人镜头 (Two-Shot)",
       "duration_sec": 4,
       "notes": "",
-      "is_continue": true
+      "is_continue": true,
+      "characters": [
+        1,
+        2
+      ],
+      "setting": 1,
+      "voiceover": "葛振林高兴地对班长说：“这回敌人的鼻子可叫咱们牵住了，得乖乖地由咱们摆布啦！“"
     },
     {
       "panel_id": 48,
@@ -570,7 +746,10 @@ Your final output must be a single, valid JSON object. Structure the JSON accord
       "camera": "广角 (WS) 敌人盲目射击 -> 中景 (MS) 日军驱赶伪军",
       "duration_sec": 5,
       "notes": "展现敌人的混乱和残暴（对伪军）。",
-      "is_continue": false
+      "is_continue": false,
+      "characters": [],
+      "setting": 1,
+      "voiceover": "敌人付出了不小代价，又摸不清我军究竟有多少兵力，只好朝着五战士枪响的地方胡乱射击，一会儿用迫击炮轰，一会儿又像轰羊一样赶着一批伪军向山上爬。"
     },
     {
       "panel_id": 49,
@@ -581,7 +760,13 @@ Your final output must be a single, valid JSON object. Structure the JSON accord
       "camera": "近景 (CU) 胡德林 (过肩)",
       "duration_sec": 4,
       "notes": "",
-      "is_continue": true
+      "is_continue": true,
+      "characters": [
+        1,
+        4
+      ],
+      "setting": 1,
+      "voiceover": "胡德林看看山下大片敌人跟了上来，高兴地说：“看样子，敌人真把我们当成主力啦！”"
     },
     {
       "panel_id": 50,
@@ -592,7 +777,12 @@ Your final output must be a single, valid JSON object. Structure the JSON accord
       "camera": "近景 (CU) 马宝玉",
       "duration_sec": 4,
       "notes": "计划完美执行中。",
-      "is_continue": true
+      "is_continue": true,
+      "characters": [
+        1
+      ],
+      "setting": 1,
+      "voiceover": "马宝玉笑笑说：“那才好呢！就怕敌人不跟我们跑。“"
     },
     {
       "panel_id": 51,
@@ -603,7 +793,10 @@ Your final output must be a single, valid JSON object. Structure the JSON accord
       "camera": "极近特写 (ECU) 太阳 -> 广角 (WS) 大火",
       "duration_sec": 4,
       "notes": "环境变得恶劣，战斗进入新阶段。",
-      "is_continue": false
+      "is_continue": false,
+      "characters": [],
+      "setting": 1,
+      "voiceover": "太阳当头时，敌人的火力十分猛烈，半人高的山草被打着了火，呼呼地燃烧着。"
     },
     {
       "panel_id": 52,
@@ -614,7 +807,10 @@ Your final output must be a single, valid JSON object. Structure the JSON accord
       "camera": "中景 (MS)，手持跟拍，镜头前有烟雾和火星。",
       "duration_sec": 4,
       "notes": "让观众感受到“呛人”和“熏”。",
-      "is_continue": true
+      "is_continue": true,
+      "characters": [],
+      "setting": 1,
+      "voiceover": "火药味呛得人透不过气，浓烟熏得战士们眼泪直流。"
     },
     {
       "panel_id": 53,
@@ -625,7 +821,12 @@ Your final output must be a single, valid JSON object. Structure the JSON accord
       "camera": "中景 (MS)，固定机位。",
       "duration_sec": 3,
       "notes": "展现老兵的战斗素养。",
-      "is_continue": true
+      "is_continue": true,
+      "characters": [
+        2
+      ],
+      "setting": 1,
+      "voiceover": "葛振林背上着了火，就地滚了几滚，把火滚灭。"
     },
     {
       "panel_id": 54,
@@ -636,7 +837,10 @@ Your final output must be a single, valid JSON object. Structure the JSON accord
       "camera": "极近特写 (ECU) 嘴唇 -> 快速闪回 (Quick Flashback) 河水",
       "duration_sec": 4,
       "notes": "用“水”的意象来反衬“火”和“渴”。",
-      "is_continue": true
+      "is_continue": true,
+      "characters": [],
+      "setting": 1,
+      "voiceover": "火烧. 烟熏，战士们唇焦口渴，想到山下清澈的易水河，巴不得能跑去喝个痛快。"
     },
     {
       "panel_id": 55,
@@ -647,7 +851,12 @@ Your final output must be a single, valid JSON object. Structure the JSON accord
       "camera": "中景 (MS) -> 视线跟进 (Follow Gaze) 到萝卜的特写 (CU)",
       "duration_sec": 4,
       "notes": "这是核心道德beat的开始。",
-      "is_continue": false
+      "is_continue": false,
+      "characters": [
+        3
+      ],
+      "setting": 10,
+      "voiceover": "宋学义身边是一块萝卜地，大萝卜长得又白又嫩。"
     },
     {
       "panel_id": 56,
@@ -658,7 +867,12 @@ Your final output must be a single, valid JSON object. Structure the JSON accord
       "camera": "极近特写 (ECU) 喉结 -> 特写 (CU) 颤抖的手 -> 特写 (CU) 他坚毅的眼神",
       "duration_sec": 7,
       "notes": "关键时刻！必须慢下来。这是“纪律的象征”。这个镜头是他们品格的基石。",
-      "is_continue": true
+      "is_continue": true,
+      "characters": [
+        3
+      ],
+      "setting": 10,
+      "voiceover": "他多么想吃一个解解渴，但一想到我军的“三大纪律八项注意”，就打消了这个念头。"
     },
     {
       "panel_id": 57,
@@ -669,7 +883,10 @@ Your final output must be a single, valid JSON object. Structure the JSON accord
       "camera": "广角 (WS)，焦点在山下的敌人阵地。",
       "duration_sec": 4,
       "notes": "用声音来表现敌人的攻心战术。",
-      "is_continue": false
+      "is_continue": false,
+      "characters": [],
+      "setting": 1,
+      "voiceover": "五战士坚守着阵地。山下不时有几个敌人扯着破锣嗓子喊话：“缴枪的，大大的优待优待！“"
     },
     {
       "panel_id": 58,
@@ -680,7 +897,10 @@ Your final output must be a single, valid JSON object. Structure the JSON accord
       "camera": "中景 (MS)，从高处拍摄日军后方的混乱。",
       "duration_sec": 4,
       "notes": "悬念：是谁在帮忙？",
-      "is_continue": false
+      "is_continue": false,
+      "characters": [],
+      "setting": 1,
+      "voiceover": "正在这个节骨眼上，敌人后边的山坡上忽然乒乒乓乓地响起了枪声，接着，又响起了手榴弹的爆炸声。"
     },
     {
       "panel_id": 59,
@@ -691,7 +911,13 @@ Your final output must be a single, valid JSON object. Structure the JSON accord
       "camera": "近景 (CU) 葛振林 -> 望远镜主观视角 (Binocular POV)",
       "duration_sec": 4,
       "notes": "“白花花”可能是指没穿衣服或只穿了白衬衣的农民。",
-      "is_continue": true
+      "is_continue": true,
+      "characters": [
+        2,
+        5
+      ],
+      "setting": 1,
+      "voiceover": "是谁打的呢？葛振林和胡福才发现远处有几个白花花的人影。"
     },
     {
       "panel_id": 60,
@@ -702,7 +928,12 @@ Your final output must be a single, valid JSON object. Structure the JSON accord
       "camera": "中景 (MS) 欢呼 -> 近景 (CU) 马宝玉",
       "duration_sec": 5,
       "notes": "军民一家的体现，士气大振。",
-      "is_continue": true
+      "is_continue": true,
+      "characters": [
+        1
+      ],
+      "setting": 1,
+      "voiceover": "他们欢呼起来：“是民兵！打得好！”马宝玉趁机鼓励大家：“同志们，有民兵配合，我们一定能更好地完成任务！“"
     },
     {
       "panel_id": 61,
@@ -713,7 +944,12 @@ Your final output must be a single, valid JSON object. Structure the JSON accord
       "camera": "中景 (MS)，背光 (Backlit by setting sun)，固定机位。",
       "duration_sec": 5,
       "notes": "这是第二个幕的转折点。从“阻击”转向“撤退”。",
-      "is_continue": true
+      "is_continue": true,
+      "characters": [
+        1
+      ],
+      "setting": 1,
+      "voiceover": "战斗一直坚持到太阳偏西。马宝玉说：“我们的任务完成了，撤！”五战士直奔棋盘陀的险路。"
     },
     {
       "panel_id": 62,
@@ -724,7 +960,10 @@ Your final output must be a single, valid JSON object. Structure the JSON accord
       "camera": "低角度中景 (Low-Angle MS)，跟拍 (Tracking Shot)。",
       "duration_sec": 5,
       "notes": "展现环境的极端困难。",
-      "is_continue": false
+      "is_continue": false,
+      "characters": [],
+      "setting": 1,
+      "voiceover": "荆棘丛生，岩石又高又陡，这哪里是路呀！五战士攀呀，爬呀，登上了“阎王鼻子”，爬上“天梯”“小鬼脸”，决心把敌人引上绝路。"
     },
     {
       "panel_id": 63,
@@ -735,7 +974,10 @@ Your final output must be a single, valid JSON object. Structure the JSON accord
       "camera": "高角度俯视 (High-Angle Top-down) -> 特写 (CU) 坠落的士兵",
       "duration_sec": 4,
       "notes": "展现敌人的狼狈，反衬战士们的适应力。",
-      "is_continue": false
+      "is_continue": false,
+      "characters": [],
+      "setting": 1,
+      "voiceover": "紧紧尾随着的敌人，气喘吁吁地往“阎王鼻子”爬着。“啊呀！”突然传来两声惨叫，山谷也发出了回响。"
     },
     {
       "panel_id": 64,
@@ -746,7 +988,13 @@ Your final output must be a single, valid JSON object. Structure the JSON accord
       "camera": "近景 (CU) 胡福才 -> 中景 (MS) 马宝玉 (反应镜头)",
       "duration_sec": 5,
       "notes": "在撤退中也不忘战斗，体现革命乐观主义。",
-      "is_continue": true
+      "is_continue": true,
+      "characters": [
+        1,
+        5
+      ],
+      "setting": 1,
+      "voiceover": "马宝玉转身一看，哈哈大笑：“好啊！好啊！”原来，胡福才蹬下一块大石头，正好砸倒了两个鬼子。"
     },
     {
       "panel_id": 65,
@@ -757,7 +1005,10 @@ Your final output must be a single, valid JSON object. Structure the JSON accord
       "camera": "中景 (MS)，固定机位。",
       "duration_sec": 4,
       "notes": "一个幸运的发现，让他们能继续阻击。",
-      "is_continue": true
+      "is_continue": true,
+      "characters": [],
+      "setting": 11,
+      "voiceover": "战士们登上山顶，忽然发现这里不知什么时候设下了“滚木石雷”，乐得心里开了花。"
     },
     {
       "panel_id": 66,
@@ -768,7 +1019,12 @@ Your final output must be a single, valid JSON object. Structure the JSON accord
       "camera": "中景 (MS) 葛振林 -> 广角 (WS) 石头砸入敌群",
       "duration_sec": 5,
       "notes": "从枪战转向更原始的冷兵器式战斗。",
-      "is_continue": true
+      "is_continue": true,
+      "characters": [
+        2
+      ],
+      "setting": 11,
+      "voiceover": "葛振林首先搬起一块大石头，瞅准敌人使劲地砸去。"
     },
     {
       "panel_id": 67,
@@ -779,7 +1035,10 @@ Your final output must be a single, valid JSON object. Structure the JSON accord
       "camera": "中景 (MS) 和 广角 (WS) 快速剪辑",
       "duration_sec": 6,
       "notes": "展现他们以一当百的“势”。",
-      "is_continue": true
+      "is_continue": true,
+      "characters": [],
+      "setting": 11,
+      "voiceover": "敌人爬上来一批，就被打下去一批。五战士越战越强，浑身有一股使不完的力量！"
     },
     {
       "panel_id": 68,
@@ -790,7 +1049,10 @@ Your final output must be a single, valid JSON object. Structure the JSON accord
       "camera": "史诗级广角 (EWS)，剪影 (Silhouette)，固定机位。",
       "duration_sec": 5,
       "notes": "一个短暂的、史诗般的胜利时刻。",
-      "is_continue": true
+      "is_continue": true,
+      "characters": [],
+      "setting": 11,
+      "voiceover": "快下山的太阳，散发着红灿灿的余晖。五战士胜利地完成了阻击敌人. 掩护主力部队转移的光荣任务，决定翻山去找自己的队伍。"
     },
     {
       "panel_id": 69,
@@ -801,7 +1063,10 @@ Your final output must be a single, valid JSON object. Structure the JSON accord
       "camera": "中景 (MS)，手持抖动 (Shaky Cam)，快速平移 (Whip Pan)。",
       "duration_sec": 4,
       "notes": "局势再次逆转，逃离路线被切断。",
-      "is_continue": false
+      "is_continue": false,
+      "characters": [],
+      "setting": 1,
+      "voiceover": "不料，刚走到莲花瓣陀下，与另一股摸上来的敌人遭遇了。"
     },
     {
       "panel_id": 70,
@@ -812,7 +1077,10 @@ Your final output must be a single, valid JSON object. Structure the JSON accord
       "camera": "中景跟拍 (MS Tracking Shot)。",
       "duration_sec": 3,
       "notes": "他们在寻找新的生路。",
-      "is_continue": false
+      "is_continue": false,
+      "characters": [],
+      "setting": 1,
+      "voiceover": "五位勇士决定甩掉敌人，绕过棋盘陀，另找下山的路。"
     },
     {
       "panel_id": 71,
@@ -823,7 +1091,12 @@ Your final output must be a single, valid JSON object. Structure the JSON accord
       "camera": "近景 (CU) 马宝玉 -> 主观视角 (POV Reveal Shot) 揭示群众",
       "duration_sec": 7,
       "notes": "这是故事的【核心道德高潮】。必须慢下来。这个发现改变了一切。",
-      "is_continue": false
+      "is_continue": false,
+      "characters": [
+        1
+      ],
+      "setting": 12,
+      "voiceover": "他们走了一阵，路过一处石谷时，发现谷底藏着一批群众，大都是老人. 妇女和小孩儿。"
     },
     {
       "panel_id": 72,
@@ -834,7 +1107,10 @@ Your final output must be a single, valid JSON object. Structure the JSON accord
       "camera": "特写 (CU) 和 极近特写 (ECU) 蒙太奇。",
       "duration_sec": 5,
       "notes": "建立起战士与他们需要保护的人民之间的情感联系。",
-      "is_continue": true
+      "is_continue": true,
+      "characters": [],
+      "setting": 12,
+      "voiceover": "无数双惊奇的眼晴，纷纷投向跑来的五战士。子弟兵保护老百姓的责任感，立刻涌上战士们的心头。"
     },
     {
       "panel_id": 73,
@@ -845,7 +1121,13 @@ Your final output must be a single, valid JSON object. Structure the JSON accord
       "camera": "极近特写 (ECU) 马宝玉的眼睛 -> 双人特写 (Two-Shot CU)",
       "duration_sec": 5,
       "notes": "无声的交流，生死的抉择。",
-      "is_continue": true
+      "is_continue": true,
+      "characters": [
+        1,
+        2
+      ],
+      "setting": 12,
+      "voiceover": "无数双惊奇的眼晴，纷纷投向跑来的五战士。子弟兵保护老百姓的责任感，立刻涌上战士们的心头。"
     },
     {
       "panel_id": 74,
@@ -856,7 +1138,12 @@ Your final output must be a single, valid JSON object. Structure the JSON accord
       "camera": "中景 (MS)，镜头从马宝玉的背部拍摄，他走向危险。",
       "duration_sec": 6,
       "notes": "这是赴死的选择。他从“逃生”转向“引敌”。",
-      "is_continue": true
+      "is_continue": true,
+      "characters": [
+        1
+      ],
+      "setting": 12,
+      "voiceover": "不允许犹豫，马宝玉当机立断，赶紧带领大家返回原路，阻击敌人。"
     },
     {
       "panel_id": 75,
@@ -867,7 +1154,10 @@ Your final output must be a single, valid JSON object. Structure the JSON accord
       "camera": "中景跟拍 (MS Tracking Shot)，他们向着山顶（绝路）移动。",
       "duration_sec": 5,
       "notes": "他们的目标变了：不是为了活，而是为了保护群众而死。",
-      "is_continue": false
+      "is_continue": false,
+      "characters": [],
+      "setting": null,
+      "voiceover": "五战士迅速找到有利地形，一边打，一边把敌人一步步引向棋盘陀峰顶。"
     },
     {
       "panel_id": 76,
@@ -878,7 +1168,10 @@ Your final output must be a single, valid JSON object. Structure the JSON accord
       "camera": "广角 (WS) -> 中景 (MS) 敌人被击中",
       "duration_sec": 5,
       "notes": "最后的战斗，最后的火力。",
-      "is_continue": false
+      "is_continue": false,
+      "characters": [],
+      "setting": 13,
+      "voiceover": "敌人被吸引过来了。五战士依托着岩石，不断射击。敌人每爬几步，都要留几具尸体。"
     },
     {
       "panel_id": 77,
@@ -889,7 +1182,10 @@ Your final output must be a single, valid JSON object. Structure the JSON accord
       "camera": "史诗级广角 (EWS)，低角度仰拍，展现他们的渺小和崇高。",
       "duration_sec": 6,
       "notes": "他们到达了“绝路”。",
-      "is_continue": true
+      "is_continue": true,
+      "characters": [],
+      "setting": 13,
+      "voiceover": "五战士登上了棋盘陀峰顶，发现四周无退路。"
     },
     {
       "panel_id": 78,
@@ -900,7 +1196,12 @@ Your final output must be a single, valid JSON object. Structure the JSON accord
       "camera": "近景 (CU) -> 极近特写 (ECU) 枪膛 -> 中景 (MS) 倒空子弹袋",
       "duration_sec": 6,
       "notes": "弹尽粮绝的时刻来临。",
-      "is_continue": true
+      "is_continue": true,
+      "characters": [
+        1
+      ],
+      "setting": 13,
+      "voiceover": "马宝玉瞄准爬上来的敌人，只听“咔”一声，子弹没有了。五个人的子弹袋全是空的了！"
     },
     {
       "panel_id": 79,
@@ -911,7 +1212,13 @@ Your final output must be a single, valid JSON object. Structure the JSON accord
       "camera": "近景 (CU) 胡福才 -> 中景 (MS) 马宝玉",
       "duration_sec": 4,
       "notes": "马宝玉作为班长，掌控着最后一件武器。",
-      "is_continue": true
+      "is_continue": true,
+      "characters": [
+        1,
+        5
+      ],
+      "setting": 13,
+      "voiceover": "胡福才还有一颗手榴弹，正要扔向敌群，马宝玉抢先一步接了过来，插进腰里。"
     },
     {
       "panel_id": 80,
@@ -922,7 +1229,10 @@ Your final output must be a single, valid JSON object. Structure the JSON accord
       "camera": "低角度中景 (Low-Angle MS)，仰拍敌人。",
       "duration_sec": 3,
       "notes": "最后的逼近。",
-      "is_continue": true
+      "is_continue": true,
+      "characters": [],
+      "setting": 13,
+      "voiceover": "这时，敌人往上爬得更快，哇啦哇啦地喊叫：“投降的活命！“"
     },
     {
       "panel_id": 81,
@@ -933,7 +1243,10 @@ Your final output must be a single, valid JSON object. Structure the JSON accord
       "camera": "广角 (WS) 敌人 -> 中景 (MS) 五人",
       "duration_sec": 4,
       "notes": "最后的防线。",
-      "is_continue": true
+      "is_continue": true,
+      "characters": [],
+      "setting": 13,
+      "voiceover": "崖顶上再没有能搬动的石头了。敌人不断号叫着，一窝蜂似的快爬上来了。"
     },
     {
       "panel_id": 82,
@@ -944,7 +1257,12 @@ Your final output must be a single, valid JSON object. Structure the JSON accord
       "camera": "中景 (MS) 马宝玉 -> 组合近景 (Group CU) 其他四人",
       "duration_sec": 6,
       "notes": "他们准备用最后一颗手榴弹自尽。",
-      "is_continue": true
+      "is_continue": true,
+      "characters": [
+        1
+      ],
+      "setting": 13,
+      "voiceover": "怎么办？马宝玉“唰”地从腰间拔出那颗唯一的手榴弹。四名战士不约而同地靠向班长：”快拉弦吧！我们死也不当俘虏！”"
     },
     {
       "panel_id": 83,
@@ -955,7 +1273,12 @@ Your final output must be a single, valid JSON object. Structure the JSON accord
       "camera": "特写 (CU) 咬开盖子 -> 近景 (CU) 马宝玉的脸",
       "duration_sec": 6,
       "notes": "核心主题【最后的战斗】。这是战士的选择，不是受害者的选择。",
-      "is_continue": true
+      "is_continue": true,
+      "characters": [
+        1
+      ],
+      "setting": 13,
+      "voiceover": "“对！”马宝玉用牙咬开了手榴弹盖子，激昂慷慨地说：”我们决不当俘虏！但也不能用自己的武器消灭自己！”"
     },
     {
       "panel_id": 84,
@@ -966,7 +1289,12 @@ Your final output must be a single, valid JSON object. Structure the JSON accord
       "camera": "中景 (MS) 马宝玉 -> 特写 (CU) 手榴弹飞行 (慢动作)",
       "duration_sec": 4,
       "notes": "最后的反击。",
-      "is_continue": true
+      "is_continue": true,
+      "characters": [
+        1
+      ],
+      "setting": 13,
+      "voiceover": "他怒视着快爬上来的敌人，狠劲地扔出最后一颗手榴弹。"
     },
     {
       "panel_id": 85,
@@ -977,7 +1305,10 @@ Your final output must be a single, valid JSON object. Structure the JSON accord
       "camera": "中景 (MS)，爆炸冲击波使镜头抖动。",
       "duration_sec": 5,
       "notes": "为他们赢得了最后几分钟的尊严和时间。",
-      "is_continue": true
+      "is_continue": true,
+      "characters": [],
+      "setting": 13,
+      "voiceover": "“轰”地一声，七八个敌人血肉横飞，吓得后边的敌人龟缩回去，好长时间不敢再往陀顶上爬。"
     },
     {
       "panel_id": 86,
@@ -988,7 +1319,16 @@ Your final output must be a single, valid JSON object. Structure the JSON accord
       "camera": "近景 (CU) 马宝玉 -> 慢速扫视 (Slow Pan) 其他四人",
       "duration_sec": 7,
       "notes": "最后的告别。这是他们作为战友的最后一刻。",
-      "is_continue": true
+      "is_continue": true,
+      "characters": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "setting": 13,
+      "voiceover": "马宝玉看看葛振林. 宋学义. 胡德林，又看看胡福才，他想，这些与他一起出生人死的战友，忠于党，忠于祖国，忠于人民，是多么可爱啊"
     },
     {
       "panel_id": 87,
@@ -999,7 +1339,13 @@ Your final output must be a single, valid JSON object. Structure the JSON accord
       "camera": "近景 (CU)，双人镜头 (Two-Shot)",
       "duration_sec": 5,
       "notes": "在生命的最后时刻，履行党的责任。",
-      "is_continue": true
+      "is_continue": true,
+      "characters": [
+        1,
+        2
+      ],
+      "setting": 13,
+      "voiceover": "他掏出小本子对葛振林说：“老葛同志，通过这次战斗考验，他们三人已够条件了，我们介绍他们入党吧！“"
     },
     {
       "panel_id": 88,
@@ -1010,7 +1356,13 @@ Your final output must be a single, valid JSON object. Structure the JSON accord
       "camera": "近景 (CU) 葛振林 -> 特写 (CU) 写字的手 -> 特写 (CU) 签名",
       "duration_sec": 6,
       "notes": "这是他们最后的、最神圣的仪式。",
-      "is_continue": true
+      "is_continue": true,
+      "characters": [
+        1,
+        2
+      ],
+      "setting": 13,
+      "voiceover": "葛振林说：“我完全同意！”马宝玉立即在小本子上写了人党介绍信，葛振林也签了名。"
     },
     {
       "panel_id": 89,
@@ -1021,7 +1373,14 @@ Your final output must be a single, valid JSON object. Structure the JSON accord
       "camera": "组合近景 (Group CU)，三人镜头。",
       "duration_sec": 6,
       "notes": "他们入党的誓言。",
-      "is_continue": true
+      "is_continue": true,
+      "characters": [
+        3,
+        4,
+        5
+      ],
+      "setting": 13,
+      "voiceover": "宋学义. 胡德林和胡福才激情满怀，斩钉截铁地说：“为了打败日本帝国主义，建立新中国，我们不怕牺牲，战斗到底！“"
     },
     {
       "panel_id": 90,
@@ -1032,7 +1391,12 @@ Your final output must be a single, valid JSON object. Structure the JSON accord
       "camera": "中景 (MS)，跟拍 (Tracking Shot) 他走向悬崖。",
       "duration_sec": 6,
       "notes": "领袖的最后一步。",
-      "is_continue": true
+      "is_continue": true,
+      "characters": [
+        1
+      ],
+      "setting": 13,
+      "voiceover": "马宝玉更是异乎寻常地激动，他高声对大家说：“同志们，我们是共产主义战士！我们决不投降，决不当俘虏！”说着，他跨着大步走向悬崖边沿，"
     },
     {
       "panel_id": 91,
@@ -1043,7 +1407,12 @@ Your final output must be a single, valid JSON object. Structure the JSON accord
       "camera": "近景 (CU)，马宝玉的脸，眼神坚定。",
       "duration_sec": 4,
       "notes": "这是最后的象征性抵抗：不留给敌人任何战利品。",
-      "is_continue": true
+      "is_continue": true,
+      "characters": [
+        1
+      ],
+      "setting": 13,
+      "voiceover": "猛然，马宝玉想起了心爱的枪。他回过头来说：“我们用鲜血换来的武器，决不留给敌人！“"
     },
     {
       "panel_id": 92,
@@ -1054,7 +1423,12 @@ Your final output must be a single, valid JSON object. Structure the JSON accord
       "camera": "中景 (MS) -> 插入特写 (Insert CU) 枪支断裂",
       "duration_sec": 3,
       "notes": "动作必须充满力量。",
-      "is_continue": true
+      "is_continue": true,
+      "characters": [
+        1
+      ],
+      "setting": 13,
+      "voiceover": "“咔”的一声，马宝玉把从敌人手里缴来的枪砸断了。"
     },
     {
       "panel_id": 93,
@@ -1065,7 +1439,15 @@ Your final output must be a single, valid JSON object. Structure the JSON accord
       "camera": "快速剪辑蒙太奇 (Quick-cut Montage)",
       "duration_sec": 4,
       "notes": "这是他们最后一次统一的集体行动。",
-      "is_continue": true
+      "is_continue": true,
+      "characters": [
+        2,
+        3,
+        4,
+        5
+      ],
+      "setting": 13,
+      "voiceover": "紧接着，又是“咔. 咔. 咔. 咔”一阵响声，战士们都把自已的武器摔坏了。"
     },
     {
       "panel_id": 94,
@@ -1076,7 +1458,10 @@ Your final output must be a single, valid JSON object. Structure the JSON accord
       "camera": "低角度广角 (Low-Angle Wide Shot)，仰拍敌人。",
       "duration_sec": 3,
       "notes": "",
-      "is_continue": true
+      "is_continue": true,
+      "characters": [],
+      "setting": 13,
+      "voiceover": "一群饿狼似的敌人快冲上崖顶了。马宝玉正了正帽子，拉了拉衣领，挺着胸，昂着头，像发出冲锋号令那样高呼着：“同志们，跳吧！“"
     },
     {
       "panel_id": 95,
@@ -1087,7 +1472,12 @@ Your final output must be a single, valid JSON object. Structure the JSON accord
       "camera": "中景 (MS)，背光 (Backlit by sunset)，他跳出画框。",
       "duration_sec": 5,
       "notes": "这是全剧的最高潮。他的动作必须是庄严的，不是狼狈的。",
-      "is_continue": true
+      "is_continue": true,
+      "characters": [
+        1
+      ],
+      "setting": 13,
+      "voiceover": "一群饿狼似的敌人快冲上崖顶了。马宝玉正了正帽子，拉了拉衣领，挺着胸，昂着头，像发出冲锋号令那样高呼着：“同志们，跳吧！“"
     },
     {
       "panel_id": 96,
@@ -1098,7 +1488,12 @@ Your final output must be a single, valid JSON object. Structure the JSON accord
       "camera": "中景 (MS)，固定机位。展现最后的威严。",
       "duration_sec": 4,
       "notes": "即使在最后一刻，他们仍然在气势上压倒敌人。",
-      "is_continue": true
+      "is_continue": true,
+      "characters": [
+        2
+      ],
+      "setting": 13,
+      "voiceover": "葛振林见几个敌人向他扑来，便挺胸怒目，跨前几步，吓得敌人慌忙后退。"
     },
     {
       "panel_id": 97,
@@ -1109,7 +1504,10 @@ Your final output must be a single, valid JSON object. Structure the JSON accord
       "camera": "史诗级广角 (EWS)，固定机位，慢动作 (Slow-motion)",
       "duration_sec": 8,
       "notes": "这是“崇高的牺牲”。不要跟拍坠落，而是展现他们跃入永恒的画面。口号声在山谷中回荡。",
-      "is_continue": false
+      "is_continue": false,
+      "characters": [],
+      "setting": 13,
+      "voiceover": "打倒日本帝国主义！”中国共产党万岁！””毛主席万岁！”五勇士一齐纵身跳崖，狼牙山的四面八方响起了动人心弦的壮烈吼声，震荡着群山深谷。"
     },
     {
       "panel_id": 98,
@@ -1120,7 +1518,10 @@ Your final output must be a single, valid JSON object. Structure the JSON accord
       "camera": "仰拍 (Worm's-eye View)，固定机位。",
       "duration_sec": 5,
       "notes": "用声音来完成这个高潮。口号是主角。",
-      "is_continue": false
+      "is_continue": false,
+      "characters": [],
+      "setting": 1,
+      "voiceover": "打倒日本帝国主义！”中国共产党万岁！””毛主席万岁！”五勇士一齐纵身跳崖，狼牙山的四面八方响起了动人心弦的壮烈吼声，震荡着群山深谷。"
     },
     {
       "panel_id": 99,
@@ -1131,7 +1532,12 @@ Your final output must be a single, valid JSON object. Structure the JSON accord
       "camera": "中景 (MS)，从他身后过肩拍摄 (Over-the-Shoulder) 深渊。",
       "duration_sec": 5,
       "notes": "",
-      "is_continue": false
+      "is_continue": false,
+      "characters": [
+        10
+      ],
+      "setting": 13,
+      "voiceover": "敌指挥官站高见，站在棋盘陀的顶峰上，呆若木鸡：我“山地精锐”攻了一天，付出了一百多条生命的代价，难道山上只有几个八路？"
     },
     {
       "panel_id": 100,
@@ -1142,7 +1548,12 @@ Your final output must be a single, valid JSON object. Structure the JSON accord
       "camera": "极近特写 (ECU)，眼球特写。",
       "duration_sec": 5,
       "notes": "这是战士们的胜利：敌人的精神被彻底击垮。",
-      "is_continue": true
+      "is_continue": true,
+      "characters": [
+        10
+      ],
+      "setting": 13,
+      "voiceover": "敌指挥官站高见，站在棋盘陀的顶峰上，呆若木鸡：我“山地精锐”攻了一天，付出了一百多条生命的代价，难道山上只有几个八路？"
     },
     {
       "panel_id": 101,
@@ -1153,7 +1564,12 @@ Your final output must be a single, valid JSON object. Structure the JSON accord
       "camera": "中景 (MS)，油灯下的凝重表情。",
       "duration_sec": 4,
       "notes": "【尾声】开始。色调转为冷静和庄重。",
-      "is_continue": false
+      "is_continue": false,
+      "characters": [
+        8
+      ],
+      "setting": 7,
+      "voiceover": "六班出色地完成了任务，现在他们在哪儿呢？一团挥员们十分惦记着五名战士。"
     },
     {
       "panel_id": 102,
@@ -1164,7 +1580,10 @@ Your final output must be a single, valid JSON object. Structure the JSON accord
       "camera": "中景 (MS)，手持跟拍。",
       "duration_sec": 4,
       "notes": "",
-      "is_continue": false
+      "is_continue": false,
+      "characters": [],
+      "setting": 1,
+      "voiceover": "第二天，团首长派专人四处寻找。"
     },
     {
       "panel_id": 103,
@@ -1175,7 +1594,14 @@ Your final output must be a single, valid JSON object. Structure the JSON accord
       "camera": "中景 (MS)，低角度固定机位。",
       "duration_sec": 5,
       "notes": "“重如泰山”。",
-      "is_continue": true
+      "is_continue": true,
+      "characters": [
+        1,
+        4,
+        5
+      ],
+      "setting": null,
+      "voiceover": "马宝玉. 胡德林和胡福才，壮烈地牺牲了。他们为祖国为人民而死，重如泰山！"
     },
     {
       "panel_id": 104,
@@ -1186,7 +1612,13 @@ Your final output must be a single, valid JSON object. Structure the JSON accord
       "camera": "近景 (CU) 战士 -> 广角 (WS) 揭示幸存者 -> 中景 (MS) 营救",
       "duration_sec": 7,
       "notes": "从悲痛中透出一丝希望。",
-      "is_continue": true
+      "is_continue": true,
+      "characters": [
+        2,
+        3
+      ],
+      "setting": 1,
+      "voiceover": "葛振林和宋学义跳下悬崖后，被树枝挂在半空，被救了出来。他们伤愈后，又投人了新的战斗。"
     },
     {
       "panel_id": 105,
@@ -1197,7 +1629,13 @@ Your final output must be a single, valid JSON object. Structure the JSON accord
       "camera": "中景 (MS) -> 近景 (CU) 坚毅的眼神",
       "duration_sec": 5,
       "notes": "",
-      "is_continue": false
+      "is_continue": false,
+      "characters": [
+        2,
+        3
+      ],
+      "setting": null,
+      "voiceover": "葛振林和宋学义跳下悬崖后，被树枝挂在半空，被救了出来。他们伤愈后，又投人了新的战斗。"
     },
     {
       "panel_id": 106,
@@ -1208,7 +1646,10 @@ Your final output must be a single, valid JSON object. Structure the JSON accord
       "camera": "史诗级广角 (EWS)，缓慢向上摇 (Slow Tilt-up)。",
       "duration_sec": 6,
       "notes": "从“战场”到“圣地”的转变。",
-      "is_continue": false
+      "is_continue": false,
+      "characters": [],
+      "setting": 14,
+      "voiceover": "我晋察冀根据地抗日军民，怀着崇敬的心情，在狼牙山上修建了五壮士的纪念塔。"
     },
     {
       "panel_id": 107,
@@ -1219,7 +1660,13 @@ Your final output must be a single, valid JSON object. Structure the JSON accord
       "camera": "特写 (CU)，缓慢推近 (Slow Push-in)。",
       "duration_sec": 4,
       "notes": "",
-      "is_continue": false
+      "is_continue": false,
+      "characters": [
+        2,
+        3
+      ],
+      "setting": null,
+      "voiceover": "军分区党委给葛振林. 宋学义二人颁发了奖状，并开展了学习“狼牙山五勇士”活动。五壮士的英雄事迹鼓舞着抗日军民英勇奋战。"
     },
     {
       "panel_id": 108,
@@ -1230,7 +1677,10 @@ Your final output must be a single, valid JSON object. Structure the JSON accord
       "camera": "蒙太奇 (Montage)，历史资料风格。",
       "duration_sec": 6,
       "notes": "将五壮士的牺牲连接到最终的宏大胜利。",
-      "is_continue": false
+      "is_continue": false,
+      "characters": [],
+      "setting": null,
+      "voiceover": "在毛主席和共产党的英明领导下，中国人民前仆后继，英勇抗战，终于取得了抗日战争的伟大胜利。"
     },
     {
       "panel_id": 109,
@@ -1241,7 +1691,10 @@ Your final output must be a single, valid JSON object. Structure the JSON accord
       "camera": "史诗级广角 (EWS)，缓慢平移 (Slow Pan)。",
       "duration_sec": 7,
       "notes": "与开头的“扫荡”形成鲜明对比。色调饱满和平。",
-      "is_continue": false
+      "is_continue": false,
+      "characters": [],
+      "setting": 1,
+      "voiceover": "今天的狼牙山啊，分外雄伟壮丽；易水河啊，滚滚东流不息。"
     },
     {
       "panel_id": 110,
@@ -1252,7 +1705,10 @@ Your final output must be a single, valid JSON object. Structure the JSON accord
       "camera": "中景 (MS) -> 缓慢推近 (Slow Push-in) -> 叠化 (Dissolve) 烈士形象",
       "duration_sec": 8,
       "notes": "“永远活在人们的心里”。全剧终。",
-      "is_continue": false
+      "is_continue": false,
+      "characters": [],
+      "setting": 14,
+      "voiceover": "抗日烈士们的崇高形象，永远活在人们的心里；英雄们的事迹，永远激励着人们前进！"
     }
   ]
 }

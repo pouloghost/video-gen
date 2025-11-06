@@ -28,7 +28,8 @@ Your final output must be a single, valid JSON object. Structure the JSON accord
     {
       "panel_id": "Sequential integer for the shot order.",
       "voiceover_ref": "The corresponding voiceover id for this specific panel.",
-      "description": "A cinematic description of the visuals and plot. MUST Include: Who, When, Where, What.",
+      "3w": "List key components: Who, When, Where.",
+      "description": "A cinematic description of the visuals and plot. Use the 3w for description, make it a human friendly short paragraph.",
       "mood": "The dominant emotion of this panel. (e.g., Tense, Nostalgic, Urgent)",
       "camera": "Professional shot description. Shot size, angle, movement, etc.",
       "duration_sec": "Estimated duration of the shot in seconds.",
@@ -235,4 +236,4 @@ Your final output must be a single, valid JSON object. Structure the JSON accord
 77.1 今天的狼牙山啊，分外雄伟壮丽；易水河啊，滚滚东流不息。
 77.2 抗日烈士们的崇高形象，永远活在人们的心里；英雄们的事迹，永远激励着人们前进！
 
- Give me first 10 panels.
+ Give me first 30 panels.

@@ -1,8 +1,3 @@
-# Prompt example
-A young woman with long blonde hair, wearing a white t-shirt and blue jeans, walking through a sunny park with green trees in the background, carrying a brown shoulder bag.
-Street photography, rule of third(left to right), soft natural lighting, golden hour, shallow depth of field, bokeh background, 85mm lens, f/1.4, ISO 200, sharp focus on eyes, cinematic look, film grain, Fujifilm Pro 400H style, medium close-up, looking slightly away from camera
-Grass on the left, woman in the middle, tree on the right.
-
 # Image generate model
 Good at following expicit instructions, good at overall rendering.
 Bad at layouting, bad at complex character-environment proportion.
@@ -10,60 +5,38 @@ Bad at layouting, bad at complex character-environment proportion.
 ----
 
 # Generative prompt guidelines
-The goal is to provide a comprehensive description that not only outlines the subject matter but also guides the AI on the desired photographic qualities, mood, and technical aspects. Think like a photographer planning a shot.
-
-**I. Core Subject and Scene Description:**
-*   **What is the main subject?** Be precise (e.g., "three young Chinese women,").
-*   **What are they doing?** (e.g., "standing side-by-side,").
-*   **What are their key characteristics?** (e.g., "exquisite traditional Hanfu,").
-*   **Are there any specific props?** (e.g., "ornamental circular fans,").
-*   **What is the setting/environment?** (e.g., "ancient Chinese palace architecture,").
-*   **Any specific background elements?** (e.g., "red walls, golden roofs, stone balustrade,").
-
-**II. Photographic Technicals (The "How"):**
-1.  **Exposure Triangle:**
-    *   **ISO:** Specify a low ISO for clean images (e.g., "ISO 100", "ISO 200").
-    *   **Aperture (f-stop):** Crucial for Depth of Field.
-    *   **Shutter Speed:** Influences motion blur and light.
-2.  **Lighting:**
-    *   **Type:** "natural daylight,", "studio lighting,", "artificial light,", "moonlight.", etc.
-    *   **Quality/Direction:** "golden hour lighting,", "soft diffused lighting,", "hard direct sunlight,", "rim light,", "backlight,", "front light,", "dramatic chiaroscuro.", etc.
-    *   **Color Temperature:** "warm tones,", "cool tones,", "neutral.", etc.
-3.  **Composition:**
-    *   **Rule of Thirds:** "subjects centered and slightly to the right/left,", "horizon on lower third.", etc.
-    *   **Leading Lines:** "leading lines from the balustrade/road/river.", etc.
-    *   **Symmetry:** "symmetrical composition.", etc.
-    *   **Framing:** "natural framing by doorway/trees.", etc.
-    *   **Negative Space:** "emphasizing negative space around subject.", etc.
-    *   **Rule of Odds:** "odd number of subjects.", etc.
-    *   **Perspective:** "low-angle,", "high-angle,", "worm's-eye view", "bird's-eye view.", etc.
-4.  **Depth of Field (DoF):**
-    *   **Shallow:**
-    *   **Deep/Large:**
-5.  **Bokeh:**
-    *   **Presence:** "creamy bokeh," "smooth bokeh," "busy bokeh," "noticeable bokeh circles."
-    *   **Quality:** "soft background blur," "dreamy background blur."
-6.  **Lens & Focal Length:**
-    *   **Type:** "prime lens," "zoom lens," "telephoto lens," "wide-angle lens," "macro lens," "fisheye lens."
-    *   **Specific Focal Length:** "85mm," "50mm," "24mm," "200mm." (This implies perspective compression/expansion).
-7.  **Genre/Style/Mood:**
-    *   **Genre:** "cultural portraiture," "environmental portraiture," "street photography," "landscape photography," "fine art," "documentary," "fashion."
-    *   **Style:** "warm, vibrant, high-key," "moody, cinematic, low-key," "vintage, sepia tone," "monochrome, black and white," "dreamy," "realistic," "hyperrealistic."
-    *   **Mood:** "serene," "dramatic," "joyful," "mysterious."
-8.  **Camera Angle & Shot Type:**
-    *   **Angle:** "eye level," "low angle," "high angle," "Dutch angle."
-    *   **Shot Type:** "full shot," "medium shot," "close-up," "wide shot," "establishing shot."
-
-**III. Structuring the Prompt:**
-*   **Start with the broad strokes:** Shot type, main subjects, core action.
-*   **Integrate technical details:** Weave in exposure, composition, lighting, DoF, lens. You can group them or spread them logically.
-*   **Add stylistic elements:** Genre, mood, color palette.
-*   **Be specific:** Instead of "good lighting," use "golden hour lighting, soft diffused." Instead of "blurry background," use "shallow depth of field, creamy bokeh."
-*   **Use strong descriptive adjectives.**
-*   **Think about the desired *feeling* of the image** and translate that into photographic terms.
-
-# Generative prompt example
-Full shot, three young Chinese women. Exposure: ISO 100, f/2.8, 1/250s, natural daylight, golden hour lighting. Composition: Rule of Thirds, subjects centered and slightly to the right, leading lines from the balustrade. Depth of Field: Shallow, isolating subjects from background. Bokeh: Creamy, soft background blur. Lens: 85mm prime lens. Focal Length: 85mm. Genre: Cultural portraiture, environmental portraiture. Style: Warm, vibrant, high-key. Subjects: exquisite traditional Hanfu, intricate traditional hairstyles, delicate traditional makeup, serene expressions, holding ornamental circular fans. Woman on left: cream and blue Hanfu, plain white fan. Woman in middle: purple and grey Hanfu, floral fan. Woman on right: white and green patterned Hanfu, bird motif fan. Shot at eye level. Background: traditional Chinese imperial palace architecture, red walls, golden roofs, stone balustrade, slightly overcast sky with warm tones.
+The goal is to give instructions like an Art Director. Describe "the image we want to see".
+## Subject & Action
+- Core Subject: Who/What. (e.g. "An Eighth Route Army soldier")
+- Pose/Action: What are they doing? (e.g. "standing solemnly at attention")
+- Key Feature: The most important identifying point? (e.g. "with a noticeable scar on his face")
+- Feature/Props: Clothing, decoration, makeups, etc. (e.g. "pale blue shirt, dark pants just above knees, brown leather boots")
+- Background: Any specific background elements? (e.g. "red walls, golden roofs, stone balustrade").
+## Shot & Composition
+- Shot Type: Full body portrait, Medium shot, Close-up, etc.
+- Angle: Eye-level, Low-angle, High-angle, etc.
+- Composition: Centered, Rule of thirds, Symmetrical, etc. Specify position of every subject. (e.g. "Symmetrical, man on left, woman on right").
+## Lighting & Atmosphere
+- Lighting Effect: Dramatic chiaroscuro, Soft diffused light, Golden hour, Rim light, etc.
+- Atmosphere/Mood: Solemn, Epic, Tense, Joyful, etc.
+- Color Temperature: "warm tones", "cool tones", "neutral", etc.
+## Style & Medium
+- Genre: cultural portraiture, environmental portraiture, street photography, landscape photography, fine art, documentary, fashion, etc.
+- Style: "warm, vibrant, high-key, moody, cinematic, low-key, black and white, dreamy, realistic, hyperrealistic, etc.
+- Medium: Digital painting, Oil painting, Photograph, etc.
+## Lens & Focus
+- DoF: Shallow depth of field (blurry background), Deep focus (entire figure sharp), etc.
+- Bokeh Presence: creamy bokeh, smooth bokeh, busy bokeh, noticeable bokeh circles, etc.
+- Boken Quality: soft background blur, dreamy background blur, etc.
+- Lens Effect: Non-distorted portrait lens, Telephoto compression (compressed perspective), Wide-angle distortion (dynamic tension), etc.
+## Emphasize the Distinctive Feature:
+You must identify the single most unique, recognizable feature (as defined in Distinctive features input) and place it prominently in the prompt. This is the primary anchor for consistency.
+## Structuring the Prompt:
+- Start with the broad strokes: Shot type, main subjects, core action.
+- Integrate details: Weave in shot, composition, lighting, atmosphere, style, medium, lens, focus, etc. You can group them or spread them logically.
+- Be specific: Instead of "good lighting", use "golden hour lighting, soft diffused". Instead of "blurry background", use "shallow depth of field, creamy bokeh".
+- Use strong descriptive adjectives.
+- Think about the desired *feeling* of the image** and translate that into photographic terms.
 
 
 ----

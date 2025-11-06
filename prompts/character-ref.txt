@@ -1,71 +1,55 @@
 /# claude-4.5
 
 # Role
-You are an expert on prompting text-to-image model.
+You are a world class art director and an expert on prompting text-to-image model.
 
 # Task
 Write a prompt for generating full body portrait for the character description. Use high contrast, single colored background.
 
 # Distinctive features
 Each character must have some unique features from others so they can be recognized immediately. Should be outfits, unique appearances, NOT expression or current posture.
+Consider all other characters for a truly distinctive feature.
 Emphasize the distinctive feature using a single description. E.g. she has golden curly hair.
 
 # Generative prompt guidelines
-The goal is to provide a comprehensive description that not only outlines the subject matter but also guides the AI on the desired photographic qualities, mood, and technical aspects. Think like a photographer planning a shot.
+The goal is to give instructions like an Art Director. Describe "the image we want to see".
+## Subject & Action
+- Core Subject: Who/What. (e.g. "An Eighth Route Army soldier")
+- Pose/Action: What are they doing? (e.g. "standing solemnly at attention")
+- Key Feature: The most important identifying point? (e.g. "with a noticeable scar on his face")
+- Feature/Props: Clothing, decoration, makeups, etc. (e.g. "pale blue shirt, dark pants just above knees, brown leather boots")
+- Background: Any specific background elements? (e.g. "red walls, golden roofs, stone balustrade").
+## Shot & Composition
+- Shot Type: Full body portrait, Medium shot, Close-up, etc.
+- Angle: Eye-level, Low-angle, High-angle, etc.
+- Composition: Centered, Rule of thirds, Symmetrical, etc. Specify position of every subject. (e.g. "Symmetrical, man on left, woman on right").
+## Lighting & Atmosphere
+- Lighting Effect: Dramatic chiaroscuro, Soft diffused light, Golden hour, Rim light, etc.
+- Atmosphere/Mood: Solemn, Epic, Tense, Joyful, etc.
+- Color Temperature: "warm tones", "cool tones", "neutral", etc.
+## Style & Medium
+- Genre: cultural portraiture, environmental portraiture, street photography, landscape photography, fine art, documentary, fashion, etc.
+- Style: "warm, vibrant, high-key, moody, cinematic, low-key, black and white, dreamy, realistic, hyperrealistic, etc.
+- Medium: Digital painting, Oil painting, Photograph, etc.
+## Lens & Focus
+- DoF: Shallow depth of field (blurry background), Deep focus (entire figure sharp), etc.
+- Bokeh Presence: creamy bokeh, smooth bokeh, busy bokeh, noticeable bokeh circles, etc.
+- Boken Quality: soft background blur, dreamy background blur, etc.
+- Lens Effect: Non-distorted portrait lens, Telephoto compression (compressed perspective), Wide-angle distortion (dynamic tension), etc.
+## Be Correct:
+Consider all factors to make the image correct on all aspects, e.g. history, characteristics, story style, plot, etc.
+## Emphasize the Distinctive Feature:
+You must identify the single most unique, recognizable feature (as defined in Distinctive features input) and place it prominently in the prompt. This is the primary anchor for consistency.
+## Structuring the Prompt:
+- Start with the broad strokes: Shot type, main subjects, core action.
+- Integrate details: Weave in shot, composition, lighting, atmosphere, style, medium, lens, focus, etc. You can group them or spread them logically.
+- Be specific: Instead of "good lighting", use "golden hour lighting, soft diffused". Instead of "blurry background", use "shallow depth of field, creamy bokeh".
+- Use strong descriptive adjectives.
+- Think about the desired *feeling* of the image and translate that into photographic terms.
 
-**I. Core Subject and Scene Description:**
-*   **What is the main subject?** Be precise (e.g., "three young Chinese women,").
-*   **What are they doing?** (e.g., "standing side-by-side,").
-*   **What are their key characteristics?** (e.g., "a blaze scar between his eyes,").
-*   **Are there any specific props?** (e.g., "ornamental circular fans,").
-*   **What is the setting/environment?** (e.g., "ancient Chinese palace architecture,").
-*   **Any specific background elements?** (e.g., "red walls, golden roofs, stone balustrade,").
-*   **What are their outfits?** (e.g., "shiny boots,").
-
-**II. Photographic Technicals (The "How"):**
-1.  **Exposure Triangle:**
-    *   **ISO:** Specify a low ISO for clean images (e.g., "ISO 100", "ISO 200").
-    *   **Aperture (f-stop):** Crucial for Depth of Field.
-    *   **Shutter Speed:** Influences motion blur and light.
-2.  **Lighting:**
-    *   **Type:** "natural daylight,", "studio lighting,", "artificial light,", "moonlight.", etc.
-    *   **Quality/Direction:** "golden hour lighting,", "soft diffused lighting,", "hard direct sunlight,", "rim light,", "backlight,", "front light,", "dramatic chiaroscuro.", etc.
-    *   **Color Temperature:** "warm tones,", "cool tones,", "neutral.", etc.
-3.  **Composition:**
-    *   **Rule of Thirds:** "subjects centered and slightly to the right/left,", "horizon on lower third.", etc.
-    *   **Leading Lines:** "leading lines from the balustrade/road/river.", etc.
-    *   **Symmetry:** "symmetrical composition.", etc.
-    *   **Framing:** "natural framing by doorway/trees.", etc.
-    *   **Negative Space:** "emphasizing negative space around subject.", etc.
-    *   **Rule of Odds:** "odd number of subjects.", etc.
-    *   **Perspective:** "low-angle,", "high-angle,", "worm's-eye view", "bird's-eye view.", etc.
-4.  **Depth of Field (DoF):**
-    *   **Shallow:**
-    *   **Deep/Large:**
-5.  **Bokeh:**
-    *   **Presence:** "creamy bokeh," "smooth bokeh," "busy bokeh," "noticeable bokeh circles."
-    *   **Quality:** "soft background blur," "dreamy background blur."
-6.  **Lens & Focal Length:**
-    *   **Type:** "prime lens," "zoom lens," "telephoto lens," "wide-angle lens," "macro lens," "fisheye lens."
-    *   **Specific Focal Length:** "85mm," "50mm," "24mm," "200mm." (This implies perspective compression/expansion).
-7.  **Genre/Style/Mood:**
-    *   **Genre:** "cultural portraiture," "environmental portraiture," "street photography," "landscape photography," "fine art," "documentary," "fashion."
-    *   **Style:** "warm, vibrant, high-key," "moody, cinematic, low-key," "vintage, sepia tone," "monochrome, black and white," "dreamy," "realistic," "hyperrealistic."
-    *   **Mood:** "serene," "dramatic," "joyful," "mysterious."
-8.  **Camera Angle & Shot Type:**
-    *   **Angle:** "eye level," "low angle," "high angle," "Dutch angle."
-    *   **Shot Type:** "full shot," "medium shot," "close-up," "wide shot," "establishing shot."
-
-**III. Structuring the Prompt:**
-*   **Start with the broad strokes:** Shot type, main subjects, core action.
-*   **Integrate technical details:** Weave in exposure, composition, lighting, DoF, lens. You can group them or spread them logically.
-*   **Add stylistic elements:** Genre, mood, color palette.
-*   **Be specific:** Instead of "good lighting," use "golden hour lighting, soft diffused." Instead of "blurry background," use "shallow depth of field, creamy bokeh."
-*   **Use strong descriptive adjectives.**
-*   **Think about the desired *feeling* of the image** and translate that into photographic terms.
-
-# Generative prompt example
-Medium shot, a lone knight in full plate armor. **Exposure:** ISO 200, f/4, 1/125s. **Lighting:** Dramatic backlit light shafts piercing through dense mist in an ancient forest, creating a mystical atmosphere. **Composition:** Knight positioned on the left third, forest path forming subtle leading lines. **Depth of Field:** Moderate, with a slight, ethereal background blur. **Lens:** 50mm prime lens. **Genre:** Fantasy portraiture, cinematic. **Style:** Moody, high contrast, dark fantasy aesthetics. Shot at eye level.
+# Image generate model
+Good at following expicit instructions, good at overall rendering.
+Bad at layouting, bad at complex character-environment proportion.
 
 # Visual style
 一种写实、厚涂的2D动画风格，运用强烈的明暗对比和偏向饱和度低的土色调色板，以强调历史事件的严酷、庄重和史诗感。
@@ -73,24 +57,65 @@ Medium shot, a lone knight in full plate armor. **Exposure:** ISO 200, f/4, 1/12
 # Story logline
 狼牙山五壮士：1941年，五名八路军战士为掩护主力部队和数千名群众安全转移，将日军精锐引上狼牙山绝顶，在弹尽粮绝后毅然跳崖，谱写了一曲壮丽的英雄赞歌。
 
-# Existing characters
-Full body portrait, a Chinese military squad leader standing at attention in 1941. **Subject:** Man in his late twenties with upright military posture, resolute angular facial features with slightly furrowed brow, and distinctive penetrating eyes that convey deep thought and firm conviction. Wearing a faded grayish-blue Eight Route Army uniform with worn fabric texture, simple cloth belt, weathered cotton shoes. **Exposure:** ISO 200, f/5.6, 1/60s. **Lighting:** Dramatic chiaroscuro lighting from the front-left, creating strong contrast between light and shadow across the face and uniform, emphasizing the historical gravity and solemnity. **Composition:** Subject centered, standing straight with disciplined military bearing, hands naturally at sides. **Depth of Field:** Deep focus keeping entire figure sharp. **Background:** High contrast, single solid dark olive-brown background. **Lens:** 85mm prime lens. **Genre:** Historical portraiture, realistic thick-painted 2D animation style. **Style:** Strong light-dark contrast, low-saturation earthy color palette with muted blues and browns, serious and epic mood, realistic brush stroke textures, painterly quality. Shot at eye level.
-Full body portrait, a Chinese military deputy squad leader standing at attention in 1941. **Subject:** Man in his late twenties with robust, muscular build featuring broad shoulders and stocky powerful frame. Hard angular facial lines with tightly pressed lips conveying unyielding determination, calm and decisive expression radiating strong presence. Wearing a faded grayish-blue Eight Route Army uniform with worn fabric texture stretched across his solid torso, simple cloth belt, weathered cotton shoes. **Exposure:** ISO 200, f/5.6, 1/60s. **Lighting:** Dramatic chiaroscuro lighting from the front-left, creating strong contrast between light and shadow across the muscular physique and uniform, emphasizing the historical gravity and solemnity. **Composition:** Subject centered, standing straight with powerful military bearing, hands naturally at sides, broad shoulders squared. **Depth of Field:** Deep focus keeping entire figure sharp. **Background:** High contrast, single solid dark olive-brown background. **Lens:** 85mm prime lens. **Genre:** Historical portraiture, realistic thick-painted 2D animation style. **Style:** Strong light-dark contrast, low-saturation earthy color palette with muted blues and browns, serious and epic mood, realistic brush stroke textures, painterly quality. Shot at eye level.
-Full body portrait, a Chinese military soldier standing at attention in 1941. **Subject:** Man in his mid-twenties with lean, wiry build and exceptionally rigid disciplined posture. Weathered face with distinctive severely cracked and parched lips showing signs of extreme deprivation, paired with unwavering steely eyes that reflect iron willpower and powerful self-control. Sharp facial features with defined cheekbones. Wearing a faded grayish-blue Eight Route Army uniform with worn fabric texture, simple cloth belt, weathered cotton shoes. **Exposure:** ISO 200, f/5.6, 1/60s. **Lighting:** Dramatic chiaroscuro lighting from the front-left, creating strong contrast between light and shadow across the weathered face and uniform, emphasizing the cracked lips and historical gravity. **Composition:** Subject centered, standing rigidly straight with exceptionally strict military bearing, hands naturally at sides, embodying absolute discipline. **Depth of Field:** Deep focus keeping entire figure sharp. **Background:** High contrast, single solid dark olive-brown background. **Lens:** 85mm prime lens. **Genre:** Historical portraiture, realistic thick-painted 2D animation style. **Style:** Strong light-dark contrast, low-saturation earthy color palette with muted blues and browns, serious and epic mood, realistic brush stroke textures, painterly quality. Shot at eye level.
-Full body portrait, a Chinese military soldier standing at attention in 1941. **Subject:** Man in his early twenties with athletic, agile build and youthful facial features. Most distinctive are the prominent smile lines (crow's feet) deeply etched around his eyes - permanent marks from habitual smiling that remain visible even in neutral expression. High cheekbones, bright alert eyes, weather-touched but youthful face. Wearing a faded grayish-blue Eight Route Army uniform with worn fabric texture, simple cloth belt, weathered cotton shoes. **Exposure:** ISO 200, f/5.6, 1/60s. **Lighting:** Dramatic chiaroscuro lighting from the front-left, creating strong contrast between light and shadow across the face and uniform, emphasizing the distinctive smile lines and historical gravity. **Composition:** Subject centered, standing straight with vigorous energetic military bearing, hands naturally at sides. **Depth of Field:** Deep focus keeping entire figure sharp. **Background:** High contrast, single solid dark olive-brown background. **Lens:** 85mm prime lens. **Genre:** Historical portraiture, realistic thick-painted 2D animation style. **Style:** Strong light-dark contrast, low-saturation earthy color palette with muted blues and browns, serious and epic mood, realistic brush stroke textures, painterly quality. Shot at eye level.
-Full body portrait, a Chinese military soldier standing at attention in 1941. **Subject:** Man in his mid-twenties with slight but nimble build and sharp angular facial features. Most distinctive are the sharp, naturally arched eyebrows that angle prominently upward, creating an inherently intelligent and cunning appearance even in neutral expression. Narrow face with defined cheekbones, alert keen eyes, weathered features suggesting resourceful quick-thinking nature. Wearing a faded grayish-blue Eight Route Army uniform with worn fabric texture, simple cloth belt, weathered cotton shoes. **Exposure:** ISO 200, f/5.6, 1/60s. **Lighting:** Dramatic chiaroscuro lighting from the front-left, creating strong contrast between light and shadow across the angular face and uniform, emphasizing the distinctive arched eyebrows and historical gravity. **Composition:** Subject centered, standing straight with nimble military bearing, hands naturally at sides. **Depth of Field:** Deep focus keeping entire figure sharp. **Background:** High contrast, single solid dark olive-brown background. **Lens:** 85mm prime lens. **Genre:** Historical portraiture, realistic thick-painted 2D animation style. **Style:** Strong light-dark contrast, low-saturation earthy color palette with muted blues and browns, serious and epic mood, realistic brush stroke textures, painterly quality. Shot at eye level.
-Full body portrait, a Japanese military commander standing at attention in 1941. **Subject:** Man in his late thirties with rigid authoritative military posture and sharp aristocratic facial features. Most distinctive are the pristine white gloves worn on both hands, standing out starkly against the dark uniform. Wearing an immaculately pressed dark green Japanese Imperial Army officer uniform with high collar, polished brass buttons, military rank insignia and medal ribbons on chest, leather Sam Browne belt with shoulder strap. Traditional command saber in black lacquered scabbard hanging at left side, polished knee-high black leather boots. Clean-cut appearance with severe military bearing. **Exposure:** ISO 200, f/5.6, 1/60s. **Lighting:** Dramatic chiaroscuro lighting from the front-left, creating strong contrast between light and shadow across the uniform and face, the white gloves catching sharp highlights, emphasizing the historical gravity and solemnity. **Composition:** Subject centered, standing rigidly straight with authoritative military bearing, hands naturally at sides with white gloves prominently visible. **Depth of Field:** Deep focus keeping entire figure sharp. **Background:** High contrast, single solid dark olive-brown background. **Lens:** 85mm prime lens. **Genre:** Historical portraiture, realistic thick-painted 2D animation style. **Style:** Strong light-dark contrast, low-saturation earthy color palette with muted greens and browns, serious and epic mood, realistic brush stroke textures, painterly quality. Shot at eye level.
-Full body portrait, a Chinese military regiment commander standing at attention in 1941. **Subject:** Man in his early forties with commanding authoritative presence and deeply weathered experienced features. Most distinctive are the exceptionally rough, heavily calloused hands with prominent weathered texture and visible work-worn skin - the unmistakable hands of a veteran field commander who has endured countless campaigns. Deep-set grave eyes radiating steely determination and resolute authority, graying hair at temples showing years of dedicated service, angular weathered face with prominent cheekbones and serious expression. Wearing a faded grayish-blue Eight Route Army officer uniform with distinctive red collar tabs indicating regiment-level rank, worn fabric texture from extended field service, sturdy leather belt with brass buckle, small leather map case secured to belt side, weathered cotton shoes. **Exposure:** ISO 200, f/5.6, 1/60s. **Lighting:** Dramatic chiaroscuro lighting from the front-left, creating strong contrast between light and shadow across the weathered face and rough calloused hands, emphasizing the hand texture and historical gravity of command authority. **Composition:** Subject centered, standing rigidly straight with commanding military bearing projecting absolute authority, hands naturally at sides with rough weathered texture prominently visible. **Depth of Field:** Deep focus keeping entire figure sharp with emphasis on hand detail. **Background:** High contrast, single solid dark olive-brown background. **Lens:** 85mm prime lens. **Genre:** Historical portraiture, realistic thick-painted 2D animation style. **Style:** Strong light-dark contrast, low-saturation earthy color palette with muted blues and browns, serious and epic mood emphasizing command gravitas, realistic brush stroke textures, painterly quality. Shot at eye level.
+# All characters
+{
+    "id": 1,
+    "name": "马宝玉 (Ma Baoyu)",
+    "description": "六班班长。作为指挥官，面容坚毅、沉稳。眼神通常冷静、果断，充满领导气质。表情通常严肃或深沉，但在战术成功时也会露出自信的微笑。"
+},
+{
+    "id": 2,
+    "name": "葛振林 (Ge Zhenlin)",
+    "description": "六班副班长。体格健壮，面容质朴。经验丰富的老兵，眼神镇定，动作精准。下颌线条明显，具有顽强、威严的特质。是幸存者之一。"
+},
+{
+    "id": 3,
+    "name": "宋学义 (Song Xueyi)",
+    "description": "六班战士。面容朴实。在极端困境中（如干渴时面对萝卜）仍恪守纪律，眼神中充满强大的自制力和原则性。是幸存者之一。"
+},
+{
+    "id": 4,
+    "name": "胡德林 (Hu Delin)",
+    "description": "六班战士。性格开朗，富有革命乐观主义精神。即使在炮火下也会微笑。常与胡福才一起出现。"
+},
+{
+    "id": 5,
+    "name": "胡福才 (Hu Fucai)",
+    "description": "六班战士。性格开朗，机智。在撤退时会（Panel 64）主动用石头攻击敌人。是最后一颗手榴弹的持有者（Panel 79）。"
+},
+{
+    "id": 7,
+    "name": "指导员 (Political Instructor)",
+    "description": "八路军指导员。神情坚毅，面部轮廓分明。具有思想深度和鼓动性，眼神坚定。在黄昏的秘密会议上出现。"
+},
+{
+    "id": 8,
+    "name": "团首长 / 团长 (Regiment Commander)",
+    "description": "八路军高级指挥官（团级）。神情凝重，有战略眼光。通常眉头紧锁，眼神中充满信任和沉重的托付。在指挥所（油灯、地图）或阵地前线出现。"
+},
+{
+    "id": 9,
+    "name": "七连长 (7th Company Commander)",
+    "description": "八路军连级指挥官。在柿子林（驻地）出现。接到命令时表情凝重，下达命令时果断。标准的军人气质。"
+},
+{
+    "id": 10,
+    "name": "日军指挥官高见 (Takahashi)",
+    "description": "日本指挥官，主要反派。面容傲慢、残酷。眼神中充满“杀气”。在故事结尾，他的表情会转变为极度的困惑、挫败和“呆若木鸡”。"
+}
 
 # Character to generate
-"name": "七连长",
-        "description": "八路军七连连长。一位坚毅的基层指挥官。他的标志性场景是在昏暗的油灯下研究命令，神情严肃，目光坚定，是忠实执行命令的军人形象。",
+{
+    "id": 1,
+    "name": "马宝玉 (Ma Baoyu)",
+    "description": "六班班长。作为指挥官，面容坚毅、沉稳。眼神通常冷静、果断，充满领导气质。表情通常严肃或深沉，但在战术成功时也会露出自信的微笑。"
+},
                 
 # Output Format
 Your final output must be a single, valid JSON object. Structure the JSON according to this schema.
 ```json
 {
-    "thought": "Your thinking or other necessary information.",
+    "thought": "Thoughts about the character, related facts, potential x-factors. Most importantly what's its distinctive feature, and what could be mistaken with other characters.",
     "distinctive_features": "The distinctive features of the character. Clothing, facial character, etc.",
     "prompt": "The final prompt for image generation. In English.",
     "ref_description": "A concise description for identifying the character between other character. Must be distinctive from other characters. E.g. Man in a yellow hat."

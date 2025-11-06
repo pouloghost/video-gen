@@ -46,8 +46,8 @@ function mergeStoryBoard(storyboardPath, refsPath, outputPath) {
     const settingMap = new Map();
 
     // Populate character map
-    refs.characters.forEach(character => {
-        character.scene_ids.forEach(sceneId => {
+    refs.entities.forEach(character => {
+        character.panel_ids.forEach(sceneId => {
             if (!characterMap.has(sceneId)) {
                 characterMap.set(sceneId, []);
             }
@@ -57,14 +57,14 @@ function mergeStoryBoard(storyboardPath, refsPath, outputPath) {
 
     // Populate setting map
     refs.settings.forEach(setting => {
-        setting.scene_ids.forEach(sceneId => {
+        setting.panel_ids.forEach(sceneId => {
             settingMap.set(sceneId, setting.id);
         });
     });
 
     // Merge characters and settings into scenes
     storyboard.scenes.forEach(scene => {
-        const sceneId = scene.panel_id;
+        const sceneId = `${scene.panel_id}`;
         
         // Add characters
         scene.characters = characterMap.get(sceneId) || [];
