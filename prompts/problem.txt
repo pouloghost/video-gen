@@ -1,0 +1,6 @@
+- storyboard 的 panel_description 不够完整。缺环境等关键元素 ✅
+- 两个guideline太长，不够突出重点
+- modify prompt不行
+- sketch 还是太多细节
+- ref 的 modify 太长
+- 生图的prompt不够结构化 https://skywork.ai/blog/nano-banana-gemini-prompt-engineering-best-practices-2025/

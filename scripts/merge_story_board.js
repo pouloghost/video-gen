@@ -12,6 +12,29 @@ function writeJsonFile(filePath, data) {
     fs.writeFileSync(filePath, JSON.stringify(data, null, 2), 'utf8');
 }
 
+// Function to get voiceover text by voiceover_ref
+function getVoiceoverText(voiceoverRef, voiceoverFilePath) {
+    if (!fs.existsSync(voiceoverFilePath)) {
+        console.warn(`Voiceover file not found: ${voiceoverFilePath}`);
+        return null;
+    }
+    
+    const voiceoverContent = fs.readFileSync(voiceoverFilePath, 'utf8');
+    const lines = voiceoverContent.split('\n').filter(line => line.trim() !== '');
+    
+    // Find the line that starts with the voiceover_ref
+    for (const line of lines) {
+        const trimmedLine = line.trim();
+        if (trimmedLine.startsWith(voiceoverRef + ' ')) {
+            // Return the text part after the voiceover_ref
+            return trimmedLine.substring(voiceoverRef.length + 1).trim();
+        }
+    }
+    
+    console.warn(`Voiceover text not found for ref: ${voiceoverRef}`);
+    return null;
+}
+
 // Main function to merge storyboard and refs
 function mergeStoryBoard(storyboardPath, refsPath, outputPath) {
     // Read the storyboard and refs files
@@ -48,6 +71,17 @@ function mergeStoryBoard(storyboardPath, refsPath, outputPath) {
         
         // Add setting
         scene.setting = settingMap.get(sceneId) ? settingMap.get(sceneId) : null;
+        
+        // Add voiceover text if voiceover_ref exists
+        if (scene.voiceover_ref) {
+            // Determine the path to the voiceover-splited.txt file
+            const animeDir = path.dirname(storyboardPath);
+            const voiceoverFilePath = path.join(path.dirname(animeDir), 'voiceover-splited.txt');
+            const voiceoverText = getVoiceoverText(scene.voiceover_ref, voiceoverFilePath);
+            if (voiceoverText) {
+                scene.voiceover = voiceoverText;
+            }
+        }
     });
 
     // Write the merged result to output file

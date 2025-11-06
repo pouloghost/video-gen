@@ -11,7 +11,8 @@
       "duration_sec": 7,
       "is_continue": false,
       "characters": [],
-      "setting": 201
+      "setting": 201,
+      "voiceover": "1941年秋，侵华日寇对我晋察冀抗日根据地进行秋季大“扫荡”，一个多月来，被我八路军和当地民兵打得晕头转向，伤亡惨重。"
     },
     {
       "panel_id": 2,
@@ -23,7 +24,8 @@
       "duration_sec": 6,
       "is_continue": false,
       "characters": [],
-      "setting": 201
+      "setting": 201,
+      "voiceover": "活动在冀西狼牙山周围的我八路军某部，和当地民兵密切配合，神出鬼没地袭击敌人，粉碎敌人的疯狂“扫荡“。"
     },
     {
       "panel_id": 3,
@@ -38,7 +40,8 @@
         1,
         2
       ],
-      "setting": 202
+      "setting": 202,
+      "voiceover": "一天傍晚，七连六班副班长葛振林正忙着给房东老大娘担水，班长马宝玉跑来通知他开会。"
     },
     {
       "panel_id": 4,
@@ -53,7 +56,8 @@
         1,
         2
       ],
-      "setting": 201
+      "setting": 201,
+      "voiceover": "葛振林立即背上枪，跟着马宝玉来到村外的小山崖下，参加党支部扩大会。两人坐在一块石头上，静听指导员分析当前形势。"
     },
     {
       "panel_id": 5,
@@ -67,7 +71,8 @@
       "characters": [
         1
       ],
-      "setting": null
+      "setting": null,
+      "voiceover": "指导员告诉大家：“日寇秋季大‘扫荡’越来越残酷，这对我们每个共产党员是一场严峻的考验。"
     },
     {
       "panel_id": 6,
@@ -81,7 +86,8 @@
       "characters": [
         2
       ],
-      "setting": null
+      "setting": null,
+      "voiceover": "要发扬不怕牺牲. 不怕疲劳. 勇敢作战的精神，坚持狼牙山根据地的战斗！"
     },
     {
       "panel_id": 7,
@@ -96,7 +102,8 @@
         1,
         2
       ],
-      "setting": null
+      "setting": null,
+      "voiceover": "散会后，葛振林边走边问马宝玉：“班长，要打大仗了吧？”马宝玉“嗯”了一声没说什么。"
     },
     {
       "panel_id": 8,
@@ -110,7 +117,8 @@
       "characters": [
         1
       ],
-      "setting": null
+      "setting": null,
+      "voiceover": "可是葛振林已经从班长的脸上看出，一场激烈的战斗就在眼前了。"
     },
     {
       "panel_id": 9,
@@ -122,7 +130,8 @@
       "duration_sec": 5,
       "is_continue": false,
       "characters": [],
-      "setting": 201
+      "setting": 201,
+      "voiceover": "巍巍狼牙山，耸立在河北省易县境内，是晋察冀抗日根据地的险要屏障。"
     },
     {
       "panel_id": 10,
@@ -134,7 +143,8 @@
       "duration_sec": 5,
       "is_continue": true,
       "characters": [],
-      "setting": 201
+      "setting": 201,
+      "voiceover": "日寇妄想“扫荡”得逞，消灭我八路军主力，首先要拔除狼牙山根据地。"
     },
     {
       "panel_id": 11,
@@ -146,7 +156,8 @@
       "duration_sec": 7,
       "is_continue": false,
       "characters": [],
-      "setting": 201
+      "setting": 201,
+      "voiceover": "果然，9月24日，盘踞在狼牙山附近界安. 龙门庄. 中独乐. 南管头. 大良岗一带的敌人，在飞机大炮的掩护下，分九路向狼牙山进犯了。"
     },
     {
       "panel_id": 12,
@@ -160,7 +171,8 @@
       "characters": [
         6
       ],
-      "setting": null
+      "setting": null,
+      "voiceover": "日寇的山地战指挥官高见，曾向他的上司夸下海口：“消现在，他率领“山地精锐灭八路军主力，为天皇建立奇功。”五三千多人和一部分伪军，疯狂扑来。"
     },
     {
       "panel_id": 13,
@@ -172,7 +184,8 @@
       "duration_sec": 4,
       "is_continue": false,
       "characters": [],
-      "setting": 201
+      "setting": 201,
+      "voiceover": "我军在狼牙山东侧和敌人整整激战了一天，打退敌人十几次进攻。"
     },
     {
       "panel_id": 14,
@@ -188,7 +201,8 @@
         2,
         3
       ],
-      "setting": null
+      "setting": null,
+      "voiceover": "天黑时，七连来到一片柿子林里休息待命。六班马宝玉. 葛振林等正在兴高采烈地谈论着敌人的失败和我军的胜利。"
     },
     {
       "panel_id": 15,
@@ -202,7 +216,8 @@
       "characters": [
         101
       ],
-      "setting": 203
+      "setting": 203,
+      "voiceover": "指挥所里，团首长估计，不甘心失败的敌人，还会增加兵力对我军继续围攻。"
     },
     {
       "panel_id": 16,
@@ -216,7 +231,8 @@
       "characters": [
         101
       ],
-      "setting": 203
+      "setting": 203,
+      "voiceover": "根据毛主席“尽可能地保存自已的力量，消灭敌人的力量”的教导，团首长决定将主力部队秘密转移到外线去作战。"
     },
     {
       "panel_id": 17,
@@ -230,7 +246,8 @@
       "characters": [
         101
       ],
-      "setting": 203
+      "setting": 203,
+      "voiceover": "团长写好一封信，叫通信员立刻急送七连驻地，交给七连长。"
     },
     {
       "panel_id": 18,
@@ -244,7 +261,8 @@
       "characters": [
         102
       ],
-      "setting": null
+      "setting": null,
+      "voiceover": "团长命令七连马上随主力转移，并抽调一个精干班配备足够弹药，到团指挥所接受任务，"
     },
     {
       "panel_id": 19,
@@ -259,7 +277,8 @@
         1,
         102
       ],
-      "setting": null
+      "setting": null,
+      "voiceover": "出发前，连长叫：“ 刘班长”“到！”马宝玉应声站了出来。"
     },
     {
       "panel_id": 20,
@@ -274,7 +293,8 @@
         1,
         102
       ],
-      "setting": null
+      "setting": null,
+      "voiceover": "连长命令说：“你们班快去团部，团首长亲自给你们布置任务。出发！"
     },
     {
       "panel_id": 21,
@@ -290,7 +310,8 @@
         2,
         3
       ],
-      "setting": 201
+      "setting": 201,
+      "voiceover": "六班只有五名战士：马宝玉. 葛振林. 宋学义. 胡德林和胡福才。"
     },
     {
       "panel_id": 22,
@@ -305,7 +326,8 @@
         4,
         5
       ],
-      "setting": null
+      "setting": null,
+      "voiceover": "他们一听说执行任务，个个乐得心都快蹦出来了，飞快地翻山越岭，跳溪越涧，跨过“仙人桥”，向团指挥所赶去。"
     },
     {
       "panel_id": 23,
@@ -320,7 +342,8 @@
         1,
         101
       ],
-      "setting": 203
+      "setting": 203,
+      "voiceover": "团长明确坚定地对六班五名战士说：“你们的任务是掩护团主力秘密转移。"
     },
     {
       "panel_id": 24,
@@ -335,7 +358,8 @@
         2,
         101
       ],
-      "setting": 203
+      "setting": 203,
+      "voiceover": "要想尽一切办法拖住敌人，明天中午以前，不让敌人越过棋盘陀！"
     },
     {
       "panel_id": 25,
@@ -351,7 +375,8 @@
         2,
         101
       ],
-      "setting": 201
+      "setting": 201,
+      "voiceover": "团长马上带领五战士到山口察看阵地，嘱咐他们：“要利用狼牙山有利地形，和当地民兵配合，加上你们的勇敢和智慧，就能以一当百，战胜更多的敌人。“"
     },
     {
       "panel_id": 26,
@@ -369,7 +394,8 @@
         4,
         5
       ],
-      "setting": 202
+      "setting": 202,
+      "voiceover": "主力部队和当地群众安全转移了。敌人放火烧村，山下火光冲天，烟雾腾腾。"
     },
     {
       "panel_id": 27,
@@ -385,7 +411,8 @@
         4,
         5
       ],
-      "setting": 201
+      "setting": 201,
+      "voiceover": "六班战士们怒火满腔，牙咬得咯咯直响。他们和民兵一起，商量怎样完成这次阻击敌人的光荣任务。"
     },
     {
       "panel_id": 28,
@@ -401,7 +428,8 @@
         3,
         5
       ],
-      "setting": 201
+      "setting": 201,
+      "voiceover": "晚上趁着月光，他们把部队留下的二百多个地雷，从山脚一直埋到山口阵地前，凡是能上山的小路，都埋上了地雷。"
     },
     {
       "panel_id": 29,
@@ -415,7 +443,8 @@
       "characters": [
         1
       ],
-      "setting": null
+      "setting": null,
+      "voiceover": "夜深了，阵地上战前准备工作做完，马宝玉立即让民兵们撤走，去保护山里的群众。"
     },
     {
       "panel_id": 30,
@@ -429,7 +458,8 @@
       "characters": [
         1
       ],
-      "setting": null
+      "setting": null,
+      "voiceover": "六班战士留下严密监视山下的动静，连一点儿细小声音都不放过。"
     },
     {
       "panel_id": 31,
@@ -441,7 +471,8 @@
       "duration_sec": 7,
       "is_continue": false,
       "characters": [],
-      "setting": 201
+      "setting": 201,
+      "voiceover": "天刚蒙蒙亮，就响起了枪声。战士们严阵以待，只见山下到处是密密麻麻的敌人，像狼群一样，号叫着向山口窜来。"
     },
     {
       "panel_id": 32,
@@ -457,7 +488,8 @@
         2,
         3
       ],
-      "setting": 201
+      "setting": 201,
+      "voiceover": "马宝玉对大家说：“准备好！”大家揭开手榴弹盖子，把子弹推上膛。"
     },
     {
       "panel_id": 33,
@@ -469,7 +501,8 @@
       "duration_sec": 5,
       "is_continue": false,
       "characters": [],
-      "setting": 201
+      "setting": 201,
+      "voiceover": "突然，山崩地裂般的一声巨响，接着又是“轰轰轰”的连续爆炸声。这是夜间埋下的地雷爆炸了。"
     },
     {
       "panel_id": 34,
@@ -481,7 +514,8 @@
       "duration_sec": 6,
       "is_continue": false,
       "characters": [],
-      "setting": null
+      "setting": null,
+      "voiceover": "地雷炸得敌人尸横遍野。硝烟过后，敌人在指挥刀的驱使下，战战兢兢地向六班阵地爬来。"
     },
     {
       "panel_id": 35,
@@ -495,7 +529,8 @@
       "characters": [
         1
       ],
-      "setting": null
+      "setting": null,
+      "voiceover": "二百米，一百米，五十米······敌人越来越近了。“打！“随着马宝玉一声怒吼，手榴弹抛进了敌群。"
     },
     {
       "panel_id": 36,
@@ -507,7 +542,8 @@
       "duration_sec": 5,
       "is_continue": false,
       "characters": [],
-      "setting": null
+      "setting": null,
+      "voiceover": "敌人死的死，伤的伤，活着的像乱了阵的蚂蚁，连滚带爬地退了下去。"
     },
     {
       "panel_id": 37,
@@ -519,7 +555,8 @@
       "duration_sec": 6,
       "is_continue": false,
       "characters": [],
-      "setting": 201
+      "setting": 201,
+      "voiceover": "过了不久，敌人用猛烈的炮火向六班阵地轰击。顿时，乱石横飞，硝烟弥漫，五个人谁也看不见谁了。"
     },
     {
       "panel_id": 38,
@@ -535,7 +572,8 @@
         2,
         3
       ],
-      "setting": 201
+      "setting": 201,
+      "voiceover": "炮火稍停，马宝玉爬起来观察动静。宋学义抬头看看有谁受伤，葛振林检查着“三八”大盖，胡德林和胡福才在乐呵呵地说笑着。"
     },
     {
       "panel_id": 39,
@@ -551,7 +589,8 @@
         4,
         5
       ],
-      "setting": null
+      "setting": null,
+      "voiceover": "紧接着，敌人又打来了一阵炮火。马宝玉说：“我们的任务是阻击敌人，掩护主力转移。"
     },
     {
       "panel_id": 40,
@@ -567,7 +606,8 @@
         4,
         5
       ],
-      "setting": 201
+      "setting": 201,
+      "voiceover": "现在我们把鬼子往山上引吧！“ 在硝烟弥漫中，他们立刻转向另一个山头。"
     },
     {
       "panel_id": 41,
@@ -582,7 +622,8 @@
         1,
         2
       ],
-      "setting": 201
+      "setting": 201,
+      "voiceover": "至鍵到了南石门山峡口，马宝玉拾头看看太阳，估计了一下时间，说：“这里地形很好，我们坚持一会儿，争取时间，对我们主力转移更有利。“"
     },
     {
       "panel_id": 42,
@@ -594,7 +635,8 @@
       "duration_sec": 6,
       "is_continue": false,
       "characters": [],
-      "setting": 201
+      "setting": 201,
+      "voiceover": "说话间，来了三架敌机，嗡嗡地朝六班原来的阵地俯冲，又是扫射，又是投炸弹，闹腾了好一阵子，最后翘着尾巴飞走了。"
     },
     {
       "panel_id": 43,
@@ -610,7 +652,8 @@
         2,
         3
       ],
-      "setting": 201
+      "setting": 201,
+      "voiceover": "六班战士在新的阵地上然不动。"
     },
     {
       "panel_id": 44,
@@ -624,7 +667,8 @@
       "characters": [
         2
       ],
-      "setting": 201
+      "setting": 201,
+      "voiceover": "他们边打边走，用冷枪准确地杀伤敌人，诱惑敌人。"
     },
     {
       "panel_id": 45,
@@ -639,7 +683,8 @@
         1,
         2
       ],
-      "setting": null
+      "setting": null,
+      "voiceover": "葛振林高兴地对班长说：“这回敌人的鼻子可叫咱们牵住了，得乖乖地由咱们摆布啦！“"
     },
     {
       "panel_id": 46,
@@ -651,7 +696,8 @@
       "duration_sec": 7,
       "is_continue": false,
       "characters": [],
-      "setting": 201
+      "setting": 201,
+      "voiceover": "敌人付出了不小代价，又摸不清我军究竟有多少兵力，只好朝着五战士枪响的地方胡乱射击，一会儿用迫击炮轰，一会儿又像轰羊一样赶着一批伪军向山上爬。"
     },
     {
       "panel_id": 47,
@@ -666,7 +712,8 @@
         1,
         4
       ],
-      "setting": null
+      "setting": null,
+      "voiceover": "胡德林看看山下大片敌人跟了上来，高兴地说：“看样子，敌人真把我们当成主力啦！”"
     },
     {
       "panel_id": 48,
@@ -680,7 +727,8 @@
       "characters": [
         1
       ],
-      "setting": null
+      "setting": null,
+      "voiceover": "马宝玉笑笑说：“那才好呢！就怕敌人不跟我们跑。“"
     },
     {
       "panel_id": 49,
@@ -692,7 +740,8 @@
       "duration_sec": 4,
       "is_continue": false,
       "characters": [],
-      "setting": 201
+      "setting": 201,
+      "voiceover": "太阳当头时，敌人的火力十分猛烈，半人高的山草被打着了火，呼呼地燃烧着。"
     },
     {
       "panel_id": 50,
@@ -704,7 +753,8 @@
       "duration_sec": 5,
       "is_continue": true,
       "characters": [],
-      "setting": null
+      "setting": null,
+      "voiceover": "火药味呛得人透不过气，浓烟熏得战士们眼泪直流。"
     },
     {
       "panel_id": 51,
@@ -718,7 +768,8 @@
       "characters": [
         2
       ],
-      "setting": null
+      "setting": null,
+      "voiceover": "葛振林背上着了火，就地滚了几滚，把火滚灭。"
     },
     {
       "panel_id": 52,
@@ -732,7 +783,8 @@
       "characters": [
         5
       ],
-      "setting": null
+      "setting": null,
+      "voiceover": "火烧. 烟熏，战士们唇焦口渴，想到山下清澈的易水河，巴不得能跑去喝个痛快。"
     },
     {
       "panel_id": 53,
@@ -746,7 +798,8 @@
       "characters": [
         3
       ],
-      "setting": 201
+      "setting": 201,
+      "voiceover": "宋学义身边是一块萝卜地，大萝卜长得又白又嫩。"
     },
     {
       "panel_id": 54,
@@ -760,7 +813,8 @@
       "characters": [
         3
       ],
-      "setting": null
+      "setting": null,
+      "voiceover": "他多么想吃一个解解渴，但一想到我军的“三大纪律八项注意”，就打消了这个念头。"
     },
     {
       "panel_id": 55,
@@ -772,7 +826,8 @@
       "duration_sec": 4,
       "is_continue": false,
       "characters": [],
-      "setting": null
+      "setting": null,
+      "voiceover": "五战士坚守着阵地。山下不时有几个敌人扯着破锣嗓子喊话：“缴枪的，大大的优待优待！“"
     },
     {
       "panel_id": 56,
@@ -784,7 +839,8 @@
       "duration_sec": 5,
       "is_continue": false,
       "characters": [],
-      "setting": 201
+      "setting": 201,
+      "voiceover": "正在这个节骨眼上，敌人后边的山坡上忽然乒乒乓乓地响起了枪声，接着，又响起了手榴弹的爆炸声。"
     },
     {
       "panel_id": 57,
@@ -796,7 +852,8 @@
       "duration_sec": 4,
       "is_continue": true,
       "characters": [],
-      "setting": null
+      "setting": null,
+      "voiceover": "顿时，敌人慌了手脚，进攻暂时停止了。"
     },
     {
       "panel_id": 58,
@@ -812,7 +869,8 @@
         3,
         5
       ],
-      "setting": null
+      "setting": null,
+      "voiceover": "是谁打的呢？葛振林和胡福才发现远处有几个白花花的人影。"
     },
     {
       "panel_id": 59,
@@ -827,7 +885,8 @@
         2,
         3
       ],
-      "setting": null
+      "setting": null,
+      "voiceover": "他们欢呼起来：“是民兵！打得好！”马宝玉趁机鼓励大家：“同志们，有民兵配合，我们一定能更好地完成任务！“"
     },
     {
       "panel_id": 60,
@@ -845,7 +904,8 @@
         4,
         5
       ],
-      "setting": null
+      "setting": null,
+      "voiceover": "战斗一直坚持到太阳偏西。马宝玉说：“我们的任务完成了，撤！”五战士直奔棋盘陀的险路。"
     },
     {
       "panel_id": 61,
@@ -863,7 +923,8 @@
         4,
         5
       ],
-      "setting": 201
+      "setting": 201,
+      "voiceover": "荆棘丛生，岩石又高又陡，这哪里是路呀！五战士攀呀，爬呀，登上了“阎王鼻子”，爬上“天梯”“小鬼脸”，决心把敌人引上绝路。"
     },
     {
       "panel_id": 62,
@@ -875,7 +936,8 @@
       "duration_sec": 5,
       "is_continue": false,
       "characters": [],
-      "setting": 201
+      "setting": 201,
+      "voiceover": "紧紧尾随着的敌人，气喘吁吁地往“阎王鼻子”爬着。“啊呀！”突然传来两声惨叫，山谷也发出了回响。"
     },
     {
       "panel_id": 63,
@@ -890,7 +952,8 @@
         1,
         5
       ],
-      "setting": null
+      "setting": null,
+      "voiceover": "马宝玉转身一看，哈哈大笑：“好啊！好啊！”原来，胡福才蹬下一块大石头，正好砸倒了两个鬼子。"
     },
     {
       "panel_id": 64,
@@ -902,7 +965,8 @@
       "duration_sec": 4,
       "is_continue": false,
       "characters": [],
-      "setting": 201
+      "setting": 201,
+      "voiceover": "战士们登上山顶，忽然发现这里不知什么时候设下了“滚木石雷”，乐得心里开了花。"
     },
     {
       "panel_id": 65,
@@ -916,7 +980,8 @@
       "characters": [
         1
       ],
-      "setting": null
+      "setting": null,
+      "voiceover": "马宝玉说：“同志们，省着子弹，用石头砸！”"
     },
     {
       "panel_id": 66,
@@ -930,7 +995,8 @@
       "characters": [
         2
       ],
-      "setting": 201
+      "setting": 201,
+      "voiceover": "葛振林首先搬起一块大石头，瞅准敌人使劲地砸去。"
     },
     {
       "panel_id": 67,
@@ -942,7 +1008,8 @@
       "duration_sec": 6,
       "is_continue": true,
       "characters": [],
-      "setting": 201
+      "setting": 201,
+      "voiceover": "要时间，你一块，我一块，大小石头像冰雹似的落到敌人头上，打得敌人鲜血四溅，哇啦哇啦叫喊着滚了下去。"
     },
     {
       "panel_id": 68,
@@ -960,7 +1027,8 @@
         4,
         5
       ],
-      "setting": 201
+      "setting": 201,
+      "voiceover": "敌人爬上来一批，就被打下去一批。五战士越战越强，浑身有一股使不完的力量！"
     },
     {
       "panel_id": 69,
@@ -972,7 +1040,8 @@
       "duration_sec": 7,
       "is_continue": false,
       "characters": [],
-      "setting": 201
+      "setting": 201,
+      "voiceover": "快下山的太阳，散发着红灿灿的余晖。五战士胜利地完成了阻击敌人. 掩护主力部队转移的光荣任务，决定翻山去找自己的队伍。"
     },
     {
       "panel_id": 70,
@@ -984,7 +1053,8 @@
       "duration_sec": 5,
       "is_continue": false,
       "characters": [],
-      "setting": 201
+      "setting": 201,
+      "voiceover": "不料，刚走到莲花瓣陀下，与另一股摸上来的敌人遭遇了。"
     },
     {
       "panel_id": 71,
@@ -998,7 +1068,8 @@
       "characters": [
         1
       ],
-      "setting": 201
+      "setting": 201,
+      "voiceover": "五位勇士决定甩掉敌人，绕过棋盘陀，另找下山的路。"
     },
     {
       "panel_id": 72,
@@ -1010,7 +1081,8 @@
       "duration_sec": 6,
       "is_continue": true,
       "characters": [],
-      "setting": 201
+      "setting": 201,
+      "voiceover": "他们走了一阵，路过一处石谷时，发现谷底藏着一批群众，大都是老人. 妇女和小孩儿。"
     },
     {
       "panel_id": 73,
@@ -1022,7 +1094,8 @@
       "duration_sec": 6,
       "is_continue": true,
       "characters": [],
-      "setting": 201
+      "setting": 201,
+      "voiceover": "无数双惊奇的眼晴，纷纷投向跑来的五战士。子弟兵保护老百姓的责任感，立刻涌上战士们的心头。"
     },
     {
       "panel_id": 74,
@@ -1036,7 +1109,8 @@
       "characters": [
         1
       ],
-      "setting": null
+      "setting": null,
+      "voiceover": "不允许犹豫，马宝玉当机立断，赶紧带领大家返回原路，阻击敌人。"
     },
     {
       "panel_id": 75,
@@ -1054,7 +1128,8 @@
         4,
         5
       ],
-      "setting": 201
+      "setting": 201,
+      "voiceover": "他们只有一个想法：宁愿牺牲自己，决不让敌人发现躲避在山谷里的老乡。"
     },
     {
       "panel_id": 76,
@@ -1068,7 +1143,8 @@
       "characters": [
         1
       ],
-      "setting": 201
+      "setting": 201,
+      "voiceover": "五战士迅速找到有利地形，一边打，一边把敌人一步步引向棋盘陀峰顶。"
     },
     {
       "panel_id": 77,
@@ -1083,7 +1159,8 @@
         1,
         2
       ],
-      "setting": 201
+      "setting": 201,
+      "voiceover": "敌人被吸引过来了。五战士依托着岩石，不断射击。敌人每爬几步，都要留几具尸体。"
     },
     {
       "panel_id": 78,
@@ -1095,7 +1172,8 @@
       "duration_sec": 5,
       "is_continue": false,
       "characters": [],
-      "setting": 201
+      "setting": 201,
+      "voiceover": "五战士登上了棋盘陀峰顶，发现四周无退路。"
     },
     {
       "panel_id": 79,
@@ -1109,7 +1187,8 @@
       "characters": [
         1
       ],
-      "setting": null
+      "setting": null,
+      "voiceover": "马宝玉比谁都了解当前情况的严重性。五个人，五条枪，只有坚持战斗，战斗到底！"
     },
     {
       "panel_id": 80,
@@ -1123,7 +1202,8 @@
       "characters": [
         1
       ],
-      "setting": null
+      "setting": null,
+      "voiceover": "马宝玉瞄准爬上来的敌人，只听“咔”一声，子弹没有了。五个人的子弹袋全是空的了！"
     },
     {
       "panel_id": 81,
@@ -1138,7 +1218,8 @@
         1,
         5
       ],
-      "setting": null
+      "setting": null,
+      "voiceover": "胡福才还有一颗手榴弹，正要扔向敌群，马宝玉抢先一步接了过来，插进腰里。"
     },
     {
       "panel_id": 82,
@@ -1150,7 +1231,8 @@
       "duration_sec": 4,
       "is_continue": false,
       "characters": [],
-      "setting": 201
+      "setting": 201,
+      "voiceover": "这时，敌人往上爬得更快，哇啦哇啦地喊叫：“投降的活命！“"
     },
     {
       "panel_id": 83,
@@ -1162,7 +1244,8 @@
       "duration_sec": 4,
       "is_continue": false,
       "characters": [],
-      "setting": 201
+      "setting": 201,
+      "voiceover": "崖顶上再没有能搬动的石头了。敌人不断号叫着，一窝蜂似的快爬上来了。"
     },
     {
       "panel_id": 84,
@@ -1177,7 +1260,8 @@
         1,
         2
       ],
-      "setting": null
+      "setting": null,
+      "voiceover": "怎么办？马宝玉“唰”地从腰间拔出那颗唯一的手榴弹。四名战士不约而同地靠向班长：”快拉弦吧！我们死也不当俘虏！”"
     },
     {
       "panel_id": 85,
@@ -1191,7 +1275,8 @@
       "characters": [
         1
       ],
-      "setting": null
+      "setting": null,
+      "voiceover": "“对！”马宝玉用牙咬开了手榴弹盖子，激昂慷慨地说：”我们决不当俘虏！但也不能用自己的武器消灭自己！”"
     },
     {
       "panel_id": 86,
@@ -1205,7 +1290,8 @@
       "characters": [
         1
       ],
-      "setting": null
+      "setting": null,
+      "voiceover": "他怒视着快爬上来的敌人，狠劲地扔出最后一颗手榴弹。"
     },
     {
       "panel_id": 87,
@@ -1217,7 +1303,8 @@
       "duration_sec": 6,
       "is_continue": false,
       "characters": [],
-      "setting": 201
+      "setting": 201,
+      "voiceover": "“轰”地一声，七八个敌人血肉横飞，吓得后边的敌人龟缩回去，好长时间不敢再往陀顶上爬。"
     },
     {
       "panel_id": 88,
@@ -1235,7 +1322,8 @@
         4,
         5
       ],
-      "setting": null
+      "setting": null,
+      "voiceover": "马宝玉看看葛振林. 宋学义. 胡德林，又看看胡福才，他想，这些与他一起出生人死的战友，忠于党，忠于祖国，忠于人民，是多么可爱啊"
     },
     {
       "panel_id": 89,
@@ -1249,7 +1337,8 @@
       "characters": [
         1
       ],
-      "setting": null
+      "setting": null,
+      "voiceover": "他掏出小本子对葛振林说：“老葛同志，通过这次战斗考验，他们三人已够条件了，我们介绍他们入党吧！“"
     },
     {
       "panel_id": 90,
@@ -1264,7 +1353,8 @@
         1,
         2
       ],
-      "setting": null
+      "setting": null,
+      "voiceover": "葛振林说：“我完全同意！”马宝玉立即在小本子上写了人党介绍信，葛振林也签了名。"
     },
     {
       "panel_id": 91,
@@ -1280,7 +1370,8 @@
         4,
         5
       ],
-      "setting": null
+      "setting": null,
+      "voiceover": "宋学义. 胡德林和胡福才激情满怀，斩钉截铁地说：“为了打败日本帝国主义，建立新中国，我们不怕牺牲，战斗到底！“"
     },
     {
       "panel_id": 92,
@@ -1294,7 +1385,8 @@
       "characters": [
         1
       ],
-      "setting": null
+      "setting": null,
+      "voiceover": "马宝玉更是异乎寻常地激动，他高声对大家说：“同志们，我们是共产主义战士！我们决不投降，决不当俘虏！”说着，他跨着大步走向悬崖边沿，"
     },
     {
       "panel_id": 93,
@@ -1308,7 +1400,8 @@
       "characters": [
         1
       ],
-      "setting": null
+      "setting": null,
+      "voiceover": "猛然，马宝玉想起了心爱的枪。他回过头来说：“我们用鲜血换来的武器，决不留给敌人！“"
     },
     {
       "panel_id": 94,
@@ -1322,7 +1415,8 @@
       "characters": [
         1
       ],
-      "setting": null
+      "setting": null,
+      "voiceover": "“咔”的一声，马宝玉把从敌人手里缴来的枪砸断了。"
     },
     {
       "panel_id": 95,
@@ -1339,7 +1433,8 @@
         4,
         5
       ],
-      "setting": null
+      "setting": null,
+      "voiceover": "紧接着，又是“咔. 咔. 咔. 咔”一阵响声，战士们都把自已的武器摔坏了。"
     },
     {
       "panel_id": 96,
@@ -1353,7 +1448,8 @@
       "characters": [
         1
       ],
-      "setting": null
+      "setting": null,
+      "voiceover": "一群饿狼似的敌人快冲上崖顶了。马宝玉正了正帽子，拉了拉衣领，挺着胸，昂着头，像发出冲锋号令那样高呼着：“同志们，跳吧！“"
     },
     {
       "panel_id": 97,
@@ -1367,7 +1463,8 @@
       "characters": [
         2
       ],
-      "setting": null
+      "setting": null,
+      "voiceover": "葛振林见几个敌人向他扑来，便挺胸怒目，跨前几步，吓得敌人慌忙后退。"
     },
     {
       "panel_id": 98,
@@ -1385,7 +1482,8 @@
         4,
         5
       ],
-      "setting": 201
+      "setting": 201,
+      "voiceover": "打倒日本帝国主义！”中国共产党万岁！””毛主席万岁！”五勇士一齐纵身跳崖，狼牙山的四面八方响起了动人心弦的壮烈吼声，震荡着群山深谷。"
     },
     {
       "panel_id": 99,
@@ -1399,7 +1497,8 @@
       "characters": [
         6
       ],
-      "setting": 201
+      "setting": 201,
+      "voiceover": "敌指挥官站高见，站在棋盘陀的顶峰上，呆若木鸡：我“山地精锐”攻了一天，付出了一百多条生命的代价，难道山上只有几个八路？"
     },
     {
       "panel_id": 100,
@@ -1413,7 +1512,8 @@
       "characters": [
         101
       ],
-      "setting": 203
+      "setting": 203,
+      "voiceover": "六班出色地完成了任务，现在他们在哪儿呢？一团挥员们十分惦记着五名战士。"
     },
     {
       "panel_id": 101,
@@ -1425,7 +1525,8 @@
       "duration_sec": 4,
       "is_continue": false,
       "characters": [],
-      "setting": 201
+      "setting": 201,
+      "voiceover": "第二天，团首长派专人四处寻找。"
     },
     {
       "panel_id": 102,
@@ -1439,7 +1540,8 @@
       "characters": [
         1
       ],
-      "setting": null
+      "setting": null,
+      "voiceover": "马宝玉. 胡德林和胡福才，壮烈地牺牲了。他们为祖国为人民而死，重如泰山！"
     },
     {
       "panel_id": 103,
@@ -1454,7 +1556,8 @@
         2,
         3
       ],
-      "setting": 201
+      "setting": 201,
+      "voiceover": "葛振林和宋学义跳下悬崖后，被树枝挂在半空，被救了出来。他们伤愈后，又投人了新的战斗。"
     },
     {
       "panel_id": 104,
@@ -1466,7 +1569,8 @@
       "duration_sec": 5,
       "is_continue": false,
       "characters": [],
-      "setting": 204
+      "setting": 204,
+      "voiceover": "我晋察冀根据地抗日军民，怀着崇敬的心情，在狼牙山上修建了五壮士的纪念塔。"
     },
     {
       "panel_id": 105,
@@ -1482,7 +1586,8 @@
         3,
         101
       ],
-      "setting": null
+      "setting": null,
+      "voiceover": "军分区党委给葛振林. 宋学义二人颁发了奖状，并开展了学习“狼牙山五勇士”活动。五壮士的英雄事迹鼓舞着抗日军民英勇奋战。"
     },
     {
       "panel_id": 106,
@@ -1494,7 +1599,8 @@
       "duration_sec": 7,
       "is_continue": false,
       "characters": [],
-      "setting": null
+      "setting": null,
+      "voiceover": "在毛主席和共产党的英明领导下，中国人民前仆后继，英勇抗战，终于取得了抗日战争的伟大胜利。"
     },
     {
       "panel_id": 107,
@@ -1506,7 +1612,8 @@
       "duration_sec": 6,
       "is_continue": false,
       "characters": [],
-      "setting": 201
+      "setting": 201,
+      "voiceover": "今天的狼牙山啊，分外雄伟壮丽；易水河啊，滚滚东流不息。"
     },
     {
       "panel_id": 108,
@@ -1524,7 +1631,8 @@
         4,
         5
       ],
-      "setting": 204
+      "setting": 204,
+      "voiceover": "抗日烈士们的崇高形象，永远活在人们的心里；英雄们的事迹，永远激励着人们前进！"
     }
   ]
 }

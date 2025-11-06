@@ -1,12 +1,12 @@
 /# qwen-max
 
 # Task
-This is a voiceover for a video. Split the captions into sub-captions.
+This is a voiceover for a video. Fix all typo or wrong words. Then split the captions into sub-captions.
 
 # Requirements
 - Each sub-caption should have a full meaning.
 - Each sub-caption must be less than 20 words.
-- All caption should stay exactly the same as the input.
+- All caption should stay exactly the same as the input, except for the fixes.
 - Sub-caption index should be like this: original caption index is "1. ", the sub-captions should be "1.1 ", "1.2 ", etc.
 
 # Voiceover/Caption
