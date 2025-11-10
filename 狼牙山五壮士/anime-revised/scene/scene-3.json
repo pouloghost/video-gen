@@ -1,0 +1,27 @@
+{
+    "thought": "My strategy: The panel description explicitly describes two different shots: a close-up (CU) followed by a medium shot (MS). Therefore, I must generate two keyframes to represent this sequence. \n\nKeyframe 1 (The CU): This is a simple shot focusing on hands, a bucket, and a water tank. The panel is not a continuation (is_continue: false). It introduces a character and setting with IDs. The best strategy is 'Ref' (Text + Reference Image) to ensure the hands, uniform (from character_2.png), and water tank (from setting_2.png) match the established assets. \n\nKeyframe 2 (The MS): This shot is complex. It involves a specific layout of two characters (Ge Zhenlin and the old woman) interacting in a defined setting. The model is noted as 'bad at layouting'. Therefore, to ensure correct composition, the 'Remix' (Sketch-then-Remix) workflow is mandatory. The sketch will define the positions, and the remix prompt will apply the character (character_2.png) and setting (setting_2.png) identities, along with the master visual style.",
+    "keyframe_prompt": [
+      {
+        "type": "Ref",
+        "images": [
+          "character_2.png",
+          "setting_2.png"
+        ],
+        "prompt": "A realistic, painterly 2D animation style close-up shot of a man's strong, steady hands (matching the soldier in `image 1`) holding a wooden bucket, pouring water into a large, rustic earthenware water tank (matching the style of `image 2`). The scene is set at dusk; the lighting is warm, soft, and low-key, casting strong shadows (chiaroscuro). The atmosphere is calm and diligent. The shot has a shallow depth of field, keeping the pouring action in sharp focus against a blurred courtyard background. The color palette is low-saturation earth tones, evoking a solemn, historical feel.",
+        "modify_prompt": null,
+        "remix_prompt": null,
+        "sketch_prompt": null
+      },
+      {
+        "type": "Remix",
+        "images": [
+          "character_2.png",
+          "setting_2.png"
+        ],
+        "prompt": null,
+        "modify_prompt": null,
+        "remix_prompt": "Render the sketch `image 1` in a realistic, painterly 2D animation style. Apply the face, physique, and uniform of the soldier from `image 2` [character_2.png] to the man on the left; he has a rustic, kind smile. Apply the village architecture style from `image 3` [setting_2.png] to the courtyard, thatched-roof house, and water tank. The lighting is warm dusk light, creating strong chiaroscuro and a low-key effect. The atmosphere is peaceful and warm. Use a low-saturation earth-tone color palette to create a solemn, epic, historical feel. The shot uses a non-distorted lens with a shallow depth of field, keeping the two figures in focus while slightly blurring the background.",
+        "sketch_prompt": "Simple storyboard sketch without panel. Medium shot, eye-level. A man is positioned in the left-center, holding a shoulder pole with two water buckets. An elderly woman stands to his right, looking at him. They are in a village courtyard. A rustic, earthen-wall house with a thatched roof and an earthenware water tank are in the background."
+      }
+    ]
+  }

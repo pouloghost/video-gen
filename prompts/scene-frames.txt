@@ -67,25 +67,43 @@ Use the ENTIRE Master Checklist. Be descriptive, specific, and weave all element
 ### sketch_prompt:
 - PURPOSE: Structural Layout ONLY.** This prompt defines the *blueprint* of the scene.
 - FOCUS: Strictly limited to **Checklist 1 (Subject & Action)**, **Checklist 2 (Shot & Composition)** and **Checklist 7(Eliminate ambiguity)**.
-- STYLE: Must be described as "simple storyboard sketch without panel".
+- Start with this style description: "Extremely simple storyboard sketch without panel, Scribble **FACELESS, NO OUTFIT DETAIL".".
 - CONTENT: Define *what* is in the scene (e.g., "a man", "a mountain range") and *where* it is (e.g., "left foreground", "centered") and key context (e.g. "year of 1884", "in the universe"). Use simple, geometric language.
 - FORBIDDEN: You MUST NOT include *any* details from Checklists 3, 4, or 5. No lighting (e.g., "shadows"), no atmosphere (e.g., "misty"), no color (e.g., "autumn yellow"), no texture, no emotion (e.g., "sad man"), and no lens effects. **This prompt is exclusively for structure and position.**
 ### remix_prompt:
-- PURPOSE: Cinematic Rendering ONLY.** This prompt "colors" and "renders" the sketch (`image 1`), transforming the blueprint into a final film frame.
+- PURPOSE: Cinematic Rendering ONLY.** This prompt "colors" and "renders" the scribble (`image 1`), transforming the blueprint into a final film frame.
 - FOCUS: Strictly limited to **Checklist 3 (Lighting & Atmosphere)**, **Checklist 4 (Style & Medium)**, **Checklist 5 (Lens & Focus)** and **Checklist 7(Eliminate ambiguity)**.
 - ACTION: This prompt's job is to apply the master `Visual style` (e.g., "realstic, painterly 2D... low saturation earth tones") and *all* contextual details (e.g., "sunny summer", "solemn mood").
 - ADDITIONAL DETAILING: If subjects or setting are not in reference image, describe the features of them in detail. Avoid unintended interpretations by I2I models
-- REFERENCES: This is where you *must* use the asset reference images (e.g., `image 2`, `image 3`...) to "cast" the characters and "dress" the set. The sketch (`image 1`) provides the *position*, and the reference images provide the *identity*.
-    Example: "Render the sketch `image 1`. Apply the face from `image 2` [character_1.png] to the man on the left. Apply the environmental style from `image 3` [setting_1.png] to the background."
-- FORBIDDEN: You MUST NOT mention composition, pose, or layout (e.g., do not say "a man on the left"). The sketch (`image 1`) *already* defines all positions.
+- REFERENCES: This is where you *must* use the asset reference images (e.g., `image 2`, `image 3`...) to "cast" the characters and "dress" the set. The scribble (`image 1`) provides the *position*, and the reference images provide the *identity*.
+    Example: "Render the scribble `image 1`. Apply the face from `image 2` [character_1.png] to the man on the left. Apply the environmental style from `image 3` [setting_1.png] to the background."
+- FORBIDDEN: You MUST NOT mention composition, pose, or layout (e.g., do not say "a man on the left"). The scribble (`image 1`) *already* defines all positions.
 
 ## For Modify prompts (in the modify_prompt field):
-Write a concise, direct instruction.
-Unrecognizable wordings and alternatives: "Digital zoom" (use "Zoom in").
-Avoid describing changes as slightly, subtle, model will do nothing.
-Example: "Change Character A(left center, with white hair)'s expression to a slight smirk."
-Example: "Zoom in 20% and pan camera slightly right, revealing the door."
-Example: "Add a subtle rain effect across the window."
+Core Principle: Describe the FINAL STATE, not the PROCESS of change.
+The I2I model does not understand editing *actions* (like "add", "zoom", "change"). It is not a video editor or a photo filter. It is a **re-renderer**. It re-draws the image based on your prompt.
+Your prompt must be a **declarative description** of the *new, desired image*.
+### Use Photographic & Compositional Terms
+The model is trained on static images. It does not understand *movements* or *post-production* terms.
+- Unrecognizable (Process/Video): "Digital zoom", "pushing in", "pan camera right", etc.
+- Correct (State/Photo): "**A close-up shot**", "**A tighter medium shot**", "**The subject is framed on the left**", etc.
+### Avoid Weak or Ambiguous Modifiers
+Do not use words like "slightly", "a little", etc. These words are too weak to overcome the powerful visual guidance from the original image. The model will ignore the instruction. Be direct and strong.
+### Re-Describe the Changed Subject
+- Do not use editing *verbs* like "add", "change", "modify", "enhance" or "remove".
+- Contrast Example 1: 
+    - Bad (Process): "Add smoke to the village."
+    - Good (State): "The village is shrouded in thick smoke."
+- Contrast Example 2:
+    - Bad (Process): "Change the man's shirt to red."
+    Good (State): "The man wears a vibrant red shirt."
+- Contrast Example 3:
+    - Bad (Process): "Make the man taller."
+    - Good (State): "A tall man with long legs stands in the center." (*Note: Significant structural changes like this are inherently difficult for I2I and heavily depend on model's denoising strength.*)
+### Example
+- Change Expression: Character A (left center, with white hair) has a confident smirk.
+- Zoom / Re-frame: A tighter medium shot, framing the character on the left (tall man with red hat), with the wooden door (center-right in image 1) visible on the right edge of the frame.
+- Add Atmosphere: Heavy raindrops stream down the glass of the window (center in image 1).
 
 # Image generate model
 Good at following expicit instructions, good at overall rendering.
