@@ -1,0 +1,25 @@
+{
+    "thought": "My strategy: The panel describes a 'Slow Push-in' on a vast landscape, so I will generate two keyframes to represent the start and end of this camera movement. For the first keyframe, the scene is a complex landscape with specific compositional requirements (mountains, distant village, smoke). To ensure the layout is correct, I will use the 'Remix' type. The `sketch_prompt` will define the high-angle wide shot of the mountains and the village's position. The `remix_prompt` will then apply the specified 'oppressive, vast, ominous' mood, the low-saturation earth-tone color palette, and the painterly 2D style, using the setting reference `setting_2.png` to inform the look of the distant village. For the second keyframe, which is the end of the push-in, I will use the 'Modify' type, taking the first keyframe as a base image and applying a slight zoom to create the motion.",
+    "keyframe_prompt": [
+        {
+            "type": "Remix",
+            "images": [
+                "setting_2.png"
+            ],
+            "sketch_prompt": "Minimalist black and white line art. High-angle epic wide shot. A vast, continuous mountain range fills the frame. In a valley in the lower third, slightly right of center, draw a small, simple village. Three thin lines rise from the village area to indicate smoke.",
+            "remix_prompt": "Render the sketch from `image 1`. The scene is vast and ominous, set in autumn. The atmosphere is oppressive, with a thin layer of mist enveloping the landscape under a diffused, overcast sky. Use a low-saturation earth-tone color palette: muted yellows, browns, and grays for the mountains and terrain. The style is a realistic, thick-painted 2D animation look with strong, dramatic chiaroscuro. The distant village, informed by the rustic style of `image 2`, should have visible plumes of black smoke rising from it. Maintain deep focus with a non-distorted epic wide-angle lens feel. The overall mood is solemn and foreboding.",
+            "prompt": null,
+            "modify_prompt": null
+        },
+        {
+            "type": "Modify",
+            "images": [
+                "scene_1_0.png"
+            ],
+            "modify_prompt": "Apply a subtle 15% digital zoom towards the center of the image, bringing the smoking village in the distant valley slightly closer and more into focus.",
+            "remix_prompt": null,
+            "sketch_prompt": null,
+            "prompt": null
+        }
+    ]
+}

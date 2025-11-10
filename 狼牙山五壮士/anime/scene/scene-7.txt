@@ -89,6 +89,13 @@ Your Job: When using Remix, Ref, or Modify, you MUST list all filenames you are 
 
 # Character description
 {
+  "id": 1,
+  "name": "马宝玉",
+  "description": "八路军六班班长，五壮士的领导者。身姿挺拔，面部轮廓坚毅。他的标志性特征是那双总是充满深刻思考、坚定信念和高度警惕的眼睛。即便是眉头微蹙时，也透露出一种超越年龄的沉稳和智慧。他身着褪色的八路军标准军装，是天生的领导者，气质果敢、决绝。",
+  "portrait_prompt": "Full body portrait, a Chinese military squad leader standing at attention in 1941. **Subject:** Man in his late twenties with upright military posture, resolute angular facial features with slightly furrowed brow, and distinctive penetrating eyes that convey deep thought and firm conviction. Wearing a faded grayish-blue Eight Route Army uniform with worn fabric texture, simple cloth belt, weathered cotton shoes. **Exposure:** ISO 200, f/5.6, 1/60s. **Lighting:** Dramatic chiaroscuro lighting from the front-left, creating strong contrast between light and shadow across the face and uniform, emphasizing the historical gravity and solemnity. **Composition:** Subject centered, standing straight with disciplined military bearing, hands naturally at sides. **Depth of Field:** Deep focus keeping entire figure sharp. **Background:** High contrast, single solid dark olive-brown background. **Lens:** 85mm prime lens. **Genre:** Historical portraiture, realistic thick-painted 2D animation style. **Style:** Strong light-dark contrast, low-saturation earthy color palette with muted blues and browns, serious and epic mood, realistic brush stroke textures, painterly quality. Shot at eye level."
+}
+
+{
   "id": 2,
   "name": "葛振林",
   "description": "八路军六班副班长，五壮士之一。身形结实，体格强壮，是力量的代表。他的脸部线条硬朗，嘴唇紧抿，显露出一种不屈不挠的决心。他的气质冷静而果敢，是班长最可靠的助手，具有强大的威慑力和行动力。身着褪色的八路军标准军装。",
@@ -127,24 +134,40 @@ Your Job: When using Remix, Ref, or Modify, you MUST list all filenames you are 
     ],
     "setting": null,
     "voiceover": "指导员告诉大家：“日寇秋季大‘扫荡’越来越残酷，这对我们每个共产党员是一场严峻的考验。"
+  },
+  {
+    "panel_id": 6,
+    "voiceover_ref": "5.2",
+    "panel_description": "切换到葛振林的特写。他的脸上同样写满了严肃，紧抿的嘴唇显示出他内心的决心。光线从一侧打来，在他脸上形成强烈的明暗对比。",
+    "action": "葛振林缓缓点头，表示对命令的领会和决心。",
+    "shot_type": "Close-Up",
+    "camera_movement": "Static",
+    "duration_sec": 6,
+    "is_continue": true,
+    "characters": [
+      2
+    ],
+    "setting": null,
+    "voiceover": "要发扬不怕牺牲. 不怕疲劳. 勇敢作战的精神，坚持狼牙山根据地的战斗！"
   }
 ]
 
 # Panel
 {
-  "panel_id": 6,
-  "voiceover_ref": "5.2",
-  "panel_description": "切换到葛振林的特写。他的脸上同样写满了严肃，紧抿的嘴唇显示出他内心的决心。光线从一侧打来，在他脸上形成强烈的明暗对比。",
-  "action": "葛振林缓缓点头，表示对命令的领会和决心。",
-  "shot_type": "Close-Up",
-  "camera_movement": "Static",
-  "duration_sec": 6,
-  "is_continue": true,
+  "panel_id": 7,
+  "voiceover_ref": "6.1",
+  "panel_description": "散会后，两人走在返回驻地的土路上。葛振林边走边侧头问马宝玉问题，脸上带着一丝期待和紧张。",
+  "action": "葛振林开口询问，马宝玉只是低沉地“嗯”了一声，继续向前走。",
+  "shot_type": "Medium Shot",
+  "camera_movement": "Tracking (following the characters)",
+  "duration_sec": 4,
+  "is_continue": false,
   "characters": [
+    1,
     2
   ],
   "setting": null,
-  "voiceover": "要发扬不怕牺牲. 不怕疲劳. 勇敢作战的精神，坚持狼牙山根据地的战斗！"
+  "voiceover": "散会后，葛振林边走边问马宝玉：“班长，要打大仗了吧？”马宝玉“嗯”了一声没说什么。"
 }
 
 # Output Format

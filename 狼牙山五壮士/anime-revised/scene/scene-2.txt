@@ -58,20 +58,38 @@ For Modify and Remix, a base image is image 1, other images starts from image 2.
 For Ref, image index starts from image 1.
 
 # Guidelines for Specific Prompt Types
-- For Text and Ref prompts (in the prompt field):
+## For Text and Ref prompts (in the prompt field):
 Use the ENTIRE Master Checklist. Be descriptive, specific, and weave all elements into a cohesive paragraph.
-- For Remix prompts:
-sketch_prompt: Focus only on Checklist 1 (Subject & Action) and Checklist 2 (Shot & Composition). Use simple language (e.g., "line art, black and white, simple sketch of a man standing left, a woman sitting right, wide shot"), explicitly forbidden detail in drawing.
-remix_prompt: Focus only on Checklist 3 (Lighting), Checklist 4 (Style), and Checklist 5 (Lens). You must also add details like facial expressions and textures. DO NOT mention composition or pose; the sketch already defines this.
-- For Modify prompts (in the modify_prompt field):
+
+## For Remix prompts:
+### sketch_prompt:
+- PURPOSE: Structural Layout ONLY.** This prompt defines the *blueprint* of the scene.
+- FOCUS: Strictly limited to **Checklist 1 (Subject & Action)** and **Checklist 2 (Shot & Composition)**.
+- STYLE: Must be described as "simple storyboard sketch".
+- CONTENT: Define *what* is in the scene (e.g., "a man", "a mountain range") and *where* it is (e.g., "left foreground", "centered") and key context (e.g. "year of 1884", "in the universe"). Use simple, geometric language.
+- SELF CONTAINED: This prompt is the only information for the I2I model, carefully eliminate all ambiguity.
+- FORBIDDEN: You MUST NOT include *any* details from Checklists 3, 4, or 5. No lighting (e.g., "shadows"), no atmosphere (e.g., "misty"), no color (e.g., "autumn yellow"), no texture, no emotion (e.g., "sad man"), and no lens effects. **This prompt is exclusively for structure and position.**
+### remix_prompt:
+- PURPOSE: Cinematic Rendering ONLY.** This prompt "colors" and "renders" the sketch (`image 1`), transforming the blueprint into a final film frame.
+- FOCUS: Strictly limited to **Checklist 3 (Lighting & Atmosphere)**, **Checklist 4 (Style & Medium)**, and **Checklist 5 (Lens & Focus)**.
+- ACTION: This prompt's job is to apply the master `Visual style` (e.g., "realstic, painterly 2D... low saturation earth tones") and *all* contextual details (e.g., "sunny summer", "solemn mood").
+- ADDITIONAL DETAILING: If subjects or setting are not in reference image, describe the features of them in detail. Avoid unintended interpretations by I2I models
+- SELF CONTAINED: This prompt is the only information(apart from the sketch) for the I2I model, carefully eliminate all ambiguity.
+- REFERENCES: This is where you *must* use the asset reference images (e.g., `image 2`, `image 3`...) to "cast" the characters and "dress" the set. The sketch (`image 1`) provides the *position*, and the reference images provide the *identity*.
+    Example: "Render the sketch `image 1`. Apply the face from `image 2` [character_1.png] to the man on the left. Apply the environmental style from `image 3` [setting_1.png] to the background."
+- FORBIDDEN: You MUST NOT mention composition, pose, or layout (e.g., do not say "a man on the left"). The sketch (`image 1`) *already* defines all positions.
+
+## For Modify prompts (in the modify_prompt field):
 Write a concise, direct instruction.
+Unrecognizable wordings and alternatives: "Digital zoom" (use "Zoom in").
+Avoid describing changes as slightly, subtle, model will do nothing.
 Example: "Change Character A(left center, with white hair)'s expression to a slight smirk."
 Example: "Zoom in 20% and pan camera slightly right, revealing the door."
 Example: "Add a subtle rain effect across the window."
 
 # Image generate model
 Good at following expicit instructions, good at overall rendering.
-Bad at layouting, bad at complex character-environment proportion.
+Bad at layouting with characters, bad at complex character-environment proportion.
 
 # Visual style
 一种写实、厚涂的2D动画风格，运用强烈的明暗对比和偏向饱和度低的土色调色板，以强调历史事件的严酷、庄重和史诗感。
@@ -85,66 +103,47 @@ Your Job: When using Remix, Ref, or Modify, you MUST list all filenames you are 
 狼牙山五壮士：1941年，五名八路军战士为掩护主力部队和数千名群众安全转移，将日军精锐引上狼牙山绝顶，在弹尽粮绝后毅然跳崖，谱写了一曲壮丽的英雄赞歌。
 
 # Setting description
-
+{
+  "id": 1,
+  "name": "狼牙山 (Langya Mountain)",
+  "description": "故事的主要环境。连绵起伏的山脉，山峰如犬牙交错。1941年秋季，色调以饱和度低的土黄色和灰色为主。地形极其险峻，多悬崖、陡坡、峡谷、荆棘和岩石。是“险要屏障”。山林茂密，但也包含裸露的岩石山脊和“半人高”的山草。易水河在山脚流过。"
+}
 
 # Character description
-{
-  "id": 2,
-  "name": "葛振林",
-  "description": "八路军六班副班长，五壮士之一。身形结实，体格强壮，是力量的代表。他的脸部线条硬朗，嘴唇紧抿，显露出一种不屈不挠的决心。他的气质冷静而果敢，是班长最可靠的助手，具有强大的威慑力和行动力。身着褪色的八路军标准军装。",
-  "portrait_prompt": "Full body portrait, a Chinese military deputy squad leader standing at attention in 1941. **Subject:** Man in his late twenties with robust, muscular build featuring broad shoulders and stocky powerful frame. Hard angular facial lines with tightly pressed lips conveying unyielding determination, calm and decisive expression radiating strong presence. Wearing a faded grayish-blue Eight Route Army uniform with worn fabric texture stretched across his solid torso, simple cloth belt, weathered cotton shoes. **Exposure:** ISO 200, f/5.6, 1/60s. **Lighting:** Dramatic chiaroscuro lighting from the front-left, creating strong contrast between light and shadow across the muscular physique and uniform, emphasizing the historical gravity and solemnity. **Composition:** Subject centered, standing straight with powerful military bearing, hands naturally at sides, broad shoulders squared. **Depth of Field:** Deep focus keeping entire figure sharp. **Background:** High contrast, single solid dark olive-brown background. **Lens:** 85mm prime lens. **Genre:** Historical portraiture, realistic thick-painted 2D animation style. **Style:** Strong light-dark contrast, low-saturation earthy color palette with muted blues and browns, serious and epic mood, realistic brush stroke textures, painterly quality. Shot at eye level."
-}
+
 
 # Previous panels
 [
   {
-    "panel_id": 4,
-    "voiceover_ref": "4.1",
-    "panel_description": "村外山崖下，光线昏暗。马宝玉和葛振林并排坐在一块大石头上，他们的背影对着镜头，正抬头专注地聆听着画面外指导员的讲话。",
-    "action": "两人保持静坐聆听的姿势，只有微风吹动他们的衣角。",
-    "shot_type": "Medium Shot (from behind)",
-    "camera_movement": "Static",
-    "duration_sec": 7,
-    "is_continue": false,
-    "characters": [
-      1,
-      2
-    ],
-    "setting": 201,
-    "voiceover": "葛振林立即背上枪，跟着马宝玉来到村外的小山崖下，参加党支部扩大会。两人坐在一块石头上，静听指导员分析当前形势。"
-  },
-  {
-    "panel_id": 5,
-    "voiceover_ref": "5.1",
-    "panel_description": "特写镜头，聚焦于马宝玉坚毅的侧脸。他眉头微蹙，眼神中透露出对严峻形势的深刻理解。背景是模糊的山岩。",
-    "action": "马宝玉的目光随着指导员的讲话而变得更加坚定。",
-    "shot_type": "Close-Up",
-    "camera_movement": "Static",
+    "panel_id": 1,
+    "voiceover_ref": "1.1",
+    "3w": "Who: Japanese Army / Where: Jin-Cha-Ji Base Area / When: Autumn 1941",
+    "description": "广阔的建立镜头（Wide Establishing Shot）：1941年秋，晋察冀根据地。镜头从高空缓慢推近，展现连绵起伏、笼罩在薄雾中的狼牙山脉。山色已染秋黄。在远处的山谷中，一个小村庄正冒着几股黑烟，暗示着战争的“扫荡”。",
+    "mood": "压抑, 广阔, 不祥",
+    "camera": "史诗级广角镜头 (EWS)，缓慢向前推进 (Slow Push-in)",
     "duration_sec": 6,
-    "is_continue": true,
-    "characters": [
-      1
-    ],
-    "setting": null,
-    "voiceover": "指导员告诉大家：“日寇秋季大‘扫荡’越来越残酷，这对我们每个共产党员是一场严峻的考验。"
+    "notes": "设定基调。强调环境的广阔和战争的威胁。色调：饱和度低的土黄色和灰色。",
+    "is_continue": false,
+    "characters": [],
+    "setting": 2,
+    "voiceover": "1941年秋，侵华日寇对我晋察冀抗日根据地进行秋季大“扫荡”，一个多月来，被我八路军和当地民兵打得晕头转向，伤亡惨重。"
   }
 ]
 
 # Panel
 {
-  "panel_id": 6,
-  "voiceover_ref": "5.2",
-  "panel_description": "切换到葛振林的特写。他的脸上同样写满了严肃，紧抿的嘴唇显示出他内心的决心。光线从一侧打来，在他脸上形成强烈的明暗对比。",
-  "action": "葛振林缓缓点头，表示对命令的领会和决心。",
-  "shot_type": "Close-Up",
-  "camera_movement": "Static",
-  "duration_sec": 6,
-  "is_continue": true,
-  "characters": [
-    2
-  ],
-  "setting": null,
-  "voiceover": "要发扬不怕牺牲. 不怕疲劳. 勇敢作战的精神，坚持狼牙山根据地的战斗！"
+  "panel_id": 2,
+  "voiceover_ref": "2.1",
+  "3w": "Who: 8th Route Army soldiers / Where: Langya Mountains, Woods / When: Day",
+  "description": "一个中景镜头，几名八路军战士（身影模糊，可能是我们的主角）正迅速穿过一片茂密的森林。他们利用树木作掩护，动作敏捷，体现了“神出鬼没”。",
+  "mood": "隐秘, 警惕, 坚韧",
+  "camera": "中景 (MS)，手持跟拍 (Handheld Tracking Shot)，穿过树叶的窥视视角。",
+  "duration_sec": 4,
+  "notes": "在不明确展示主角的情况下，展示八路军的战斗方式。",
+  "is_continue": false,
+  "characters": [],
+  "setting": 1,
+  "voiceover": "活动在冀西狼牙山周围的我八路军某部，和当地民兵密切配合，神出鬼没地袭击敌人，粉碎敌人的疯狂“扫荡“。"
 }
 
 # Output Format

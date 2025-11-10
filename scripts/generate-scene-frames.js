@@ -30,13 +30,56 @@ if (!scene) {
   process.exit(1);
 }
 
+function getContinuingPanel(currentIndex, scenes) {
+  if (currentIndex === -1) return null;
+  const panels = [];
+  while (currentIndex >= 0 && scenes[currentIndex].is_continue) {
+    panels.unshift(scenes[currentIndex]);
+    currentIndex--;
+  }
+
+  return panels;
+}
+
+// Function to get previous panel groups based on is_continue rules
+function getPreviousPanelGroups(currentPanelId, scenes) {
+  const currentScene = scenes.find(s => s.panel_id === currentPanelId);
+  if (!currentScene) return [];
+
+  // Find the index of the current scene
+  let currentIndex = scenes.findIndex(s => s.panel_id === currentPanelId);
+  if (currentIndex === -1) return [];
+
+  const groupPanels = [];
+
+  while (currentIndex >= 0 && groupPanels.length < 3) {
+    if (currentScene.is_continue) {
+      // Case 2: For is_continue panels, find the complete is_continue group that this panel belongs to
+      // All is_continue groups start with a is_continue=false panel
+
+      groupPanels.unshift(...getContinuingPanel(currentIndex, scenes));
+    } else {
+      // Case 1 & 3: For non is_continue panels
+      // Look backwards to see if we have an is_continue sequence that needs to be made complete
+      groupPanels.unshift(scenes[currentIndex]);
+    }
+
+    currentIndex--;
+  }
+
+  return groupPanels;
+}
+
+// Get previous panel groups
+const previousPanels = getPreviousPanelGroups(parseInt(panelId) - 1, mergedStoryboard.scenes);
+
 // Process setting
-let settingContent = '';
+let settingContent = 'None';
 if (scene.setting) {
   // Find setting in refs
   const settingRef = refs.settings.find(s => s.id === scene.setting);
   if (settingRef) {
-    delete settingRef.scene_ids;
+    delete settingRef.panel_ids;
     // Read setting prompt from file
     const settingFilePath = path.join(animeDir, 'setting', `setting-${scene.setting}.json`);
     if (fs.existsSync(settingFilePath)) {
@@ -58,9 +101,9 @@ let charactersContent = [];
 if (scene.characters && scene.characters.length > 0) {
   scene.characters.forEach(charId => {
     // Find character in refs
-    const characterRef = refs.characters.find(c => c.id === charId);
+    const characterRef = refs.entities.find(c => c.id === charId);
     if (characterRef) {
-      delete characterRef.scene_ids;
+      delete characterRef.panel_ids;
       // Read character prompt from file
       const characterFilePath = path.join(animeDir, 'character', `character-${charId}.json`);
       if (fs.existsSync(characterFilePath)) {
@@ -81,6 +124,7 @@ if (scene.characters && scene.characters.length > 0) {
 // Replace placeholders in template
 templateContent = templateContent.replace('<gt_tmpl>setting</gt_tmpl>', settingContent);
 templateContent = templateContent.replace('<gt_tmpl>character</gt_tmpl>', charactersContent.join('\n\n'));
+templateContent = templateContent.replace('<gt_tmpl>pre</gt_tmpl>', JSON.stringify(previousPanels, null, 2));
 templateContent = templateContent.replace('<gt_tmpl>scene</gt_tmpl>', JSON.stringify(scene, null, 2));
 
 // Write output file
@@ -93,7 +137,7 @@ console.log(`Scene frames prompt generated successfully: ${outputPath}`);
 try {
   // Use pbcopy to copy the content
   execSync(`pbcopy < "${outputPath}"`);
-  
+
   console.log('Content copied to clipboard successfully');
 } catch (error) {
   console.warn('Failed to copy content to clipboard:', error.message);

@@ -85,66 +85,90 @@ Your Job: When using Remix, Ref, or Modify, you MUST list all filenames you are 
 狼牙山五壮士：1941年，五名八路军战士为掩护主力部队和数千名群众安全转移，将日军精锐引上狼牙山绝顶，在弹尽粮绝后毅然跳崖，谱写了一曲壮丽的英雄赞歌。
 
 # Setting description
-
+{
+  "id": 2,
+  "name": "村庄 (Village)",
+  "description": "晋察冀根据地的一个普通山村。由土墙、茅草屋顶构成。有庭院（带水缸）、村路。风格质朴。在战争中（panel 1）会冒黑烟，在（panel 28）会燃起大火。"
+}
 
 # Character description
 {
+  "id": 1,
+  "name": "马宝玉 (Ma Baoyu)",
+  "description": "六班班长。作为指挥官，面容坚毅、沉稳。眼神通常冷静、果断，充满领导气质。表情通常严肃或深沉，但在战术成功时也会露出自信的微笑。"
+}
+
+{
   "id": 2,
-  "name": "葛振林",
-  "description": "八路军六班副班长，五壮士之一。身形结实，体格强壮，是力量的代表。他的脸部线条硬朗，嘴唇紧抿，显露出一种不屈不挠的决心。他的气质冷静而果敢，是班长最可靠的助手，具有强大的威慑力和行动力。身着褪色的八路军标准军装。",
-  "portrait_prompt": "Full body portrait, a Chinese military deputy squad leader standing at attention in 1941. **Subject:** Man in his late twenties with robust, muscular build featuring broad shoulders and stocky powerful frame. Hard angular facial lines with tightly pressed lips conveying unyielding determination, calm and decisive expression radiating strong presence. Wearing a faded grayish-blue Eight Route Army uniform with worn fabric texture stretched across his solid torso, simple cloth belt, weathered cotton shoes. **Exposure:** ISO 200, f/5.6, 1/60s. **Lighting:** Dramatic chiaroscuro lighting from the front-left, creating strong contrast between light and shadow across the muscular physique and uniform, emphasizing the historical gravity and solemnity. **Composition:** Subject centered, standing straight with powerful military bearing, hands naturally at sides, broad shoulders squared. **Depth of Field:** Deep focus keeping entire figure sharp. **Background:** High contrast, single solid dark olive-brown background. **Lens:** 85mm prime lens. **Genre:** Historical portraiture, realistic thick-painted 2D animation style. **Style:** Strong light-dark contrast, low-saturation earthy color palette with muted blues and browns, serious and epic mood, realistic brush stroke textures, painterly quality. Shot at eye level."
+  "name": "葛振林 (Ge Zhenlin)",
+  "description": "六班副班长。体格健壮，面容质朴。经验丰富的老兵，眼神镇定，动作精准。下颌线条明显，具有顽强、威严的特质。是幸存者之一。"
 }
 
 # Previous panels
 [
   {
-    "panel_id": 4,
-    "voiceover_ref": "4.1",
-    "panel_description": "村外山崖下，光线昏暗。马宝玉和葛振林并排坐在一块大石头上，他们的背影对着镜头，正抬头专注地聆听着画面外指导员的讲话。",
-    "action": "两人保持静坐聆听的姿势，只有微风吹动他们的衣角。",
-    "shot_type": "Medium Shot (from behind)",
-    "camera_movement": "Static",
-    "duration_sec": 7,
+    "panel_id": 1,
+    "voiceover_ref": "1.1",
+    "3w": "Who: Japanese Army / Where: Jin-Cha-Ji Base Area / When: Autumn 1941",
+    "description": "广阔的建立镜头（Wide Establishing Shot）：1941年秋，晋察冀根据地。镜头从高空缓慢推近，展现连绵起伏、笼罩在薄雾中的狼牙山脉。山色已染秋黄。在远处的山谷中，一个小村庄正冒着几股黑烟，暗示着战争的“扫荡”。",
+    "mood": "压抑, 广阔, 不祥",
+    "camera": "史诗级广角镜头 (EWS)，缓慢向前推进 (Slow Push-in)",
+    "duration_sec": 6,
+    "notes": "设定基调。强调环境的广阔和战争的威胁。色调：饱和度低的土黄色和灰色。",
     "is_continue": false,
-    "characters": [
-      1,
-      2
-    ],
-    "setting": 201,
-    "voiceover": "葛振林立即背上枪，跟着马宝玉来到村外的小山崖下，参加党支部扩大会。两人坐在一块石头上，静听指导员分析当前形势。"
+    "characters": [],
+    "setting": 2,
+    "voiceover": "1941年秋，侵华日寇对我晋察冀抗日根据地进行秋季大“扫荡”，一个多月来，被我八路军和当地民兵打得晕头转向，伤亡惨重。"
   },
   {
-    "panel_id": 5,
-    "voiceover_ref": "5.1",
-    "panel_description": "特写镜头，聚焦于马宝玉坚毅的侧脸。他眉头微蹙，眼神中透露出对严峻形势的深刻理解。背景是模糊的山岩。",
-    "action": "马宝玉的目光随着指导员的讲话而变得更加坚定。",
-    "shot_type": "Close-Up",
-    "camera_movement": "Static",
-    "duration_sec": 6,
-    "is_continue": true,
+    "panel_id": 2,
+    "voiceover_ref": "2.1",
+    "3w": "Who: 8th Route Army soldiers / Where: Langya Mountains, Woods / When: Day",
+    "description": "一个中景镜头，几名八路军战士（身影模糊，可能是我们的主角）正迅速穿过一片茂密的森林。他们利用树木作掩护，动作敏捷，体现了“神出鬼没”。",
+    "mood": "隐秘, 警惕, 坚韧",
+    "camera": "中景 (MS)，手持跟拍 (Handheld Tracking Shot)，穿过树叶的窥视视角。",
+    "duration_sec": 4,
+    "notes": "在不明确展示主角的情况下，展示八路军的战斗方式。",
+    "is_continue": false,
+    "characters": [],
+    "setting": 1,
+    "voiceover": "活动在冀西狼牙山周围的我八路军某部，和当地民兵密切配合，神出鬼没地袭击敌人，粉碎敌人的疯狂“扫荡“。"
+  },
+  {
+    "panel_id": 3,
+    "voiceover_ref": "3.1",
+    "3w": "Who: 葛振林 (Ge Zhenlin), 房东老大娘 / Where: Village courtyard / When: 傍晚 (Dusk)",
+    "description": "特写：葛振林的手正稳稳地握着扁担，将一桶水倒满水缸。切换到中景，他（副班长葛振林）正帮一位房东老大娘担水。他脸上带着质朴的微笑，展现军民鱼水情。",
+    "mood": "平静, 温暖, 勤劳",
+    "camera": "特写 (CU) 倒水 -> 中景 (MS)，固定机位 (Static)",
+    "duration_sec": 5,
+    "notes": "“暴风雨前的宁静”。建立葛振林与人民的联系。",
+    "is_continue": false,
     "characters": [
-      1
+      2
     ],
-    "setting": null,
-    "voiceover": "指导员告诉大家：“日寇秋季大‘扫荡’越来越残酷，这对我们每个共产党员是一场严峻的考验。"
+    "setting": 2,
+    "voiceover": "一天傍晚，七连六班副班长葛振林正忙着给房东老大娘担水，班长马宝玉跑来通知他开会。"
   }
 ]
 
 # Panel
 {
-  "panel_id": 6,
-  "voiceover_ref": "5.2",
-  "panel_description": "切换到葛振林的特写。他的脸上同样写满了严肃，紧抿的嘴唇显示出他内心的决心。光线从一侧打来，在他脸上形成强烈的明暗对比。",
-  "action": "葛振林缓缓点头，表示对命令的领会和决心。",
-  "shot_type": "Close-Up",
-  "camera_movement": "Static",
-  "duration_sec": 6,
+  "panel_id": 4,
+  "voiceover_ref": "3.1",
+  "3w": "Who: 马宝玉 (Ma Baoyu), 葛振林 / Where: Village courtyard / When: 傍晚 (Dusk)",
+  "description": "班长马宝玉快步走进院子，神情严肃。他拍了拍葛振林的肩膀。镜头拉近，马宝玉的表情打破了前一刻的平静。",
+  "mood": "紧急, 严肃",
+  "camera": "中景 (MS)，马宝玉入画 (Enter Frame)，然后轻微推向两人的面部表情 (Slow Push-in to Two-Shot)",
+  "duration_sec": 3,
+  "notes": "用马宝玉的严肃表情制造紧张感。",
   "is_continue": true,
   "characters": [
+    1,
     2
   ],
-  "setting": null,
-  "voiceover": "要发扬不怕牺牲. 不怕疲劳. 勇敢作战的精神，坚持狼牙山根据地的战斗！"
+  "setting": 2,
+  "voiceover": "一天傍晚，七连六班副班长葛振林正忙着给房东老大娘担水，班长马宝玉跑来通知他开会。"
 }
 
 # Output Format

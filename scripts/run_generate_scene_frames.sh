@@ -10,7 +10,7 @@ fi
 
 # Assign arguments to variables
 panel_id=$1
-anime_dir="$(dirname "$0")/../狼牙山五壮士/anime"
+anime_dir="$(dirname "$0")/../狼牙山五壮士/anime-revised/"
 
 # Execute the Node.js script with the provided arguments
 node "$(dirname "$0")/generate-scene-frames.js" "$panel_id" "$anime_dir"

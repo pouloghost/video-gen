@@ -85,66 +85,59 @@ Your Job: When using Remix, Ref, or Modify, you MUST list all filenames you are 
 狼牙山五壮士：1941年，五名八路军战士为掩护主力部队和数千名群众安全转移，将日军精锐引上狼牙山绝顶，在弹尽粮绝后毅然跳崖，谱写了一曲壮丽的英雄赞歌。
 
 # Setting description
-
+{
+  "id": 201,
+  "name": "狼牙山（战时）",
+  "description": "1941年秋季的狼牙山。一个“险峻陡峭”、“岩石嶙峋”的山地环境。其标志性特征是“山峰如犬齿交错”，三面多为“万丈悬崖”。整体色调是饱和度低的“枯黄色”和“土黄色”，营造出一种凝重、荒凉且极度危险的战争氛围。地形复杂，遍布崎岖山路、岩壁和峡谷。",
+  "setting_image_prompt": "Wide establishing shot, Wolf Fang Mountain wartime landscape, autumn 1941. Exposure: ISO 200, f/8, natural overcast daylight, dramatic chiaroscuro lighting with strong light-dark contrast. Composition: Low-angle perspective looking upward, emphasizing verticality and danger, rule of thirds with jagged peaks occupying upper two-thirds, leading lines from rugged mountain paths drawing eye toward precipitous summit. Depth of Field: Deep, rendering entire mountainscape in sharp focus from foreground rocky terrain to distant peaks. Lens: 24mm wide-angle lens for epic scale and environmental context. Genre: Landscape photography, historical environmental documentary. Style: Realistic thick-painted 2D animation aesthetic, low-saturation earth-tone color palette, somber and heavy atmosphere. Setting Details: Steep, rugged mountain terrain with jagged peaks resembling interlocking dog teeth silhouetted against grey sky, three sides featuring sheer cliff faces and precipitous drops of thousands of feet, complex topography with winding treacherous mountain paths, exposed rock walls, deep canyons and ravines. Color Palette: Desaturated withered yellow and earth yellow tones dominating rocky surfaces, grey-brown stone, muted ochre and sienna in sparse vegetation, cool grey overcast sky. Lighting Quality: Diffused natural light filtered through war-time haze, creating stark shadows in crevices and valleys, rim lighting along cliff edges emphasizing dangerous drops. Atmosphere: Desolate, harsh, grave, emphasizing extreme danger and wartime severity. Texture: Rough, craggy rock surfaces, weathered stone, sparse dried autumn grass. No characters present, pure environmental shot showcasing the treacherous battlefield terrain."
+}
 
 # Character description
-{
-  "id": 2,
-  "name": "葛振林",
-  "description": "八路军六班副班长，五壮士之一。身形结实，体格强壮，是力量的代表。他的脸部线条硬朗，嘴唇紧抿，显露出一种不屈不挠的决心。他的气质冷静而果敢，是班长最可靠的助手，具有强大的威慑力和行动力。身着褪色的八路军标准军装。",
-  "portrait_prompt": "Full body portrait, a Chinese military deputy squad leader standing at attention in 1941. **Subject:** Man in his late twenties with robust, muscular build featuring broad shoulders and stocky powerful frame. Hard angular facial lines with tightly pressed lips conveying unyielding determination, calm and decisive expression radiating strong presence. Wearing a faded grayish-blue Eight Route Army uniform with worn fabric texture stretched across his solid torso, simple cloth belt, weathered cotton shoes. **Exposure:** ISO 200, f/5.6, 1/60s. **Lighting:** Dramatic chiaroscuro lighting from the front-left, creating strong contrast between light and shadow across the muscular physique and uniform, emphasizing the historical gravity and solemnity. **Composition:** Subject centered, standing straight with powerful military bearing, hands naturally at sides, broad shoulders squared. **Depth of Field:** Deep focus keeping entire figure sharp. **Background:** High contrast, single solid dark olive-brown background. **Lens:** 85mm prime lens. **Genre:** Historical portraiture, realistic thick-painted 2D animation style. **Style:** Strong light-dark contrast, low-saturation earthy color palette with muted blues and browns, serious and epic mood, realistic brush stroke textures, painterly quality. Shot at eye level."
-}
+
 
 # Previous panels
 [
   {
-    "panel_id": 4,
-    "voiceover_ref": "4.1",
-    "panel_description": "村外山崖下，光线昏暗。马宝玉和葛振林并排坐在一块大石头上，他们的背影对着镜头，正抬头专注地聆听着画面外指导员的讲话。",
-    "action": "两人保持静坐聆听的姿势，只有微风吹动他们的衣角。",
-    "shot_type": "Medium Shot (from behind)",
-    "camera_movement": "Static",
-    "duration_sec": 7,
+    "panel_id": 9,
+    "voiceover_ref": "7.1",
+    "panel_description": "一幅壮丽的狼牙山全景。山峰如犬齿交错，险峻陡峭，云雾缭绕在山腰，显得神秘而威严。镜头缓缓向上移动，强调其高度和险要。",
+    "action": "云雾在山间流动，阳光穿透云层，在山体上留下斑驳的光影。",
+    "shot_type": "Extreme Wide Shot",
+    "camera_movement": "Tilt Up",
+    "duration_sec": 5,
     "is_continue": false,
-    "characters": [
-      1,
-      2
-    ],
+    "characters": [],
     "setting": 201,
-    "voiceover": "葛振林立即背上枪，跟着马宝玉来到村外的小山崖下，参加党支部扩大会。两人坐在一块石头上，静听指导员分析当前形势。"
+    "voiceover": "巍巍狼牙山，耸立在河北省易县境内，是晋察冀抗日根据地的险要屏障。"
   },
   {
-    "panel_id": 5,
-    "voiceover_ref": "5.1",
-    "panel_description": "特写镜头，聚焦于马宝玉坚毅的侧脸。他眉头微蹙，眼神中透露出对严峻形势的深刻理解。背景是模糊的山岩。",
-    "action": "马宝玉的目光随着指导员的讲话而变得更加坚定。",
-    "shot_type": "Close-Up",
+    "panel_id": 10,
+    "voiceover_ref": "7.2",
+    "panel_description": "在狼牙山的全景上，叠加一个半透明的、风格化的军事地图，红色的箭头指向狼牙山，象征着日军的战略意图。",
+    "action": "地图上的红色箭头闪烁，最后锁定在狼牙山的主峰位置。",
+    "shot_type": "Extreme Wide Shot with Graphic Overlay",
     "camera_movement": "Static",
-    "duration_sec": 6,
+    "duration_sec": 5,
     "is_continue": true,
-    "characters": [
-      1
-    ],
-    "setting": null,
-    "voiceover": "指导员告诉大家：“日寇秋季大‘扫荡’越来越残酷，这对我们每个共产党员是一场严峻的考验。"
+    "characters": [],
+    "setting": 201,
+    "voiceover": "日寇妄想“扫荡”得逞，消灭我八路军主力，首先要拔除狼牙山根据地。"
   }
 ]
 
 # Panel
 {
-  "panel_id": 6,
-  "voiceover_ref": "5.2",
-  "panel_description": "切换到葛振林的特写。他的脸上同样写满了严肃，紧抿的嘴唇显示出他内心的决心。光线从一侧打来，在他脸上形成强烈的明暗对比。",
-  "action": "葛振林缓缓点头，表示对命令的领会和决心。",
-  "shot_type": "Close-Up",
+  "panel_id": 11,
+  "voiceover_ref": "8.1",
+  "panel_description": "低角度拍摄，日军士兵的军靴和绑腿在崎岖的山路上行进，扬起阵阵尘土。远处，大炮正在开火，炮口闪光。",
+  "action": "大批日军士兵如潮水般涌入画面，气氛紧张。",
+  "shot_type": "Low Angle Shot",
   "camera_movement": "Static",
-  "duration_sec": 6,
-  "is_continue": true,
-  "characters": [
-    2
-  ],
-  "setting": null,
-  "voiceover": "要发扬不怕牺牲. 不怕疲劳. 勇敢作战的精神，坚持狼牙山根据地的战斗！"
+  "duration_sec": 7,
+  "is_continue": false,
+  "characters": [],
+  "setting": 201,
+  "voiceover": "果然，9月24日，盘踞在狼牙山附近界安. 龙门庄. 中独乐. 南管头. 大良岗一带的敌人，在飞机大炮的掩护下，分九路向狼牙山进犯了。"
 }
 
 # Output Format
