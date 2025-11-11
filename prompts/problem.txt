@@ -3,4 +3,4 @@
 - modify prompt不行 的zoom老出问题 太长
 - sketch 还是太多细节 ✅
 - 生图的prompt不够结构化 https://skywork.ai/blog/nano-banana-gemini-prompt-engineering-best-practices-2025/ ✅
-- remix 对参考图的遵循不够
+- remix 对参考图的遵循不够 ✅
