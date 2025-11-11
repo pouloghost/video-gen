@@ -1,27 +1,44 @@
 {
-    "thought": "My strategy: The panel description explicitly describes two different shots: a close-up (CU) followed by a medium shot (MS). Therefore, I must generate two keyframes to represent this sequence. \n\nKeyframe 1 (The CU): This is a simple shot focusing on hands, a bucket, and a water tank. The panel is not a continuation (is_continue: false). It introduces a character and setting with IDs. The best strategy is 'Ref' (Text + Reference Image) to ensure the hands, uniform (from character_2.png), and water tank (from setting_2.png) match the established assets. \n\nKeyframe 2 (The MS): This shot is complex. It involves a specific layout of two characters (Ge Zhenlin and the old woman) interacting in a defined setting. The model is noted as 'bad at layouting'. Therefore, to ensure correct composition, the 'Remix' (Sketch-then-Remix) workflow is mandatory. The sketch will define the positions, and the remix prompt will apply the character (character_2.png) and setting (setting_2.png) identities, along with the master visual style.",
-    "keyframe_prompt": [
-      {
-        "type": "Ref",
-        "images": [
-          "character_2.png",
-          "setting_2.png"
-        ],
-        "prompt": "A realistic, painterly 2D animation style close-up shot of a man's strong, steady hands (matching the soldier in `image 1`) holding a wooden bucket, pouring water into a large, rustic earthenware water tank (matching the style of `image 2`). The scene is set at dusk; the lighting is warm, soft, and low-key, casting strong shadows (chiaroscuro). The atmosphere is calm and diligent. The shot has a shallow depth of field, keeping the pouring action in sharp focus against a blurred courtyard background. The color palette is low-saturation earth tones, evoking a solemn, historical feel.",
-        "modify_prompt": null,
-        "remix_prompt": null,
-        "sketch_prompt": null
-      },
-      {
-        "type": "Remix",
-        "images": [
-          "character_2.png",
-          "setting_2.png"
-        ],
-        "prompt": null,
-        "modify_prompt": null,
-        "remix_prompt": "Render the sketch `image 1` in a realistic, painterly 2D animation style. Apply the face, physique, and uniform of the soldier from `image 2` [character_2.png] to the man on the left; he has a rustic, kind smile. Apply the village architecture style from `image 3` [setting_2.png] to the courtyard, thatched-roof house, and water tank. The lighting is warm dusk light, creating strong chiaroscuro and a low-key effect. The atmosphere is peaceful and warm. Use a low-saturation earth-tone color palette to create a solemn, epic, historical feel. The shot uses a non-distorted lens with a shallow depth of field, keeping the two figures in focus while slightly blurring the background.",
-        "sketch_prompt": "Simple storyboard sketch without panel. Medium shot, eye-level. A man is positioned in the left-center, holding a shoulder pole with two water buckets. An elderly woman stands to his right, looking at him. They are in a village courtyard. A rustic, earthen-wall house with a thatched roof and an earthenware water tank are in the background."
-      }
-    ]
-  }
+  "thought": "Overall thoughts on frames, my strategy is: The panel description explicitly mentions a shot change: '特写 (CU) 倒水 -> 中景 (MS)'. This requires two distinct keyframes to represent the start and end of this sequence. This is a new scene (is_continue: false), so I cannot use a 'Modify' prompt from panel 2.\n\n1.  **Keyframe 1 (scene_3_0):** This will be the Close-Up (CU) of the hands pouring water. I will use type `Ref` to leverage the character asset (`character-2.jpg`) for skin/uniform texture and the setting asset (`setting-2.jpg`) for the style of the water vat and courtyard.\n\n2.  **Keyframe 2 (scene_3_1):** This will be the Medium Shot (MS) showing both Ge Zhenlin and the old landlady. This is a complex layout with two interacting characters and a specific background. To ensure quality and correct composition, I MUST use the **Iterative Inpainting strategy**.\n    * **Step 1 (iterate-3-1-1):** Generate the empty courtyard background from `setting-2.jpg` (Type: `Ref`).\n    * **Step 2 (iterate-3-1-2):** Add the main character, Ge Zhenlin, from `character-2.jpg` (Type: `Modify`).\n    * **Step 3 (scene_3_1):** Add the new generic character, the 'Old Landlady', interacting with Ge Zhenlin (Type: `Modify`).\n\nThis results in a total of 4 `keyframe_prompt` objects: one final image for the CU, and three steps (base, add 1, add 2) to create the final MS.",
+  "keyframe_prompt": [
+    {
+      "thought": "This is the first keyframe, the Close-Up (CU) shot. The focus is the action of pouring water. I will use `Ref` to pull textures and style from both the character (for hands/uniform sleeve) and the setting (for the water vat and mud wall). The prompt must be very specific about the tight framing and the objects involved.",
+      "type": "Ref",
+      "images": [
+        "character-2.jpg",
+        "setting-2.jpg"
+      ],
+      "prompt": "A tight close-up shot focusing on the strong, steady hands of an Eighth Route Army soldier (skin tone and uniform sleeve texture from image 1). The hands are gripping a wooden carrying pole (扁担), tilting a wooden bucket to pour clear water into a large, brown earthenware water vat (水缸, style and texture from image 2). Small splashes of water are visible. The background is a simple, out-of-focus mud-brick wall, typical of the courtyard in image 2. The lighting is warm, soft dusk (傍晚), creating a calm and diligent atmosphere. The style is a realistic, thick-painted 2D animation look with strong chiaroscuro and a low-saturation, warm-toned earth palette.",
+      "is_final_image": true
+    },
+    {
+      "thought": "This is the first step (base layer) for the iterative Medium Shot. The goal is to create the empty setting, a village courtyard at dusk, with the key prop (water vat) in position. I use `Ref` with `setting-2.jpg` to ensure architectural consistency. The composition must leave room for two characters to be added.",
+      "type": "Ref",
+      "images": [
+        "setting-2.jpg"
+      ],
+      "final_scene": "The final scene will be a medium shot of the soldier Ge Zhenlin standing next to the water vat, holding a carrying pole, and an old landlady standing nearby, smiling at him. The setting is this courtyard at dusk.",
+      "prompt": "An empty village courtyard at dusk, based on the rustic architecture of image 1. The shot is a medium, eye-level, static frame. A large, brown earthenware water vat (水缸) is positioned on the right-third line of the frame. The background consists of the village's characteristic mud-brick walls and thatched roofs. The lighting is warm and soft, coming from the setting sun, casting long, gentle shadows. The atmosphere is calm and peaceful. Realistic, thick-painted 2D animation style with a low-saturation, warm-toned earth palette.",
+      "is_final_image": false
+    },
+    {
+      "thought": "This is the second step of the iteration. I am adding the main character, Ge Zhenlin, to the empty courtyard (image 1, `iterate-3-1-1`). I must use `character-2.jpg` (image 2) as a reference for his appearance and uniform. The `modify_prompt` must be precise about his position relative to the vat from image 1 and his action/expression.",
+      "type": "Modify",
+      "images": [
+        "iterate-3-1-1",
+        "character-2.jpg"
+      ],
+      "modify_prompt": "A medium shot composition. The base is the empty courtyard from image 1. The soldier Ge Zhenlin (identity, muscular build, and uniform from image 2) now stands in the center-right of the frame, next to the water vat. He is holding a wooden carrying pole (扁担) resting on his shoulders, and he has a simple, rustic smile on his face, looking towards the left side of the frame. The warm dusk lighting from image 1 is maintained.",
+      "is_final_image": false
+    },
+    {
+      "thought": "This is the final step and the final keyframe for the Medium Shot. I am adding the '房东老大娘' (Old Landlady) to the scene (image 1, `iterate-3-1-2`), which already contains Ge Zhenlin. I will describe the final composition with both characters, their positions, and their interaction, completing the 'army-people fish-water' mood.",
+      "type": "Modify",
+      "images": [
+        "iterate-3-1-2"
+      ],
+      "modify_prompt": "A medium two-shot composition, maintaining the realistic, thick-painted 2D animation style. The scene is the village courtyard from image 1, with the soldier Ge Zhenlin on the center-right by the water vat, smiling. Now, an elderly Chinese landlady (房东老大娘) stands on the center-left. She is wearing simple, dark blue peasant clothing, has gray hair, and a kind, weathered face. She is smiling warmly at Ge Zhenlin, portraying the calm, warm mood of army-people unity. The warm dusk lighting envelops both figures.",
+      "is_final_image": true
+    }
+  ]
+}

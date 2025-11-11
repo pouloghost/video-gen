@@ -73,29 +73,7 @@ function getPreviousPanelGroups(currentPanelId, scenes) {
 // Get previous panel groups
 const previousPanels = getPreviousPanelGroups(parseInt(panelId) - 1, mergedStoryboard.scenes);
 
-// Process setting
-let settingContent = 'None';
-if (scene.setting) {
-  // Find setting in refs
-  const settingRef = refs.settings.find(s => s.id === scene.setting);
-  if (settingRef) {
-    delete settingRef.panel_ids;
-    // Read setting prompt from file
-    const settingFilePath = path.join(animeDir, 'setting', `setting-${scene.setting}.json`);
-    if (fs.existsSync(settingFilePath)) {
-      const settingData = JSON.parse(fs.readFileSync(settingFilePath, 'utf8'));
-      // Add setting_image_prompt field
-      const settingWithImagePrompt = {
-        ...settingRef,
-        setting_image_prompt: settingData.prompt
-      };
-      settingContent = JSON.stringify(settingWithImagePrompt, null, 2);
-    } else {
-      settingContent = JSON.stringify(settingRef, null, 2);
-    }
-  }
-}
-
+let imageIndex = 1;
 // Process characters
 let charactersContent = [];
 if (scene.characters && scene.characters.length > 0) {
@@ -104,8 +82,10 @@ if (scene.characters && scene.characters.length > 0) {
     const characterRef = refs.entities.find(c => c.id === charId);
     if (characterRef) {
       delete characterRef.panel_ids;
+      characterRef.image = `image ${imageIndex}`;
+      imageIndex++;
       // Read character prompt from file
-      const characterFilePath = path.join(animeDir, 'character', `character-${charId}.json`);
+      const characterFilePath = path.join(animeDir, 'character', `${charId}.json`);
       if (fs.existsSync(characterFilePath)) {
         const characterData = JSON.parse(fs.readFileSync(characterFilePath, 'utf8'));
         // Add portrait_prompt field
@@ -119,6 +99,30 @@ if (scene.characters && scene.characters.length > 0) {
       }
     }
   });
+}
+
+// Process setting
+let settingContent = 'None';
+if (scene.setting) {
+  // Find setting in refs
+  const settingRef = refs.settings.find(s => s.id === scene.setting);
+  if (settingRef) {
+    delete settingRef.panel_ids;
+    settingRef.image = `image ${imageIndex}`;
+    // Read setting prompt from file
+    const settingFilePath = path.join(animeDir, 'setting', `${scene.setting}.json`);
+    if (fs.existsSync(settingFilePath)) {
+      const settingData = JSON.parse(fs.readFileSync(settingFilePath, 'utf8'));
+      // Add setting_image_prompt field
+      const settingWithImagePrompt = {
+        ...settingRef,
+        setting_image_prompt: settingData.prompt
+      };
+      settingContent = JSON.stringify(settingWithImagePrompt, null, 2);
+    } else {
+      settingContent = JSON.stringify(settingRef, null, 2);
+    }
+  }
 }
 
 // Replace placeholders in template
