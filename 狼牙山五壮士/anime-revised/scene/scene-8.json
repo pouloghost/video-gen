@@ -1,0 +1,35 @@
+{
+    "thought": "Overall thoughts on frames, my strategy is: The panel requires a 'Two-Shot CU' of two specific characters, Ma Baoyu (1) and Ge Zhenlin (2), with a specific 'determined' mood, set against the 'Small Cliff Base' (3). A single-pass prompt (Ref) is extremely likely to fail this complex layout of two specific identities. The instruction 'is_continue: true' refers to the scene context (same location/time as Panel 7), not a literal camera continuation from the previous shot (which was a CU on a different character). The cut to a new two-shot is a 'major camera move' or compositional change, invalidating the simple 'Modify' rule and triggering the 'Iterative Inpainting' strategy for complex scenes. I will use a 3-step iterative process: First, generate the empty background (Keyframe 1), then add Ma Baoyu (Keyframe 2), and finally add Ge Zhenlin to complete the two-shot (Keyframe 3).",
+    "keyframe_prompt": [
+      {
+        "thought": "This first keyframe establishes the setting, lighting, and composition for the final shot. I'm using `setting-3.jpg` as a reference for the style and elements. The prompt explicitly asks for an empty background, framed for a close-up, with a shallow depth of field. This prepares the scene to have in-focus characters added to the foreground.",
+        "type": "Ref",
+        "images": [
+          "setting-3.jpg"
+        ],
+        "final_scene": "Final scene: A two-shot close-up of Ma Baoyu and Ge Zhenlin at the small cliff base at dusk. They are listening with determined, inspired expressions.",
+        "prompt": "A background-only shot for a close-up, capturing the out-of-focus elements of the small cliff base from image 1. The perspective is eye-level, showing the textured, weathered rock of the cliff wall in the immediate background. The scene is empty, prepared for characters to be added in the foreground. The lighting is low-key dusk, with cool, dim light from the fading twilight creating deep shadows and a serious, tense atmosphere. Realistic, thick-painted 2D animation style with a desaturated earth-tone palette. Shallow depth of field is crucial, rendering the rock background as a soft, creamy bokeh, with focus intended for the foreground.",
+        "is_final_image": false
+      },
+      {
+        "thought": "Now I will add the first character, Ma Baoyu, using `character-1.jpg` for his identity. I will place him on the left side of the frame. The prompt must be precise about his position, pose, and expression, and state that he is in-focus against the blurry background from the previous step (image 1).",
+        "type": "Modify",
+        "images": [
+          "iterate-8-1-1.png",
+          "character-1.jpg"
+        ],
+        "modify_prompt": "A new composition: a close-up of Ma Baoyu (identity from image 2, with his characteristic binoculars) in the foreground, occupying the left side of the frame. The background is the soft-focus cliff base from image 1. He is seen from the shoulders up, his face in three-quarters profile, looking forward and slightly right. His expression is determined and inspired, eyes sharp and focused as he listens. He wears his Eighth Route Army cap and uniform. The low-key dusk light illuminates his face, casting shadows that define his resolute features. He is in sharp focus, contrasting the blurry background.",
+        "is_final_image": false
+      },
+      {
+        "thought": "This is the final step. I will add the second character, Ge Zhenlin, using `character-2.jpg`. The base image (image 1) already has Ma Baoyu. My prompt will describe the final two-shot, placing Ge Zhenlin on the right, next to Ma Baoyu, ensuring both are in-focus and share the same determined mood and lighting.",
+        "type": "Modify",
+        "images": [
+          "iterate-8-1-2.png",
+          "character-2.jpg"
+        ],
+        "modify_prompt": "A final two-shot close-up composition. The base image (image 1) already contains Ma Baoyu on the left. Now, Ge Zhenlin (identity from image 2, with his strong, square jawline) is on the right side of the frame, positioned shoulder-to-shoulder with Ma Baoyu to create a tight two-shot. Ge Zhenlin is also in close-up (shoulders up), looking forward with a rugged, determined expression. Both soldiers are in sharp focus, listening intently. The low-key dusk light hits both their faces, highlighting their inspired, unwavering eyes, while the cliff background remains in soft focus.",
+        "is_final_image": true
+      }
+    ]
+  }

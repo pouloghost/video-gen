@@ -144,16 +144,96 @@ Bad at layouting with characters, bad at complex character-environment proportio
 狼牙山五壮士：1941年，五名八路军战士为掩护主力部队和数千名群众安全转移，将日军精锐引上狼牙山绝顶，在弹尽粮绝后毅然跳崖，谱写了一曲壮丽的英雄赞歌。
 
 # Setting description
-<gt_tmpl>setting</gt_tmpl>
+{
+  "id": 3,
+  "name": "小山崖下 (Small Cliff Base)",
+  "description": "村外的一处隐蔽地点。有大石头可供战士们坐下。光线昏暗，尤其在黄昏时，适合秘密会议。",
+  "image": "image 2",
+  "setting_image_prompt": "Medium-wide environmental shot of a secluded area at the base of a small cliff outcropping, located outside the village perimeter. Low eye-level to slightly low-angle view emphasizing the protective rocky overhang and concealed nature of the location. Asymmetrical composition with the cliff face dominating the left side, creating natural shelter and shadow. Foreground featuring several large weathered boulders and flat-topped rocks positioned as natural seating, surfaces worn smooth with moss and lichen patches. Middle ground showing the cliff base with exposed stratified rock layers, scattered smaller stones, patches of dry autumn grass, and wild shrubs providing additional concealment. Background subtly revealing distant village structures or mountain slopes through gaps in vegetation, maintaining the hidden, secluded atmosphere. Dramatic low-key dusk lighting with fading golden hour transitioning to twilight, creating deep shadowed areas beneath the cliff overhang while rim light catches the edges of rocks. Strong chiaroscuro with pronounced contrast between illuminated rock surfaces and dark recessed areas perfect for secrecy. Desaturated earth-tone color palette dominated by deep shadow grays, muted stone browns, darkened ochres, and cool blue-gray twilight tones. Dim, shadowy atmosphere with mysterious, tense, clandestine mood suitable for covert military meetings. Realistic heavily-painted 2D animation style with thick brushwork emphasizing rock textures, deep shadows, and dramatic light fall-off. Moderate depth of field keeping the sitting rocks and cliff base sharp while background elements soften slightly. Environmental documentary portraiture with cinematic low-key aesthetic. Moody, secretive atmosphere with cool-to-neutral color temperature shifting toward cooler dusk tones. Emphasis on the protected, concealed qualities of this strategic meeting location."
+}
 
 # Character description
-<gt_tmpl>character</gt_tmpl>
+{
+  "id": 7,
+  "name": "指导员 (Political Instructor)",
+  "description": "八路军指导员。神情坚毅，面部轮廓分明。具有思想深度和鼓动性，眼神坚定。在黄昏的秘密会议上出现。",
+  "image": "image 1",
+  "portrait_prompt": "Full body portrait of an Eighth Route Army political instructor standing in a dignified, upright stance, embodying ideological conviction and inspirational leadership. The man has distinctively sharp, angular facial features with high cheekbones and a defined face structure. Most prominently, he wears wire-rimmed round glasses that immediately mark him as educated and intellectual, setting him apart from combat soldiers. A small leather-bound notebook is tucked into his belt at the waist, symbolizing his role in political education and record-keeping. He wears a blue-gray Eighth Route Army uniform jacket that is slightly longer in cut than combat tunics, standard military cap with red star emblem worn precisely, brown leather belt, dark cotton pants, and clean cloth shoes. No rifle, but a holstered pistol at his side befitting his officer status. Centered composition, symmetrical framing, eye-level angle. The subject stands against a single colored deep burgundy background with high contrast separation, creating a dignified silhouette. Dramatic chiaroscuro lighting from the front, casting shadows that accentuate his sharp facial contours while creating a subtle glint on his glasses lenses. Cool to neutral color temperature with low-saturation earth tones - muted slate blues, weathered browns, dusty grays. The lighting emphasizes the intellectual quality conveyed by the glasses and the texture of the notebook at his belt. Solemn, resolute, and inspirational atmosphere, reflecting the ideological depth required for political leadership in 1941 wartime China. Realistic, thick-painted 2D animation style with bold, visible brushstrokes and strong contrast between light and shadow, emphasizing the harsh dignity and epic gravitas of historical events. Deep focus keeping the entire figure sharp from head to toe. Non-distorted portrait lens with natural perspective. The overall mood conveys intellectual authority, unwavering conviction, and the power to inspire through words and ideology. Cultural portraiture, historically accurate 1941 Chinese Eighth Route Army political officer appearance and equipment, realistic rendering with painterly texture."
+}
 
 # Previous panels
-<gt_tmpl>pre</gt_tmpl>
+[
+  {
+    "panel_id": 4,
+    "voiceover_ref": "3.1",
+    "3w": "Who: 马宝玉 (Ma Baoyu), 葛振林 / Where: Village courtyard / When: 傍晚 (Dusk)",
+    "description": "班长马宝玉快步走进院子，神情严肃。他拍了拍葛振林的肩膀。镜头拉近，马宝玉的表情打破了前一刻的平静。",
+    "mood": "紧急, 严肃",
+    "camera": "中景 (MS)，马宝玉入画 (Enter Frame)，然后轻微推向两人的面部表情 (Slow Push-in to Two-Shot)",
+    "duration_sec": 3,
+    "notes": "用马宝玉的严肃表情制造紧张感。",
+    "is_continue": true,
+    "characters": [
+      1,
+      2
+    ],
+    "setting": 2,
+    "voiceover": "一天傍晚，七连六班副班长葛振林正忙着给房东老大娘担水，班长马宝玉跑来通知他开会。"
+  },
+  {
+    "panel_id": 5,
+    "voiceover_ref": "4.1",
+    "3w": "Who: 葛振林, 马宝玉 / Where: Village path, 小山崖下 / When: 傍晚 (Dusk)",
+    "description": "葛振林迅速放下扁担，背上枪。一个跟拍镜头，两人快步走出村子，走向村外的小山崖。黄昏的光线给他们的身影拉出长长的影子。",
+    "mood": "迅速, 严肃",
+    "camera": "中景跟拍 (MS Tracking Shot)，从他们身后拍摄。",
+    "duration_sec": 4,
+    "notes": "从“生活”到“战斗”的快速转变。",
+    "is_continue": false,
+    "characters": [
+      1,
+      2
+    ],
+    "setting": 3,
+    "voiceover": "葛振林立即背上枪，跟着马宝玉来到村外的小山崖下，参加党支部扩大会。两人坐在一块石头上，静听指导员分析当前形势。"
+  },
+  {
+    "panel_id": 6,
+    "voiceover_ref": "4.1",
+    "3w": "Who: 马宝玉, 葛振林, 指导员, 其他党员 / Where: 小山崖下 / When: 傍晚 (Dusk)",
+    "description": "一个中景镜头，党支部扩大会议。几名战士（包括马和葛）坐在石头上，围着指导员。光线昏暗，只有黄昏的余光。他们都在聚精会神地听着。",
+    "mood": "庄重, 秘密",
+    "camera": "中景 (MS)，固定机位，低角度拍摄以示庄重。",
+    "duration_sec": 5,
+    "notes": "构图要简洁，突出会议的严肃性。",
+    "is_continue": false,
+    "characters": [
+      1,
+      2,
+      7
+    ],
+    "setting": 3,
+    "voiceover": "葛振林立即背上枪，跟着马宝玉来到村外的小山崖下，参加党支部扩大会。两人坐在一块石头上，静听指导员分析当前形势。"
+  }
+]
 
 # Panel
-<gt_tmpl>scene</gt_tmpl>
+{
+  "panel_id": 7,
+  "voiceover_ref": "5.1",
+  "3w": "Who: 指导员 / Where: 小山崖下 / When: 傍晚 (Dusk)",
+  "description": "近景 (CU) 切换到指导员的脸。他神情坚毅，正在分析形势，强调“严峻的考验”。他的脸在渐暗的光线中显得轮廓分明。",
+  "mood": "坚毅, 严峻",
+  "camera": "近景 (CU)，固定机位。",
+  "duration_sec": 4,
+  "notes": "通过特写强调话语的重要性。",
+  "is_continue": true,
+  "characters": [
+    7
+  ],
+  "setting": 3,
+  "voiceover": "指导员告诉大家：“日寇秋季大‘扫荡’越来越残酷，这对我们每个共产党员是一场严峻的考验。"
+}
 
 # Output Format
 Your final output must be a single, valid JSON object. Structure the JSON according to this schema.

@@ -1,0 +1,35 @@
+{
+    "thought": "Overall thoughts on frames, my strategy is: The panel (5) describes a new scene ('is_continue: false') showing two specific characters (Ma Baoyu and Ge Zhenlin) in a 'Medium Tracking Shot' from behind, as they walk *towards* a new setting (Setting 3) at dusk. This is a complex composition involving two specific characters in a specific pose (walking away) and a specific environment with dramatic lighting (dusk, long shadows). A single prompt is high-risk for layout failure. Therefore, I will use an **Iterative Inpainting strategy** with **3 keyframes**. \n1.  **Keyframe 1 (Ref):** Generate the empty setting. This will be the path *leading to* the cliff base, using 'setting-3.jpg' as a style and destination reference. This establishes the lighting and atmosphere.\n2.  **Keyframe 2 (Modify):** Add the first character, Ma Baoyu (Character 1), onto the base landscape. I'll use 'character-1.jpg' for his uniform/build reference, but the prompt will explicitly state he is seen from behind, walking away. \n3.  **Keyframe 3 (Modify):** Add the second character, Ge Zhenlin (Character 2), onto the image from the previous step. I'll use 'character-2.jpg' for his reference and place him walking alongside Ma Baoyu, also from behind. This sequential addition ensures correct placement and separation.",
+    "keyframe_prompt": [
+      {
+        "thought": "This first keyframe establishes the empty 'stage'—the path leading to the cliff base (Setting 3). The most important elements are the path, the dusk lighting ('long shadows'), and the destination (Setting 3) in the distance. I'm using 'setting-3.jpg' as a reference for the style of the cliff and the overall painterly look. The prompt must specify it's an 'empty scene'.",
+        "type": "Ref",
+        "images": [
+          "setting-3.jpg"
+        ],
+        "final_scene": "A medium tracking shot from behind, showing two Eighth Route Army soldiers, Ma Baoyu (Character 1) and Ge Zhenlin (Character 2), walking quickly away from the camera. They are on a dusty path leading out of a village (village structures visible in far background/behind camera) and towards a small cliff base (Setting 3) in the middle distance. The shot is at dusk, and the low sun casts long, dramatic shadows in front of the soldiers. The mood is serious and urgent. Realistic, thick-painted 2D animation style.",
+        "prompt": "A medium-wide environmental shot of an **empty, dusty path** in the countryside, leading towards a rocky cliff outcropping in the middle distance. The style and geology of the distant cliff should be inspired by **image 1 [setting-3.jpg]**. The scene is set at **dusk**; the low sun (out of frame) casts **long, dramatic shadows** across the path. The atmosphere is serious and quiet. The sky is a deep twilight blue with the last vestiges of warm light on the horizon. Realistic, thick-painted 2D animation style with a desaturated, earthy color palette and strong chiaroscuro. Deep focus. Eye-level angle.",
+        "is_final_image": false
+      },
+      {
+        "thought": "Now I will add the first subject, Ma Baoyu (Character 1), onto the empty landscape from the previous step (iterate-5-1-1). I must use 'character-1.jpg' for his visual identity (uniform, build) but override the pose. The prompt must be explicit that he is in a **medium shot, seen from behind, walking away** from the camera.",
+        "type": "Modify",
+        "images": [
+          "iterate-5-1-1",
+          "character-1.jpg"
+        ],
+        "modify_prompt": "A new composition: a **medium shot from behind**. The empty, path from **image 1** serves as the background. In the **center-left** of the frame, an Eighth Route Army soldier, matching the build and uniform of the man in **image 2 [character-1.jpg]** (Ma Baoyu), is seen **walking quickly away from the camera** down the path. He has a rifle slung on his back. The dramatic dusk lighting from image 1 casts a long shadow in front of him.",
+        "is_final_image": false
+      },
+      {
+      "thought": "This is the final keyframe. I will add the second character, Ge Zhenlin (Character 2), to the scene, which already contains Ma Baoyu (from iterate-5-1-2). I'll use 'character-2.jpg' for Ge Zhenlin's reference. The prompt must precisely place him *next to* the first soldier, also walking away, to create the final 'two-shot from behind' described in the panel.",
+      "type": "Modify",
+      "images": [
+        "iterate-5-1-2",
+        "character-2.jpg"
+      ],
+      "modify_prompt": "A **medium tracking shot from behind**, based on **image 1**. The soldier on the left remains. **To the right** of the first soldier, a second soldier, matching the stocky build and uniform of the man in **image 2 [character-2.jpg]** (Ge Zhenlin), is also **walking quickly away from the camera**. The two soldiers walk in tandem down the path towards the distant cliff. The dusk lighting casts long shadows in front of both of them. The mood is serious and urgent. Realistic, thick-painted 2D animation style.",
+      "is_final_image": true
+      }
+    ]
+  }

@@ -1,0 +1,15 @@
+{
+    "thought": "My strategy is to generate one keyframe. The panel is a close-up (CU) cut from a previous medium shot (Panel 6). Although `is_continue` is true, the shot type is a completely new composition (CU vs MS). Attempting to `Modify` the MS from Panel 6 into a CU of a single character is extremely high-risk and likely to fail or produce a low-quality 'digital zoom' look. Therefore, the best strategy is to use `Ref` to generate a new, clean keyframe. This allows for precise control over the CU composition, lighting, and expression, while still maintaining continuity by referencing the character asset (character-7.jpg) and the setting asset (setting-3.jpg) to inform the background and atmosphere.",
+    "keyframe_prompt": [
+      {
+        "thought": "This is the single, final keyframe. I am using `Ref` to get a high-fidelity match for the Political Instructor's face from image 1 and to establish the correct background lighting and texture from image 2. The prompt focuses on the 'close-up' shot type, the 'resolute, grim' expression, and the 'fading dusk light' with 'strong chiaroscuro' as described in the panel.",
+        "type": "Ref",
+        "images": [
+          "character-7.jpg",
+          "setting-3.jpg"
+        ],
+        "prompt": "A dramatic close-up shot of the Eighth Route Army Political Instructor, with his face and resolute features taken from image 1 [character-7.jpg]. He is framed tightly, showing his head and shoulders. His expression is grim and steadfast, his face sharply defined by the low-key lighting of the fading dusk. Strong chiaroscuro casts deep shadows, accentuating his angular features and the glint on his wire-rimmed glasses as he speaks. The background is the softly blurred, shadowy rock face of the cliff base, matching the dim, cool-toned environment of image 2 [setting-3.jpg]. The atmosphere is solemn and tense. Realistic, thick-painted 2D animation style with a desaturated, cool color palette, emphasizing the gravity of the moment.",
+        "is_final_image": true
+      }
+    ]
+  }

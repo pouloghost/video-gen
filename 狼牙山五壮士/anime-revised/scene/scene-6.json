@@ -1,0 +1,36 @@
+{
+    "thought": "Overall thoughts on frames, my strategy is: The panel describes a complex scene with three specific, named characters (Ma Baoyu, Ge Zhenlin, Political Instructor) plus 'other party members' in a specific setting (Small Cliff Base) during a secret dusk meeting. The camera is a static, low-angle medium shot. Trying to generate all these distinct, referenced characters in their correct positions in one pass is extremely high-risk and likely to fail at layout. Therefore, I MUST use the Iterative Inpainting strategy. I will generate 3 keyframes. The first keyframe will be a 'Ref' prompt to establish the empty setting and atmosphere. The second will be a 'Modify' prompt to add the focal point, the Political Instructor. The third will be the final 'Modify' prompt, adding the two other main characters (Ma and Ge) and the generic soldiers, referencing the output of the previous step.",
+    "keyframe_prompt": [
+      {
+        "thought": "This is the first step of the iterative strategy. I will generate the base background. I must use 'Ref' and the 'setting-3.jpg' image to lock in the location, style, and critical dusk lighting. The prompt will explicitly state the scene is empty but ready for characters, emphasizing the rocks as seating.",
+        "type": "Ref",
+        "images": [
+          "setting-3.jpg"
+        ],
+        "final_scene": "A medium shot from a low angle, showing a secret party meeting at dusk. The Political Instructor (from character-7.jpg) is the central figure, with Ma Baoyu (character-1.jpg) and Ge Zhenlin (character-2.jpg) sitting on rocks, listening intently. A few other soldiers are gathered around, all focused on the instructor. The scene is set at the base of a small cliff (setting-3.jpg), with deep shadows and dim twilight, creating a solemn and clandestine mood.",
+        "prompt": "A medium-wide environmental shot of a secluded, empty area at the base of a small cliff, referencing the style and composition of image 1. Low eye-level, slightly low-angle view emphasizing the protective rocky overhang. Several large weathered boulders and flat-topped rocks are in the foreground and middle ground, positioned as natural seating. The scene is empty of people. Dramatic low-key dusk lighting with fading twilight creates deep, heavy shadows beneath the cliff overhang, perfect for a secret meeting. The atmosphere is solemn, tense, and clandestine. Realistic, thick-painted 2D animation style with strong chiaroscuro, a desaturated earth-tone color palette (deep shadow grays, muted browns, cool blues), and visible brushwork. Deep focus.",
+        "is_final_image": false
+      },
+      {
+        "thought": "Step 2: Add the focal point. The panel says the others are 'surrounding the instructor' (圍著指導員), so he is the central figure. I will add him to the empty setting from the previous step ('image 1'). I'll use 'character-7.jpg' ('image 2') for his identity. He should be positioned centrally.",
+        "type": "Modify",
+        "images": [
+          "iterate-6-1-1",
+          "character-7.jpg"
+        ],
+        "modify_prompt": "A new composition: the empty cliff base from image 1 serves as the background. In the center-middle ground, the Political Instructor (identity and uniform from image 2) is the focal point, perhaps sitting on a prominent rock or standing. He has a serious, determined expression, his sharp features and round glasses matching image 2. The low-angle perspective and dim, shadowy dusk lighting are maintained, casting his figure in dramatic chiaroscuro. He appears to be addressing a group.",
+        "is_final_image": false
+      },
+      {
+        "thought": "Step 3: This is the final image. I'll use the output from Step 2 ('image 1', which now has the instructor) as the base. I will add Ma Baoyu ('image 2') and Ge Zhenlin ('image 3'), plus the 'other party members' (who will be generic). This respects the 3-image reference limit (base + 2 new). I'll use precise positional language to place them sitting on the rocks, listening.",
+        "type": "Modify",
+        "images": [
+          "iterate-6-1-2",
+          "character-1.jpg",
+          "character-2.jpg"
+        ],
+        "modify_prompt": "A final medium shot composition from a low angle. The scene is the cliff base from image 1, with the Political Instructor as the central figure. Now, in the foreground and middle ground, Ma Baoyu (identity from image 2, with binoculars) and Ge Zhenlin (identity from image 3, stocky build) are sitting on the large rocks. Ma Baoyu is on the left, and Ge Zhenlin is on the right. Both are looking at the instructor with solemn, focused expressions. A few other generic soldiers in similar uniforms are visible in the shadows, also sitting and listening intently. The dim, cool dusk light and clandestine, serious atmosphere are maintained.",
+        "is_final_image": true
+      }
+    ]
+  }
