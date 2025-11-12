@@ -1,0 +1,26 @@
+{
+  "thought": "I will analyze each panel. For panel 3 (description: 'CU pouring water -> MS soldier helps old lady'), the panel describes two distinct shots, and two keyframes (`scene-3-0.jpg` and `scene-3-1.jpg`) are provided. Per the mandatory 'always video' rule, I will choose 'video'. I will create two video prompts for this panel's `generation_details` array, one for each keyframe, describing the continuous action from that keyframe. For panel 4 (description: 'Ma Baoyu enters... pats shoulder... camera pushes in'), the action is a 'slow push-in' on the two-shot. The keyframe (`scene-4-1.jpg`) is the start of this push-in (t=0). The preceding actions (walking, patting) are not animated per the 'Keyframe-First' rule. I will choose 'video' and write a prompt focusing on the camera push-in and the characters' serious expressions.",
+  "animation_sequence": [
+    {
+      "duration_sec": 5,
+      "animation_type": "video",
+      "generation_details": [
+        {
+          "video_prompt": "水流持续从木桶中倾泻而出，注入大缸。握着木桶的双手保持稳定。摄影机保持固定。焦点清晰地落在水流和木桶边缘。光线和阴影保持不变。"
+        },
+        {
+          "video_prompt": "身穿军装的士兵（葛振林）保持着微笑，肩膀上的扁担有非常轻微的自然晃动。他对面的老大娘保持微笑。背景中的树叶和人物的衣角有轻微的摆动。摄影机保持固定。焦点锁定在两人身上。傍晚的光线保持柔和。"
+        }
+      ]
+    },
+    {
+      "duration_sec": 3,
+      "animation_type": "video",
+      "generation_details": [
+        {
+          "video_prompt": "左侧的士兵（马宝玉）嘴唇有轻微的张合，表情严肃。右侧的士兵（葛振林）保持姿势，神情专注地聆听。摄影机镜头缓慢向前推进，逐渐拉近两人的面部特写。焦点始终保持在两人的眼睛上。光线和阴影保持不变。"
+        }
+      ]
+    }
+  ]
+}

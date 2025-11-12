@@ -43,37 +43,21 @@ Always choose video.
 # Panels
 [
   {
-    "panel_id": 3,
-    "voiceover_ref": "3.1",
-    "3w": "Who: 葛振林 (Ge Zhenlin), 房东老大娘 / Where: Village courtyard / When: 傍晚 (Dusk)",
-    "description": "特写：葛振林的手正稳稳地握着扁担，将一桶水倒满水缸。切换到中景，他（副班长葛振林）正帮一位房东老大娘担水。他脸上带着质朴的微笑，展现军民鱼水情。",
-    "mood": "平静, 温暖, 勤劳",
-    "camera": "特写 (CU) 倒水 -> 中景 (MS)，固定机位 (Static)",
-    "duration_sec": 5,
-    "notes": "“暴风雨前的宁静”。建立葛振林与人民的联系。",
+    "panel_id": 5,
+    "voiceover_ref": "4.1",
+    "3w": "Who: 葛振林, 马宝玉 / Where: Village path, 小山崖下 / When: 傍晚 (Dusk)",
+    "description": "葛振林迅速放下扁担，背上枪。一个跟拍镜头，两人快步走出村子，走向村外的小山崖。黄昏的光线给他们的身影拉出长长的影子。",
+    "mood": "迅速, 严肃",
+    "camera": "中景跟拍 (MS Tracking Shot)，从他们身后拍摄。",
+    "duration_sec": 4,
+    "notes": "从“生活”到“战斗”的快速转变。",
     "is_continue": false,
-    "characters": [
-      2
-    ],
-    "setting": 2,
-    "voiceover": "一天傍晚，七连六班副班长葛振林正忙着给房东老大娘担水，班长马宝玉跑来通知他开会。"
-  },
-  {
-    "panel_id": 4,
-    "voiceover_ref": "3.1",
-    "3w": "Who: 马宝玉 (Ma Baoyu), 葛振林 / Where: Village courtyard / When: 傍晚 (Dusk)",
-    "description": "班长马宝玉快步走进院子，神情严肃。他拍了拍葛振林的肩膀。镜头拉近，马宝玉的表情打破了前一刻的平静。",
-    "mood": "紧急, 严肃",
-    "camera": "中景 (MS)，马宝玉入画 (Enter Frame)，然后轻微推向两人的面部表情 (Slow Push-in to Two-Shot)",
-    "duration_sec": 3,
-    "notes": "用马宝玉的严肃表情制造紧张感。",
-    "is_continue": true,
     "characters": [
       1,
       2
     ],
-    "setting": 2,
-    "voiceover": "一天傍晚，七连六班副班长葛振林正忙着给房东老大娘担水，班长马宝玉跑来通知他开会。"
+    "setting": 3,
+    "voiceover": "葛振林立即背上枪，跟着马宝玉来到村外的小山崖下，参加党支部扩大会。两人坐在一块石头上，静听指导员分析当前形势。"
   }
 ]
 

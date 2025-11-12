@@ -43,37 +43,55 @@ Always choose video.
 # Panels
 [
   {
-    "panel_id": 3,
-    "voiceover_ref": "3.1",
-    "3w": "Who: 葛振林 (Ge Zhenlin), 房东老大娘 / Where: Village courtyard / When: 傍晚 (Dusk)",
-    "description": "特写：葛振林的手正稳稳地握着扁担，将一桶水倒满水缸。切换到中景，他（副班长葛振林）正帮一位房东老大娘担水。他脸上带着质朴的微笑，展现军民鱼水情。",
-    "mood": "平静, 温暖, 勤劳",
-    "camera": "特写 (CU) 倒水 -> 中景 (MS)，固定机位 (Static)",
+    "panel_id": 6,
+    "voiceover_ref": "4.1",
+    "3w": "Who: 马宝玉, 葛振林, 指导员, 其他党员 / Where: 小山崖下 / When: 傍晚 (Dusk)",
+    "description": "一个中景镜头，党支部扩大会议。几名战士（包括马和葛）坐在石头上，围着指导员。光线昏暗，只有黄昏的余光。他们都在聚精会神地听着。",
+    "mood": "庄重, 秘密",
+    "camera": "中景 (MS)，固定机位，低角度拍摄以示庄重。",
     "duration_sec": 5,
-    "notes": "“暴风雨前的宁静”。建立葛振林与人民的联系。",
+    "notes": "构图要简洁，突出会议的严肃性。",
     "is_continue": false,
     "characters": [
-      2
+      1,
+      2,
+      7
     ],
-    "setting": 2,
-    "voiceover": "一天傍晚，七连六班副班长葛振林正忙着给房东老大娘担水，班长马宝玉跑来通知他开会。"
+    "setting": 3,
+    "voiceover": "葛振林立即背上枪，跟着马宝玉来到村外的小山崖下，参加党支部扩大会。两人坐在一块石头上，静听指导员分析当前形势。"
   },
   {
-    "panel_id": 4,
-    "voiceover_ref": "3.1",
-    "3w": "Who: 马宝玉 (Ma Baoyu), 葛振林 / Where: Village courtyard / When: 傍晚 (Dusk)",
-    "description": "班长马宝玉快步走进院子，神情严肃。他拍了拍葛振林的肩膀。镜头拉近，马宝玉的表情打破了前一刻的平静。",
-    "mood": "紧急, 严肃",
-    "camera": "中景 (MS)，马宝玉入画 (Enter Frame)，然后轻微推向两人的面部表情 (Slow Push-in to Two-Shot)",
-    "duration_sec": 3,
-    "notes": "用马宝玉的严肃表情制造紧张感。",
+    "panel_id": 7,
+    "voiceover_ref": "5.1",
+    "3w": "Who: 指导员 / Where: 小山崖下 / When: 傍晚 (Dusk)",
+    "description": "近景 (CU) 切换到指导员的脸。他神情坚毅，正在分析形势，强调“严峻的考验”。他的脸在渐暗的光线中显得轮廓分明。",
+    "mood": "坚毅, 严峻",
+    "camera": "近景 (CU)，固定机位。",
+    "duration_sec": 4,
+    "notes": "通过特写强调话语的重要性。",
+    "is_continue": true,
+    "characters": [
+      7
+    ],
+    "setting": 3,
+    "voiceover": "指导员告诉大家：“日寇秋季大‘扫荡’越来越残酷，这对我们每个共产党员是一场严峻的考验。"
+  },
+  {
+    "panel_id": 8,
+    "voiceover_ref": "5.2",
+    "3w": "Who: 马宝玉, 葛振林 / Where: 小山崖下 / When: 傍晚 (Dusk)",
+    "description": "镜头切回到马宝玉和葛振林的特写，他们聆听着“不怕牺牲”的教导。他们的眼神中闪烁着决心，黄昏的微光映在他们年轻的脸庞上。",
+    "mood": "坚定, 受鼓舞",
+    "camera": "双人特写 (Two-Shot CU)，焦点在他们的眼睛上。",
+    "duration_sec": 5,
+    "notes": "将指导员的抽象话语与主角的具象决心联系起来。",
     "is_continue": true,
     "characters": [
       1,
       2
     ],
-    "setting": 2,
-    "voiceover": "一天傍晚，七连六班副班长葛振林正忙着给房东老大娘担水，班长马宝玉跑来通知他开会。"
+    "setting": 3,
+    "voiceover": "要发扬不怕牺牲. 不怕疲劳. 勇敢作战的精神，坚持狼牙山根据地的战斗！"
   }
 ]
 

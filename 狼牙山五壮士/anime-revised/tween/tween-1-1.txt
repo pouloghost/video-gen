@@ -43,37 +43,18 @@ Always choose video.
 # Panels
 [
   {
-    "panel_id": 3,
-    "voiceover_ref": "3.1",
-    "3w": "Who: 葛振林 (Ge Zhenlin), 房东老大娘 / Where: Village courtyard / When: 傍晚 (Dusk)",
-    "description": "特写：葛振林的手正稳稳地握着扁担，将一桶水倒满水缸。切换到中景，他（副班长葛振林）正帮一位房东老大娘担水。他脸上带着质朴的微笑，展现军民鱼水情。",
-    "mood": "平静, 温暖, 勤劳",
-    "camera": "特写 (CU) 倒水 -> 中景 (MS)，固定机位 (Static)",
-    "duration_sec": 5,
-    "notes": "“暴风雨前的宁静”。建立葛振林与人民的联系。",
+    "panel_id": 1,
+    "voiceover_ref": "1.1",
+    "3w": "Who: Japanese Army / Where: Jin-Cha-Ji Base Area / When: Autumn 1941",
+    "description": "广阔的建立镜头（Wide Establishing Shot）：1941年秋，晋察冀根据地。镜头从高空缓慢推近，展现连绵起伏、笼罩在薄雾中的狼牙山脉。山色已染秋黄。在远处的山谷中，一个小村庄正冒着几股黑烟，暗示着战争的“扫荡”。",
+    "mood": "压抑, 广阔, 不祥",
+    "camera": "史诗级广角镜头 (EWS)，缓慢向前推进 (Slow Push-in)",
+    "duration_sec": 6,
+    "notes": "设定基调。强调环境的广阔和战争的威胁。色调：饱和度低的土黄色和灰色。",
     "is_continue": false,
-    "characters": [
-      2
-    ],
+    "characters": [],
     "setting": 2,
-    "voiceover": "一天傍晚，七连六班副班长葛振林正忙着给房东老大娘担水，班长马宝玉跑来通知他开会。"
-  },
-  {
-    "panel_id": 4,
-    "voiceover_ref": "3.1",
-    "3w": "Who: 马宝玉 (Ma Baoyu), 葛振林 / Where: Village courtyard / When: 傍晚 (Dusk)",
-    "description": "班长马宝玉快步走进院子，神情严肃。他拍了拍葛振林的肩膀。镜头拉近，马宝玉的表情打破了前一刻的平静。",
-    "mood": "紧急, 严肃",
-    "camera": "中景 (MS)，马宝玉入画 (Enter Frame)，然后轻微推向两人的面部表情 (Slow Push-in to Two-Shot)",
-    "duration_sec": 3,
-    "notes": "用马宝玉的严肃表情制造紧张感。",
-    "is_continue": true,
-    "characters": [
-      1,
-      2
-    ],
-    "setting": 2,
-    "voiceover": "一天傍晚，七连六班副班长葛振林正忙着给房东老大娘担水，班长马宝玉跑来通知他开会。"
+    "voiceover": "1941年秋，侵华日寇对我晋察冀抗日根据地进行秋季大“扫荡”，一个多月来，被我八路军和当地民兵打得晕头转向，伤亡惨重。"
   }
 ]
 

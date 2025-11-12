@@ -1,0 +1,14 @@
+{
+  "thought": "I will analyze panel 2. The description is 'A medium shot, several 8th Route Army soldiers are moving quickly through a dense forest... Handheld Tracking Shot'. The primary action is the soldiers running and the camera tracking them. The keyframe shows three soldiers in mid-motion. Based on the strict rule 'Always choose video', I will select the 'video' strategy. I will create a `video_prompt` that instructs the model to animate the central and right soldiers continuing to run forward, while the camera performs a slight handheld pan to the right to track their movement, maintaining the peeking-through-leaves perspective and focus.",
+  "animation_sequence": [
+    {
+      "duration_sec": 4,
+      "animation_type": "video",
+      "generation_details": [
+        {
+          "video_prompt": "位于画面中央持枪的战士和后方（画面右侧）的战士继续警惕地向前快速移动，穿过森林。左侧树后的战士保持警戒姿态。手持摄影机向右轻微平移，跟随中央战士的动作，模拟穿过树叶的窥视感。焦点始终保持在移动的战士身上。光线保持不变，穿过树冠的斑驳光影随摄影机轻微晃动。"
+        }
+      ]
+    }
+  ]
+}

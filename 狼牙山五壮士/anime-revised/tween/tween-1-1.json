@@ -1,0 +1,14 @@
+{
+  "thought": "I will analyze panel 1. The decision-making rule is 'Always choose video', so I will select 'video' for this panel. The panel description specifies a 'Wide Establishing Shot' with a 'Slow Push-in' camera movement ('镜头从高空缓慢推近'). It also details subject motion: the village is '冒着几股黑烟' (emitting plumes of black smoke) and the mountains are '笼罩在薄雾中' (shrouded in thin mist). My video prompt must therefore combine these two elements: the primary subject motion (smoke rising, mist drifting) and the dominant camera motion (slow push-in). I will use the first keyframe, scene-1-0.jpg, as the t=0 starting point. The prompt will instruct a slow push-in while the smoke plumes rise and the mist subtly drifts, matching the 6-second duration and the ominous mood.",
+  "animation_sequence": [
+    {
+      "duration_sec": 6,
+      "animation_type": "video",
+      "generation_details": [
+        {
+          "video_prompt": "位于山谷中（画面中下部）村庄的几股黑烟缓缓上升、飘散。山谷间的薄雾有非常轻微的漂浮感。一个史诗感的广角镜头缓慢向前推进，镜头匀速越过前景的山脊，逐渐靠近远处的村庄。焦点始终保持在远处的山脉和村庄上，景深极大。光效和阴影保持不变。"
+        }
+      ]
+    }
+  ]
+}

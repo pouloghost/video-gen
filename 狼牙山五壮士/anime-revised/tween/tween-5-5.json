@@ -1,0 +1,14 @@
+{
+  "thought": "I will analyze panel 5. The description is 'A tracking shot follows as the two men quickly walk out of the village... The dusk light casts long shadows'. The key action is the continuous walking and the camera tracking them from behind. The rule is to 'Always choose video'. Therefore, I will choose 'video' and generate a prompt that describes this forward tracking motion, focusing on the two soldiers walking and the camera following them, while maintaining the dusk lighting.",
+  "animation_sequence": [
+    {
+      "duration_sec": 4,
+      "animation_type": "video",
+      "generation_details": [
+        {
+          "video_prompt": "前景中的两名士兵继续快步向前行走。摄影机平稳地向前跟拍，始终保持在他们身后，维持中景景别。焦点始终锁定在两名士兵的背影上。黄昏的光线和长长的影子保持一致，并随着他们的移动而自然变化。"
+        }
+      ]
+    }
+  ]
+}

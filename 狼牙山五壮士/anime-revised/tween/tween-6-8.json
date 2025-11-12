@@ -1,0 +1,32 @@
+{
+  "thought": "I will analyze each panel sequentially as provided. The directive is to 'Always choose video'. Therefore, for every panel, I will select the 'video' animation_type and generate a corresponding video_prompt. Panel 6 (ID: 6) shows an instructor speaking to a group. The motion will be the instructor speaking and gesturing subtly, with a slow dolly in. Panel 7 (ID: 7) is a close-up of the instructor. The motion will be his lips moving as he speaks, with a very slow zoom in to emphasize his words. Panel 8 (ID: 8) is a two-shot of Ma and Ge listening. The motion will be minimal—subtle blinks and a tensing of their expressions to show determination, with a slow push-in to focus on their eyes. All prompts will be in Chinese and follow the 'Keyframe-First' rule.",
+  "animation_sequence": [
+    {
+      "duration_sec": 5,
+      "animation_type": "video",
+      "generation_details": [
+        {
+          "video_prompt": "站在石头上的指导员（画面中央）正在讲话，嘴唇开合，手臂有轻微的、有力的手势。周围坐着的士兵保持聚精会神，只有轻微的眨眼和呼吸。一个极其缓慢的推轨镜头向指导员推进，强调会议的庄重。光线保持黄昏的昏暗感。"
+        }
+      ]
+    },
+    {
+      "duration_sec": 4,
+      "animation_type": "video",
+      "generation_details": [
+        {
+          "video_prompt": "指导员的嘴唇开合，正在发表讲话，神情坚毅。一个极其缓慢的镜头推进，逐渐拉近，聚焦于他坚定的眼神。黄昏的光线保持不变，在他脸上投下分明的阴影。"
+        }
+      ]
+    },
+    {
+      "duration_sec": 5,
+      "animation_type": "video",
+      "generation_details": [
+        {
+          "video_prompt": "画面中的两名战士（马宝玉和葛振林）保持聚精会神地聆听，只有非常轻微的眨眼动作。他们的面部肌肉有不易察觉的绷紧，显露出决心。一个极其缓慢的镜头推进，焦点始终锁定在他们坚定的眼神上。黄昏的微光映在他们脸上，光效保持不变。"
+        }
+      ]
+    }
+  ]
+}
