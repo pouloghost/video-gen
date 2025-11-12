@@ -10,22 +10,29 @@ Analyze each storyboard panel (or a continuous is_continue group) and its corres
 You will then generate the precise instructions for your chosen strategy for every panel.
 
 # Decision-Making Rules (Crucial)
-You MUST follow these rules to decide between "video" and "static_fx":
+You MUST use a two-part test to decide the animation strategy. A panel only gets "video" if it passes BOTH tests, or else use static_fx.
 
-1. When to use "video"
-- Camera Movement: The panel.camera field explicitly requests pan, tilt, zoom, dolly, or crane movements.
-- Ambient Motion: The panel.description calls for simple, non-interactive environmental motion (e.g., "snow falling", "leaves rustling").
-- Blockbuster-Scale Chaos: The panel.description calls for large-scale, "Hollywood" style chaotic motion where physical accuracy is secondary to visual spectacle (e.g., "a large building explosion", "a tidal wave").
-- Simple Subject Motion: The panel.description calls for very simple, isolated movements (e.g., "character turns head", "character blinks slowly") or full screen chaotic scenes (e.g. explosion in the tower on left top).
+## Test 1: Narrative Value (The "Why")
+First, you must assess the panel's plot importance. Is this a key "beat" that strongly advances the plot, reveals critical information, or defines a character moment?
+- High Value (Plot-Driving): A "hero shot" of a character making a decision, a "reaction shot" to critical news, a "reveal" of a new threat, a specific action that is a key plot point, etc.
+- Low Value (Contextual): B-roll, establishing shots, redundant actions, simple transitions, or background ambience, etc.
 
-2. When to use "static_fx" (Default for Safety)
-- High-Risk Deterministic Physics/Interactions: The panel.description implies complex, close-up interactions requiring causal logic or anatomical precision (e.g., "two people fighting hand-to-hand", "a character catching a thrown object").
-- Subtle Emotion/Dialogue: The panel.description focuses on subtle emotion or dialogue ("he looks thoughtfully", "she whispers") where a video model might create uncanny "mouth flapping" or bizarre facial twitches. A "slow zoom in" on a static image is far more professional.
-- Static Informational Shots: The shot is purely informational (e.g., "a map", "a chart", "a wide shot of a building").
+##Test 2: Technical Feasibility (The "How")
+If a panel is "High Value", you will then assess its technical feasibility:
+- Camera Movement (pan, tilt, zoom, dolly).
+- Ambient Motion (snow, leaves, fire).
+- Blockbuster Chaos (explosions, tidal wave).
+- Isolated Subject Motion: "a character turns head", "a soldier raises a hand", "a fist clenches".
+- Simple, Non-Occluding Interactions: "a character pats another's shoulder", "a character touches another's arm", "a hand points".
+- No Uncommon but Real Items: Things may not be fully trained but recognizable for people, e.g. "扁担", "龙椅". But unrealistic items are ok, e.g. "Space aircraft", "robots".
+- No Fast and Big Complex/Anatomical Motion: "two man wrestling", ""
+- No Close Multiple Subjects Motions: "Close-up, a group of athletes runing".
 
 # Prompt Requirements
 1. If "video" is chosen
 - You will generate a video_prompt for the tween_prompt array.
+- The "Keyframe-First" Truncation Rule: You MUST assume the provided keyframe image is the absolute start (t=0) of the video clip.
+- Mandatory Motion Description: Your video_prompt must translate high value motions described in the panel.description into a cinematic instruction. If the panel says "a soldier raises his hand", your prompt must include this.
 - The prompt must be professional, cinematic, and focus only on the motion that happens between keyframes.
 - Referencing Subjects: To specify which subject moves (if there are multiple), use simple, descriptive references based on the keyframe (e.g., "The man in the red shirt raises his hand", "The background trees sway").
 - Do not describe the keyframe image. The model already sees it.
@@ -33,29 +40,15 @@ You MUST follow these rules to decide between "video" and "static_fx":
 - Structure: [Subject Movements], [Camera Movements], [Lens & Focus], [Lighting Change].
 - Language: professional filming terms in Chinese.
 - Concise: Prompts must be less than 180 words.
-Example: "Subtle wind blowing the subject(left center, long red dress)'s hair. A slow dolly zoom (Vertigo effect) pulling away from the subject. Focus racks from foreground to background. Lighting remains consistent, soft shadows."
+- Good Example: "微风吹动着主体（位于画面偏左，身穿红色长裙）的发丝。一个缓慢的滑动变焦镜头启动，摄影机远离主体。焦点从前景转移至背景。光效始终保持一致，呈现柔和的阴影。"
+- Bad Example: "一个缓慢的镜头推进" (No subject motion).
+- Bad Example: "人做了一个后空翻" (referencing ambiguous, motion too complex).
 
 2. If "static_fx" is chosen
 - You will generate a static_effect object.
 - This object must detail a "Ken Burns" style animation. 
 - Effect_type: Choose from: "slow_zoom_in", "slow_zoom_out", "pan_left", "pan_right", "tilt_up", "tilt_down", "fade_in", "fade_out", "subtle_shake", "none".
 - Target: Describe the focus area by tlbr coordinates. (e.g., "{"top": 0.1, "left": 0.2, "bottom": 0.2, "right": 0.4}").
-
-# Video generate model
-Good at motion, b-roll and camera movement.
-Not good at physics.
-Bad at plots.
-
-# Video Generate Model Capabilities:
-## Good at (Based on Technical Principles):
-- Global Camera Movements: (e.g., pan, tilt, zoom, dolly).
-- Ambient/Stochastic Motion: (e.g., water, fire, smoke). These are "textural" motions, models are trained well.
-- Simple, Isolated Motion: (e.g., "a person turning their head"). The model can interpolate simple movements as long as they don't involve complex interactions or occlusion.
-## Bad at (Due to Technical Limitations):
-- Object & Identity Consistency: (e.g., faces "melting," clothing patterns changing, objects flickering). The model lacks long-term object permanence. Each frame is a new "guess" based on the last, leading to diffusion artifacts and identity drift. This is the highest risk.
-- Physics & Complex Interactions: (e.g., "two man wrestling"). The model has no internal 3D world model or physics engine. All interactions are "pixel guesses" and often look "mushy" or physically impossible.
-- Complex/Anatomical Motion: (e.g., "a character dancing", "a specific hand gesture"). The model struggles with skeletal anatomy, causality, and high-level, intentional actions. "Talking" often results in "uncanny valley" mouth movements.
-- Spawning New Information (Occlusion): The model cannot easily generate complex objects that weren't in the keyframe (e.g., "a person walks out from behind a tree") or understand what's behind an object that moves.
 
 # Visual style
 一种写实、厚涂的2D动画风格，运用强烈的明暗对比和偏向饱和度低的土色调色板，以强调历史事件的严酷、庄重和史诗感。
