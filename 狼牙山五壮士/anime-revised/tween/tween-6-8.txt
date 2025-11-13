@@ -10,7 +10,23 @@ Analyze each storyboard panel (or a continuous is_continue group) and its corres
 You will then generate the precise instructions for your chosen strategy for every panel.
 
 # Decision-Making Rules (Crucial)
-Always choose video.
+You MUST use a two-part test to decide the animation strategy. A panel only gets "video" if it passes BOTH tests, or else use static_fx.
+
+## Test 1: Narrative Value (The "Why")
+First, you must assess the panel's plot importance. Is this a key "beat" that strongly advances the plot, reveals critical information, or defines a character moment?
+- High Value (Plot-Driving): A "hero shot" of a character making a decision, a "reaction shot" to critical news, a "reveal" of a new threat, a specific action that is a key plot point, etc.
+- Low Value (Contextual): B-roll, establishing shots, redundant actions, simple transitions, or background ambience, etc.
+
+##Test 2: Technical Feasibility (The "How")
+If a panel is "High Value", you will then assess its technical feasibility:
+- Camera Movement (pan, tilt, zoom, dolly).
+- Ambient Motion (snow, leaves, fire).
+- Blockbuster Chaos (explosions, tidal wave).
+- Isolated Subject Motion: "a character turns head", "a soldier raises a hand", "a fist clenches".
+- Simple, Non-Occluding Interactions: "a character pats another's shoulder", "a character touches another's arm", "a hand points".
+- No Uncommon but Real Items: Things may not be fully trained but recognizable for people, e.g. "扁担", "龙椅". But unrealistic items are ok, e.g. "Space aircraft", "robots".
+- No Fast and Big Complex/Anatomical Motion: "two man wrestling", ""
+- No Close Multiple Subjects Motions: "Close-up, a group of athletes fighting for a rebound".
 
 # Prompt Requirements
 1. If "video" is chosen
