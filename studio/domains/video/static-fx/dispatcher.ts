@@ -1,5 +1,5 @@
 import path from 'path';
-import { slowZoomInHandler } from './handlers/slow-zoom-in';
+import { slowZoomInHandler } from './handlers/slow-zoom-in.ts';
 
 // 定义请求参数类型
 export interface StaticFxParams {

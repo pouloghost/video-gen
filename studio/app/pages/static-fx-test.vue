@@ -17,13 +17,13 @@
       <div class="mb-4">
         <label class="block mb-2">Coordinates (top, left, bottom, right):</label>
         <div class="grid grid-cols-4 gap-2">
-          <input v-model.number="form.coordinate[0]" type="number" class="border p-2" min="0" max="100"
+          <input v-model.number="form.coordinate[0]" type="number" class="border p-2" min="0" max="1" step="0.01"
             placeholder="top" />
-          <input v-model.number="form.coordinate[1]" type="number" class="border p-2" min="0" max="100"
+          <input v-model.number="form.coordinate[1]" type="number" class="border p-2" min="0" max="1" step="0.01"
             placeholder="left" />
-          <input v-model.number="form.coordinate[2]" type="number" class="border p-2" min="0" max="100"
+          <input v-model.number="form.coordinate[2]" type="number" class="border p-2" min="0" max="1" step="0.01"
             placeholder="bottom" />
-          <input v-model.number="form.coordinate[3]" type="number" class="border p-2" min="0" max="100"
+          <input v-model.number="form.coordinate[3]" type="number" class="border p-2" min="0" max="1" step="0.01"
             placeholder="right" />
         </div>
       </div>
@@ -60,7 +60,7 @@ interface StaticFxResult {
 const form = ref({
   target_image: '',
   duration: 5,
-  coordinate: [0, 0, 100, 100],
+  coordinate: [0.0, 0.0, 1.0, 1.0],
   fx: 'slow_zoom_in'
 });
 
