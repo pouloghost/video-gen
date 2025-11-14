@@ -10,9 +10,9 @@
 # fi
 
 # Get file paths from command line arguments
-REFS_FILE="/Users/zty/video-gen/狼牙山五壮士/anime-revised/refs.json"
-STORYBOARD_FILE="/Users/zty/video-gen/狼牙山五壮士/anime-revised/storyboard.json"
-OUTPUT_FILE="/Users/zty/video-gen/狼牙山五壮士/anime-revised/merged_storyboard.json"
+REFS_FILE="/Users/zty/video-gen/狼牙山五壮士/final/refs.json"
+STORYBOARD_FILE="/Users/zty/video-gen/狼牙山五壮士/final/storyboard.json"
+OUTPUT_FILE="/Users/zty/video-gen/狼牙山五壮士/final/merged_storyboard.json"
 
 # Check if files exist
 if [ ! -f "$REFS_FILE" ]; then

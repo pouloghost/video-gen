@@ -5,9 +5,9 @@
 
 # Default values
 SCRIPT_DIR="$(dirname "$0")"
-DEFAULT_STORYBOARD="$SCRIPT_DIR/../狼牙山五壮士/anime-revised/merged_storyboard.json"
+DEFAULT_STORYBOARD="$SCRIPT_DIR/../狼牙山五壮士/final/merged_storyboard.json"
 DEFAULT_TEMPLATE="$SCRIPT_DIR/../prompts/tween.txt"
-DEFAULT_OUTPUT="$SCRIPT_DIR/../狼牙山五壮士/anime-revised/tween/"
+DEFAULT_OUTPUT="$SCRIPT_DIR/../狼牙山五壮士/final/tween/"
 START_ID=""
 
 # Parse command line arguments

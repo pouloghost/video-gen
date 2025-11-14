@@ -4,8 +4,8 @@
 # Usage: ./run_join_storyboard.sh
 
 # Define paths
-STORYBOARDS_DIR="/Users/zty/video-gen/狼牙山五壮士/anime-revised/storyboards"
-OUTPUT_FILE="/Users/zty/video-gen/狼牙山五壮士/anime-revised/storyboard.json"
+STORYBOARDS_DIR="/Users/zty/video-gen/狼牙山五壮士/final/storyboards"
+OUTPUT_FILE="/Users/zty/video-gen/狼牙山五壮士/final/storyboard.json"
 
 # Check if storyboards directory exists
 if [ ! -d "$STORYBOARDS_DIR" ]; then

@@ -64,9 +64,9 @@ async function processPanels() {
     const args = process.argv.slice(2);
     
     // 设置默认值和解析参数
-    let storyboardPath = '/Users/zty/video-gen/狼牙山五壮士/anime-revised/merged_storyboard.json';
-    let templatePath = '/Users/zty/video-gen/prompts/tween.txt';
-    let outputDir = '/Users/zty/video-gen/狼牙山五壮士/anime-revised/tween';
+    let storyboardPath = '';
+    let templatePath = '';
+    let outputDir = '';
     let startPanelId: number | null = null;
 
     // 简单的参数解析逻辑
