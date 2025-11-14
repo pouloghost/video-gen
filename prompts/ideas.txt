@@ -4,7 +4,7 @@
 - 枚举出模型常见错误 ✅
 - 先做sketch再做modify，sketch的情景感和物理准确性明显好。 ✅
 - 用agentic的方式获取信息：参考图、前后的panel等。可能很贵。
-
+- 增加一个基于keyframe expand panel的过程。
 ------
 
 split-text -> story-concept -> storyboard -> extract-refs -> character-ref -> setting-ref -> scene-frames -> tween -> merge
