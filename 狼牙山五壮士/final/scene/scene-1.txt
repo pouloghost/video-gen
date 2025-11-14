@@ -1,4 +1,4 @@
-/# frame for panel <gt_tmpl>panel_id</gt_tmpl>
+/# frame for panel 1
 
 # Role
 You are a world-class director and a text-to-image prompt expert. 
@@ -62,7 +62,6 @@ If this is the Base Frame for an Iterative Strategy:
 * You MUST fill the `final_scene` field with a detailed description of the *completed* scene. This is mandatory.
 ## For `Modify` Prompts (The "Re-Renderer")
 **Core Principle: Describe the FINAL STATE, not the PROCESS of change.**
-Do not motion visual style unless changed.
 ### 1. Banned "Process" Words
 You **MUST NOT** use verbs or concepts related to video editing, animation, or gradual change.
 **BANNED:** zoom in, push in, pan left, tilt up, add, change, remove, make taller, make smaller, slightly, a little, continue the..., etc.
@@ -94,16 +93,35 @@ When using `Modify` to add subjects to a base image:
 狼牙山五壮士：1941年，五名八路军战士为掩护主力部队和数千名群众安全转移，将日军精锐引上狼牙山绝顶，在弹尽粮绝后毅然跳崖，谱写了一曲壮丽的英雄赞歌。
 
 # Setting description
-<gt_tmpl>setting</gt_tmpl>
+{
+  "id": 2,
+  "name": "村庄 (Village)",
+  "description": "晋察冀根据地的一个普通山村。由土墙、茅草屋顶构成。有庭院（带水缸）、村路。风格质朴。在战争中（panel 1）会冒黑烟，在（panel 28）会燃起大火。",
+  "image": "image 1",
+  "setting_image_prompt": "Wide environmental establishing shot of a typical rustic mountain village in the Shanxi-Chahar-Hebei base area, 1941 autumn. Eye-level view showcasing traditional Chinese rural architecture with distinctive rammed earth walls in weathered ochre and dusty brown tones, thatched roofs made of bundled dried straw and millet stalks. Asymmetrical composition following natural village layout with clustered dwellings arranged organically along dirt village paths. Foreground featuring a traditional courtyard entrance with prominent large clay water vat (水缸) positioned beside the doorway, middle ground showing multiple single-story farmhouses with textured mud-brick walls, small wooden doors, and aged thatched roofing with visible layered straw texture, background revealing more village structures nestled against mountain foothills. Unpaved earthen village roads winding between buildings, scattered with small stones and dried autumn grass. Simple wooden farm tools leaning against walls, sparse chicken coops, modest vegetable plots. Overcast diffused autumn lighting creating soft shadows and emphasizing the humble, vulnerable nature of the settlement. Desaturated earth-tone color palette dominated by muted clay browns, faded ochres, dusty grays, dried straw yellows, and weathered wood tones. Solemn, austere atmosphere conveying the simplicity and precariousness of wartime rural life. Realistic heavily-painted 2D animation style with thick impasto brushwork, strong textural quality on mud walls and thatched roofs, pronounced light-dark contrast characteristic of historical war illustrations. Deep depth of field maintaining clarity from foreground water vats to background structures. Environmental documentary portraiture emphasizing authentic period architecture. Cinematic, subdued lighting with neutral-to-cool color temperature. Moody, historically-grounded aesthetic capturing the modest dignity of revolutionary base area villages."
+}
 
 # Character description
-<gt_tmpl>character</gt_tmpl>
+
 
 # Previous panels
-<gt_tmpl>pre</gt_tmpl>
+[]
 
 # Panel
-<gt_tmpl>scene</gt_tmpl>
+{
+  "panel_id": 1,
+  "voiceover_ref": "1.1",
+  "3w": "Who: Japanese Army / Where: Jin-Cha-Ji Base Area / When: Autumn 1941",
+  "description": "广阔的建立镜头（Wide Establishing Shot）：1941年秋，晋察冀根据地。镜头从高空缓慢推近，展现连绵起伏、笼罩在薄雾中的狼牙山脉。山色已染秋黄。在远处的山谷中，一个小村庄正冒着几股黑烟，暗示着战争的“扫荡”。",
+  "mood": "压抑, 广阔, 不祥",
+  "camera": "史诗级广角镜头 (EWS)，缓慢向前推进 (Slow Push-in)",
+  "duration_sec": 12,
+  "notes": "设定基调。强调环境的广阔和战争的威胁。色调：饱和度低的土黄色和灰色。",
+  "is_continue": false,
+  "characters": [],
+  "setting": 2,
+  "voiceover": "1941年秋，侵华日寇对我晋察冀抗日根据地进行秋季大“扫荡”，一个多月来，被我八路军和当地民兵打得晕头转向，伤亡惨重。"
+}
 
 # Output Format
 Your final output must be a single, valid JSON object. Structure the JSON according to this schema.

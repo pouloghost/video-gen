@@ -130,6 +130,7 @@ templateContent = templateContent.replace('<gt_tmpl>setting</gt_tmpl>', settingC
 templateContent = templateContent.replace('<gt_tmpl>character</gt_tmpl>', charactersContent.join('\n\n'));
 templateContent = templateContent.replace('<gt_tmpl>pre</gt_tmpl>', JSON.stringify(previousPanels, null, 2));
 templateContent = templateContent.replace('<gt_tmpl>scene</gt_tmpl>', JSON.stringify(scene, null, 2));
+templateContent = templateContent.replace('<gt_tmpl>panel_id</gt_tmpl>', panelId);
 
 // Write output file
 const outputPath = path.join(animeDir, 'scene', `scene-${panelId}.txt`);

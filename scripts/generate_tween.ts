@@ -132,7 +132,8 @@ async function processPanels() {
         const panelData = JSON.stringify(targetGroup, null, 2);
 
         // 替换模板中的占位符
-        const content = template.replace('<gt_tmpl>panel</gt_tmpl>', panelData);
+        let content = template.replace('<gt_tmpl>panel</gt_tmpl>', panelData);
+        content = content.replace('<gt_tmpl>ids</gt_tmpl>', `${startPanelId}-${endPanelId}`);
 
         // 写入文件
         fs.writeFileSync(outputPath, content, 'utf-8');
