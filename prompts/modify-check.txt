@@ -1,3 +1,3 @@
 Double-check these common errors, rewrite to fix them, if no rewrite needed, say "All is right".
 - Illegal modify_prompt. If a modify_prompt contains any comparative or process-based words (e.g., 'closer', 'tighter', 'more', 'less', 'zoom in', 'pan left', 'add', 'change', etc), the output is invalid. You must rewrite it to describe the absolute static composition.
-- Wrong Refrence. For I2I model, image input are way stronger than text. If an reference image only takes small portion of frame, remove it and change the prompt.
+- Wrong Reference. For I2I model, image input are way stronger than text. If an reference image only takes small portion of frame, remove it and change the prompt.

@@ -1,4 +1,4 @@
-/# frame for panel <gt_tmpl>panel_id</gt_tmpl>
+/# frame for panel 2
 
 # Role
 You are a world-class director and a text-to-image prompt expert. 
@@ -96,16 +96,50 @@ When using `Modify` to add subjects to a base image:
 狼牙山五壮士：1941年，五名八路军战士为掩护主力部队和数千名群众安全转移，将日军精锐引上狼牙山绝顶，在弹尽粮绝后毅然跳崖，谱写了一曲壮丽的英雄赞歌。
 
 # Setting description
-<gt_tmpl>setting</gt_tmpl>
+{
+  "id": 1,
+  "name": "狼牙山 (Langya Mountain)",
+  "description": "故事的主要环境。连绵起伏的山脉，山峰如犬牙交错。1941年秋季，色调以饱和度低的土黄色和灰色为主。地形极其险峻，多悬崖、陡坡、峡谷、荆棘和岩石。是“险要屏障”。山林茂密，但也包含裸露的岩石山脊和“半人高”的山草。易水河在山脚流过。",
+  "image": "image 1",
+  "setting_image_prompt": "Wide establishing landscape shot of Langya Mountain range, showcasing the distinctive jagged peaks interlocking like wolf's fangs against an overcast autumn sky. Eye-level to slightly low-angle view emphasizing the imposing, strategic terrain. Layered composition with multiple mountain ridges receding into atmospheric perspective, foreground featuring steep rocky cliffs with exposed granite surfaces, waist-high yellowed mountain grass, and thorny scrub vegetation, middle ground showing dense coniferous and deciduous forest groves interspersed with bare rocky outcroppings and treacherous ravines, background revealing the serpentine Yi River flowing at the mountain's base through the valley. Dramatic chiaroscuro lighting with diffused overcast autumn light creating strong contrast between shadowed cliff faces and illuminated rocky ridges. Extremely rugged topography with visible steep slopes, sharp drop-offs, and险峻 precipices. Desaturated earth-tone color palette dominated by muted ochres, dusty grays, faded olive greens, and weathered browns, emphasizing 1941 autumn season. Solemn, harsh, and epic atmosphere conveying historical gravitas and the mountain's role as a formidable natural barrier. Realistic heavily-painted 2D animation style with visible thick brush strokes, strong painterly texture, and pronounced light-dark contrast characteristic of historical war illustrations. Deep depth of field maintaining sharpness across all mountain layers from foreground boulders to distant peaks. Environmental landscape portraiture in the style of documentary historical illustration. Cinematic, moody, low-key lighting with cool-to-neutral color temperature. Strategic emphasis on the treacherous, defensible nature of the mountainous terrain."
+}
 
 # Character description
-<gt_tmpl>character</gt_tmpl>
+
 
 # Previous panels
-<gt_tmpl>pre</gt_tmpl>
+[
+  {
+    "panel_id": 1,
+    "voiceover_ref": "1.1",
+    "3w": "Who: Japanese Army / Where: Jin-Cha-Ji Base Area / When: Autumn 1941",
+    "description": "广阔的建立镜头（Wide Establishing Shot）：1941年秋，晋察冀根据地。镜头从高空缓慢推近，展现连绵起伏、笼罩在薄雾中的狼牙山脉。山色已染秋黄。在远处的山谷中，一个小村庄正冒着几股黑烟，暗示着战争的“扫荡”。",
+    "mood": "压抑, 广阔, 不祥",
+    "camera": "史诗级广角镜头 (EWS)，缓慢向前推进 (Slow Push-in)",
+    "duration_sec": 12,
+    "notes": "设定基调。强调环境的广阔和战争的威胁。色调：饱和度低的土黄色和灰色。",
+    "is_continue": false,
+    "characters": [],
+    "setting": 2,
+    "voiceover": "1941年秋，侵华日寇对我晋察冀抗日根据地进行秋季大“扫荡”，一个多月来，被我八路军和当地民兵打得晕头转向，伤亡惨重。"
+  }
+]
 
 # Panel
-<gt_tmpl>scene</gt_tmpl>
+{
+  "panel_id": 2,
+  "voiceover_ref": "2.1",
+  "3w": "Who: 8th Route Army soldiers / Where: Langya Mountains, Woods / When: Day",
+  "description": "一个中景镜头，几名八路军战士（身影模糊，可能是我们的主角）正迅速穿过一片茂密的森林。他们利用树木作掩护，动作敏捷，体现了“神出鬼没”。",
+  "mood": "隐秘, 警惕, 坚韧",
+  "camera": "中景 (MS)，手持跟拍 (Handheld Tracking Shot)，穿过树叶的窥视视角。",
+  "duration_sec": 9,
+  "notes": "在不明确展示主角的情况下，展示八路军的战斗方式。",
+  "is_continue": false,
+  "characters": [],
+  "setting": 1,
+  "voiceover": "活动在冀西狼牙山周围的我八路军某部，和当地民兵密切配合，神出鬼没地袭击敌人，粉碎敌人的疯狂“扫荡“。"
+}
 
 # Output Format
 Your final output must be a single, valid JSON object. Structure the JSON according to this schema.

@@ -1,0 +1,36 @@
+{
+  "thought": "My overall strategy: First, I will determine the number of Final Keyframes. The panel describes a 'Handheld Tracking Shot' with a duration of 9 seconds. This requires at least two Final Keyframes (a start and end) to define the motion. Furthermore, the 9-second duration violates the 5-Second Rule. Therefore, I MUST add an intermediate Final Keyframe to break the duration. I will generate 3 Final Keyframes. KF1 will be the start of the tracking shot (0s). KF2 will be the midpoint (approx 4.5s). KF3 will be the end of the shot (9s). The panel `is_continue` is false, so I will start with a `Text` prompt to create the new scene, which is a 'dense forest' interior and not the wide vista from setting-1.jpg. The soldiers are 'blurry,' so I can generate them directly without a complex iterative strategy. KF2 and KF3 will be `Modify` prompts based on the previous keyframe, describing a new static composition to simulate the 'handheld tracking' movement.",
+  "keyframe_prompt": [
+    {
+      "thought": "This is Final Keyframe 1 of 3. It's the starting position for the 9-second handheld tracking shot. I am using `Text` to generate this new, dense forest interior scene. The description calls for a 'peeking perspective through leaves,' so I will add strong, out-of-focus foreground elements. The soldiers are 'blurry' and in the mid-ground.",
+      "type": "Text",
+      "images": [],
+      "final_scene": null,
+      "prompt": "A cinematic medium shot from a peeking perspective, as if hidden and looking through dense foliage. **In the extreme foreground, large, dark, out-of-focus tree leaves and branches frame the right side of the shot.** In the mid-ground, several blurry figures of 8th Route Army soldiers move quickly from right to left, their forms indistinct as they use the dense trees of Langya Mountain for cover. The forest is thick with tall pines and autumn undergrowth. **Sunlight filters through the canopy, creating dramatic patches of light and deep shadow (chiaroscuro).** Atmosphere is tense, stealthy, and resilient. Realistic, heavily-painted 2D animation style with a desaturated earth-tone color palette (muted ochres, grays, olive greens).",
+      "modify_prompt": null,
+      "is_final_image": true
+    },
+    {
+      "thought": "This is Final Keyframe 2 of 3, serving as the midpoint of the shot (~4.5s) to satisfy the 5-Second Rule. I will use `Modify` on KF1 (scene_2_1.png). I must describe a new, absolute static composition. I will change the foreground framing and the position of the soldiers to imply the camera has tracked with them.",
+      "type": "Modify",
+      "images": [
+        "scene_2_1.png"
+      ],
+      "final_scene": null,
+      "prompt": null,
+      "modify_prompt": "A cinematic medium shot from a peeking perspective, using the elements from image 1. **In this composition, out-of-focus foreground leaves and branches frame the top and left of the shot.** In the mid-ground, the blurry figures of the 8th Route Army soldiers (from image 1) are positioned in the **center of the frame**, captured mid-stride between the dense trees. The dramatic, filtered sunlight and deep shadows from image 1 are present. The atmosphere is tense and stealthy. Realistic, heavily-painted 2D animation style.",
+      "is_final_image": true
+    },
+    {
+      "thought": "This is Final Keyframe 3 of 3, the end position of the 9-second shot. I will use `Modify` on KF2 (scene_2_2.png). This final static composition will show the soldiers further along their path, completing the implied 'tracking' motion. The foreground will shift again.",
+      "type": "Modify",
+      "images": [
+        "scene_2_2.png"
+      ],
+      "final_scene": null,
+      "prompt": null,
+      "modify_prompt": "A final cinematic medium shot from a peeking perspective, using the elements from image 1. **The composition's foreground consists of out-of-focus leaves framing the far-left edge.** The mid-ground forest is clearly visible. In the **far-left mid-ground**, the blurry figures of the 8th Route Army soldiers (from image 1) are partially obscured by a large, shadowed tree trunk. The dense forest, filtered light, and tense atmosphere from image 1 are all consistent. Realistic, heavily-painted 2D animation style.",
+      "is_final_image": true
+    }
+  ]
+}
