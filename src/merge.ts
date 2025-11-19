@@ -108,23 +108,32 @@ async function main() {
         const maskSvg = createTrapezoidSvg(p1, p2, p3, p4);
 
         // 2. Prepare Image
-        // We need the image to cover the trapezoid area.
-        // The trapezoid is roughly half the screen height/width.
-        // Let's resize image to outputSize to be safe (cover), then rotate.
-        // Actually, rotation changes dimensions.
-        // If we rotate 90/270, width becomes height.
+        // Calculate bounding box of the trapezoid
+        const xs = [p1[0], p2[0], p3[0], p4[0]];
+        const ys = [p1[1], p2[1], p3[1], p4[1]];
+        const minX = Math.floor(Math.min(...xs));
+        const maxX = Math.ceil(Math.max(...xs));
+        const minY = Math.floor(Math.min(...ys));
+        const maxY = Math.ceil(Math.max(...ys));
+        const width = maxX - minX;
+        const height = maxY - minY;
 
         let img = sharp(imagePath);
-        const metadata = await img.metadata();
 
         // Rotate first
         img = img.rotate(rotation);
 
-        // Resize to cover the whole canvas (simplest way to ensure it covers the mask)
-        // Or better, resize to cover the bounding box of the trapezoid?
-        // Covering the whole canvas is safer and easier logic, though slightly less efficient.
-        // Given 2048x2048, it's fine.
-        img = img.resize(outputSize, outputSize, { fit: 'cover' });
+        // Resize to cover the bounding box of the trapezoid
+        img = img.resize(width, height, { fit: 'cover' });
+
+        // Extend to full canvas size to position the image correctly
+        img = img.extend({
+            top: minY,
+            bottom: outputSize - maxY,
+            left: minX,
+            right: outputSize - maxX,
+            background: { r: 0, g: 0, b: 0, alpha: 0 }
+        });
 
         // 3. Masking
         // We want to cut out the trapezoid from this image.
