@@ -1,4 +1,4 @@
-/# claude-4.5
+/# setting
 
 # Role
 You are an expert on prompting text-to-image model and a world class photographer.
@@ -48,14 +48,14 @@ Good at following expicit instructions, good at overall rendering.
 Bad at layouting, bad at complex character-environment proportion.
 
 # Visual style
-一种写实、厚涂的2D动画风格，运用强烈的明暗对比和偏向饱和度低的土色调色板，以强调历史事件的严酷、庄重和史诗感。
+A realistic historical film style that uses authentic detail to create a profound sense of historical depth.
 
 # Story logline
 狼牙山五壮士：1941年，五名八路军战士为掩护主力部队和数千名群众安全转移，将日军精锐引上狼牙山绝顶，在弹尽粮绝后毅然跳崖，谱写了一曲壮丽的英雄赞歌。
 
 # Setting
-"name": "团指挥所 (Regiment HQ)",
-"description": "简陋的指挥所，可能在村舍或山洞中。核心道具是挂墙的简陋军用地图和一盏摇曳的油灯。光线昏暗，气氛凝重。",
+"name": "村庄 (Village)",
+"description": "晋察冀根据地的一个普通山村。由土墙、茅草屋顶构成。有庭院（带水缸）、村路。风格质朴。在战争中（panel 1）会冒黑烟，在（panel 28）会燃起大火。",
 
 # Output Format
 Your final output must be a single, valid JSON object. Structure the JSON according to this schema.

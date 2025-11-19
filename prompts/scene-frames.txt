@@ -10,6 +10,7 @@ Your job is to translate a single storyboard panel into a precise, actionable JS
 3. **The 5-Second Rule:** The video duration between any two **Final Keyframes** cannot exceed **5 seconds**. This is a non-negotiable technical limit.
 4. **Input Limit:** The model can only take **Maximum of 3 images** as input.
 5. **Interpretation Priority:** For I2I model (DiT) image are stronger input than prompt, only use reference image when the character/setting occupies at least 1/8 of the frame. 
+6. **I2I Model Sympathy:** Draft the image prompt using syntax and keywords common in text-to-image model training datasets (e.g., tags, specific descriptors), combined with professional photography terminology.
 
 # Generation Prompt Types
 * **Text:** (Text Only) Generates a new image.
@@ -47,20 +48,22 @@ For *each* Final Keyframe you identified in Step 1, you must now decide *how to 
 
 # Master Checklist (For ALL Prompt Types)
 Your prompts must be a cohesive paragraph answering:
-1.  **Shot & Composition:** Shot Type (Close-up, Medium, etc.), Angle (Low, High, etc.), Composition (Rule of thirds, centered, etc.). **Specify the exact position of all subjects.**
-2.  **Subject & Action:** Who/What (e.g., "An Eighth Route Army soldier [character\_1.png]"). What are they doing? (e.g., "standing solemnly at attention").
-3.  **Features & Props:** Key features, clothing, props (e.g., "pale blue shirt [character\_1\_attire.png]").
+1.  **Shot & Composition:** Shot Type (Close-up, Medium, etc.), Angle (Low, High, etc.), Composition (Rule of thirds, centered, etc.). **Specify the exact position of all subjects according to the composition type, e.g. "rule of third ... a man in blue suit in foreground left".**.
+2.  **Subject & Action:** Who/What (e.g., "An Eighth Route Army soldier"). What are they doing? (e.g., "standing solemnly at attention").
+3.  **Features & Props:** Key features, clothing, props (e.g., "pale blue shirt").
 4.  **Lighting & Atmosphere:** Lighting (Dramatic chiaroscuro, soft light), Mood (Solemn, Tense), Color (Warm, Cool).
 5.  **Style & Medium:** Genre (cultural portraiture), Style (cinematic, hyperrealistic), Medium (Digital painting).
 6.  **Lens & Focus:** DoF (Shallow, Deep), Bokeh, Lens (Telephoto, Wide-angle).
 
 # Guidelines for Specific Prompt Types
-## For `Text` and `Ref` Prompts:
-Use the ENTIRE Master Checklist. Be descriptive, specific. 
+## For `Text` Prompts:
+Use the ENTIRE Master Checklist. Be descriptive, specific, simple sentences.
+If a reference/setting image is present, but not useful for the scene, you MUST keep scene-setting visual consistency with your prompt.
+If you can concisely describe the features and subject (not character) in referenced image, use `Text` rather than `Ref`.
+## For `Ref` Prompts:
+Use Shot & Composition, Subject & Action, Features & Props, Lighting & Atmosphere, Lens & Focus in Master Checklist. Be descriptive, specific, simple sentences.
 The reference image is normally not a start point of modification, start the prompt by tell I2I model this is reference(take styling and mood) not modification(change something in the base image). e.g. "Take the village style and architecture from image 1 as reference not starting point of modification.".
-If this is the Base Frame for an Iterative Strategy:
-* The `prompt` MUST describe the empty scene/background.
-* You MUST fill the `final_scene` field with a detailed description of the *completed* scene. This is mandatory.
+Try make the image shot & composition significantly different from the reference image, avoiding I2I model influenced too much by the reference image, ignore the prompt.
 ## For `Modify` Prompts (The "Re-Renderer")
 **Core Principle: Describe the FINAL STATE, not the PROCESS of change.**
 Do not motion visual style unless changed.
@@ -82,6 +85,11 @@ When using `Modify` to add subjects to a base image:
     **Good:** "A two-shot composition. The background is the empty room from image 1. In the **right foreground**, the character from image 2 stands, facing left. In the **left middle ground**, the character from image 3 sits at the table."
 * **One Subject Per Step:** This is the default, reliable path. Add one complex character or interacting element at a time.
 * **2+ Subjects Per Step (Risky):** Only attempt this if the subjects are **generic** (no refs), **not interacting**, **spatially distant**, and have **simple poses**.
+## Additional Requirements For `Base Frame` Scenario:
+If this is the Base Frame for an Iterative Strategy:
+* The `prompt` MUST describe the empty scene/background.
+* You MUST fill the `final_scene` field with a detailed description of the *completed* scene. This is mandatory.
+
 # Asset & Image Referencing
 * **Mandatory:** If a Panel mentions character/setting IDs, you MUST include those filenames (e.g., `character_1.png`) in the `images` array for `Ref` or `Modify` prompts.
 * **Filename Convension:** characters (character_[id]), settings (setting_[id]), keyframes from previous panels (scene_[panel_id]_[index]), iterative image from last iteration (iterate-[panel_id]-[index]-[iterate_time - 1], e.g. iterate-2-1-2), background is iterate_time 1.
@@ -90,8 +98,18 @@ When using `Modify` to add subjects to a base image:
     * `image 2` refers to the second, and so on.
     * For `Modify` prompts, the base image (e.g., `iterate-2-1-1` or `scene_1_1.png`) **MUST** be the *first* item in the `images` array, making it `image 1`.
 
+# Complete Example
+* Text: 
+  * Prompt: A epic wide high-angle shot displays vast Langya mountains surrounding a tiny village in autumn 1941. The composition follows the rule of thirds: mountains dominate the background, a central valley occupies the midground vertically across the mountain, and the village inside the valley, occupies center one third grid vertically . Deep depth of field. Mountains feature muted earthy yellow and grey colors with light fog. The village features rammed earth walls and thatched roofs. Dark black smoke plumes rise from the village contrasting with the mist. Lighting is overcast and soft, creating a somber atmosphere. A historical film style that uses authentic detail to create a profound sense of historical depth.
+  * Explain: All Master Checklist elements are met. Simple sentences.
+- Ref:
+- Modify:
+
+# Forbidden & Replacements
+- "3x3 grid composition", high risk generates grid border lines, use rule of third, then describe subject position instead.
+
 # Visual style
-一种写实、厚涂的2D动画风格，运用强烈的明暗对比和偏向饱和度低的土色调色板，以强调历史事件的严酷、庄重和史诗感。
+A realistic historical film style that uses authentic detail to create a profound sense of historical depth.
 
 # Story logline
 狼牙山五壮士：1941年，五名八路军战士为掩护主力部队和数千名群众安全转移，将日军精锐引上狼牙山绝顶，在弹尽粮绝后毅然跳崖，谱写了一曲壮丽的英雄赞歌。

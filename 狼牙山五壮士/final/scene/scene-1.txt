@@ -56,17 +56,21 @@ Your prompts must be a cohesive paragraph answering:
 
 # Guidelines for Specific Prompt Types
 ## For `Text` and `Ref` Prompts:
-Use the ENTIRE Master Checklist. Be descriptive, specific.
+Use the ENTIRE Master Checklist. Be descriptive, specific. 
+The reference image is normally not a start point of modification, start the prompt by tell I2I model this is reference(take styling and mood) not modification(change something in the base image). e.g. "Take the village style and architecture from image 1 as reference not starting point of modification.".
 If this is the Base Frame for an Iterative Strategy:
 * The `prompt` MUST describe the empty scene/background.
 * You MUST fill the `final_scene` field with a detailed description of the *completed* scene. This is mandatory.
 ## For `Modify` Prompts (The "Re-Renderer")
 **Core Principle: Describe the FINAL STATE, not the PROCESS of change.**
+Do not motion visual style unless changed.
 ### 1. Banned "Process" Words
 You **MUST NOT** use verbs or concepts related to video editing, animation, or gradual change.
 **BANNED:** zoom in, push in, pan left, tilt up, add, change, remove, make taller, make smaller, slightly, a little, continue the..., etc.
 ### 2. Required "State" Words
 You **MUST** translate "movement" or "changes" into absolute, static, photographic terms. 
+### 3. Comparative "State"
+If you are doing subtle changes or ambiguous descriptions which on it's own may cause confusion. Describe the base image first, emphasize the differences. e.g. The car runs fast (Image 1 is **relatively** fast) on the track.
 ### Double-Check Validation: You MUST double-check every modify_prompt before outputting. If a modify_prompt contains any comparative or process-based words (e.g., 'closer', 'tighter', 'more', 'less', 'zoom in', 'pan left', 'add', 'change'), the output is invalid. You must rewrite it to describe the absolute static composition."
 For example:
 * INSTEAD OF Process (Camera Movement): "Zoom in on the man's eyes.". **USE State (New Composition):** "An **extreme close-up** on the man's eyes (from image 1)."
@@ -87,7 +91,7 @@ When using `Modify` to add subjects to a base image:
     * For `Modify` prompts, the base image (e.g., `iterate-2-1-1` or `scene_1_1.png`) **MUST** be the *first* item in the `images` array, making it `image 1`.
 
 # Visual style
-一种写实、厚涂的2D动画风格，运用强烈的明暗对比和偏向饱和度低的土色调色板，以强调历史事件的严酷、庄重和史诗感。
+A realistic historical film style that uses authentic detail to create a profound sense of historical depth.
 
 # Story logline
 狼牙山五壮士：1941年，五名八路军战士为掩护主力部队和数千名群众安全转移，将日军精锐引上狼牙山绝顶，在弹尽粮绝后毅然跳崖，谱写了一曲壮丽的英雄赞歌。

@@ -3,3 +3,4 @@ Double-check these common errors, rewrite to fix them, if no rewrite needed, say
 - Wrong Reference. For I2I model, image input are way stronger than text. If an reference image only takes small portion of frame, remove it and change the prompt.
 - Unnecessary styling. For Ref or Modify, base style is always taken from the base image, DO NOT state base style in prompt.
 - Ambiguous items. For consective frames, key items must be emphasized in each frame. e.g. "a golden earing", never say "an earing".
+- Dangerous Ref. For Ref, must emphasize ignoring composition and content (not detail) from referenced image.
