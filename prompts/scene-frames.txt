@@ -32,6 +32,7 @@ Your `thought` process must justify this number based on:
       * **YES:** You MUST add a `Modify` keyframe to represent this new emotional state, even on a static shot.
 3.  **Pacing & The 5-Second Rule:** The duration between Final Keyframes **cannot exceed 5 seconds.**
       * **If a shot is longer than 5 seconds,** you MUST "fill" it by *inventing* subtle "rhythm beats" (like a slight expression change or focus pull) by adding intermediate Final Keyframes.
+      * **Only Exception,** if the scene is completely camera movement, duration can be ignored, ONLY generate a start frame, cause this scene will be a static effect on the start frame.
 > **Example Analysis:** "I am generating 3 Final Keyframes. KF1 is the start of the zoom. KF2 is the end of the zoom. KF3 is an added emotional beat where the character reacts, which matches the long narration and fills the 7-second duration."
 
 ## Step 2: Define Generation Strategy for EACH Final Keyframe
@@ -48,7 +49,7 @@ For *each* Final Keyframe you identified in Step 1, you must now decide *how to 
 
 # Master Checklist (For ALL Prompt Types)
 Your prompts must be a cohesive paragraph answering:
-1.  **Shot & Composition:** Shot Type (Close-up, Medium, etc.), Angle (Low, High, etc.), Composition (Rule of thirds, centered, etc.). **Specify the exact position of all subjects according to the composition type, e.g. "rule of third ... a man in blue suit in foreground left".**.
+1.  **Shot & Composition:** Shot Type (Close-up, Medium, etc.), Angle (Low, High, etc.), Composition (Rule of thirds, centered, etc.). **Specify the exact position of all subjects according to the composition type, e.g. "rule of third ... a man in blue suit in foreground left, takes bottom half vertically".**.
 2.  **Subject & Action:** Who/What (e.g., "An Eighth Route Army soldier"). What are they doing? (e.g., "standing solemnly at attention").
 3.  **Features & Props:** Key features, clothing, props (e.g., "pale blue shirt").
 4.  **Lighting & Atmosphere:** Lighting (Dramatic chiaroscuro, soft light), Mood (Solemn, Tense), Color (Warm, Cool).
@@ -62,7 +63,7 @@ If a reference/setting image is present, but not useful for the scene, you MUST 
 If you can concisely describe the features and subject (not character) in referenced image, use `Text` rather than `Ref`.
 ## For `Ref` Prompts:
 Use Shot & Composition, Subject & Action, Features & Props, Lighting & Atmosphere, Lens & Focus in Master Checklist. Be descriptive, specific, simple sentences.
-The reference image is normally not a start point of modification, start the prompt by tell I2I model this is reference(take styling and mood) not modification(change something in the base image). e.g. "Take the village style and architecture from image 1 as reference not starting point of modification.".
+The reference image is normally not a start point of modification, start the prompt by tell I2I model this is reference (take styling and mood) not modification(change something in the base image). e.g. "Take the village style and architecture from image 1 as reference not starting point of modification.".
 Try make the image shot & composition significantly different from the reference image, avoiding I2I model influenced too much by the reference image, ignore the prompt.
 ## For `Modify` Prompts (The "Re-Renderer")
 **Core Principle: Describe the FINAL STATE, not the PROCESS of change.**
@@ -99,11 +100,16 @@ If this is the Base Frame for an Iterative Strategy:
     * For `Modify` prompts, the base image (e.g., `iterate-2-1-1` or `scene_1_1.png`) **MUST** be the *first* item in the `images` array, making it `image 1`.
 
 # Complete Example
+* Overall Structure: Shot + Subject + Action. Composition + Subject position&screen space. Features + Props for each subject. Lighting & Atmosphere. Lens & Focus. Pick component based on Prompt Type requirements.
 * Text: 
   * Prompt: A epic wide high-angle shot displays vast Langya mountains surrounding a tiny village in autumn 1941. The composition follows the rule of thirds: mountains dominate the background, a central valley occupies the midground vertically across the mountain, and the village inside the valley, occupies center one third grid vertically . Deep depth of field. Mountains feature muted earthy yellow and grey colors with light fog. The village features rammed earth walls and thatched roofs. Dark black smoke plumes rise from the village contrasting with the mist. Lighting is overcast and soft, creating a somber atmosphere. A historical film style that uses authentic detail to create a profound sense of historical depth.
   * Explain: All Master Checklist elements are met. Simple sentences.
-- Ref:
-- Modify:
+* Ref:
+  * Prompt: Eye-level close-up shot, a large weathered clay water vat in a village courtyard. Left-right layout, Shallow depth of field. The vat occupies the left-center foreground. The earthen house wall fills the entire soft-focused background, stretch from left bottom to right top. The vat is a weathered clay water vat (reference vat, left bottom third in image 1). The house features earthen wall and thatched roofs (reference house, left in image 1). The lighting is soft and warm, characteristic of dusk. The atmosphere is calm and peaceful. Scene is Empty with no personnel. Image 1 is for reference, generate a new image, IGNORE THE COMPOSITION, SHOT, FOCUS AND LIGHTING.
+  * Explain: All Master Checklist elements are met (without visual style). Simple sentences. Explicit reference subject with simple description. Explicit claim it's for reference not modification.
+* Modify:
+  * Prompt: A cinematic medium shot from a peeking perspective, natural framing, using the elements from image 1. **Out-of-focus foreground leaves and branches (right top in image 1) frame the top and left of the shot, out of focus.** In the mid-ground, the blurry figures of the 8th Route Army soldiers (left in image 1) are positioned in the **center of the frame**, moving rightwards fast, captured mid-stride between the dense trees. The dramatic, filtered sunlight and deep shadows from image 1 are present.
+  * Explain: Explicit composition and shot. Explicit reference. Emphasize all important state details.
 
 # Forbidden & Replacements
 - "3x3 grid composition", high risk generates grid border lines, use rule of third, then describe subject position instead.
