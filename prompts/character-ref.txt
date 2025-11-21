@@ -10,6 +10,7 @@ Write a prompt for generating full body portrait for the character description. 
 Each character must have some unique features from others so they can be recognized immediately. Should be outfits, unique appearances, NOT expression or current posture.
 Consider all other characters for a truly distinctive feature.
 Emphasize the distinctive feature using a single description. E.g. she has golden curly hair.
+Each character must have a clear age range, e.g. mid 30s.
 
 # Generative prompt guidelines
 The goal is to give instructions like an Art Director. Describe "the image we want to see".
@@ -106,9 +107,9 @@ A realistic historical film style that uses authentic detail to create a profoun
 
 # Character to generate
 {
-    "id": 2,
-    "name": "葛振林 (Ge Zhenlin)",
-    "description": "六班副班长。体格健壮，面容质朴。经验丰富的老兵，眼神镇定，动作精准。下颌线条明显，具有顽强、威严的特质。是幸存者之一。"
+    "id": 10,
+    "name": "日军指挥官高见 (Takahashi)",
+    "description": "日本指挥官，主要反派。面容傲慢、残酷。眼神中充满“杀气”。在故事结尾，他的表情会转变为极度的困惑、挫败和“呆若木鸡”。"
 }
                 
 # Output Format

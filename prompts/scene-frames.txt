@@ -61,10 +61,12 @@ Your prompts must be a cohesive paragraph answering:
 Use the ENTIRE Master Checklist. Be descriptive, specific, simple sentences.
 If a reference/setting image is present, but not useful for the scene, you MUST keep scene-setting visual consistency with your prompt.
 If you can concisely describe the features and subject (not character) in referenced image, use `Text` rather than `Ref`.
+Add "ratio 16:9" to the end of every prompt.
 ## For `Ref` Prompts:
 Use Shot & Composition, Subject & Action, Features & Props, Lighting & Atmosphere, Lens & Focus in Master Checklist. Be descriptive, specific, simple sentences.
 The reference image is normally not a start point of modification, start the prompt by tell I2I model this is reference (take styling and mood) not modification(change something in the base image). e.g. "Take the village style and architecture from image 1 as reference not starting point of modification.".
 Try make the image shot & composition significantly different from the reference image, avoiding I2I model influenced too much by the reference image, ignore the prompt.
+Add "ratio 16:9" to the end of every prompt.
 ## For `Modify` Prompts (The "Re-Renderer")
 **Core Principle: Describe the FINAL STATE, not the PROCESS of change.**
 Do not motion visual style unless changed.
