@@ -115,6 +115,7 @@ If this is the Base Frame for an Iterative Strategy:
 
 # Forbidden & Replacements
 - "3x3 grid composition", high risk generates grid border lines, use rule of third, then describe subject position instead.
+- "realistic film", hight risk generates a realistic cartoon, just use "film".
 
 # Visual style
 A realistic historical film style that uses authentic detail to create a profound sense of historical depth.

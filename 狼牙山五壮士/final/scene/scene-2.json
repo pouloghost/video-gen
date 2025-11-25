@@ -1,35 +1,41 @@
 {
-  "thought": "My overall strategy: First, I will determine the number of Final Keyframes. The panel describes a 'Handheld Tracking Shot' with a duration of 9 seconds. This requires at least two Final Keyframes (a start and end) to define the motion. Furthermore, the 9-second duration violates the 5-Second Rule. Therefore, I MUST add an intermediate Final Keyframe to break the duration. I will generate 3 Final Keyframes. KF1 will be the start of the tracking shot (0s). KF2 will be the midpoint (approx 4.5s). KF3 will be the end of the shot (9s). The panel `is_continue` is false, so I will start with a `Text` prompt to create the new scene, which is a 'dense forest' interior and not the wide vista from setting-1.jpg. The soldiers are 'blurry,' so I can generate them directly without a complex iterative strategy. KF2 and KF3 will be `Modify` prompts based on the previous keyframe, describing a new static composition to simulate the 'handheld tracking' movement.",
+  "thought": "I will refine the prompts to strictly adhere to the 'Static/Photographic Terms' rule. While 'running' is a pose, using 'captured in a mid-stride pose' prevents the model from attempting to add motion blur where not explicitly requested or interpreting it as a video command. I will also ensure the 'Modify' prompts explicitly treat the base image as a static backdrop.",
   "keyframe_prompt": [
     {
-      "thought": "This is Final Keyframe 1 of 3. It's the starting position for the 9-second handheld tracking shot. I am using `Text` to generate this new, dense forest interior scene. The description calls for a 'peeking perspective through leaves,' so I will add strong, out-of-focus foreground elements. The soldiers are 'blurry' and in the mid-ground.",
-      "type": "Text",
-      "images": [],
-      "final_scene": null,
-      "prompt": "A cinematic medium shot from a peeking perspective, as if hidden and looking through dense foliage. **In the extreme foreground, large, dark, out-of-focus tree leaves and branches frame the right side of the shot.** In the mid-ground, several blurry figures of 8th Route Army soldiers move quickly from right to left, their forms indistinct as they use the dense trees of Langya Mountain for cover. The forest is thick with tall pines and autumn undergrowth. **Sunlight filters through the canopy, creating dramatic patches of light and deep shadow (chiaroscuro).** Atmosphere is tense, stealthy, and resilient. Realistic, heavily-painted 2D animation style with a desaturated earth-tone color palette (muted ochres, grays, olive greens).",
-      "modify_prompt": null,
+      "thought": "Construction Frame. The prompt is well-structured. I will ensure the screen space for the path is explicit to guarantee a clear stage for the actors.",
+      "type": "Ref",
+      "images": [
+        "setting-1.jpg"
+      ],
+      "final_scene": "A dense, stealthy forest scene on Langya Mountain. Foreground: Out-of-focus pine branches and dark leaves frame the left and top edges. Midground: A rugged, narrow dirt path winds through thick gray tree trunks and dry, yellowed undergrowth. Background: Hazy forest depth with glimpses of gray rocky slopes. Lighting: Filtered, dappled sunlight creating a mood of secrecy.",
+      "prompt": "Take the color palette, lighting, and texture from image 1 as reference, not as a starting point for modification. A cinematic medium shot, eye-level. A dense forest interior on a steep mountain slope. The composition uses natural framing: out-of-focus pine branches and dark leaves occupy the immediate foreground left and top corners (peeking perspective). The midground features a rugged, narrow dirt path occupying the lower center third, weaving through thick, rough-barked tree trunks and waist-high yellowed grass. The background shows layers of dense woods and gray rock faces fading into mist. Lighting is dappled and high-contrast. The atmosphere is tense. ratio 16:9",
+      "is_final_image": false
+    },
+    {
+      "thought": "Final Keyframe 1. Refined to use purely static language for the soldiers' action.",
+      "type": "Modify",
+      "images": [
+        "iterate-2-0-1"
+      ],
+      "modify_prompt": "The dense forest scene from image 1 is populated. In the **extreme left mid-ground**, three 8th Route Army soldiers (wearing faded gray-blue uniforms and puttees) are captured in a dynamic sprinting pose facing right. The leading soldier is fully visible, while the trailing soldier is partially cut off by the left edge of the frame. They hold rifles close to their chests. Their limbs feature slight motion blur to suggest speed. The foreground leaves and background forest remain exactly as in image 1.",
       "is_final_image": true
     },
     {
-      "thought": "This is Final Keyframe 2 of 3, serving as the midpoint of the shot (~4.5s) to satisfy the 5-Second Rule. I will use `Modify` on KF1 (scene_2_1.png). I must describe a new, absolute static composition. I will change the foreground framing and the position of the soldiers to imply the camera has tracked with them.",
+      "thought": "Final Keyframe 2. Refined to describe a static 'mid-stride' state rather than 'running' action.",
       "type": "Modify",
       "images": [
-        "scene_2_1.png"
+        "iterate-2-0-1"
       ],
-      "final_scene": null,
-      "prompt": null,
-      "modify_prompt": "A cinematic medium shot from a peeking perspective, using the elements from image 1. **In this composition, out-of-focus foreground leaves and branches frame the top and left of the shot.** In the mid-ground, the blurry figures of the 8th Route Army soldiers (from image 1) are positioned in the **center of the frame**, captured mid-stride between the dense trees. The dramatic, filtered sunlight and deep shadows from image 1 are present. The atmosphere is tense and stealthy. Realistic, heavily-painted 2D animation style.",
+      "modify_prompt": "The dense forest scene from image 1 is populated. The three 8th Route Army soldiers (gray-blue uniforms) are positioned in the **center mid-ground**, captured in a mid-stride running pose facing right. They are fully visible in the clear gap between the trees, crouching low with intense expressions. Motion blur is visible on their legs. The lighting, trees, and foreground elements match image 1 perfectly.",
       "is_final_image": true
     },
     {
-      "thought": "This is Final Keyframe 3 of 3, the end position of the 9-second shot. I will use `Modify` on KF2 (scene_2_2.png). This final static composition will show the soldiers further along their path, completing the implied 'tracking' motion. The foreground will shift again.",
+      "thought": "Final Keyframe 3. Refined to describe the static state of exiting the frame.",
       "type": "Modify",
       "images": [
-        "scene_2_2.png"
+        "iterate-2-0-1"
       ],
-      "final_scene": null,
-      "prompt": null,
-      "modify_prompt": "A final cinematic medium shot from a peeking perspective, using the elements from image 1. **The composition's foreground consists of out-of-focus leaves framing the far-left edge.** The mid-ground forest is clearly visible. In the **far-left mid-ground**, the blurry figures of the 8th Route Army soldiers (from image 1) are partially obscured by a large, shadowed tree trunk. The dense forest, filtered light, and tense atmosphere from image 1 are all consistent. Realistic, heavily-painted 2D animation style.",
+      "modify_prompt": "The dense forest scene from image 1 is populated. The three 8th Route Army soldiers are positioned in the **extreme right mid-ground**, facing the right frame border. The leading soldier is partially obscured by the tree trunks on the right edge, and the trailing soldiers are close behind. They maintain their low, crouching running posture. The atmosphere remains tense. The background elements match image 1.",
       "is_final_image": true
     }
   ]

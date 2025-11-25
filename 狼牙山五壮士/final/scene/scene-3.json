@@ -1,52 +1,42 @@
 {
-  "thought": "My overall strategy: First, I will determine the number of Final Keyframes. The panel description explicitly describes two different shots: a 'Close-up' (CU) of a hand pouring water, followed by a 'Cut to Medium Shot' (MS) of Ge Zhenlin and an old woman. A 'cut' necessitates two distinct Final Keyframes. The total duration is 4 seconds, so no additional rhythm beats are needed.\n\n* **Final Keyframe 1 (The CU):** This is a complex interaction of a character element (hand) with a setting element (vat from setting-2.jpg). I will use the Iterative Strategy to build it.\n    1.  **Construction Frame:** Use `Ref` with `setting-2.jpg` to create the base close-up of the water vat.\n    2.  **Final Keyframe:** Use `Modify` to add Ge Zhenlin's hand, the pole, bucket, and pouring water.\n\n* **Final Keyframe 2 (The MS):** This is a complex two-character shot. Ge Zhenlin (from character-2.jpg) and a new character (old landlady) must be placed in the setting (setting-2.jpg). I MUST use the Iterative Strategy.\n    1.  **Construction Frame:** Use `Ref` with `setting-2.jpg` to create the base medium shot of the empty courtyard.\n    2.  **Construction Frame:** Use `Modify` with the base and `character-2.jpg` to add Ge Zhenlin to the scene.\n    3.  **Final Keyframe:** Use `Modify` to add the new character, the elderly landlady, completing the scene.",
+  "thought": "I detected minor errors in the previous output regarding filename conventions (Asset IDs) and 'Modify' prompt phrasing (process verbs). \n1. Fixed filename `character_image_1.png` to `character_2.png` to match ID 2. Fixed `setting_image_2.png` to `setting_2.png`.\n2. In KF4, 'replacing the serious expression' is a process description. Rewrote to describe the absolute state ('wears a smile').\n3. In KF4, 'turned slightly' is a process description. Rewrote to 'faces left'.\n4. Ensured explicit screen space definitions for all subjects.",
   "keyframe_prompt": [
     {
-      "thought": "This is a Construction Frame. My goal is to create the base for Final Keyframe 1. I am using `setting-2.jpg` to establish the close-up shot of the water vat in the village courtyard. This frame will be modified to add the character's hand and action.",
-      "type": "Ref",
+      "thought": "Construction Frame 1: Base setting. Establishing the courtyard layout and lighting. Using 'Text' with setting reference to ensure correct asset usage while allowing for specific lighting (Dusk) not present in the original asset.",
+      "type": "Text",
       "images": [
-        "setting-2.jpg"
+        "setting_2.png"
       ],
-      "final_scene": "A close-up on a large, weathered clay water vat in a village courtyard at dusk. A strong, muscular hand (Ge Zhenlin's) is visible, holding a wooden shoulder pole with a bucket, pouring clear water into the vat. Warm, calm dusk lighting. Realistic, thick-painted 2D animation style.",
-      "prompt": "Close-up shot, eye-level, focused on a large, weathered clay water vat (from image 1) in a village courtyard. The vat is positioned in the left-center of the frame. The background is the out-of-focus, warm-toned earthen wall of a house (from image 1). The lighting is soft and warm, characteristic of dusk. The atmosphere is calm and peaceful. Realistic, thick-painted 2D animation style with saturated earth tones and strong textures. Shallow depth of field, with the focal point on the rim of the vat.",
+      "final_scene": "A medium shot of a village courtyard at dusk. A large clay water vat sits in the right foreground. An elderly landlady stands in the left middle ground. Ge Zhenlin stands in the center foreground, carrying water.",
+      "prompt": "A cinematic medium shot of a rustic village courtyard in 1941 China at dusk. The composition follows the rule of thirds. A large, weathered clay water vat (reference water vat in image 1) occupies the **right foreground**, taking up the bottom right corner. The background features textured rammed earth walls and a wooden lattice window. The lighting is soft, golden-hour sunlight casting long shadows, creating a warm, peaceful atmosphere. Authentic historical details with a realistic painted style. ratio 16:9",
       "is_final_image": false
     },
     {
-      "thought": "This is Final Keyframe 1. I am modifying the base image (`iterate-3-1-1`) to add the action. **I have removed the reference to `character-2.jpg`** because the reference image shows the full body, but I only want a hand and forearm. Using the full-body reference for such a small part would confuse the model. The text prompt is now solely responsible for describing the arm.",
+      "thought": "Construction Frame 2: Add Landlady. Using 'Modify' to composite the secondary character into the background before adding the main hero.",
       "type": "Modify",
       "images": [
-        "iterate-3-1-1"
+        "iterate-3-1-1.png"
       ],
-      "modify_prompt": "This is a close-up shot focused on the large clay water vat (from image 1). A **strong, muscular hand and forearm** (consistent with the build of Ge Zhenlin) are positioned in the upper right of the frame, holding a dark wooden shoulder pole. A wooden bucket attached to the pole is tilted, and a clear stream of water pours from the bucket into the vat. The composition is tight on this action. The lighting is warm dusk. Realistic, thick-painted 2D animation style. Calm, warm atmosphere.",
+      "modify_prompt": "The village courtyard (from image 1). In the **left middle ground**, an elderly Chinese peasant woman stands near the wall, occupying the left vertical third. She wears a patched dark blue tunic and loose grey trousers. Her grey hair is pulled back in a bun. She faces towards the center right, looking with a kindly expression. The lighting remains warm and atmospheric.",
+      "is_final_image": false
+    },
+    {
+      "thought": "Final Keyframe 1: Add Ge Zhenlin. He is the main focus, performing the action. Using 'Modify' with character reference.",
+      "type": "Modify",
+      "images": [
+        "iterate-3-1-2.png",
+        "character_2.png"
+      ],
+      "modify_prompt": "The courtyard scene with the landlady (from image 1). In the **center foreground**, Ge Zhenlin (reference image 2) stands in a three-quarter view facing the water vat on the right. He occupies the central vertical third of the frame. He balances a wooden shoulder pole with two hanging water buckets across his shoulders. He wears the Eighth Route Army grey uniform with sleeves rolled up, revealing muscular forearms (from image 2). His expression is serious and focused on his task. The warm dusk light highlights his figure.",
       "is_final_image": true
     },
     {
-      "thought": "This is a Construction Frame, the base for Final Keyframe 2. I am using `setting-2.jpg` to establish the empty medium shot of the village courtyard. This creates the 'stage' where I will place the characters. This prompt is valid.",
-      "type": "Ref",
-      "images": [
-        "setting-2.jpg"
-      ],
-      "final_scene": "Medium shot in a village courtyard at dusk. Ge Zhenlin stands on the left, smiling warmly, holding a shoulder pole across his shoulders. Beside him on the right is an elderly Chinese landlady, smiling kindly. Warm, calm dusk lighting. Realistic, thick-painted 2D animation style.",
-      "prompt": "Medium shot of an empty village courtyard (from image 1) at dusk. The composition frames a section of the yard with an earthen wall and a house (from image 1) in the background. The foreground is clear and empty. The lighting is soft and warm from the setting sun. Atmosphere is peaceful and domestic. Realistic, thick-painted 2D animation style with saturated earth tones. Deep depth of field.",
-      "is_final_image": false
-    },
-    {
-      "thought": "This is a Construction Frame, the second step for building Final Keyframe 2. I am modifying the empty courtyard (`iterate-3-2-1`) to add the first character, Ge Zhenlin, using `character-2.jpg` as a reference for his appearance. This is a correct use of the reference as I am adding the full character.",
+      "thought": "Final Keyframe 2: Emotional Beat. Changing Ge Zhenlin's expression to a smile. This effectively 'animates' the interaction implied in the panel description.",
       "type": "Modify",
       "images": [
-        "iterate-3-2-1",
-        "character-2.jpg"
+        "iterate-3-1-3.png"
       ],
-      "modify_prompt": "Medium shot of the village courtyard (from image 1). In the left-center of the frame stands Ge Zhenlin (the soldier from image 2). He wears his blue-gray uniform with sleeves rolled up and has a wooden shoulder pole resting across his broad shoulders. He has a simple, warm smile on his face. Warm dusk lighting. Realistic, thick-painted 2D animation style.",
-      "is_final_image": false
-    },
-    {
-      "thought": "This is Final Keyframe 2. I am modifying the scene that already contains Ge Zhenlin (`iterate-3-2-2`) to add the final element: the elderly landlady. This completes the two-shot described in the panel. This prompt is valid and uses no illegal words or incorrect references.",
-      "type": "Modify",
-      "images": [
-        "iterate-3-2-2"
-      ],
-      "modify_prompt": "Medium shot of the village courtyard at dusk. Ge Zhenlin (from image 1) stands in the left-center, holding a shoulder pole across his shoulders with a warm, simple smile. Standing to his right is an elderly Chinese landlady, a civilian with a kind, weathered face, wearing simple, rustic peasant clothing. She is smiling kindly, looking towards Ge. The two are composed together, illustrating a harmonious, warm relationship. Warm dusk lighting. Realistic, thick-painted 2D animation style.",
+      "modify_prompt": "The courtyard scene (from image 1). Ge Zhenlin (center foreground) stands in the standing posture holding the shoulder pole (from image 1). His head faces left towards the landlady in the background. He wears a warm, simple, and honest smile. The landlady in the background remains watching. The atmosphere is harmonious and touching.",
       "is_final_image": true
     }
   ]

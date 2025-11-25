@@ -1,40 +1,11 @@
 {
-  "thought": "My overall strategy: The panel describes a 12-second 'Slow Push-in' on a wide establishing shot. Based on the 5-second-per-segment rule, a 12-second duration requires 3 segments (0-5s, 5-10s, 10-12s), which means I need a total of 4 Final Keyframes (KF1 at 0s, KF2 at 5s, KF3 at 10s, KF4 at 12s). \n\nFor Final Keyframe 1, the shot is new (`is_continue: false`) but references a specific setting (`setting: 2`) with an uploaded image (`setting-2.jpg`). The panel *description* (EWS of mountains, distant village) overrides the *composition* of the reference image (medium shot of village). Therefore, I will use a `Ref` prompt. This prompt will describe the new EWS composition in detail, while using `setting-2.jpg` (as image 1) strictly as a style, texture, and architectural reference for the *distant* village. \n\nFinal Keyframes 2, 3, and 4 will be `Modify` prompts, each based on the previous keyframe. They will describe a progressively 'tighter' static composition, translating the 'push-in' into a series of distinct shots that the interpolation engine can connect.",
+  "thought": "Double-checking against 'Wrong Reference' and 'Explicit Screen Space'. \n1. Wrong Reference: The target is an Epic Wide Shot (EWS) where the village is a minute detail. The reference image 'setting-2.jpg' is a medium shot. Using it would force a close-up composition, violating the 'Wrong Reference' rule (reference takes < 1/8 frame). I will use 'Text' mode and remove the image reference.\n2. Explicit Screen Space: I will refine the prompt to explicitly define the screen space for the mountains (top 80%), the valley (bottom 20%), and the village (tiny center point) to ensure the scale is correct.",
   "keyframe_prompt": [
     {
-      "thought": "This is Final Keyframe 1 (0s mark), the start of the push-in. It's an `Ref` prompt to establish the scene. The panel requires a 'Wide Establishing Shot' of mountains with a 'distant village' and smoke. I'm using `setting-2.jpg` (image 1) as a style reference for the village, but the prompt's main goal is to create a new, vast mountain EWS, ignoring the reference image's composition.",
-      "type": "Ref",
-      "images": [
-        "setting-2.jpg"
-      ],
-      "prompt": "An epic, vast, wide establishing shot (EWS) of the undulating Langya Mountains in autumn 1941, under an oppressive, overcast sky. The mountainsides are covered in the desaturated earth-tones of autumn (dull yellows, grays, and browns) and partially shrouded in thin mist, creating an ominous atmosphere. In a deep valley, far in the distant middle-ground, a small, rustic village is visible. The village's architecture (rammed earth walls, thatched roofs) and overall style is inspired by **image 1**. Several distinct wisps of black smoke rise slowly from the village, signaling a 'mopping-up' operation. The lighting is diffused and subdued. The style is a realistic, heavily-painted 2D animation look with strong textural qualities.",
-      "is_final_image": true
-    },
-    {
-      "thought": "This is Final Keyframe 2 (5s mark). It's a `Modify` prompt based on KF1 (which will be `scene_1_1.png`). This describes the state of the shot after 5 seconds of a 'slow push-in,' which I'm translating to a 'tighter wide shot' composition. The village is slightly more prominent.",
-      "type": "Modify",
-      "images": [
-        "scene_1_1.png"
-      ],
-      "modify_prompt": "A tighter wide shot composition, appearing as a push-in on the landscape from image 1. The distant village and the rising black smoke in the valley are now slightly larger and more prominent, occupying more of the central frame. The surrounding mountains fill more of the composition. The oppressive, misty, and desaturated autumn atmosphere is maintained.",
-      "is_final_image": true
-    },
-    {
-      "thought": "This is Final Keyframe 3 (10s mark). It's a `Modify` prompt based on KF2 (which will be `scene_1_2.png`). This continues the push-in. The village is now an even clearer focal point, though still in a wide, environmental shot.",
-      "type": "Modify",
-      "images": [
-        "scene_1_2.png"
-      ],
-      "modify_prompt": "An even tighter wide shot, continuing the push-in from image 1. The village in the valley, with its rising columns of black smoke, is now a clear focal point in the lower-middle-third of the frame, appearing perceptibly closer and more detailed. The surrounding mountain landscape feels larger and more imposing.",
-      "is_final_image": true
-    },
-    {
-      "thought": "This is Final Keyframe 4 (12s mark), the end of the shot. It's a `Modify` prompt based on KF3 (which will be `scene_1_3.png`). This is the final, closest frame of the 'slow push-in.' It's still a wide shot, but the village and the threat it represents are the undeniable subject.",
-      "type": "Modify",
-      "images": [
-        "scene_1_3.png"
-      ],
-      "modify_prompt": "The final frame of the slow push-in. A wide shot, closer still than image 1. The village and its ominous black smoke are now the undeniable subject, framed by the vast, oppressive, and misty autumn mountains. The sense of foreboding is at its peak.",
+      "thought": "Final Keyframe 1 (Start). Using Text mode to generate a massive scale EWS. Incorporating the visual traits of the setting (ochre walls, thatch) into the text description but keeping them as 'shapes' to suit the distance. This frame supports the 12s static push-in.",
+      "type": "Text",
+      "images": [],
+      "prompt": "An epic wide high-angle establishing shot of the vast Langya Mountain range in autumn 1941. The composition uses a high horizon line. The undulating mountain ridges, colored in muted autumn yellows and greys, occupy the top 80% of the frame. A narrow, deep valley cuts through the bottom center, occupying the remaining bottom 20%. In the absolute center of the valley floor, the village appears as a tiny cluster of ochre geometric shapes and dark thatched roofs. Vertical plumes of dark black smoke rise from this central village cluster, drifting up into the misty mid-ground. The lighting is overcast and soft. A realistic historical film style. ratio 16:9",
       "is_final_image": true
     }
   ]
