@@ -1,0 +1,24 @@
+{
+    "thought": "I will rewrite both keyframes to strictly adhere to the 'Explicit Screen Space Statement' rule. In KF1, I will define exactly where the central peak sits relative to the valleys. In KF2, I will define the screen positions for the smoke columns, soldier lines, and planes to ensure a balanced composition. I will also add the mandatory 'final_scene' field to the first keyframe since it serves as the Base Frame for the iterative strategy.",
+    "keyframe_prompt": [
+        {
+            "thought": "Adding explicit screen space definitions to the Ref prompt to ensure the high-angle composition is generated correctly. Also adding the missing 'final_scene' field required for iterative base frames.",
+            "type": "Ref",
+            "images": [
+                "setting-1.jpg"
+            ],
+            "final_scene": "A high-angle aerial view of Langya Mountain with smoke columns rising from the surrounding valleys, tiny soldier lines advancing on paths, and planes in the sky.",
+            "prompt": "A cinematic high-angle extreme wide shot (aerial bird's-eye view) of the Langya Mountain range in late autumn 1941. The composition centers on the main jagged peak, which **occupies the central middle third of the frame**. Deep valleys and ravines radiate outward, **filling the surrounding left, right, and bottom thirds of the screen**. The terrain is treacherous, featuring steep gray granite cliffs, withered yellow waist-high grass, and patches of dark green pine forests. The lighting is overcast, dim, and gloomy, creating a somber atmosphere. Take the mountain rock texture, vegetation style, and color palette from image 1 as reference, but IGNORE the low-angle composition of image 1. Create a vast, top-down aerial landscape. ratio 16:9",
+            "is_final_image": false
+        },
+        {
+            "thought": "Adding explicit screen space definitions for the added elements (smoke, soldiers, planes) to ensure the 'encirclement' visual is clear and avoids layout confusion.",
+            "type": "Modify",
+            "images": [
+                "iterate-12-1-1"
+            ],
+            "modify_prompt": "A high-angle war scene showing an overwhelming encirclement using the landscape from image 1. **In the outer surrounding valleys across the left, right, and bottom edges of the frame**, nine distinct columns of thick black smoke and gray dust rise vertically. On the winding mountain paths **stretching across the bottom half of the frame**, dense, tiny, ant-like masses of Japanese soldiers and trucks form continuous lines. **In the top right quadrant of the sky**, three Japanese bomber planes fly in a circling formation, their dark silhouettes prominent against the overcast clouds. The scene is shrouded in the haze of war.",
+            "is_final_image": true
+        }
+    ]
+}

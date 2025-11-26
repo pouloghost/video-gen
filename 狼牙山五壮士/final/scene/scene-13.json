@@ -1,0 +1,32 @@
+{
+    "thought": "I will refine KF1 to remove the word 'vintage' (in 1941, they were current) for accuracy. I will rewrite KF2 to clarify the 'composition' instruction; instructing the model to use the 'lighting and background' from the base image is safer than 'composition' when the pose (arms moving) changes significantly. KF3 is largely correct but I will standardize the background reference.",
+    "keyframe_prompt": [
+        {
+            "thought": "Removing 'vintage' to ensure period-accurate gear. Strengthening the 'Ignore Composition' instruction to ensure the close-up framing overrides the full-body reference.",
+            "type": "Ref",
+            "images": [
+                "character-10.jpg"
+            ],
+            "prompt": "A cinematic close-up shot of Commander Takahashi inside a Japanese command tent. The composition is centered. He holds a pair of black military binoculars up to his eyes, obscuring the upper half of his face. Only his mouth, sporting a neatly groomed military mustache, and his chin are visible in the lower center frame. He wears a Japanese Army peaked officer's cap. His white-gloved hands grip the binoculars tightly. The background is a soft-focus interior of a tent with canvas texture and blurred maps. The lighting is dramatic and moody, casting shadows on his face. Take the character features (mustache, cap, uniform collar) from image 1 but generate this specific close-up binocular pose. IGNORE THE COMPOSITION AND POSE OF IMAGE 1. ratio 16:9",
+            "is_final_image": true
+        },
+        {
+            "thought": "Rewriting to specify 'lighting and background' instead of 'composition' to prevent the model from fighting the new pose (arms down) while trying to match the old layout (arms up).",
+            "type": "Modify",
+            "images": [
+                "scene_13_1.png"
+            ],
+            "modify_prompt": "A close-up of Commander Takahashi (from image 1). The black binoculars are held in his gloved hands at chest level, occupying the bottom edge of the frame. His face is fully visible above the binoculars, showing a cruel, arrogant sneer. He wears the peaked cap and olive-drab collar from image 1. The background is the blurred command tent interior from image 1. The lighting matches the dramatic mood of image 1.",
+            "is_final_image": true
+        },
+        {
+            "thought": "Refining the description to ensure a static, intense final beat.",
+            "type": "Modify",
+            "images": [
+                "scene_13_2.png"
+            ],
+            "modify_prompt": "Commander Takahashi (from image 1) stands in the chest-level binocular pose. His expression is a fixed, wide, vicious grin, displaying extreme arrogance. His eyes are wide with murderous intent. The lighting highlights the sweat and texture of his skin. The background is the blurred tent interior from image 1.",
+            "is_final_image": true
+        }
+    ]
+}

@@ -1,0 +1,32 @@
+{
+    "thought": "My overall strategy: The panel requires a 6-second shot showcasing 'Towering Langya Mountain' transitioning from a 'night silhouette' to a 'majestic day panorama'. \n\n1.  **Number of Keyframes:** To bridge the 6-second duration (violating the 5-second rule if purely start/end) and achieve the dramatic lighting change (Night -> Day), I will generate 3 Final Keyframes. \n    * KF1 (Start): Night/Silhouette.\n    * KF2 (Middle ~3s): Dawn/Sunrise (Intermediate beat).\n    * KF3 (End ~6s): Day (Full reveal).\n2.  **Generation Strategy:** I will use the **Modify** strategy for all three frames, using the provided `setting-1.jpg` as the base `image 1` for each. This ensures the complex topographical details of the 'wolf teeth' peaks remain perfectly consistent while I strictly alter the lighting and atmosphere (State) to match the time of day. I will avoid 'process' verbs and describe the specific lighting conditions for each stage.",
+    "keyframe_prompt": [
+        {
+            "thought": "Final Keyframe 1 (0s). Visualizing the 'night silhouette' mentioned in the panel description. I will use the Modify workflow on the setting image to darken it into a silhouette while keeping the composition identical.",
+            "type": "Modify",
+            "images": [
+                "setting-1.jpg"
+            ],
+            "modify_prompt": "A cinematic night landscape shot of the Langya Mountain range (from image 1). The composition and terrain features are identical to image 1. The jagged mountain peaks are rendered as dark, imposing silhouettes against a deep midnight blue sky scattered with faint stars. The valley floor and river are shrouded in pitch-black shadow. A cold, pale moonlight provides a subtle rim light along the sharpest ridges of the mountains. The atmosphere is mysterious, silent, and formidable.",
+            "is_final_image": true
+        },
+        {
+            "thought": "Final Keyframe 2 (~3s). An intermediate 'Dawn/Sunrise' beat to bridge the transition and fill the duration. This represents the 'slow transition' mentioned.",
+            "type": "Modify",
+            "images": [
+                "setting-1.jpg"
+            ],
+            "modify_prompt": "A cinematic dawn landscape shot of the Langya Mountain range (from image 1). The composition is identical to image 1. The scene captures the moment of sunrise. Warm, golden-orange sunlight strikes the very tips of the jagged peaks, creating a high contrast with the cool, deep blue shadows that still dominate the lower valleys and the river. The sky features a gradient from pale orange at the horizon to blue at the top. Patches of morning mist cling to the mountainsides. The atmosphere is majestic and awakening.",
+            "is_final_image": true
+        },
+        {
+            "thought": "Final Keyframe 3 (6s). The 'Day' state. I will Modify the setting image to lock in its original daylight look but ensure it renders with the 'realistic historical film style' requested.",
+            "type": "Modify",
+            "images": [
+                "setting-1.jpg"
+            ],
+            "modify_prompt": "A cinematic daytime landscape shot of the Langya Mountain range (from image 1). The composition is identical to image 1. The scene is fully revealed under soft, overcast autumn daylight. The grey granite texture of the wolf-tooth peaks, the withered yellow mountain grass, and the dark green pine forests are clearly visible and detailed. The Yi River in the valley reflects the grey sky. The lighting is diffused and even, typical of an overcast day. The atmosphere is solemn, grand, and epic. Realistic historical film style.",
+            "is_final_image": true
+        }
+    ]
+}
