@@ -1,0 +1,36 @@
+{
+    "thought": "I identified a missing mandatory field and a minor phrasing improvement. \n1. KF1 (Ref): As the Base Frame of an Iterative Strategy (is_final_image: false), it requires the `final_scene` field to describe the ultimate goal of the sequence, even if the current prompt generates an empty background. \n2. KF3 (Modify): The phrase 'frame cuts off at their waist' is slightly negative. I will change it to 'visible from the waist up' to describe the positive visual state more clearly.",
+    "keyframe_prompt": [
+        {
+            "thought": "Construction Frame (Base). Generating the empty path. Added the mandatory `final_scene` field describing the eventual content. The prompt ensures the perspective (Medium Shot) matches the final intent.",
+            "type": "Ref",
+            "images": [
+                "setting-3.jpg"
+            ],
+            "final_scene": "A cinematic medium shot from behind. Two Eighth Route Army soldiers walk away from the camera towards the cliff base at dusk.",
+            "prompt": "Cinematic medium shot. The location is the foot of a rugged limestone cliff. The composition focuses on the dusty path in the foreground leading directly to the large flat-topped boulders in the mid-ground. The upper cliffs are excluded from the frame to focus on the human-scale elements. The scene is completely empty, void of any people or soldiers. Use the cool blue twilight atmosphere and rock textures from image 1. Lighting is dim with deep shadows, characteristic of dusk. Image 1 is for texture and lighting reference only, generate a new empty scene, IGNORE THE COMPOSITION AND SOLDIERS in Image 1. Ratio 16:9",
+            "is_final_image": false
+        },
+        {
+            "thought": "Final Keyframe 1. Adding characters. All looks right. Base image is the correct medium shot perspective.",
+            "type": "Modify",
+            "images": [
+                "iterate-5-0-1",
+                "character-1.jpg",
+                "character-2.jpg"
+            ],
+            "final_scene": "A cinematic medium shot from behind. Two Eighth Route Army soldiers walk away from the camera towards the cliff base at dusk.",
+            "modify_prompt": "A cinematic medium shot, back view. The scene is the cliff base path from image 1. In the central vertical third of the frame, two Eighth Route Army soldiers are captured in mid-stride walking away from the camera towards the rocks. On the left center, Ma Baoyu (reference image 2) is seen from behind, wearing a full grey-blue uniform and a cap with a red star, with a rifle slung vertically across his back. On the right center, Ge Zhenlin (reference image 3) is seen from behind with his uniform sleeves rolled up, carrying a rifle. Long dark shadows stretch forward on the ground. The lighting is a mix of cool ambient twilight and low-angle warm accents.",
+            "is_final_image": true
+        },
+        {
+            "thought": "Final Keyframe 2. Simulating the 'tracking' by changing the shot size to Medium Close-up. Refined phrasing to be purely positive state description.",
+            "type": "Modify",
+            "images": [
+                "iterate-5-1-1"
+            ],
+            "modify_prompt": "A Medium Close-up shot from behind. The upper bodies and backpacks of the two soldiers (from image 1) dominate the central foreground. They are visible from the waist up. The texture of their grey-blue uniforms and the wood of the rifles is distinct. The limestone cliff background (from image 1) is visible in the distance but soft-focused to separate the subjects. Deep, heavy shadows persist.",
+            "is_final_image": true
+        }
+    ]
+}

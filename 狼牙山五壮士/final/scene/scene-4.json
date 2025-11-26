@@ -1,0 +1,26 @@
+{
+    "thought": "I will rewrite the prompts to strictly adhere to the static state description and style redundancy rules. \n1. In Keyframe 1, I will replace the verb 'preserves' with 'is' to strictly describe the state.\n2. In Keyframe 2, I will remove the explicit style tag 'Authentic historical film style' as per the 'Unnecessary styling' guideline for Ref prompts using style-heavy references. I will also explicitly mention the uniforms for both characters to ensure consistency across the cut.",
+    "keyframe_prompt": [
+        {
+            "thought": "Final Keyframe 1. This is the start of the shot. I am using `Modify` on the previous panel's result (`scene-3-2.jpg`) to add the new character, Ma Baoyu, into the scene. I am positioning him in the center foreground to show he has just walked in.",
+            "type": "Modify",
+            "images": [
+                "scene-3-2.jpg",
+                "character-1.jpg"
+            ],
+            "modify_prompt": "The village courtyard scene from image 1. Ge Zhenlin (from image 1) stands in the **right mid-ground**, carrying water buckets. The old woman (from image 1) stands in the **left background**. Ma Baoyu (reference image 2) stands in the **center foreground**, occupying the central vertical third of the frame, facing Ge Zhenlin. Ma Baoyu wears a blue-gray Eighth Route Army uniform with a binocular strap. The lighting is the warm, golden dusk atmosphere from image 1.",
+            "is_final_image": true
+        },
+        {
+            "thought": "Final Keyframe 2. This represents the end of the 'Slow Push-in'. I use a `Ref` prompt to create a clean Medium Two-Shot composition focusing on the interaction and expression. I reference the previous scene (`scene-3-2.jpg`) for lighting and Ge's props (buckets/yoke), and the portraits for facial fidelity.",
+            "type": "Ref",
+            "images": [
+                "character-1.jpg",
+                "scene-3-2.jpg",
+                "character-2.jpg"
+            ],
+            "prompt": "Images 1, 2, and 3 are for reference, generate a new image, IGNORE THE COMPOSITION AND SHOT from references. A cinematic Medium Two-Shot (waist-up) at eye level. Split composition. Ma Baoyu (reference image 1) occupies the **left half of the frame**, body angled slightly right, wearing a blue-gray uniform and a serious, urgent expression, with his hand reaching toward the right. Ge Zhenlin (reference image 3) occupies the **right half of the frame**, facing left, wearing a blue-gray uniform and carrying the wooden water yoke (props from image 2). The background is the soft-focus, textured earthen wall of the village (atmosphere from image 2). The lighting is the warm, dramatic dusk light. ratio 16:9",
+            "is_final_image": true
+        }
+    ]
+}

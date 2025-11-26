@@ -1,4 +1,4 @@
-/# frame for panel <gt_tmpl>panel_id</gt_tmpl>
+/# frame for panel 6
 
 # Role
 You are a world-class director and a text-to-image prompt expert. 
@@ -124,16 +124,112 @@ A realistic historical film style that uses authentic detail to create a profoun
 狼牙山五壮士：1941年，五名八路军战士为掩护主力部队和数千名群众安全转移，将日军精锐引上狼牙山绝顶，在弹尽粮绝后毅然跳崖，谱写了一曲壮丽的英雄赞歌。
 
 # Setting description
-<gt_tmpl>setting</gt_tmpl>
+{
+  "id": 3,
+  "name": "小山崖下 (Small Cliff Base)",
+  "description": "村外的一处隐蔽地点。有大石头可供战士们坐下。光线昏暗，尤其在黄昏时，适合秘密会议。",
+  "image": "image 4",
+  "setting_image_prompt": "Cinematic wide shot, environmental view. The setting is the 'Small Cliff Base', a secluded natural alcove nestled at the foot of a steep, weathered limestone cliff face in Northern China, 1941. Core Subject: The rugged terrain featuring a cluster of large, flat-topped boulders in the foreground, serving as makeshift seats. Action: Five Eighth Route Army soldiers in worn, dust-covered grey-blue uniforms are sitting on the rocks, huddled close together in a low-profile secret meeting, reviewing a map. Key Feature: The large, rough-hewn stones and the overhanging cliff that obscures the sky, creating a natural hiding spot. Background: Dry scrub vegetation and jagged rock textures. Lighting: Dim, atmospheric twilight (blue hour), low-key lighting with deep, heavy shadows to emphasize the secrecy and tension; no direct sunlight. Atmosphere: Solemn, tense, gritty, and historically profound. Visual Style: Realistic historical film, high-fidelity texture, muted earth tones (slate grey, dusty brown, fading blue). Lens & Focus: 35mm lens for a natural perspective, deep depth of field to keep both the soldiers on the rocks and the cliff texture in focus. Composition: Centered composition, grounding the boulder cluster at the bottom center with the cliff looming impressively above."
+}
 
 # Character description
-<gt_tmpl>character</gt_tmpl>
+{
+  "id": 1,
+  "name": "马宝玉 (Ma Baoyu)",
+  "description": "六班班长。作为指挥官，面容坚毅、沉稳。眼神通常冷静、果断，充满领导气质。表情通常严肃或深沉，但在战术成功时也会露出自信的微笑。",
+  "image": "image 1",
+  "portrait_prompt": "Full body portrait of a tall, lean Eighth Route Army squad leader standing at attention in a commanding upright stance. The man has a weathered, sun-tanned face with distinctively thick, dark eyebrows that give him a natural look of authority. Most prominently, a pair of military binoculars hangs from a strap around his neck, marking his role as field commander. He wears a blue-gray Eighth Route Army uniform jacket, standard military cap with red star emblem, brown leather belt with ammunition pouches, dark cotton pants, and cloth shoes. A rifle is slung across his back. Centered composition, symmetrical framing, eye-level angle. The subject stands against a single colored dark burnt sienna background with high contrast separation, creating a bold silhouette. Dramatic chiaroscuro lighting from the front-left, creating strong shadows that emphasize his lean facial structure and the binoculars at his chest. Cool to neutral color temperature with low-saturation earth tones - muted slate blues, weathered grays, dusty browns. The metal and glass of the binoculars catch a subtle highlight. Solemn, heroic, and resolute atmosphere reflecting the gravity of 1941 wartime China. Realistic, thick-painted 2D animation style with bold, visible brushstrokes and strong contrast between illuminated and shadowed areas, emphasizing the harsh, dignified, and epic nature of historical events. Deep focus keeping the entire figure sharp from head to toe. Non-distorted portrait lens with natural perspective. The overall mood conveys unwavering leadership, tactical awareness, and quiet determination. Cultural portraiture, historically accurate 1941 Chinese Eighth Route Army uniform and equipment, realistic rendering with painterly texture."
+}
+
+{
+  "id": 2,
+  "name": "葛振林 (Ge Zhenlin)",
+  "description": "六班副班长。体格健壮，面容质朴。经验丰富的老兵，眼神镇定，动作精准。下颌线条明显，具有顽强、威严的特质。是幸存者之一。",
+  "image": "image 2",
+  "portrait_prompt": "Full body portrait of a stocky, muscular Eighth Route Army vice squad leader standing in a solid, grounded stance. The man has a distinctively prominent square jawline that conveys tenacity and authority, with a weathered, honest face showing years of combat experience. Most notably, his uniform sleeves are rolled up to his elbows, exposing strong, muscular forearms that emphasize his hands-on, battle-hardened nature. He wears a blue-gray Eighth Route Army uniform jacket with sleeves rolled up, standard military cap with red star emblem, brown leather belt with grenade pouch at his side, dark cotton pants, and sturdy cloth shoes. A rifle is held diagonally across his chest in a ready position. Centered composition, symmetrical framing, eye-level angle. The subject stands against a single colored deep charcoal gray background with high contrast separation. Dramatic chiaroscuro lighting from the front-right, creating strong shadows that accentuate his square jawline and muscular build, with highlights on his exposed forearms. Cool to neutral color temperature with low-saturation earth tones - muted slate blues, weathered grays, dusty olive. The lighting emphasizes the texture of his weathered skin and the solid mass of his physique. Solemn, steadfast, and resilient atmosphere reflecting a veteran soldier's unwavering resolve in 1941 wartime China. Realistic, thick-painted 2D animation style with bold, visible brushstrokes and strong value contrast between light and shadow areas, emphasizing the harsh dignity and epic gravitas of historical warfare. Deep focus maintaining sharpness throughout the entire figure from head to toe. Non-distorted portrait lens with natural perspective. The overall mood conveys veteran experience, physical strength, calm precision, and unshakeable determination. Cultural portraiture, historically accurate 1941 Chinese Eighth Route Army uniform and equipment, realistic rendering with painterly texture."
+}
+
+{
+  "id": 7,
+  "name": "指导员 (Political Instructor)",
+  "description": "八路军指导员。神情坚毅，面部轮廓分明。具有思想深度和鼓动性，眼神坚定。在黄昏的秘密会议上出现。",
+  "image": "image 3",
+  "portrait_prompt": "Full body portrait of an Eighth Route Army Political Instructor, late 20s, standing with an upright, persuasive posture. Distinctive feature: he wears a worn brown leather document case strapped diagonally across his chest, over a faded blue-grey cotton uniform, with a wooden-holstered Mauser C96 pistol at his hip. His face is chiseled, clean-shaven, and handsome with a look of intellectual depth and fierce determination, distinguishing him from the rougher infantrymen. He wears a standard soft cloth cap and cloth shoes with puttees. The lighting is dramatic chiaroscuro with a strong key light on his face, set against a solid, high-contrast dark slate grey background. Realistic historical film style, 85mm portrait lens, sharp focus, highly detailed fabric textures."
+}
 
 # Previous panels
-<gt_tmpl>pre</gt_tmpl>
+[
+  {
+    "panel_id": 3,
+    "voiceover_ref": "3.1",
+    "3w": "Who: 葛振林 (Ge Zhenlin), 房东老大娘 / Where: Village courtyard / When: 傍晚 (Dusk)",
+    "description": "特写：葛振林的手正稳稳地握着扁担，将一桶水倒满水缸。切换到中景，他（副班长葛振林）正帮一位房东老大娘担水。他脸上带着质朴的微笑，展现军民鱼水情。",
+    "mood": "平静, 温暖, 勤劳",
+    "camera": "特写 (CU) 倒水 -> 中景 (MS)，固定机位 (Static)",
+    "duration_sec": 4,
+    "notes": "“暴风雨前的宁静”。建立葛振林与人民的联系。",
+    "is_continue": false,
+    "characters": [
+      2
+    ],
+    "setting": 2,
+    "voiceover": "一天傍晚，七连六班副班长葛振林正忙着给房东老大娘担水，班长马宝玉跑来通知他开会。"
+  },
+  {
+    "panel_id": 4,
+    "voiceover_ref": "3.1",
+    "3w": "Who: 马宝玉 (Ma Baoyu), 葛振林 / Where: Village courtyard / When: 傍晚 (Dusk)",
+    "description": "班长马宝玉快步走进院子，神情严肃。他拍了拍葛振林的肩膀。镜头拉近，马宝玉的表情打破了前一刻的平静。",
+    "mood": "紧急, 严肃",
+    "camera": "中景 (MS)，马宝玉入画 (Enter Frame)，然后轻微推向两人的面部表情 (Slow Push-in to Two-Shot)",
+    "duration_sec": 4,
+    "notes": "用马宝玉的严肃表情制造紧张感。",
+    "is_continue": true,
+    "characters": [
+      1,
+      2
+    ],
+    "setting": 2,
+    "voiceover": "一天傍晚，七连六班副班长葛振林正忙着给房东老大娘担水，班长马宝玉跑来通知他开会。"
+  },
+  {
+    "panel_id": 5,
+    "voiceover_ref": "4.1",
+    "3w": "Who: 葛振林, 马宝玉 / Where: Village path, 小山崖下 / When: 傍晚 (Dusk)",
+    "description": "葛振林迅速放下扁担，背上枪。一个跟拍镜头，两人快步走出村子，走向村外的小山崖。黄昏的光线给他们的身影拉出长长的影子。",
+    "mood": "迅速, 严肃",
+    "camera": "中景跟拍 (MS Tracking Shot)，从他们身后拍摄。",
+    "duration_sec": 5,
+    "notes": "从“生活”到“战斗”的快速转变。",
+    "is_continue": false,
+    "characters": [
+      1,
+      2
+    ],
+    "setting": 3,
+    "voiceover": "葛振林立即背上枪，跟着马宝玉来到村外的小山崖下，参加党支部扩大会。两人坐在一块石头上，静听指导员分析当前形势。"
+  }
+]
 
 # Panel
-<gt_tmpl>scene</gt_tmpl>
+{
+  "panel_id": 6,
+  "voiceover_ref": "4.1",
+  "3w": "Who: 马宝玉, 葛振林, 指导员, 其他党员 / Where: 小山崖下 / When: 傍晚 (Dusk)",
+  "description": "一个中景镜头，党支部扩大会议。几名战士（包括马和葛）坐在石头上，围着指导员。光线昏暗，只有黄昏的余光。他们都在聚精会神地听着。",
+  "mood": "庄重, 秘密",
+  "camera": "中景 (MS)，固定机位，低角度拍摄以示庄重。",
+  "duration_sec": 5,
+  "notes": "构图要简洁，突出会议的严肃性。",
+  "is_continue": false,
+  "characters": [
+    1,
+    2,
+    7
+  ],
+  "setting": 3,
+  "voiceover": "葛振林立即背上枪，跟着马宝玉来到村外的小山崖下，参加党支部扩大会。两人坐在一块石头上，静听指导员分析当前形势。"
+}
 
 # Output Format
 Your final output must be a single, valid JSON object. Structure the JSON according to this schema.

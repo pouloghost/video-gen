@@ -1,0 +1,38 @@
+{
+    "thought": "I will rewrite Keyframe 1 to fix the 'Realistic historical film' style issue (which risks generating cartoons) and add the mandatory 'IGNORE COMPOSITION' clause for Ref prompts. I will rewrite Keyframes 2 and 3 to make the screen space definitions more explicit (e.g., 'occupying the central vertical third') as per the Master Checklist.",
+    "keyframe_prompt": [
+        {
+            "thought": "Construction Frame 1 (Base). Establishing the empty setting. I will use the setting reference image to get the texture, but enforce a 'low-angle medium shot' and remove the risky 'Realistic' style keyword.",
+            "type": "Ref",
+            "images": [
+                "setting-3.jpg"
+            ],
+            "final_scene": "A low-angle medium shot at twilight. The Political Instructor stands in the center mid-ground against the cliff. Ma Baoyu and Ge Zhenlin sit on rocks in the immediate foreground, left and right, looking up at him.",
+            "prompt": "A cinematic low-angle medium shot of the 'Small Cliff Base' (reference image 1). The composition focuses on a cluster of large, flat-topped boulders in the foreground arranged like makeshift seats, occupying the bottom third of the frame. The background is dominated by the steep, overhanging limestone cliff face. The lighting is dim and atmospheric, capturing the 'blue hour' of twilight with deep, heavy shadows and no direct sunlight. The scene is empty of people. Historical film style, 35mm lens. Image 1 is for reference, generate a new image, IGNORE THE COMPOSITION, SHOT, FOCUS AND LIGHTING. ratio 16:9",
+            "is_final_image": false
+        },
+        {
+            "thought": "Construction Frame 2 (Element). Adding the Political Instructor. I will make the screen space definition more explicit to ensure he is placed correctly for the low-angle perspective.",
+            "type": "Modify",
+            "images": [
+                "iterate-6-1-1",
+                "character-7.jpg"
+            ],
+            "final_scene": "A low-angle medium shot at twilight. The Political Instructor stands in the center mid-ground against the cliff. Ma Baoyu and Ge Zhenlin sit on rocks in the immediate foreground, left and right, looking up at him.",
+            "modify_prompt": "A low-angle medium shot of the cliff base from image 1. In the **center mid-ground**, occupying the central vertical third of the frame, the Political Instructor (reference image 2) stands tall against the cliff wall. He wears a blue-grey uniform and a brown leather document case strapped across his chest. His expression is serious and determined as he holds a gesture with one hand. The lighting from image 1 casts him in silhouette against the dim cliff. The foreground rocks remain empty.",
+            "is_final_image": false
+        },
+        {
+            "thought": "Final Keyframe. Adding Ma Baoyu and Ge Zhenlin. I will define their screen space as specific quadrants to ensure they frame the instructor correctly.",
+            "type": "Modify",
+            "images": [
+                "iterate-6-2-2",
+                "character-1.jpg",
+                "character-2.jpg"
+            ],
+            "final_scene": "A low-angle medium shot at twilight. The Political Instructor stands in the center mid-ground against the cliff. Ma Baoyu and Ge Zhenlin sit on rocks in the immediate foreground, left and right, looking up at him.",
+            "modify_prompt": "A low-angle medium shot of the secret meeting, using the scene from image 1. The Political Instructor stands in the background center. In the **foreground left**, occupying the bottom left quadrant, Ma Baoyu (reference image 2) sits on a large rock, seen in profile facing right, looking up at the instructor. In the **foreground right**, occupying the bottom right quadrant, Ge Zhenlin (reference image 3) sits on a lower rock, seen in profile facing left, also looking up at the instructor. Both soldiers wear worn Eighth Route Army uniforms and have rifles slung over their shoulders. The lighting is low-key, with the soldiers in the foreground darker than the instructor, creating a depth-filled, solemn composition.",
+            "is_final_image": true
+        }
+    ]
+}

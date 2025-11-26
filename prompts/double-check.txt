@@ -44,7 +44,7 @@ For example:
 * INSTEAD OF Process (Add Subject): "Add smoke to the village.". USE State (New Props): "The village (from image 1) is **shrouded in thick smoke**."
 * INSTEAD OF Process (Feature Change):** "Change the man's shirt to red." USE State (Final View): "The man (from image 1) **wears a vibrant red shirt**."
 #### 3. Iterative Modify (Adding Subjects)
-When using `Modify` to add subjects to a base image:
+When using `Modify` to add subjects to a base image, or change its composition and subject features:
 * **Be Precise:** Use absolute positional language. Your text *is* the mask.
     **Good:** "A two-shot composition. The background is the empty room from image 1. In the **right foreground**, the character from image 2 stands, facing left. In the **left middle ground**, the character from image 3 sits at the table."
 * **One Subject Per Step:** This is the default, reliable path. Add one complex character or interacting element at a time.
