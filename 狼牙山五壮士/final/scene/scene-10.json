@@ -1,0 +1,24 @@
+{
+    "thought": "My overall strategy: The panel describes a static, emotional close-up shot lasting 5 seconds. Although 'is_continue' is true, the camera shifts from a Medium Shot (Panel 9) to a Close-up (Panel 10), which represents a hard cut. Using 'Modify' on a medium shot to create a close-up violates the model's limitation (it cannot zoom/crop effectively). Therefore, I will generate a fresh 'Ref' image to establish the new composition. I will generate 2 Final Keyframes: KF1 to establish the lighting and shot, and KF2 to add a subtle 'emotional beat' (deepening expression) to sustain the 5-second duration.",
+    "keyframe_prompt": [
+        {
+            "thought": "This is Final Keyframe 1. I am establishing the Close-up shot. I will use the reference image of Ma Baoyu (character-2.jpg) for the face and the setting image (setting-2.jpg) for the background texture, but I will heavily re-light the scene for night (moonlight/shadows) as per the description. The composition is a fixed close-up.",
+            "type": "Ref",
+            "images": [
+                "character-2.jpg",
+                "setting-2.jpg"
+            ],
+            "prompt": "A cinematic Close-up portrait of Ma Baoyu at night. The composition is centered on his face and shoulders. The subject is the Eighth Route Army soldier from image 1, wearing his blue-grey uniform and cap. He looks directly forward with a stoic, resolute expression, his lips pressed together. The lighting is dramatic and low-key: cool blue moonlight illuminates the left half of his face, while the right side is cast in deep, heavy shadow (chiaroscuro effect). The background is a dark, out-of-focus blur of the village path (referencing textures from image 2) obscured by night. The atmosphere is solemn, heavy, and contemplative. Realistic historical film style. Image 1 is for character reference, generate a new composition. ratio 16:9",
+            "is_final_image": true
+        },
+        {
+            "thought": "This is Final Keyframe 2. This serves as the 'Emotional Beat' to fill the 5-second duration. I will use 'Modify' on KF1 to create a subtle shift in expression, implying he is thinking deeply ('En'). The lighting and composition remain identical.",
+            "type": "Modify",
+            "images": [
+                "iterate-10-1-1"
+            ],
+            "modify_prompt": "A cinematic Close-up of Ma Baoyu (from image 1) at night. The composition and dramatic split-lighting remain exactly the same as image 1. Ma Baoyu's expression is deeper and more intense, with a slight furrowing of the brow, indicating profound thought and determination. The dark, blurry village background (from image 1) is unchanged. The atmosphere remains silent and heavy. ratio 16:9",
+            "is_final_image": true
+        }
+    ]
+}

@@ -1,0 +1,34 @@
+{
+    "thought": "I detected a few issues to fix for better generation compliance. \n1. **KF1 (Modify):** While the logic to use 'Modify' is correct per instructions (`is_continue: true`), the prompt needs explicit screen space definitions to force the transition from the previous panel's Medium Shot to this Close-Up. I will add specific coverage percentages.\n2. **KF2 (Modify):** The phrase 'slightly furrowed' uses a banned modifier ('slightly'). I will change this to 'furrowed' to describe the absolute state.\n3. **KF3 (Modify):** The prompt is generally good but can be tightened to ensure consistency.",
+    "keyframe_prompt": [
+        {
+            "thought": "Final Keyframe 1 (Start - 0s). Bridging the cut from Panel 6 (Medium Shot) to Panel 7 (Close-Up). Using 'Modify' on the previous frame (`scene_6_1.png`) is required by the 'is_continue' rule, but I must strongly define the new layout to override the old geometry. I reference the character portrait (`character-7.jpg`) for facial fidelity and the setting (`setting-3.jpg`) for the background texture.",
+            "type": "Modify",
+            "images": [
+                "scene_6_1.png",
+                "character-7.jpg",
+                "setting-3.jpg"
+            ],
+            "modify_prompt": "A static close-up portrait shot. The Political Instructor (reference image 2) is positioned in the center foreground, his head and shoulders filling the central 60% of the frame. He faces slightly right. He features a clean-shaven, chiseled face with a serious, analytical expression. He wears a faded blue-grey uniform collar and a leather strap (from image 2) visible on his shoulder. The background is the rock cliff (reference image 3) rendered as a dark, out-of-focus texture filling the peripheral areas. The lighting matches the dim, dramatic twilight atmosphere of image 1, casting deep chiaroscuro shadows on his face. Ratio 16:9",
+            "is_final_image": true
+        },
+        {
+            "thought": "Final Keyframe 2 (Middle - ~3.5s). Developing the emotional beat. I removed the banned word 'slightly' to ensure the prompt describes a definitive state.",
+            "type": "Modify",
+            "images": [
+                "scene_7_1.png"
+            ],
+            "modify_prompt": "A static close-up portrait shot, maintaining the exact composition and lighting of image 1. The Political Instructor (from image 1) displays an intense expression with furrowed eyebrows, emphasizing gravity. The background remains a consistent, dark, blurred rock texture. Ratio 16:9",
+            "is_final_image": true
+        },
+        {
+            "thought": "Final Keyframe 3 (End - 7s). Concluding the shot with a determined look.",
+            "type": "Modify",
+            "images": [
+                "scene_7_2.png"
+            ],
+            "modify_prompt": "A static close-up portrait shot, maintaining the exact composition and lighting of image 1. The Political Instructor (from image 1) holds a resolute and unwavering gaze, looking determined. The chiaroscuro lighting continues to define his features against the dark background. Ratio 16:9",
+            "is_final_image": true
+        }
+    ]
+}

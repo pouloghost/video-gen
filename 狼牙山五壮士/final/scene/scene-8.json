@@ -1,0 +1,46 @@
+{
+    "thought": "I detected a few errors in the Modify prompts regarding 'Process Words' (e.g., 'is added to', 'maintain', 'now'). I will rewrite the prompts to describe the absolute final state. I also strengthened the 'Ref' prompt in KF1 to explicitly define screen space and ignore the reference composition.",
+    "keyframe_prompt": [
+        {
+            "thought": "Refining the Ref prompt to explicitly define screen space ('fills the frame') and include the mandatory 'Ignore Composition' instruction to prevent the model from just copying the wide shot setting image.",
+            "type": "Ref",
+            "images": [
+                "setting-3.jpg"
+            ],
+            "final_scene": "A cinematic two-shot close-up of Ma Baoyu and Ge Zhenlin sitting shoulder-to-shoulder against a dark cliff wall at dusk. Ma Baoyu is on the left, Ge Zhenlin on the right. Both look off-screen to the right with determined expressions. The lighting is dim blue-hour twilight with strong shadows.",
+            "prompt": "Cinematic close-up background shot. The frame is filled entirely by the dark, textured limestone rock wall of the cliff base (reference texture from image 1). The focus is soft and shallow. Lighting is dim, atmospheric twilight (blue hour) with deep shadows. There are no characters in this frame. Image 1 is for texture reference, generate a new image, IGNORE THE COMPOSITION AND LIGHTING of image 1. Ratio 16:9.",
+            "is_final_image": false
+        },
+        {
+            "thought": "All is right. Defines the first character's position clearly.",
+            "type": "Modify",
+            "images": [
+                "iterate-8-1-1",
+                "character-1.jpg"
+            ],
+            "modify_prompt": "A close-up composition with a single subject on the left. The background is the rock wall from image 1. Ma Baoyu (the man from image 2) occupies the left half of the frame. He is seen from the chest up, wearing a blue-grey 8th Route Army uniform with a binocular strap visible around his neck. His body is angled slightly towards the right, and his face is turned to look off-screen right. His expression is serious and attentive. Lighting is low-key dusk.",
+            "is_final_image": false
+        },
+        {
+            "thought": "Rewriting to remove the process phrase 'is added to'. Describing the static state where Ge Zhenlin 'occupies' the right side.",
+            "type": "Modify",
+            "images": [
+                "iterate-8-2-2",
+                "character-2.jpg"
+            ],
+            "modify_prompt": "A cinematic Two-Shot Close-Up (CU). The background is the rock wall from image 1. Ma Baoyu (from image 1) sits on the left side of the frame. Ge Zhenlin (the man from image 2) occupies the right side of the frame, positioned shoulder-to-shoulder with Ma. Ge Zhenlin is seen from the chest up, wearing a grey-blue uniform. Both men face slightly right, looking off-screen with focused, listening expressions. The lighting is dramatic dusk chiaroscuro, highlighting their facial features while leaving the background in deep shadow.",
+            "is_final_image": true
+        },
+        {
+            "thought": "Rewriting to remove process/temporal words like 'now' and 'maintain'. Describing the static emotional state.",
+            "type": "Modify",
+            "images": [
+                "iterate-8-3-3",
+                "character-1.jpg",
+                "character-2.jpg"
+            ],
+            "modify_prompt": "A cinematic Two-Shot Close-Up with intense emotional focus. Ma Baoyu (left) and Ge Zhenlin (right) are positioned shoulder-to-shoulder (matching the composition of image 1). Their expressions are steely and deeply resolute. Their eyebrows are furrowed in determination, and the catchlights in their eyes are sharp. The dusk lighting is atmospheric, emphasizing the gritty texture of their skin and uniforms.",
+            "is_final_image": true
+        }
+    ]
+}

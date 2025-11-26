@@ -1,0 +1,35 @@
+{
+    "thought": "I will review the prompts for common errors. In KF3, the phrase 'turns his head slightly' could be interpreted as a process verb. I will rewrite it to describe the static pose ('His head is turned'). The rest of the logic and formatting is correct.",
+    "keyframe_prompt": [
+        {
+            "thought": "All is right.",
+            "type": "Text",
+            "images": [],
+            "final_scene": "A medium shot of Ma Baoyu and Ge Zhenlin walking side-by-side on a village path at night.",
+            "prompt": "A cinematic medium shot of an empty dirt road winding through a rustic mountain village at night (1941). The composition features a depth-leading path stretching from the bottom center into the dark background. Rammed earth walls and thatched roofs line the sides, consistent with traditional Shanxi rural architecture. The scene is illuminated by cold, pale moonlight, creating deep blue shadows and silvery highlights on the straw roofs. The atmosphere is tense, quiet, and somber. Historical film style with realistic textures. ratio 16:9",
+            "is_final_image": false
+        },
+        {
+            "thought": "All is right.",
+            "type": "Modify",
+            "images": [
+                "iterate-9-1-1",
+                "character-1.jpg"
+            ],
+            "final_scene": "A medium shot of Ma Baoyu and Ge Zhenlin walking side-by-side on a village path at night.",
+            "modify_prompt": "A medium shot composition at night. The background is the moonlit village path from image 1. In the foreground left, Ma Baoyu (reference image 2) is walking forward, captured from the waist up. He wears a blue-gray Eighth Route Army uniform, a cap with a red star, and prominent binoculars hanging from his neck. He is lit by the cool, blue moonlight from the scene (image 1), creating sharp shadows on his face. His expression is solemn and resolute. The right side of the frame remains empty for the next character.",
+            "is_final_image": false
+        },
+        {
+            "thought": "Rewrite to fix potential process verb 'turns'.",
+            "type": "Modify",
+            "images": [
+                "iterate-9-1-2",
+                "character-2.jpg"
+            ],
+            "final_scene": "A medium shot of Ma Baoyu and Ge Zhenlin walking side-by-side on a village path at night.",
+            "modify_prompt": "A cinematic medium two-shot at night. Ma Baoyu (from image 1) walks on the left. On the right, Ge Zhenlin (reference image 2) walks alongside him. Ge Zhenlin is a stocky soldier with rolled-up sleeves, holding a rifle, captured from the waist up. His head is turned to the left, looking at Ma Baoyu with a concerned expression. Both men are illuminated by the cold moonlight of the village path (from image 1). The background features the dark, shadowed rammed earth walls. The lighting is low-key and dramatic.",
+            "is_final_image": true
+        }
+    ]
+}

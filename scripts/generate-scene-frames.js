@@ -30,48 +30,20 @@ if (!scene) {
   process.exit(1);
 }
 
-function getContinuingPanel(currentIndex, scenes) {
-  if (currentIndex === -1) return null;
-  const panels = [];
-  while (currentIndex >= 0 && scenes[currentIndex].is_continue) {
-    panels.unshift(scenes[currentIndex]);
-    currentIndex--;
-  }
-
-  return panels;
-}
-
-// Function to get previous panel groups based on is_continue rules
-function getPreviousPanelGroups(currentPanelId, scenes) {
-  const currentScene = scenes.find(s => s.panel_id === currentPanelId);
-  if (!currentScene) return [];
-
-  // Find the index of the current scene
-  let currentIndex = scenes.findIndex(s => s.panel_id === currentPanelId);
-  if (currentIndex === -1) return [];
-
-  const groupPanels = [];
-
-  while (currentIndex >= 0 && groupPanels.length < 3) {
-    if (currentScene.is_continue) {
-      // Case 2: For is_continue panels, find the complete is_continue group that this panel belongs to
-      // All is_continue groups start with a is_continue=false panel
-
-      groupPanels.unshift(...getContinuingPanel(currentIndex, scenes));
-    } else {
-      // Case 1 & 3: For non is_continue panels
-      // Look backwards to see if we have an is_continue sequence that needs to be made complete
-      groupPanels.unshift(scenes[currentIndex]);
+// Logic to get previous panels based on is_continue rules
+let previousPanels = [];
+if (scene.is_continue) {
+  const currentSceneIndex = mergedStoryboard.scenes.indexOf(scene);
+  let i = currentSceneIndex - 1;
+  while (i >= 0) {
+    const p = mergedStoryboard.scenes[i];
+    previousPanels.unshift(p);
+    if (!p.is_continue) {
+      break;
     }
-
-    currentIndex--;
+    i--;
   }
-
-  return groupPanels;
 }
-
-// Get previous panel groups
-const previousPanels = getPreviousPanelGroups(parseInt(panelId) - 1, mergedStoryboard.scenes);
 
 let imageIndex = 1;
 // Process characters
@@ -128,7 +100,7 @@ if (scene.setting) {
 // Replace placeholders in template
 templateContent = templateContent.replace('<gt_tmpl>setting</gt_tmpl>', settingContent);
 templateContent = templateContent.replace('<gt_tmpl>character</gt_tmpl>', charactersContent.join('\n\n'));
-templateContent = templateContent.replace('<gt_tmpl>pre</gt_tmpl>', JSON.stringify(previousPanels, null, 2));
+templateContent = templateContent.replace('<gt_tmpl>pre</gt_tmpl>', previousPanels.length > 0 ? JSON.stringify(previousPanels, null, 2) : '');
 templateContent = templateContent.replace('<gt_tmpl>scene</gt_tmpl>', JSON.stringify(scene, null, 2));
 templateContent = templateContent.replace('<gt_tmpl>panel_id</gt_tmpl>', panelId);
 
