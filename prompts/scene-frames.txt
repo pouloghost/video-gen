@@ -123,13 +123,7 @@ A realistic historical film style that uses authentic detail to create a profoun
 # Story logline
 狼牙山五壮士：1941年，五名八路军战士为掩护主力部队和数千名群众安全转移，将日军精锐引上狼牙山绝顶，在弹尽粮绝后毅然跳崖，谱写了一曲壮丽的英雄赞歌。
 
-# Setting description
-<gt_tmpl>setting</gt_tmpl>
-
-# Character description
-<gt_tmpl>character</gt_tmpl>
-
-# Previous panels
+# Continuous panels
 <gt_tmpl>pre</gt_tmpl>
 
 # Panel
